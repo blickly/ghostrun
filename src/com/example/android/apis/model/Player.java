@@ -6,10 +6,6 @@ public class Player {
     private GeoPoint location;
     
     public Player(GeoPoint location) {
-        this.setLocation(location);
-    }
-
-    public void setLocation(GeoPoint location) {
         this.location = location;
     }
 

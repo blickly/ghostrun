@@ -12,17 +12,17 @@ import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
 public class PlayerItemizedOverlay extends ItemizedOverlay {
-    private OverlayItem item;
+    private Player player;
 
     public PlayerItemizedOverlay(Drawable defaultMarker, Player player) {
         super(boundCenterBottom(defaultMarker));
-        this.item = new OverlayItem(player.getLocation(), "", "");
+        this.player = player;
         populate();
     }
 
     @Override
     protected OverlayItem createItem(int i) {
-        return item;
+        return new OverlayItem(player.getLocation(), "", "");
     }
 
     @Override
