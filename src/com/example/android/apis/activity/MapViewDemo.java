@@ -30,6 +30,8 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
 import android.location.Location;
@@ -105,6 +107,30 @@ public class MapViewDemo extends MapActivity {
         
         mapOverlays.add(playerOverlay);
         
+        makeDialog();
+        
+    }
+    
+    private void makeDialog() {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                case DialogInterface.BUTTON_POSITIVE:
+                    //Yes button clicked
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    System.exit(0);
+                    break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Gratuitous Dialog").setMessage("Initializing Map...")
+            .setPositiveButton("OK", dialogClickListener)
+            .setNegativeButton("Get me outta here!", dialogClickListener).show();
     }
 
     private Location getLastLocation() {
