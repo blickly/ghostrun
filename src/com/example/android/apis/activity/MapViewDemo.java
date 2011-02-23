@@ -27,6 +27,7 @@ import com.example.android.google.apis.R;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
+import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
 
 import android.app.Activity;
@@ -37,7 +38,6 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
 /**
  * Example of how to use an {@link com.google.android.maps.MapView}.
@@ -61,13 +61,13 @@ Views/MapView
  * </table>
  */
 public class MapViewDemo extends MapActivity {
-    LinearLayout linearLayout;
     MapView mapView;
     List<Overlay> mapOverlays;
+    MyLocationOverlay locationOverlay;
     Drawable robotIcon;
-    Drawable playerIcon;
     RobotsItemizedOverlay robotsOverlay;
-    PlayerItemizedOverlay playerOverlay;
+//    Drawable playerIcon;
+//    PlayerItemizedOverlay playerOverlay;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +78,7 @@ public class MapViewDemo extends MapActivity {
         mapView.setBuiltInZoomControls(true);
 
         mapOverlays = mapView.getOverlays();
+        mapOverlays.clear();
         
         robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
         robotsOverlay = new RobotsItemizedOverlay(robotIcon);
@@ -90,48 +91,37 @@ public class MapViewDemo extends MapActivity {
         Robot robot2 = new Robot(neCornerPoint);
         robotsOverlay.addRobot(robot2);
         
-        Location location = getLastLocation();
-        GeoPoint here = new GeoPoint(
-                (int) Math.round(location.getLatitude() * 1E6),
-                (int) Math.round(location.getLongitude() * 1E6));
-        
+//        Location location = getLastLocation();
+//        GeoPoint here = new GeoPoint(
+//                (int) Math.round(location.getLatitude() * 1E6),
+//                (int) Math.round(location.getLongitude() * 1E6));
+
         // Generate robots in random places
-        createRandomRobots(robotsOverlay, here, 7);
+        createRandomRobots(robotsOverlay, campanilePoint, 7);
 
         mapOverlays.add(robotsOverlay);
         
         // Add player overlay
-        Player me = new Player(here);
-        playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
-        playerOverlay = new PlayerItemizedOverlay(playerIcon, me);
+        locationOverlay = new MyLocationOverlay(this, mapView);
+        mapOverlays.add(locationOverlay);
         
-        mapOverlays.add(playerOverlay);
-        
-        makeDialog();
+
+//        Player me = new Player(here);
+//        playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
+//        playerOverlay = new PlayerItemizedOverlay(playerIcon, me);
+//        mapOverlays.add(playerOverlay);
         
     }
     
-    private void makeDialog() {
-        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which){
-                case DialogInterface.BUTTON_POSITIVE:
-                    //Yes button clicked
-                    break;
-
-                case DialogInterface.BUTTON_NEGATIVE:
-                    System.exit(0);
-                    break;
-                }
-            }
-        };
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Gratuitous Dialog").setMessage("Initializing Map...")
-            .setPositiveButton("OK", dialogClickListener)
-            .setNegativeButton("Get me outta here!", dialogClickListener).show();
+    @Override
+    public void onResume() {
+        super.onResume();
+        locationOverlay.enableMyLocation();
     }
+    
+    //////////////////////////////////////////////////////////////////
+    //                      private methods
+    /////////////////////////////////////////////////////////////////
 
     private Location getLastLocation() {
         LocationManager locationManager = (LocationManager) getSystemService(
@@ -143,10 +133,10 @@ public class MapViewDemo extends MapActivity {
                 criteria, false);
         if (bestLocationProvider == null
                 || !locationManager.isProviderEnabled(bestLocationProvider)) {
-          return null;
+            return null;
         }
         return locationManager.getLastKnownLocation(bestLocationProvider);
-      }
+    }
 
     private RobotsItemizedOverlay createRandomRobots(RobotsItemizedOverlay overlay, GeoPoint center, int numRobots) {
         Random rand = new Random();
