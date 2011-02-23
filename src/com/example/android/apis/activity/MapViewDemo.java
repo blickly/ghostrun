@@ -17,27 +17,16 @@
 package com.example.android.apis.activity;
 
 import java.util.List;
-import java.util.Random;
 
-import com.example.android.apis.model.Player;
-import com.example.android.apis.model.Robot;
-import com.example.android.apis.overlays.PlayerItemizedOverlay;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+
 import com.example.android.apis.overlays.RobotsItemizedOverlay;
 import com.example.android.google.apis.R;
-import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.graphics.drawable.Drawable;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationManager;
-import android.os.Bundle;
 
 /**
  * Example of how to use an {@link com.google.android.maps.MapView}.
@@ -82,22 +71,12 @@ public class MapViewDemo extends MapActivity {
         
         robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
         robotsOverlay = new RobotsItemizedOverlay(robotIcon);
-        // Campanile
-        GeoPoint campanilePoint = new GeoPoint(37871944, -122257778);
-        Robot robot = new Robot(campanilePoint);
-        robotsOverlay.addRobot(robot);
-        // NE Corner of Campus
-        GeoPoint neCornerPoint = new GeoPoint(37875522,-122256825);
-        Robot robot2 = new Robot(neCornerPoint);
-        robotsOverlay.addRobot(robot2);
+
         
 //        Location location = getLastLocation();
 //        GeoPoint here = new GeoPoint(
 //                (int) Math.round(location.getLatitude() * 1E6),
 //                (int) Math.round(location.getLongitude() * 1E6));
-
-        // Generate robots in random places
-        createRandomRobots(robotsOverlay, campanilePoint, 7);
 
         mapOverlays.add(robotsOverlay);
         
@@ -123,30 +102,20 @@ public class MapViewDemo extends MapActivity {
     //                      private methods
     /////////////////////////////////////////////////////////////////
 
-    private Location getLastLocation() {
-        LocationManager locationManager = (LocationManager) getSystemService(
-                Activity.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-        criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        criteria.setAltitudeRequired(true);
-        String bestLocationProvider = locationManager.getBestProvider(
-                criteria, false);
-        if (bestLocationProvider == null
-                || !locationManager.isProviderEnabled(bestLocationProvider)) {
-            return null;
-        }
-        return locationManager.getLastKnownLocation(bestLocationProvider);
-    }
-
-    private RobotsItemizedOverlay createRandomRobots(RobotsItemizedOverlay overlay, GeoPoint center, int numRobots) {
-        Random rand = new Random();
-        for (int i = 0; i < numRobots; ++i) {
-            int lat = (int) (center.getLatitudeE6() + 10000 * rand.nextGaussian());
-            int lon = (int) (center.getLongitudeE6() + 10000 * rand.nextGaussian());
-            overlay.addRobot(new Robot(new GeoPoint(lat, lon)));
-        }
-        return overlay;
-    }
+//    private Location getLastLocation() {
+//        LocationManager locationManager = (LocationManager) getSystemService(
+//                Activity.LOCATION_SERVICE);
+//        Criteria criteria = new Criteria();
+//        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+//        criteria.setAltitudeRequired(true);
+//        String bestLocationProvider = locationManager.getBestProvider(
+//                criteria, false);
+//        if (bestLocationProvider == null
+//                || !locationManager.isProviderEnabled(bestLocationProvider)) {
+//            return null;
+//        }
+//        return locationManager.getLastKnownLocation(bestLocationProvider);
+//    }
 
     @Override
     protected boolean isRouteDisplayed() { return false; }
