@@ -10,12 +10,11 @@ import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
-public class RobotsItemizedOverlay extends ItemizedOverlay {
+public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     private ArrayList<Robot> mOverlays = new ArrayList<Robot>();
 
     public RobotsItemizedOverlay(Drawable defaultMarker) {
         super(boundCenterBottom(defaultMarker));
-        // TODO Auto-generated constructor stub
     }
 
     public void addRobot(Robot robot) {
@@ -38,23 +37,13 @@ public class RobotsItemizedOverlay extends ItemizedOverlay {
     }
 
     @Override
-    protected RobotOverlayItem createItem(int i) {
-        return new RobotOverlayItem(mOverlays.get(i));
+    protected OverlayItem createItem(int i) {
+        Robot r = mOverlays.get(i);
+        return new OverlayItem(r.getLocation(), "", "");
     }
 
     @Override
     public int size() {
         return mOverlays.size();
     }
-    
-    private class RobotOverlayItem extends OverlayItem {
-        private Robot robot;
-
-        public RobotOverlayItem(Robot robot) {
-            super(robot.getLocation(), "", "");
-            this.robot = robot;
-        }
-        
-    }
-
 }

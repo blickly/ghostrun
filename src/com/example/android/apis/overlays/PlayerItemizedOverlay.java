@@ -6,7 +6,7 @@ import com.example.android.apis.model.Player;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
-public class PlayerItemizedOverlay extends ItemizedOverlay {
+public class PlayerItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     private Player player;
 
     public PlayerItemizedOverlay(Drawable defaultMarker, Player player) {
