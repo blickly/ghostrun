@@ -118,9 +118,11 @@ public class MapViewDemo extends MapActivity {
                 criteria, false);
         if (bestLocationProvider == null
                 || !locationManager.isProviderEnabled(bestLocationProvider)) {
+            android.util.Log.d("registerLocationUpdates",
+                    "Provider not available or not enabled");
             return;
         }
-        locationManager.requestLocationUpdates(bestLocationProvider, 0L, 0.0f, listener);
+        locationManager.requestLocationUpdates(bestLocationProvider, 0, 0, listener);
     }
 
 }

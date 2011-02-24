@@ -1,7 +1,6 @@
 package com.example.android.apis.overlays;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import android.graphics.drawable.Drawable;
 
@@ -33,14 +32,9 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 
     @Override
     protected boolean onTap(int index) {
-        Random rand = new Random();
         android.util.Log.d("RobotsItemizedOverlay", "Item tapped. Id: " + index
                 + " Total items: " + size());
-        Robot oldRobot = robots.get(index);
-        GeoPoint oldLocation = oldRobot.getLocation();
-        int lat = (int) (oldLocation.getLatitudeE6() + 500 * rand.nextGaussian());
-        int lon = (int) (oldLocation.getLongitudeE6() + 500 * rand.nextGaussian());
-        robots.set(index, new Robot(new GeoPoint(lat, lon)));
+        robots.get(index).moveRandomly(500);
         populate();
         return true;
     }
@@ -61,13 +55,10 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     ////////////////////////////////////////////////////////////////
 
     private void createRandomRobots(GeoPoint center, int numRobots) {
-        Random rand = new Random();
         for (int i = 0; i < numRobots; ++i) {
-            int lat = (int) (center.getLatitudeE6()
-                    + 10000 * rand.nextGaussian());
-            int lon = (int) (center.getLongitudeE6()
-                    + 10000 * rand.nextGaussian());
-            robots.add(new Robot(new GeoPoint(lat, lon)));
+            Robot newRobot = new Robot(center);
+            newRobot.moveRandomly(1000);
+            robots.add(newRobot);
         }
     }
 }
