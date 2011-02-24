@@ -57,7 +57,7 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     private void createRandomRobots(GeoPoint center, int numRobots) {
         for (int i = 0; i < numRobots; ++i) {
             Robot newRobot = new Robot(center);
-            newRobot.moveRandomly(1000);
+            newRobot.moveRandomly(10000);
             robots.add(newRobot);
         }
     }
