@@ -18,7 +18,11 @@ package com.example.android.apis.activity;
 
 import java.util.List;
 
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.location.Criteria;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.example.android.apis.overlays.RobotsItemizedOverlay;
@@ -53,8 +57,8 @@ public class MapViewDemo extends MapActivity {
     MapView mapView;
     List<Overlay> mapOverlays;
     MyLocationOverlay locationOverlay;
-    Drawable robotIcon;
-    RobotsItemizedOverlay robotsOverlay;
+//    Drawable robotIcon;
+//    RobotsItemizedOverlay robotsOverlay;
 //    Drawable playerIcon;
 //    PlayerItemizedOverlay playerOverlay;
     
@@ -69,21 +73,14 @@ public class MapViewDemo extends MapActivity {
         mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
         
-        robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
-        robotsOverlay = new RobotsItemizedOverlay(robotIcon);
-
-        
-//        Location location = getLastLocation();
-//        GeoPoint here = new GeoPoint(
-//                (int) Math.round(location.getLatitude() * 1E6),
-//                (int) Math.round(location.getLongitude() * 1E6));
-
+        Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
+        Overlay robotsOverlay = new RobotsItemizedOverlay(robotIcon);
         mapOverlays.add(robotsOverlay);
         
         // Add player overlay
         locationOverlay = new MyLocationOverlay(this, mapView);
         mapOverlays.add(locationOverlay);
-        
+        registerLocationUpdates(locationOverlay);
 
 //        Player me = new Player(here);
 //        playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
@@ -91,32 +88,39 @@ public class MapViewDemo extends MapActivity {
 //        mapOverlays.add(playerOverlay);
         
     }
-    
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        locationOverlay.disableMyLocation();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         locationOverlay.enableMyLocation();
     }
-    
-    //////////////////////////////////////////////////////////////////
-    //                      private methods
-    /////////////////////////////////////////////////////////////////
-
-//    private Location getLastLocation() {
-//        LocationManager locationManager = (LocationManager) getSystemService(
-//                Activity.LOCATION_SERVICE);
-//        Criteria criteria = new Criteria();
-//        criteria.setAccuracy(Criteria.ACCURACY_FINE);
-//        criteria.setAltitudeRequired(true);
-//        String bestLocationProvider = locationManager.getBestProvider(
-//                criteria, false);
-//        if (bestLocationProvider == null
-//                || !locationManager.isProviderEnabled(bestLocationProvider)) {
-//            return null;
-//        }
-//        return locationManager.getLastKnownLocation(bestLocationProvider);
-//    }
 
     @Override
     protected boolean isRouteDisplayed() { return false; }
+    
+    ///////////////////////////////////////////////////////////////////
+    //                     private methods
+    ///////////////////////////////////////////////////////////////////
+
+    private void registerLocationUpdates(LocationListener listener) {
+        LocationManager locationManager = (LocationManager) getSystemService(
+                Activity.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+        criteria.setAltitudeRequired(true);
+        String bestLocationProvider = locationManager.getBestProvider(
+                criteria, false);
+        if (bestLocationProvider == null
+                || !locationManager.isProviderEnabled(bestLocationProvider)) {
+            return;
+        }
+        locationManager.requestLocationUpdates(bestLocationProvider, 0L, 0.0f, listener);
+    }
+
 }
