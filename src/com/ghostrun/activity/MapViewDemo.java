@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.activity;
+package com.ghostrun.activity;
 
 import java.util.List;
 
@@ -25,9 +25,9 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-import com.example.android.apis.overlays.PlayerOverlay;
-import com.example.android.apis.overlays.RobotsItemizedOverlay;
 import com.example.android.google.apis.R;
+import com.ghostrun.overlays.PlayerOverlay;
+import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
@@ -45,7 +45,7 @@ Views/MapView
 <h4>Source files</h4>
  * <table class="LinkTable">
  *         <tr>
- *             <td >src/com.example.android.apis/view/MapViewDemo.java</td>
+ *             <td >src/com.ghostrun/view/MapViewDemo.java</td>
  *             <td >The Alert Dialog Samples implementation</td>
  *         </tr>
  *         <tr>

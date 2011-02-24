@@ -1,10 +1,10 @@
-package com.example.android.apis.overlays;
+package com.ghostrun.overlays;
 
 import java.util.ArrayList;
 
 import android.graphics.drawable.Drawable;
 
-import com.example.android.apis.model.Robot;
+import com.ghostrun.model.Robot;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;

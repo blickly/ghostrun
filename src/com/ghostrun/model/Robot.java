@@ -1,4 +1,4 @@
-package com.example.android.apis.model;
+package com.ghostrun.model;
 
 import java.util.Random;
 
