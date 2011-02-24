@@ -25,6 +25,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+import com.example.android.apis.overlays.PlayerOverlay;
 import com.example.android.apis.overlays.RobotsItemizedOverlay;
 import com.example.android.google.apis.R;
 import com.google.android.maps.MapActivity;
@@ -57,10 +58,6 @@ public class MapViewDemo extends MapActivity {
     MapView mapView;
     List<Overlay> mapOverlays;
     MyLocationOverlay locationOverlay;
-//    Drawable robotIcon;
-//    RobotsItemizedOverlay robotsOverlay;
-//    Drawable playerIcon;
-//    PlayerItemizedOverlay playerOverlay;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,21 +69,18 @@ public class MapViewDemo extends MapActivity {
 
         mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
-        
+
+        // Add robot overlay
         Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
         Overlay robotsOverlay = new RobotsItemizedOverlay(robotIcon);
         mapOverlays.add(robotsOverlay);
         
         // Add player overlay
-        locationOverlay = new MyLocationOverlay(this, mapView);
-        mapOverlays.add(locationOverlay);
+        locationOverlay = new PlayerOverlay(this, mapView);
+//      Drawable playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
         registerLocationUpdates(locationOverlay);
+        mapOverlays.add(locationOverlay);
 
-//        Player me = new Player(here);
-//        playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
-//        playerOverlay = new PlayerItemizedOverlay(playerIcon, me);
-//        mapOverlays.add(playerOverlay);
-        
     }
 
     @Override
