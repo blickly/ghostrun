@@ -26,6 +26,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 import com.example.android.google.apis.R;
+import com.ghostrun.model.Player;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;
@@ -76,8 +77,8 @@ public class MapViewDemo extends MapActivity {
         mapOverlays.add(robotsOverlay);
         
         // Add player overlay
-        locationOverlay = new PlayerOverlay(this, mapView);
-//      Drawable playerIcon = this.getResources().getDrawable(R.drawable.ben_face_small);
+        Player player = new Player();
+        locationOverlay = new PlayerOverlay(player, this, mapView);
         registerLocationUpdates(locationOverlay);
         mapOverlays.add(locationOverlay);
 
