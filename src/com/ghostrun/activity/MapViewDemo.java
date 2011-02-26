@@ -22,7 +22,6 @@ import com.google.android.maps.Overlay;
  */
 public class MapViewDemo extends MapActivity {
     MapView mapView;
-    List<Overlay> mapOverlays;
     MyLocationOverlay locationOverlay;
     
     @Override
@@ -33,19 +32,19 @@ public class MapViewDemo extends MapActivity {
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
 
-        mapOverlays = mapView.getOverlays();
+        List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
 
-        // Add robot overlay
-        Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
-        Overlay robotsOverlay = new RobotsItemizedOverlay(robotIcon);
-        mapOverlays.add(robotsOverlay);
-        
         // Add player overlay
         Player player = new Player();
         locationOverlay = new PlayerOverlay(player, this, mapView);
         registerLocationUpdates(locationOverlay);
         mapOverlays.add(locationOverlay);
+
+        // Add robot overlay
+        Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
+        Overlay robotsOverlay = new RobotsItemizedOverlay(robotIcon, player);
+        mapOverlays.add(robotsOverlay);
 
     }
 

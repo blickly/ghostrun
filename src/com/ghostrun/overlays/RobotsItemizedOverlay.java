@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.graphics.drawable.Drawable;
 
+import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
@@ -11,17 +12,20 @@ import com.google.android.maps.OverlayItem;
 
 public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     private ArrayList<Robot> robots = new ArrayList<Robot>();
+    private Player followingPlayer;
 
-    public RobotsItemizedOverlay(Drawable defaultMarker) {
+    public RobotsItemizedOverlay(Drawable defaultMarker, Player following) {
         super(boundCenterBottom(defaultMarker));
+        
+        this.followingPlayer = following;
 
         // Put robot on Campanile
         GeoPoint campanilePoint = new GeoPoint(37871944, -122257778);
-        Robot robot = new Robot(campanilePoint);
+        Robot robot = new Robot(campanilePoint, followingPlayer);
         robots.add(robot);
         // Put robot at NE corner of campus
         GeoPoint neCornerPoint = new GeoPoint(37875522,-122256825);
-        Robot robot2 = new Robot(neCornerPoint);
+        Robot robot2 = new Robot(neCornerPoint, followingPlayer);
         robots.add(robot2);
 
         // Generate robots in random places
@@ -34,7 +38,12 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     protected boolean onTap(int index) {
         android.util.Log.d("RobotsItemizedOverlay", "Item tapped. Id: " + index
                 + " Total items: " + size());
-        robots.get(index).moveRandomly(500);
+        Robot tapee = robots.get(index);
+        if (followingPlayer.hasLocation()) {
+            tapee.moveTowardPlayer();
+        } else {
+            tapee.moveRandomly(500);
+        }
         populate();
         return true;
     }
@@ -56,7 +65,7 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 
     private void createRandomRobots(GeoPoint center, int numRobots) {
         for (int i = 0; i < numRobots; ++i) {
-            Robot newRobot = new Robot(center);
+            Robot newRobot = new Robot(center, followingPlayer);
             newRobot.moveRandomly(10000);
             robots.add(newRobot);
         }
