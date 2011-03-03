@@ -5,7 +5,7 @@ import java.util.Random;
 import com.google.android.maps.GeoPoint;
 
 public class Robot {
-    final int ROBOT_SPEED = 200;
+    final int ROBOT_SPEED = 20;
     private GeoPoint location;
     Player player;
     
