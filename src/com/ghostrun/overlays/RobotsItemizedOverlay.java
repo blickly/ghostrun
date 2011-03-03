@@ -47,6 +47,13 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
         populate();
         return true;
     }
+    
+    public void updateRobots() {
+        for (Robot r : robots) {
+            r.moveRandomly(200);
+        }
+        populate();
+    }
 
     @Override
     protected OverlayItem createItem(int i) {

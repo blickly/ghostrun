@@ -8,8 +8,10 @@ import android.location.Criteria;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.ghostrun.R;
+import com.ghostrun.model.GameLoop;
 import com.ghostrun.model.Player;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
@@ -43,9 +45,12 @@ public class MapViewDemo extends MapActivity {
 
         // Add robot overlay
         Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
-        Overlay robotsOverlay = new RobotsItemizedOverlay(robotIcon, player);
+        RobotsItemizedOverlay robotsOverlay = new RobotsItemizedOverlay(robotIcon, player);
         mapOverlays.add(robotsOverlay);
-
+        
+        GameLoop gameLoop = new GameLoop(player, robotsOverlay);
+        Handler handler = new Handler();
+        handler.post(gameLoop);
     }
 
     @Override
