@@ -1,6 +1,7 @@
 package com.ghostrun.overlays;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.graphics.drawable.Drawable;
 
@@ -64,6 +65,10 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     @Override
     public int size() {
         return robots.size();
+    }
+
+    public List<Robot> iter() {
+        return robots;
     }
 
     /////////////////////////////////////////////////////////////////
