@@ -10,7 +10,6 @@ import com.google.android.maps.GeoPoint;
 
 public class GameLoop implements Runnable {
     public final int DEATH_DISTANCE = 500;
-    public final int ROBOT_MOVE_DISTANCE = 200;
     public final int ROBOT_UPDATE_RATE_MS = 500;
     public final int ROBOT_START_SPACING = 10000;
     
@@ -59,7 +58,7 @@ public class GameLoop implements Runnable {
 
     private void updateRobotPositions() {
         for (Robot r : robots) {
-            r.moveRandomly(ROBOT_MOVE_DISTANCE);
+            r.updateLocation();
         }
     }
 
