@@ -9,7 +9,7 @@ import com.google.android.maps.MyLocationOverlay;
 public class PlayerOverlay extends MyLocationOverlay {
     Player player;
 
-    public PlayerOverlay(Player player, Context context, MapView mapView) {
+    public PlayerOverlay(Context context, MapView mapView, Player player) {
         super(context, mapView);
         this.player = player;
     }

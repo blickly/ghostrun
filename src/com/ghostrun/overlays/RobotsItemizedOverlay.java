@@ -1,37 +1,21 @@
 package com.ghostrun.overlays;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.graphics.drawable.Drawable;
 
-import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
-import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
 public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
-    private ArrayList<Robot> robots = new ArrayList<Robot>();
-    private Player followingPlayer;
+    private List<Robot> robots;
 
-    public RobotsItemizedOverlay(Drawable defaultMarker, Player following) {
+    public RobotsItemizedOverlay(Drawable defaultMarker, List<Robot> robots) {
         super(boundCenterBottom(defaultMarker));
-        
-        this.followingPlayer = following;
 
-        // Put robot on Campanile
-        GeoPoint campanilePoint = new GeoPoint(37871944, -122257778);
-        Robot robot = new Robot(campanilePoint, followingPlayer);
-        robots.add(robot);
-        // Put robot at NE corner of campus
-        GeoPoint neCornerPoint = new GeoPoint(37875522,-122256825);
-        Robot robot2 = new Robot(neCornerPoint, followingPlayer);
-        robots.add(robot2);
+        this.robots = robots;
 
-        // Generate robots in random places
-        createRandomRobots(campanilePoint, 7);
-        
         populate();
     }
 
@@ -39,20 +23,12 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     protected boolean onTap(int index) {
         android.util.Log.d("RobotsItemizedOverlay", "Item tapped. Id: " + index
                 + " Total items: " + size());
-        Robot tapee = robots.get(index);
-        if (followingPlayer.hasLocation()) {
-            tapee.moveTowardPlayer();
-        } else {
-            tapee.moveRandomly(500);
-        }
+        robots.get(index).moveRandomly(500);
         populate();
         return true;
     }
     
-    public void updateRobots() {
-        for (Robot r : robots) {
-            r.moveRandomly(200);
-        }
+    public void refresh() {
         populate();
     }
 
@@ -65,21 +41,5 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     @Override
     public int size() {
         return robots.size();
-    }
-
-    public List<Robot> iter() {
-        return robots;
-    }
-
-    /////////////////////////////////////////////////////////////////
-    //                       private methods
-    ////////////////////////////////////////////////////////////////
-
-    private void createRandomRobots(GeoPoint center, int numRobots) {
-        for (int i = 0; i < numRobots; ++i) {
-            Robot newRobot = new Robot(center, followingPlayer);
-            newRobot.moveRandomly(10000);
-            robots.add(newRobot);
-        }
     }
 }

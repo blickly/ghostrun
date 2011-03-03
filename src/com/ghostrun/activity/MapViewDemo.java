@@ -12,7 +12,6 @@ import android.os.Handler;
 
 import com.ghostrun.R;
 import com.ghostrun.model.GameLoop;
-import com.ghostrun.model.Player;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;
@@ -36,20 +35,25 @@ public class MapViewDemo extends MapActivity {
 
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
+        
+        GameLoop gameLoop = new GameLoop();
 
         // Add player overlay
-        Player player = new Player();
-        locationOverlay = new PlayerOverlay(player, this, mapView);
+        locationOverlay = new PlayerOverlay(this, mapView,
+                gameLoop.getPlayer());
         registerLocationUpdates(locationOverlay);
         mapOverlays.add(locationOverlay);
 
         // Add robot overlay
-        Drawable robotIcon = this.getResources().getDrawable(R.drawable.androidmarker);
-        RobotsItemizedOverlay robotsOverlay = new RobotsItemizedOverlay(robotIcon, player);
-        mapOverlays.add(robotsOverlay);
+        Drawable robotIcon = this.getResources().getDrawable(
+                R.drawable.androidmarker);
+        RobotsItemizedOverlay robotOverlay = new RobotsItemizedOverlay(
+                    robotIcon, gameLoop.getRobots());
+        mapOverlays.add(robotOverlay);
         
-        GameLoop gameLoop = new GameLoop(player, robotsOverlay);
+        // Start game loop
         Handler handler = new Handler();
+        gameLoop.setRobotOverlay(robotOverlay);
         handler.post(gameLoop);
     }
 
