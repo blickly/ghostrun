@@ -22,7 +22,7 @@ public class HomeView extends Activity {
         	@Override
 			public void onClick(View v) {
         		// TODO Auto-generated method stub
-        		Intent i = new Intent(HomeView.this, MapViewDemo.class);
+        		Intent i = new Intent(HomeView.this, GameMapView.class);
         		startActivity(i);
         	}
         });
