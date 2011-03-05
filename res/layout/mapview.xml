@@ -16,17 +16,62 @@
 
 <!-- Demonstrates use of the com.google.android.maps.MapView.
      See corresponding Java code com.ghostrun.activity.MapViewDemo.java. -->
+     
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent">
-    <com.google.android.maps.MapView
-    	android:id="@+id/mapview"
-        android:layout_width="fill_parent" 
-        android:layout_height="fill_parent"
-        android:enabled="true"
-        android:clickable="true"
-        android:apiKey="0_nmnDYdp8dvRcCQogBB6URrbQW_Xvzjj5Fo60Q"
-        />
+    
+    <LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+		
+		<Button android:layout_width = "wrap_content" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/map_pac_logo"
+			android:background="@drawable/pac_logo" />
+	
+	</LinearLayout>
+	
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:background="@color/white">
+    	
+    	<com.google.android.maps.MapView
+    		android:id="@+id/mapview"
+        	android:layout_width="fill_parent" 
+        	android:layout_height="440px"
+        	android:enabled="true"
+        	android:clickable="true"
+        	android:apiKey="01e29ScTjTkztWxtY9TdfDI3iAjRJU9bCVR98xw" />
+        	
+        <!-- android:apiKey="0_nmnDYdp8dvRcCQogBB6URrbQW_Xvzjj5Fo60Q" -->
+			
+	</LinearLayout>
+       
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:gravity="center_vertical"
+		android:paddingLeft="10px">
+		
+		<TextView
+			android:id="@+id/points"
+ 			android:text="0 points"
+ 			android:textStyle="bold"
+ 			android:textColor="@color/white"
+ 			android:textSize="25px"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content" />
+
+	</LinearLayout>
+	
 </LinearLayout>
+
