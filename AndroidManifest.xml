@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.ghostrun.activity.MapViewDemo" android:label="MapView"
+        <activity android:name="com.ghostrun.activity.GameMapView" android:label="MapView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 
         <!-- ************************************* -->

@@ -21,7 +21,7 @@ import com.google.android.maps.Overlay;
 
 /** Map Activity for showing the status of a game in progress.
  */
-public class MapViewDemo extends MapActivity {
+public class GameMapView extends MapActivity {
     MapView mapView;
     MyLocationOverlay locationOverlay;
     
