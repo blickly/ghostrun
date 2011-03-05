@@ -17,14 +17,13 @@ public class HomeView extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.homeview);
         Button play=(Button)findViewById(R.id.play);
-        
+
         play.setOnClickListener(new View.OnClickListener() {
-        	@Override
-			public void onClick(View v) {
-        		// TODO Auto-generated method stub
-        		Intent i = new Intent(HomeView.this, GameMapView.class);
-        		startActivity(i);
-        	}
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeView.this, GameMapView.class);
+                startActivity(i);
+            }
         });
     }
 }
