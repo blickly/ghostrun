@@ -20,9 +20,27 @@ public class MazeGraph {
 
     public MazeGraphPoint getRandomPoint() {
         Random rand = new Random();
-        return points.get(rand.nextInt(points.size()));
+        int nPoints = points.size();
+        if (nPoints > 0) {
+            return points.get(rand.nextInt(nPoints));
+        } else {
+            return null;
+        }
     }
 
-    private ArrayList<MazeGraphPoint> points;
+    public void createSimpleMap() {
+        // Campanile
+        MazeGraphPoint campanilePoint = addPoint(new GeoPoint(37871944, -122257778));
+        // NE corner of campus
+        MazeGraphPoint neCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+        // NW corner of campus
+        MazeGraphPoint nwCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+
+        // Edges
+        addEdge(neCornerPoint, nwCornerPoint);
+        addEdge(neCornerPoint, campanilePoint);
+    }
+
+    private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();
 
 }

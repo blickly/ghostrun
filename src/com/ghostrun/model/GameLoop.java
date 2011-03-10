@@ -14,6 +14,7 @@ public class GameLoop implements Runnable {
     public final int ROBOT_START_SPACING = 10000;
     
     Handler h = new Handler();
+    private MazeGraph maze = new MazeGraph();
     private Player player = new Player();
     private List<Robot> robots = new ArrayList<Robot>();
     private RobotsItemizedOverlay robotOverlay;
@@ -29,16 +30,8 @@ public class GameLoop implements Runnable {
     }
 
     public GameLoop() {
-        // Put robot on Campanile
-        GeoPoint campanilePoint = new GeoPoint(37871944, -122257778);
-        Robot robot = new Robot(campanilePoint, player);
-        robots.add(robot);
-        // Put robot at NE corner of campus
-        GeoPoint neCornerPoint = new GeoPoint(37875522,-122256825);
-        Robot robot2 = new Robot(neCornerPoint, player);
-        robots.add(robot2);
-        // Generate robots in random places
-        createRandomRobots(campanilePoint, 7); 
+        maze.createSimpleMap();
+        createRandomRobots(2);
     }
 
     @Override
@@ -74,10 +67,10 @@ public class GameLoop implements Runnable {
         return false;
     }
 
-    private void createRandomRobots(GeoPoint center, int numRobots) {
+    private void createRandomRobots(int numRobots) {
         for (int i = 0; i < numRobots; ++i) {
-            Robot newRobot = new Robot(center, player);
-            newRobot.moveRandomly(ROBOT_START_SPACING);
+            MazeGraphPoint randomPoint = maze.getRandomPoint();
+            Robot newRobot = new Robot(randomPoint.getLocation(), player);
             robots.add(newRobot);
         }
     }
