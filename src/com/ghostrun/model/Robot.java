@@ -7,8 +7,9 @@ import com.google.android.maps.GeoPoint;
 public class Robot {
     final int ROBOT_SPEED = 20;
     private GeoPoint location;
-    Player player;
-    
+    private MazeGraphPoint destination;
+    private Player player;
+
     public Robot(GeoPoint location, Player following) {
         this.setLocation(location);
         this.player = following;
@@ -21,8 +22,26 @@ public class Robot {
     public GeoPoint getLocation() {
         return location;
     }
+
+    public MazeGraphPoint getDestination() {
+        return destination;
+    }
+
+    public void setDestination(MazeGraphPoint destination) {
+        this.destination = destination;
+    }
     
     public void updateLocation() {
+        if (destination == null) {
+            return;
+        }
+        moveTowardPoint(destination.getLocation());
+        if (destination.getLocation().equals(location)) {
+            setDestination(destination.getRandomNeighbor());
+        }
+    }
+    
+    public void moveTowardPlayer() {
         if (player.hasLocation()) {
             moveTowardPoint(player.getLocationAsGeoPoint());
         } else {
@@ -36,7 +55,7 @@ public class Robot {
      *  @param stddev Standard deviation of distance to move, given in units
      *    of millions of a degree of arc.
      */
-    public void moveRandomly(int stddev) {
+    private void moveRandomly(int stddev) {
         Random rand = new Random();
         GeoPoint oldLocation = getLocation();
         int lat = (int) (oldLocation.getLatitudeE6()
@@ -50,7 +69,7 @@ public class Robot {
      *  (or to the point if it is closer than ROBOT_SPEED.
      *  @param point The desired destination point.
      */
-    public void moveTowardPoint(GeoPoint point) {
+    private void moveTowardPoint(GeoPoint point) {
         if (point == null) {
             return;
         }

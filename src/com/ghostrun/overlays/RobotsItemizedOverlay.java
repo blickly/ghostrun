@@ -19,14 +19,14 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
         populate();
     }
 
-    @Override
-    protected boolean onTap(int index) {
-        android.util.Log.d("RobotsItemizedOverlay", "Item tapped. Id: " + index
-                + " Total items: " + size());
-        robots.get(index).moveRandomly(500);
-        populate();
-        return true;
-    }
+//    @Override
+//    protected boolean onTap(int index) {
+//        android.util.Log.d("RobotsItemizedOverlay", "Item tapped. Id: " + index
+//                + " Total items: " + size());
+//        robots.get(index).moveRandomly(500);
+//        populate();
+//        return true;
+//    }
     
     public void refresh() {
         populate();

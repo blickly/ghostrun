@@ -71,6 +71,7 @@ public class GameLoop implements Runnable {
         for (int i = 0; i < numRobots; ++i) {
             MazeGraphPoint randomPoint = maze.getRandomPoint();
             Robot newRobot = new Robot(randomPoint.getLocation(), player);
+            newRobot.setDestination(randomPoint);
             robots.add(newRobot);
         }
     }
