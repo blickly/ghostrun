@@ -49,9 +49,14 @@
         	android:layout_height="440px"
         	android:enabled="true"
         	android:clickable="true"
-        	android:apiKey="01e29ScTjTkztWxtY9TdfDI3iAjRJU9bCVR98xw" />
-        	
-        <!-- android:apiKey="0_nmnDYdp8dvRcCQogBB6URrbQW_Xvzjj5Fo60Q" -->
+        	android:apiKey="@string/mapsApiKey" />
+            <!-- To add your Google Maps API key, create a file in res/values
+                 called keys.xml with the following content:
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="mapsApiKey">YOUR_API_KEY_GOES_HERE</string>
+</resources>
+            -->
 			
 	</LinearLayout>
        
