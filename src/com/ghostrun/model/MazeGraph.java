@@ -1,49 +1,46 @@
 package com.ghostrun.model;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.Random;
 
 import com.google.android.maps.GeoPoint;
 
 public class MazeGraph {
-   private Vector<Vertex> vertices;
-   private Vector<Edge> edges;
-   private int counter; // give each vertex a unique id.
-   private HashMap<Integer,Vertex> h; // allow fast retrieval of a Vertex based on its label.
-   
-   public MazeGraph() {
-       vertices = new Vector<Vertex>();
-       edges = new Vector<Edge>();
-       h = new HashMap<Integer,Vertex>();
-       counter = 0;
-   }
 
-   public Vertex addVertex(GeoPoint point) {
-       Vertex v = new Vertex(counter,point);
-       h.put(counter, v);
-       vertices.add(v);
-       ++counter;
-       return v;
-   }
+    public MazeGraphPoint addPoint(GeoPoint point) {
+        MazeGraphPoint mgPoint = new MazeGraphPoint(point);
+        points.add(mgPoint);
+        return mgPoint;
+    }
     
-   public void addEdge(Vertex p1, Vertex p2) {
-       Edge e = new Edge(p1,p2);
-       p1.addNeighbor(p2);
-       p2.addNeighbor(p1);
-       edges.add(e);
-   }
-    
-   public Vertex getVertex(int label) {
-       return h.get(label);
-   }
-   
-   public Object vertices() {
-       return vertices.clone();
-   }
-   
-   public Object edges(){
-       return edges.clone();
-   }
+    public void addEdge(MazeGraphPoint p1, MazeGraphPoint p2) {
+        p1.addConncetionTo(p2);
+        p2.addConncetionTo(p1);
+    }
+
+    public MazeGraphPoint getRandomPoint() {
+        Random rand = new Random();
+        int nPoints = points.size();
+        if (nPoints > 0) {
+            return points.get(rand.nextInt(nPoints));
+        } else {
+            return null;
+        }
+    }
+
+    public void createSimpleMap() {
+        // Campanile
+        MazeGraphPoint campanilePoint = addPoint(new GeoPoint(37871944, -122257778));
+        // NE corner of campus
+        MazeGraphPoint neCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+        // NW corner of campus
+        MazeGraphPoint nwCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+
+        // Edges
+        addEdge(neCornerPoint, nwCornerPoint);
+        addEdge(neCornerPoint, campanilePoint);
+    }
+
+    private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();
 
 }

@@ -41,7 +41,7 @@ public class GameLoop implements Runnable {
         createRandomRobots(campanilePoint, 7); 
     }
 
-    @Override
+    //@Override
     public void run() {
         updateRobotPositions();
         if (isGameOver()) {

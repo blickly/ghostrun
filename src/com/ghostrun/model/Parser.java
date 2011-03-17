@@ -1,4 +1,4 @@
-package com.ghostrun.model;
+/*package com.ghostrun.model;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,7 +25,7 @@ public class Parser {
      * Construct a MazeGraph object from an input xml file.
      * @param fileName
      */
-    public MazeGraph parse(InputStream instream) {
+   /* public MazeGraph parse(InputStream instream) {
         MazeGraph g = new MazeGraph();
         
         try {
@@ -73,4 +73,4 @@ public class Parser {
         }
         return g;
     }
-}
+}*/
