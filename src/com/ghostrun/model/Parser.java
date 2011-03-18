@@ -1,10 +1,16 @@
-/*package com.ghostrun.model;
-import java.io.BufferedReader;
-import java.io.IOException;
+package com.ghostrun.model;
+
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Scanner;
+import java.util.HashMap;
 import java.util.Vector;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import com.google.android.maps.GeoPoint;
 
@@ -13,64 +19,67 @@ public class Parser {
     private Vector<Double> lons;
     private Vector<Integer> src;
     private Vector<Integer> dest;
+    private HashMap<Integer,MazeGraphPoint> hash_map;
     
     public Parser() {
         lats = new Vector<Double>();
         lons = new Vector<Double>();
         src = new Vector<Integer>();
         dest = new Vector<Integer>();
+        hash_map = new HashMap<Integer,MazeGraphPoint>();
     }
     
     /**
      * Construct a MazeGraph object from an input xml file.
      * @param fileName
      */
-   /* public MazeGraph parse(InputStream instream) {
+    public MazeGraph parse(InputStream instream) {
         MazeGraph g = new MazeGraph();
-        
         try {
-            //BufferedReader in = new BufferedReader(new FileReader(fileName));
-            BufferedReader in = new BufferedReader(new InputStreamReader(instream));
-            Scanner scanner = new Scanner(in);
-            String s, num;
-            
-            while (scanner.hasNext()) {
-                s=scanner.next();
-                if (s.contains("lat")) {
-                    num = s.substring("lat=".length()+1,s.length()-1);
-                    //System.out.println("lat "+num);
-                    lats.add(Double.parseDouble(num));
-                } else if (s.contains("lon")) {
-                    num = s.substring("lon=".length()+1,s.indexOf("/")-1);
-                    //System.out.println("lon "+num);
-                    lons.add(Double.parseDouble(num));
-                } else if (s.contains("source")) {
-                    num = s.substring("source=".length()+1,s.length()-1);
-                    //System.out.println("source "+num);
-                    src.add(Integer.parseInt(num));
-                } else if (s.contains("dest")) {
-                    num = s.substring("dest=".length()+1,s.indexOf("/")-1);
-                    //System.out.println("dest "+num);
-                    dest.add(Integer.parseInt(num));
-                }
-            }
+            DocumentBuilder doc_builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document doc = doc_builder.parse(instream);
+            parsingATag(doc,"LatLng");
+            parsingATag(doc,"Edge");
             
             for (int i=0;i<lats.size();++i) {
-                g.addVertex(new GeoPoint((int)(lats.get(i).doubleValue()*1E6),
-                                         (int)(lons.get(i).doubleValue()*1E6)));
+                MazeGraphPoint point = g.addPoint(new GeoPoint((int)(lats.get(i).doubleValue()*1E6),
+                                                               (int)(lons.get(i).doubleValue()*1E6)));
+                hash_map.put(i, point);
             }
             
             for (int i=0;i<src.size();++i) {
-                Vertex srcVertex = g.getVertex(src.get(i));
-                Vertex dstVertex = g.getVertex(dest.get(i));
+                MazeGraphPoint srcVertex = hash_map.get(src.get(i));
+                MazeGraphPoint dstVertex = hash_map.get(dest.get(i));
                 g.addEdge(srcVertex,dstVertex);
             }
             
-            in.close();
-            instream.close();
-        } catch (IOException e) {
-            System.out.println("Exception from reading file "+e.getMessage());
+        } catch (Exception e) {
+            System.out.print("Exception found in Parser.java: "+e.getMessage());
         }
         return g;
     }
-}*/
+    
+    private void parsingATag(Document doc, String tagName) {
+        NodeList node_list = doc.getElementsByTagName(tagName);
+        if (node_list!=null) {
+            for (int i=0;i<node_list.getLength();++i) {
+                Node tag_node = node_list.item(i);
+                //System.out.println(tag_node.getNodeName());
+                NamedNodeMap node_attributes = tag_node.getAttributes();
+                for (int j=0;j<node_attributes.getLength();++j) {
+                    Node attribute = node_attributes.item(j);
+                    if (attribute.getNodeName().equals("lat")) {
+                        lats.add(Double.parseDouble(attribute.getNodeValue()));
+                    } else if (attribute.getNodeName().equals("lon")) {
+                        lons.add(Double.parseDouble(attribute.getNodeValue()));
+                    } else if (attribute.getNodeName().equals("source")) {
+                        src.add(Integer.parseInt(attribute.getNodeValue()));
+                    } else if (attribute.getNodeName().equals("dest")) {
+                        dest.add(Integer.parseInt(attribute.getNodeValue()));
+                    }
+                    //System.out.println(attribute.getNodeName()+" "+attribute.getNodeValue());
+                }
+            }
+        }
+    }
+}
