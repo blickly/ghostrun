@@ -1,11 +1,10 @@
 package com.ghostrun.model;
 
-import java.util.Random;
-
 import com.google.android.maps.GeoPoint;
 
 public class Robot {
     final int ROBOT_SPEED = 20;
+    final int CHARGE_DISTANCE = 1000;
     private GeoPoint location;
     private MazeGraphPoint destination;
     private Player player;
@@ -35,34 +34,24 @@ public class Robot {
         if (destination == null) {
             return;
         }
-        moveTowardPoint(destination.getLocation());
-        if (destination.getLocation().equals(location)) {
-            setDestination(destination.getRandomNeighbor());
-        }
-    }
-    
-    public void moveTowardPlayer() {
-        if (player.hasLocation()) {
+        if (distanceFromPlayer() < CHARGE_DISTANCE) {
             moveTowardPoint(player.getLocationAsGeoPoint());
         } else {
-            moveRandomly(ROBOT_SPEED);
+            moveTowardPoint(destination.getLocation());
+            if (destination.getLocation().equals(location)) {
+                setDestination(destination.getRandomNeighbor());
+            }
         }
     }
 
-    /** Move robot randomly from existing position by a distance that is
-     *  normally distributed with standard deviation given in millions of
-     *  a degree of latitude/longitude.
-     *  @param stddev Standard deviation of distance to move, given in units
-     *    of millions of a degree of arc.
-     */
-    private void moveRandomly(int stddev) {
-        Random rand = new Random();
-        GeoPoint oldLocation = getLocation();
-        int lat = (int) (oldLocation.getLatitudeE6()
-                + stddev * rand.nextGaussian());
-        int lon = (int) (oldLocation.getLongitudeE6()
-                + stddev * rand.nextGaussian());
-        setLocation(new GeoPoint(lat, lon));
+    private double distanceFromPlayer() {
+        GeoPoint playerLocation = player.getLocationAsGeoPoint();
+        if (playerLocation == null) {
+            return Double.POSITIVE_INFINITY;
+        }
+        GeoPointOffset toPlayer = new GeoPointOffset(
+                this.getLocation(), playerLocation);
+        return toPlayer.getLength();
     }
 
     /** Move robot toward the given point by a distance up to ROBOT_SPEED
