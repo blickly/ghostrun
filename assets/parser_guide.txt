@@ -1,0 +1,9 @@
+//Note: getAssets() can only be called within an Android activity.
+
+Parser p = new Parser();
+MazeGraph g=new MazeGraph();
+try {
+    g=p.parse(getAssets().open("maze.xml"));
+} catch (Exception e){
+    System.out.println("Exception found: "+e.getMessage());
+}
