@@ -1,4 +1,4 @@
-package com.ghostrun.model;
+package com.ghostrun.controllers;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -12,6 +12,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.ghostrun.model.MazeGraph;
+import com.ghostrun.model.MazeGraphPoint;
 import com.google.android.maps.GeoPoint;
 
 public class Parser {
