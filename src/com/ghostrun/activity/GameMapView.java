@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.ghostrun.R;
-import com.ghostrun.model.GameLoop;
+import com.ghostrun.controllers.GameLoop;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;

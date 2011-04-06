@@ -1,10 +1,14 @@
-package com.ghostrun.model;
+package com.ghostrun.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Handler;
 
+import com.ghostrun.model.MazeGraph;
+import com.ghostrun.model.MazeGraphPoint;
+import com.ghostrun.model.Player;
+import com.ghostrun.model.Robot;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.GeoPoint;
 
