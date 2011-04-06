@@ -17,6 +17,7 @@ import com.ghostrun.model.MazeGraphPoint;
 import com.google.android.maps.GeoPoint;
 
 public class Parser {
+    private Vector<Integer> ids;
     private Vector<Double> lats;
     private Vector<Double> lons;
     private Vector<Integer> src;
@@ -24,6 +25,7 @@ public class Parser {
     private HashMap<Integer,MazeGraphPoint> hash_map;
     
     public Parser() {
+        ids = new Vector<Integer>();
         lats = new Vector<Double>();
         lons = new Vector<Double>();
         src = new Vector<Integer>();
@@ -32,22 +34,22 @@ public class Parser {
     }
     
     /**
-     *  Construct a MazeGraph object from an input xml file.
-     *  @param instream An input stream representing the XML file to parse.
-     *  @return A fully constructed MazeGraph representing the given XML.
+     * Construct a MazeGraph object from an input xml file.
+     * @param fileName
      */
     public MazeGraph parse(InputStream instream) {
         MazeGraph g = new MazeGraph();
         try {
             DocumentBuilder doc_builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc = doc_builder.parse(instream);
+            parsingATag(doc,"Node");
             parsingATag(doc,"LatLng");
             parsingATag(doc,"Edge");
             
-            for (int i=0;i<lats.size();++i) {
+            for (int i=0;i<ids.size();++i) {
                 MazeGraphPoint point = g.addPoint(new GeoPoint((int)(lats.get(i).doubleValue()*1E6),
                                                                (int)(lons.get(i).doubleValue()*1E6)));
-                hash_map.put(i, point);
+                hash_map.put(ids.get(i), point);
             }
             
             for (int i=0;i<src.size();++i) {
@@ -71,7 +73,9 @@ public class Parser {
                 NamedNodeMap node_attributes = tag_node.getAttributes();
                 for (int j=0;j<node_attributes.getLength();++j) {
                     Node attribute = node_attributes.item(j);
-                    if (attribute.getNodeName().equals("lat")) {
+                    if (attribute.getNodeName().equals("id")) {
+                        ids.add(Integer.parseInt(attribute.getNodeValue()));
+                    } else if (attribute.getNodeName().equals("lat")) {
                         lats.add(Double.parseDouble(attribute.getNodeValue()));
                     } else if (attribute.getNodeName().equals("lon")) {
                         lons.add(Double.parseDouble(attribute.getNodeValue()));
