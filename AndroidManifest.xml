@@ -42,6 +42,9 @@
         
         <activity android:name="com.ghostrun.activity.GameMapView" android:label="MapView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		
+		<activity android:name="com.ghostrun.activity.WebMapActivity" android:label="WebMapActivity"
+			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 
         <!-- ************************************* -->
         <!--      VIEW/WIDGET PACKAGE SAMPLES      -->
