@@ -25,5 +25,14 @@ public class HomeView extends Activity {
                 startActivity(i);
             }
         });
+        
+        Button mazes=(Button)findViewById(R.id.mazes);
+        mazes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(HomeView.this, WebMapActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }
