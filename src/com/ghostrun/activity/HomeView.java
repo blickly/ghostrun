@@ -30,7 +30,7 @@ public class HomeView extends Activity {
         mazes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(HomeView.this, WebMapActivity.class);
+                Intent i= new Intent(HomeView.this, WebMapActivityJSInterface.class);
                 startActivity(i);
             }
         });
