@@ -8,7 +8,6 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.pm.ActivityInfo;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -84,6 +83,7 @@ public class WebMapActivityJSInterface extends Activity implements LocationListe
     }
     
     /** Sets up the interface for getting access to Latitude and Longitude data from device **/
+    @SuppressWarnings("unused")
     private class JavaScriptInterface {
         public double getLatitude(){
             return mostRecentLocation.getLatitude();
