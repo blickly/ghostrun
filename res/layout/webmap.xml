@@ -10,8 +10,8 @@
 		
 		<Button android:layout_width = "wrap_content" 
 			android:layout_height="wrap_content" 
-			android:id="@+id/pac_logo"
-			android:background="@drawable/pac_logo" />
+			android:id="@+id/webmap_paclogo"
+			android:background="@drawable/pac_log_clicked" />
     
     </LinearLayout>
 	

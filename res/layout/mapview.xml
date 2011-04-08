@@ -32,7 +32,7 @@
 		
 		<Button android:layout_width = "wrap_content" 
 			android:layout_height="wrap_content" 
-			android:id="@+id/map_pac_logo"
+			android:id="@+id/mapview_paclogo"
 			android:background="@drawable/pac_log_clicked" />
 	
 	</LinearLayout>
