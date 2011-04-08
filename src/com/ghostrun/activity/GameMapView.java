@@ -3,12 +3,17 @@ package com.ghostrun.activity;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
@@ -55,6 +60,15 @@ public class GameMapView extends MapActivity {
         Handler handler = new Handler();
         gameLoop.setRobotOverlay(robotOverlay);
         handler.post(gameLoop);
+        
+        // Stop the current activity and return to the previous view.
+        Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
+        logobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
@@ -92,5 +106,20 @@ public class GameMapView extends MapActivity {
         }
         locationManager.requestLocationUpdates(bestLocationProvider, 0, 0, listener);
     }
-
+    
+    // Menu will hold "Sound" button and "Map Selection" button.
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        menu.add("Select Map");
+        menu.add("Sound is on");
+        menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent i= new Intent(GameMapView.this, FileBrowserView.class);
+                startActivity(i);
+                return true;
+            }
+        });
+        return true;
+    }
 }
