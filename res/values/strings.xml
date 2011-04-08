@@ -16,5 +16,11 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="activity_sample_code">Maps Test</string>
+	<string name="app_name">ghost:run</string>
+	<string name="up_one_level">..</string>
+    <string name="current_dir">.</string>
+    <string name="menu_new_folder">New Folder</string>
+    <string name="dirnameinput_cmd_return">Save</string>
+    <string name="dirnameinput_hint">Enter a directory-name:</string>
 </resources>
 
