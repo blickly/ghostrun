@@ -45,6 +45,9 @@
 		
 		<activity android:name="com.ghostrun.activity.WebMapActivityJSInterface" android:label="WebMapActivityJSInterface"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+			
+		<activity android:name="com.ghostrun.activity.FileBrowserView" android:label="FileBrowserView"
+			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 
         <!-- ************************************* -->
         <!--      VIEW/WIDGET PACKAGE SAMPLES      -->

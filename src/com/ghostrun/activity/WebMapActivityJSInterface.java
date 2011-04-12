@@ -47,7 +47,16 @@ public class WebMapActivityJSInterface extends Activity implements LocationListe
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                writeToFile(text.getText().toString()+".xml");
+                writeToFile(text.getText().toString()+".pac");
+            }
+        });
+        
+        // Stop the current activity and return to the previous view.
+        Button logobutton=(Button)findViewById(R.id.webmap_paclogo);
+        logobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
