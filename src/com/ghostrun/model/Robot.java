@@ -1,5 +1,7 @@
 package com.ghostrun.model;
 
+import com.ghostrun.model.ai.RandomStrategy;
+import com.ghostrun.model.ai.RobotStrategy;
 import com.google.android.maps.GeoPoint;
 
 public class Robot {
@@ -8,10 +10,12 @@ public class Robot {
     private GeoPoint location;
     private MazeGraphPoint destination;
     private Player player;
+    private RobotStrategy ai;
 
     public Robot(GeoPoint location, Player following) {
         this.setLocation(location);
         this.player = following;
+        this.ai = new RandomStrategy();
     }
 
     public void setLocation(GeoPoint location) {
@@ -39,7 +43,8 @@ public class Robot {
         } else {
             moveTowardPoint(destination.getLocation());
             if (destination.getLocation().equals(location)) {
-                setDestination(destination.getRandomNeighbor());
+                setDestination(ai.getNextWaypoint(destination,
+                        player.getLocationAsGeoPoint()));
             }
         }
     }
