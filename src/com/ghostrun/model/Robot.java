@@ -88,8 +88,9 @@ public class Robot {
         } else {
             moveTowardPoint(destination.getLocation());
             if (destination.getLocation().equals(location)) {
-                setDestination(ai.getNextWaypoint(destination,
-                        player.getLocationAsGeoPoint()));
+                GeoPoint playerLoc = player.getLocationAsGeoPoint();
+                if (playerLoc == null) return;
+                setDestination(ai.getNextWaypoint(destination, playerLoc));
             }
         }
     }
