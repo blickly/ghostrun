@@ -1,5 +1,8 @@
 package com.ghostrun.model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import com.ghostrun.model.ai.RandomStrategy;
 import com.ghostrun.model.ai.RobotStrategy;
 import com.google.android.maps.GeoPoint;
@@ -12,12 +15,34 @@ public class Robot {
     private Player player;
     private RobotStrategy ai;
 
+    ////////////////////////////////////////////////////////////////////////
+    //                          constructors/factories
+    ////////////////////////////////////////////////////////////////////////
+    public static List<Robot> createRobots(List<MazeGraphPoint> startingPoints,
+            Player following) {
+        List<Robot> result = new LinkedList<Robot>();
+        for (MazeGraphPoint point : startingPoints) {
+            result.add(new Robot(point, following));
+        }
+        return result;
+    }
+
+    public Robot(MazeGraphPoint startingPoint, Player following) {
+        this.setDestination(startingPoint);
+        this.setLocation(startingPoint.getLocation());
+        this.player = following;
+        this.ai = new RandomStrategy();
+    }
+
     public Robot(GeoPoint location, Player following) {
         this.setLocation(location);
         this.player = following;
         this.ai = new RandomStrategy();
     }
 
+    ////////////////////////////////////////////////////////////////////////
+    //                          public methods
+    ////////////////////////////////////////////////////////////////////////
     public void setLocation(GeoPoint location) {
         this.location = location;
     }
@@ -49,6 +74,9 @@ public class Robot {
         }
     }
 
+    ////////////////////////////////////////////////////////////////////////
+    //                          private methods
+    ////////////////////////////////////////////////////////////////////////
     private double distanceFromPlayer() {
         GeoPoint playerLocation = player.getLocationAsGeoPoint();
         if (playerLocation == null) {

@@ -1,6 +1,7 @@
 package com.ghostrun.controllers;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import android.os.Handler;
@@ -72,12 +73,11 @@ public class GameLoop implements Runnable {
     }
 
     private void createRandomRobots(int numRobots) {
+        List<MazeGraphPoint> startingPoints = new LinkedList<MazeGraphPoint>();
         for (int i = 0; i < numRobots; ++i) {
-            MazeGraphPoint randomPoint = maze.getRandomPoint();
-            Robot newRobot = new Robot(randomPoint.getLocation(), player);
-            newRobot.setDestination(randomPoint);
-            robots.add(newRobot);
+            startingPoints.add(maze.getRandomPoint());
         }
+        robots = Robot.createRobots(startingPoints, player);
     }
 
     private static int getDistance(GeoPoint loc1, GeoPoint loc2) {
