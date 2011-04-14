@@ -11,7 +11,7 @@ import com.ghostrun.model.MazeGraphPoint;
 import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
-import com.google.android.maps.GeoPoint;
+import com.ghostrun.util.GeoPointUtils;
 
 public class GameLoop implements Runnable {
     public final int DEATH_DISTANCE = 500;
@@ -63,8 +63,8 @@ public class GameLoop implements Runnable {
     private boolean isGameOver() {
         if (player.hasLocation()) {
             for (Robot r : robots) {
-                if (getDistance(player.getLocationAsGeoPoint(), r.getLocation())
-                        < DEATH_DISTANCE) {
+                if (GeoPointUtils.getDistance(player.getLocationAsGeoPoint(),
+                        r.getLocation()) < DEATH_DISTANCE) {
                     return true;
                 }
             }
@@ -78,14 +78,5 @@ public class GameLoop implements Runnable {
             startingPoints.add(maze.getRandomPoint());
         }
         robots = Robot.createRobots(startingPoints, player);
-    }
-
-    private static int getDistance(GeoPoint loc1, GeoPoint loc2) {
-        if (loc1 == null || loc2 == null) {
-            return Integer.MAX_VALUE;
-        }
-        int deltaLat = loc1.getLatitudeE6() - loc2.getLatitudeE6();
-        int deltaLon = loc1.getLongitudeE6() - loc2.getLongitudeE6();
-        return (int) Math.sqrt(deltaLon * deltaLon + deltaLat * deltaLat);
     }
 }

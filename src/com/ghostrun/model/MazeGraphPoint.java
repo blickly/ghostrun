@@ -1,6 +1,7 @@
 package com.ghostrun.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Random;
 
 import com.google.android.maps.GeoPoint;
@@ -25,6 +26,10 @@ public class MazeGraphPoint {
         }
         int index = (new Random()).nextInt(neighbors.size());
         return neighbors.get(index);
+    }
+
+    public Collection<MazeGraphPoint> getNeighbors() {
+        return neighbors;
     }
 
     private GeoPoint location;
