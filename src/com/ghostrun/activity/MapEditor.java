@@ -158,7 +158,7 @@ public class MapEditor extends MapActivity {
     	
     	alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 	    	public void onClick(DialogInterface dialog, int whichButton) {
-	    	  String value = input.getText().toString();
+	    	  String value = input.getText().toString()+".pac";
 	    	  // Do something with value!
 	    	  writeToFile(value);
 	    	}});
