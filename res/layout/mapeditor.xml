@@ -46,7 +46,7 @@
     	<com.google.android.maps.MapView
     		android:id="@+id/mapview"
         	android:layout_width="fill_parent" 
-        	android:layout_height="440px"
+        	android:layout_height="fill_parent"
         	android:enabled="true"
         	android:clickable="true"
         	android:apiKey="@string/mapsApiKey" />
@@ -59,29 +59,10 @@
             -->
             
 		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="0px">
-  			<Button android:id="@+id/select" android:layout_width="100px" android:layout_height="wrap_content" android:layout_marginLeft="30px" android:layout_weight="1.0" android:textSize="12sp" android:text="Select On" /> 
+			<Button android:id="@+id/select" android:layout_width="100px" android:layout_height="wrap_content" android:layout_marginLeft="30px" android:layout_weight="1.0" android:textSize="12sp" android:text="Select On" /> 
 		</LinearLayout>
 		
-			
 	</FrameLayout>
        
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent" 
-		android:gravity="center_vertical"
-		android:paddingLeft="10px">
-		
-		<TextView
-			android:id="@+id/points"
- 			android:text="0 points"
- 			android:textStyle="bold"
- 			android:textColor="@color/white"
- 			android:textSize="25px"
- 			android:layout_width="wrap_content"
- 			android:layout_height="wrap_content" />
-
-	</LinearLayout>
-	
 </LinearLayout>
 
