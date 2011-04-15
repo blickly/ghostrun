@@ -1,19 +1,68 @@
 package com.ghostrun.model;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import com.ghostrun.model.ai.DirectStrategy;
+import com.ghostrun.model.ai.HorizontalStrategy;
+import com.ghostrun.model.ai.RandomStrategy;
+import com.ghostrun.model.ai.RobotStrategy;
+import com.ghostrun.model.ai.VerticalStrategy;
 import com.google.android.maps.GeoPoint;
 
 public class Robot {
     final int ROBOT_SPEED = 20;
+
     final int CHARGE_DISTANCE = 1000;
+
     private GeoPoint location;
+
     private MazeGraphPoint destination;
+
     private Player player;
 
-    public Robot(GeoPoint location, Player following) {
-        this.setLocation(location);
-        this.player = following;
+    private RobotStrategy ai;
+
+    ////////////////////////////////////////////////////////////////////////
+    //                          constructors/factories
+    ////////////////////////////////////////////////////////////////////////
+    public static List<Robot> createRobots(List<MazeGraphPoint> startingPoints,
+            Player following) {
+        List<Robot> result = new LinkedList<Robot>();
+        int i = 0;
+        for (MazeGraphPoint point : startingPoints) {
+            RobotStrategy s;
+            switch (i) {
+            case 0: s = new RandomStrategy(); break;
+            case 1: s = new HorizontalStrategy(); break;
+            case 2: s = new VerticalStrategy(); break;
+            case 3: s = new DirectStrategy(); break;
+            default: throw new RuntimeException("Unknown RobotStrategy:" + i);
+            }
+            i = (i + 1) % 4;
+            result.add(new Robot(point, following, s));
+        }
+        return result;
     }
 
+    public Robot(MazeGraphPoint startingPoint, Player following,
+            RobotStrategy strategy) {
+        this.setDestination(startingPoint);
+        this.setLocation(startingPoint.getLocation());
+        this.player = following;
+        this.ai = strategy;
+    }
+
+    public Robot(MazeGraphPoint startingPoint, Player following) {
+        this.setDestination(startingPoint);
+        this.setLocation(startingPoint.getLocation());
+        this.player = following;
+        this.ai = new RandomStrategy();
+    }
+
+    ////////////////////////////////////////////////////////////////////////
+    //                          public methods
+    ////////////////////////////////////////////////////////////////////////
     public void setLocation(GeoPoint location) {
         this.location = location;
     }
@@ -29,7 +78,7 @@ public class Robot {
     public void setDestination(MazeGraphPoint destination) {
         this.destination = destination;
     }
-    
+
     public void updateLocation() {
         if (destination == null) {
             return;
@@ -39,18 +88,23 @@ public class Robot {
         } else {
             moveTowardPoint(destination.getLocation());
             if (destination.getLocation().equals(location)) {
-                setDestination(destination.getRandomNeighbor());
+                GeoPoint playerLoc = player.getLocationAsGeoPoint();
+                if (playerLoc == null) return;
+                setDestination(ai.getNextWaypoint(destination, playerLoc));
             }
         }
     }
 
+    ////////////////////////////////////////////////////////////////////////
+    //                          private methods
+    ////////////////////////////////////////////////////////////////////////
     private double distanceFromPlayer() {
         GeoPoint playerLocation = player.getLocationAsGeoPoint();
         if (playerLocation == null) {
             return Double.POSITIVE_INFINITY;
         }
-        GeoPointOffset toPlayer = new GeoPointOffset(
-                this.getLocation(), playerLocation);
+        GeoPointOffset toPlayer = new GeoPointOffset(this.getLocation(),
+                playerLocation);
         return toPlayer.getLength();
     }
 
@@ -71,9 +125,10 @@ public class Robot {
             location = direction.addTo(location);
         }
     }
-    
+
     private class GeoPointOffset {
         private int deltaLat;
+
         private int deltaLon;
 
         public GeoPointOffset(GeoPoint start, GeoPoint end) {
@@ -95,7 +150,7 @@ public class Robot {
         public double getLength() {
             return Math.sqrt(deltaLat * deltaLat + deltaLon * deltaLon);
         }
-        
+
     }
 
 }
