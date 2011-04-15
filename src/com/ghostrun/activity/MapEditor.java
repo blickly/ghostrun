@@ -8,7 +8,6 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
@@ -16,7 +15,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +27,6 @@ import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.PointsOverlay;
-import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
@@ -60,21 +57,9 @@ public class MapEditor extends MapActivity {
                 gameLoop.getPlayer());
         registerLocationUpdates(locationOverlay);
         mapOverlays.add(locationOverlay);
-
-        // Add robot overlay
-        Drawable robotIcon = this.getResources().getDrawable(
-                R.drawable.androidmarker);
-        RobotsItemizedOverlay robotOverlay = new RobotsItemizedOverlay(
-                    robotIcon, gameLoop.getRobots());
-        mapOverlays.add(robotOverlay);
         
         // Add points
         newPointsOverlay();
-        
-        // Start game loop
-        Handler handler = new Handler();
-        gameLoop.setRobotOverlay(robotOverlay);
-        handler.post(gameLoop);
         
         // Stop the current activity and return to the previous view.
         Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
@@ -149,8 +134,8 @@ public class MapEditor extends MapActivity {
         super.onCreateOptionsMenu(menu);
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
-    	alert.setTitle("Title");
-    	alert.setMessage("Message");
+    	alert.setTitle("Save Map");
+    	alert.setMessage("Map Name");
 
     	// Set an EditText view to get user input 
     	final EditText input = new EditText(this);
