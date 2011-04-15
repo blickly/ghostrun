@@ -135,6 +135,9 @@ public class GameMapView extends MapActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	super.onActivityResult(requestCode, resultCode, data);
+    	if (data == null) {
+    	    return;
+    	}
     	String filename = data.getStringExtra("filename");
 		try {
 			FileReader input = new FileReader(filename);
