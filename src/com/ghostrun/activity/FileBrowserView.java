@@ -1,6 +1,7 @@
 package com.ghostrun.activity;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +10,7 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import android.content.pm.ActivityInfo;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -128,6 +129,14 @@ public class FileBrowserView extends ListActivity {
           startActivity( myIntent );*/
     	 //Toast.makeText(getBaseContext(), aFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
     	 //DisplayImage.fileName=aFile.getAbsolutePath();
+    	 Intent newIntent = new Intent();
+    	 try {
+			newIntent.putExtra("filename", aFile.getCanonicalPath());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    	 setResult(0, newIntent);
     	 finish();
      }
 

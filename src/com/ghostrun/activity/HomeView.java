@@ -16,7 +16,7 @@ public class HomeView extends Activity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.homeview);
-        Button play=(Button)findViewById(R.id.play);
+        Button play = (Button)findViewById(R.id.play);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,11 +26,11 @@ public class HomeView extends Activity {
             }
         });
         
-        Button mazes=(Button)findViewById(R.id.mazes);
+        Button mazes = (Button)findViewById(R.id.mazes);
         mazes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(HomeView.this, WebMapActivityJSInterface.class);
+                Intent i= new Intent(HomeView.this, MapEditor.class);
                 startActivity(i);
             }
         });

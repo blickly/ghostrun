@@ -38,9 +38,9 @@ public class WebMapActivityJSInterface extends Activity implements LocationListe
         getLocation();
         setupWebView();
         //this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        final Date d=new Date();
+        final Date d = new Date();
         String filename = "Map_"+d.getTime();
-        final EditText text=(EditText)findViewById(R.id.filename);
+        final EditText text = (EditText)findViewById(R.id.filename);
         text.setText(filename);
         Button save = (Button)findViewById(R.id.save);
         save.setOnClickListener(new View.OnClickListener() {

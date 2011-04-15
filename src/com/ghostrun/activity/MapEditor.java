@@ -8,6 +8,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
@@ -154,25 +155,26 @@ public class MapEditor extends MapActivity {
     	// Set an EditText view to get user input 
     	final EditText input = new EditText(this);
     	alert.setView(input);
-
+    	
     	alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-    	public void onClick(DialogInterface dialog, int whichButton) {
-    	  String value = input.getText().toString();
-    	  // Do something with value!
-    	  writeToFile(value);
-    	  }
-    	});
+	    	public void onClick(DialogInterface dialog, int whichButton) {
+	    	  String value = input.getText().toString();
+	    	  // Do something with value!
+	    	  writeToFile(value);
+	    	}});
 
     	alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
     	  public void onClick(DialogInterface dialog, int whichButton) {
     	    // Canceled.
     	  }
     	});
+    	final AlertDialog dialog = alert.create();
+    	
         menu.add("Save Map");
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-            	alert.show();
+            	dialog.show();
                 return true;
             }
         });

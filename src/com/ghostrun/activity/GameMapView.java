@@ -1,5 +1,7 @@
 package com.ghostrun.activity;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.List;
 
 import android.app.Activity;
@@ -17,6 +19,8 @@ import android.widget.Button;
 
 import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
+import com.ghostrun.driving.NodeFactory;
+import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.google.android.maps.MapActivity;
@@ -29,6 +33,8 @@ import com.google.android.maps.Overlay;
 public class GameMapView extends MapActivity {
     MapView mapView;
     MyLocationOverlay locationOverlay;
+    MazeOverlay mazeOverlay;
+    Drawable defaultMarker;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,6 +75,9 @@ public class GameMapView extends MapActivity {
                 finish();
             }
         });
+        
+        this.defaultMarker = this.getResources().getDrawable(R.drawable.blue);
+        this.mazeOverlay = null;
     }
 
     @Override
@@ -116,10 +125,39 @@ public class GameMapView extends MapActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Intent i= new Intent(GameMapView.this, FileBrowserView.class);
-                startActivity(i);
+                startActivityForResult(i, 0);
                 return true;
             }
         });
         return true;
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	super.onActivityResult(requestCode, resultCode, data);
+    	String filename = data.getStringExtra("filename");
+		try {
+			FileReader input = new FileReader(filename);
+			BufferedReader bufRead = new BufferedReader(input);
+			String json = bufRead.readLine();
+			
+			System.out.println(json);
+			
+			NodeFactory factory = new NodeFactory();
+			NodeFactory.NodesAndRoutes nodesAndRoutes = factory.fromMap(json);
+			
+			System.out.println(nodesAndRoutes.nodes.size());
+			System.out.println(nodesAndRoutes.routesMap.size());
+			
+			if (mazeOverlay != null)
+				this.mapView.getOverlays().remove(mazeOverlay);
+			
+			mazeOverlay = new MazeOverlay(defaultMarker, nodesAndRoutes);
+			this.mapView.getOverlays().add(mazeOverlay);			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    	
     }
 }
