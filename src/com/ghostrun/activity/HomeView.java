@@ -34,5 +34,15 @@ public class HomeView extends Activity {
                 startActivity(i);
             }
         });
+        
+        Button scoregraph = (Button)findViewById(R.id.scoregraph);
+        scoregraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i= new Intent(HomeView.this, ScoreGraphView.class);
+                startActivity(i);
+            }
+        });
     }
 }

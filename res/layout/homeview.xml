@@ -80,8 +80,8 @@
 	 			
 	 		<Button android:layout_width = "wrap_content" 
 				android:layout_height="wrap_content"
-				android:id="@+id/settings"
-				android:background="@drawable/pink_ghost" />
+				android:id="@+id/scoregraph"
+				android:background="@drawable/score_graph_clicked" />
 	 			
 		</LinearLayout>
 		
@@ -91,7 +91,7 @@
 			android:layout_height="wrap_content" >
 				
 			<TextView android:id="@+id/plain"
-	 			android:text="  Mazes                  Settings"
+	 			android:text="      Mazes              Score Graph"
 	 			android:textSize="18px"
 	 			android:textStyle="bold"
 	 			android:textColor="@color/black"
