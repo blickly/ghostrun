@@ -49,7 +49,10 @@
 		<activity android:name="com.ghostrun.activity.FileBrowserView" android:label="FileBrowserView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 			
-		<activity android:name="com.ghostrun.activity.MapEditor" android:label="MapView"
+		<activity android:name="com.ghostrun.activity.MapEditor" android:label="MapEditor"
+			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+			
+		<activity android:name="com.ghostrun.activity.ScoreGraphView" android:label="ScoreGraphView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 		
 
