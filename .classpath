@@ -5,5 +5,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="lib" path="lib/gson-1.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/Androidplot-core-0.4a-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/Androidplot-core-0.4a-release.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
