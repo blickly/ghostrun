@@ -28,17 +28,21 @@ public class MazeGraph {
         }
     }
 
-    public void createSimpleMap() {
+    public static MazeGraph createSimpleMap() {
+        MazeGraph m = new MazeGraph();
+
         // Campanile
-        MazeGraphPoint campanilePoint = addPoint(new GeoPoint(37871944, -122257778));
+        MazeGraphPoint campanilePoint = m.addPoint(new GeoPoint(37871944, -122257778));
         // NE corner of campus
-        MazeGraphPoint neCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+        MazeGraphPoint neCornerPoint = m.addPoint(new GeoPoint(37875522,-122256825));
         // NW corner of campus
-        MazeGraphPoint nwCornerPoint = addPoint(new GeoPoint(37875522,-122256825));
+        MazeGraphPoint nwCornerPoint = m.addPoint(new GeoPoint(37875522,-122256825));
 
         // Edges
-        addEdge(neCornerPoint, nwCornerPoint);
-        addEdge(neCornerPoint, campanilePoint);
+        m.addEdge(neCornerPoint, nwCornerPoint);
+        m.addEdge(neCornerPoint, campanilePoint);
+        
+        return m;
     }
 
     private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();

@@ -45,6 +45,15 @@ public class Robot {
         return result;
     }
 
+    public static List<Robot> createRandomRobots(int numRobots, MazeGraph maze,
+            Player player) {
+        List<MazeGraphPoint> startingPoints = new LinkedList<MazeGraphPoint>();
+        for (int i = 0; i < numRobots; ++i) {
+            startingPoints.add(maze.getRandomPoint());
+        }
+        return Robot.createRobots(startingPoints, player);
+    }
+
     public Robot(MazeGraphPoint startingPoint, Player following,
             RobotStrategy strategy) {
         this.setDestination(startingPoint);

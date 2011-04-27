@@ -1,13 +1,10 @@
 package com.ghostrun.controllers;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 import android.os.Handler;
 
 import com.ghostrun.model.MazeGraph;
-import com.ghostrun.model.MazeGraphPoint;
 import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
@@ -19,9 +16,9 @@ public class GameLoop implements Runnable {
     public final int ROBOT_START_SPACING = 10000;
     
     Handler h = new Handler();
-    private MazeGraph maze = new MazeGraph();
+    private MazeGraph maze;
     private Player player = new Player();
-    private List<Robot> robots = new ArrayList<Robot>();
+    private List<Robot> robots;
     private RobotsItemizedOverlay robotOverlay;
 
     public Player getPlayer() {
@@ -35,8 +32,13 @@ public class GameLoop implements Runnable {
     }
 
     public GameLoop() {
-        maze.createSimpleMap();
-        createRandomRobots(2);
+        this.maze = MazeGraph.createSimpleMap();
+        this.robots = Robot.createRandomRobots(2, this.maze, this.player);
+    }
+
+    public GameLoop(MazeGraph maze, List<Robot> robots) {
+        this.maze = maze;
+        this.robots = robots;
     }
 
     @Override
@@ -70,13 +72,5 @@ public class GameLoop implements Runnable {
             }
         }
         return false;
-    }
-
-    private void createRandomRobots(int numRobots) {
-        List<MazeGraphPoint> startingPoints = new LinkedList<MazeGraphPoint>();
-        for (int i = 0; i < numRobots; ++i) {
-            startingPoints.add(maze.getRandomPoint());
-        }
-        robots = Robot.createRobots(startingPoints, player);
     }
 }
