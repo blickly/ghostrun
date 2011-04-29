@@ -20,6 +20,22 @@ public class Node {
 		this.neighbors = new ArrayList<Node>();
 	}
 	
+	public Node clone() {
+		return new Node(this.latlng, this.id);
+	}
+	
+	public boolean equals(Object o) {
+		if (o instanceof Node) {
+			Node n = (Node)o;
+			return n.id == this.id;
+		}
+		return false;
+	}
+	
+	public int hashCode() {
+		return this.id;
+	}
+	
 	public void addNeighbor(Node n) {
 		this.neighbors.add(n);
 	}

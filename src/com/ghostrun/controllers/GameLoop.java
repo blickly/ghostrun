@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.os.Handler;
 
+import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
@@ -32,13 +33,14 @@ public class GameLoop implements Runnable {
     }
 
     public GameLoop() {
-        this.maze = MazeGraph.createSimpleMap();
-        this.robots = Robot.createRandomRobots(2, this.maze, this.player);
+    	maze = new MazeGraph();
+    	maze.createSimpleMap();
+    	robots = Robot.createRandomRobots(2, maze, player);
     }
-
-    public GameLoop(MazeGraph maze, List<Robot> robots) {
-        this.maze = maze;
-        this.robots = robots;
+    
+    public GameLoop(List<Node> nodes) {
+    	maze = new MazeGraph(nodes);
+    	robots = Robot.createRandomRobots(2, maze, player);
     }
 
     @Override

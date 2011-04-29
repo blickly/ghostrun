@@ -1,11 +1,36 @@
 package com.ghostrun.model;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
+import com.ghostrun.driving.Node;
 import com.google.android.maps.GeoPoint;
 
 public class MazeGraph {
+	
+	public MazeGraph() {
+		
+	}
+	
+	public MazeGraph(List<Node> nodes) {
+		Map<Integer, MazeGraphPoint> nodeMap = new HashMap<Integer, MazeGraphPoint>();
+		for (Node node : nodes) {
+			nodeMap.put(node.id, addPoint(node.latlng));
+		}
+		
+		for (Node node : nodes) {
+			MazeGraphPoint p1 = nodeMap.get(node);
+			for (Node n : node.neighbors) {
+				MazeGraphPoint p2 = nodeMap.get(n);
+				addEdge(p1, p2);
+			}
+		}
+	}
 
     public MazeGraphPoint addPoint(GeoPoint point) {
         MazeGraphPoint mgPoint = new MazeGraphPoint(point);

@@ -1,10 +1,15 @@
 package com.ghostrun.driving;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Queue;
+import java.util.Random;
 import java.util.Set;
 
 import org.json.simple.parser.ContainerFactory;
@@ -18,30 +23,149 @@ public class NodeFactory {
 	public class NodesAndRoutes {
 		public List<Node> nodes;
 		public Map<NodePair, Route> routesMap;
-		NodesAndRoutes(List<Node> nodes, Map<NodePair, Route> routesMap) {
+		public NodesAndRoutes(List<Node> nodes, Map<NodePair, Route> routesMap) {
 			this.nodes = nodes;
 			this.routesMap = routesMap;
 		}
+		
+		public List<Node> toNodes() {
+			Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+			List<Node> result = new ArrayList<Node>();
+			
+			int max_id = 0;
+			for (Node n : nodes) {
+				nodeMap.put(n.id, n);
+				max_id = Math.max(n.id, max_id);
+			}
+			for (Map.Entry<NodePair, Route> entry : routesMap.entrySet()) {
+				NodePair p = entry.getKey();
+				Route r = entry.getValue();
+				
+				Node node1 = nodeMap.get(p.id1);
+				Node node2 = nodeMap.get(p.id2);
+				
+				Node lastNode = node1;
+				List<GeoPoint> lst = ((RouteImpl)r).getGeoPoints();
+				lst.remove(0);
+				lst.remove(lst.size()-1);
+				
+				if (lst.size() > 0) {
+					node1.removeNeighbor(node2);
+					node2.removeNeighbor(node1);
+				}
+				for (GeoPoint pt : ((RouteImpl)r).getGeoPoints()) {
+					// combine pts into nodes
+					Node node = new Node(pt, max_id++);
+					lastNode.addNeighbor(node);
+					node.addNeighbor(lastNode);
+					lastNode = node;
+					
+					result.add(node);
+				}
+				lastNode.addNeighbor(node2);
+				node2.addNeighbor(lastNode);
+			}
+			return result;
+		}
 	}
-	public GeoPoint getGeoPointFromMap(Map<Object, Object> map) {
+	public GeoPoint getGeoPointFromMap(Map<String, Object> map) {
 		return new GeoPoint(((Long)map.get("lat")).intValue(), 
 				((Long)map.get("lng")).intValue());
 	}
-	public NodesAndRoutes fromMap(String serialized) {
+	
+	@SuppressWarnings("unchecked")
+	public List<Node> fromStaticMap(String serialized) {
+		List<Node> results = new ArrayList<Node>();
 		JSONParser parser = new JSONParser();
 		ContainerFactory containerFactory = new ContainerFactory(){
-		    public List creatArrayContainer() {
-		      return new ArrayList();
+		    public List<Map<String, Object>> creatArrayContainer() {
+		      return new ArrayList<Map<String, Object>>();
 		    }
 
-		    public Map createObjectContainer() {
-		      return new HashMap();
+		    public Map<String, Object> createObjectContainer() {
+		      return new HashMap<String, Object>();
 		    }
 		                        
 		  };
-		Map map = null;
+		Map<String, Object> map = null;
 		try {
-			map = (Map)parser.parse(serialized, containerFactory);
+			map = (Map<String, Object>)parser.parse(serialized, containerFactory);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+		Collection<Object> values = map.values();
+		for (Object val : values) {
+			Map<String, Object> tmp = (HashMap<String, Object>)val;
+			Node n = new Node(new GeoPoint(
+						(int)(new Double((String)tmp.get("lat")) * 1e6), 
+						(int)(new Double((String)tmp.get("lng")) * 1e6)),
+						new Integer((String)tmp.get("id")));
+			nodeMap.put(new Integer((String)tmp.get("id")), n);
+			
+			results.add(n);
+		}
+		
+		for (Object val : values) {
+			Map<String, Object> tmp = (HashMap<String, Object>)val;
+			Node n = nodeMap.get(new Integer((String)tmp.get("id")));
+			for (Object neighborId : (List<Integer>)tmp.get("neighbors")) {
+				Node tmpNode = nodeMap.get(new Integer((String)neighborId));
+				n.addNeighbor(tmpNode);				
+			}
+		}
+		return results;
+	}
+	
+	public List<Node> generateRandomMap(List<Node> nodes) {
+		List<Node> results = new ArrayList<Node>();
+		Set<Node> doneNodes = new HashSet<Node>();
+		final double randomTh = 0.7;
+		Random random = new Random();
+		
+		Queue<Node> queue = new LinkedList<Node>();
+		Node n = nodes.get(random.nextInt(nodes.size()));
+		queue.offer(n);
+		doneNodes.add(n);
+		while (queue.size() > 0) {
+			Node curNode = queue.poll();
+			Node newNode = curNode.clone();
+			
+			results.add(newNode);
+			
+			for (Node neighbor : n.neighbors) {
+				if (!doneNodes.contains(neighbor)) {
+					double r = random.nextDouble();
+					if (r < randomTh) {
+						queue.offer(neighbor);
+						doneNodes.add(neighbor);
+						newNode.addNeighbor(neighbor);
+					}
+				}
+			}
+		}
+		
+		return results;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public NodesAndRoutes fromMap(String serialized) {
+		JSONParser parser = new JSONParser();
+		ContainerFactory containerFactory = new ContainerFactory(){
+		    public List<Map<String, Object>> creatArrayContainer() {
+		      return new ArrayList<Map<String, Object>>();
+		    }
+
+		    public Map<String, Object> createObjectContainer() {
+		      return new HashMap<String, Object>();
+		    }
+		                        
+		  };
+		Map<String, Object> map = null;
+		try {
+			map = (Map<String, Object>)parser.parse(serialized, containerFactory);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -50,12 +174,13 @@ public class NodeFactory {
 		List<Node> nodes = new ArrayList<Node>();
 		Map<NodePair, Route> routesMap = new HashMap<NodePair, Route>();
 		
-		List<Map> nodesList = (List<Map>) map.get("nodes");
+		List<Map<String, Object>> nodesList = 
+			(List<Map<String, Object>>) map.get("nodes");
 		System.out.println("nodes: " + nodesList.size());
 		Object[] jsonNodes = (Object[]) (nodesList.toArray());
 		Map<Integer, Node> nodesMap = new HashMap<Integer, Node>();
 		for (int i = 0; i < jsonNodes.length; i++) {
-			Map<Object, Object> m = (Map)jsonNodes[i];
+			Map<String, Object> m = (Map<String, Object>)jsonNodes[i];
 			int id = ((Long) m.get("id")).intValue();
 			Node n = new Node(getGeoPointFromMap(m), id);
 			nodes.add(n);
@@ -64,7 +189,8 @@ public class NodeFactory {
 		
 		for (int i = 0; i < jsonNodes.length; i++) {
 			Node n = nodes.get(i);
-			Object[] neighbor = (Object[]) ((List)((Map) jsonNodes[i]).get("neighbors")).toArray();
+			Object[] neighbor = (Object[]) ((List<Map<String, Object>>)
+					((Map<String, Object>) jsonNodes[i]).get("neighbors")).toArray();
 			for (int j = 0; j < neighbor.length; j++) {
 				n.addNeighbor(nodesMap.get(((Long)neighbor[j]).intValue()));
 			}

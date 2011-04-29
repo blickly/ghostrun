@@ -17,7 +17,8 @@ public class MazeGraphPoint {
     }
 
     public void addConncetionTo(MazeGraphPoint other) {
-        neighbors.add(other);
+    	if (!neighbors.contains(other))
+    		neighbors.add(other);
     }
 
     public MazeGraphPoint getRandomNeighbor() {
@@ -30,6 +31,14 @@ public class MazeGraphPoint {
 
     public Collection<MazeGraphPoint> getNeighbors() {
         return neighbors;
+    }
+    
+    public boolean equals(Object o) {
+    	if (o instanceof MazeGraphPoint) {
+    		MazeGraphPoint p = (MazeGraphPoint)o;
+    		return p.getLocation().equals(this.getLocation());
+    	}
+    	return false;
     }
 
     private GeoPoint location;

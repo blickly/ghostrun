@@ -77,20 +77,6 @@ public class MapEditor extends MapActivity {
         final PointsOverlay pointsOverlay = new PointsOverlay(marker, selectedMarker, this);
         this.mapView.getOverlays().add(pointsOverlay);
         this.pointsOverlay = pointsOverlay;
-        
-        // Select/remove button
-        final Button selectButton = (Button)findViewById(R.id.select);
-        selectButton.setOnClickListener(new OnClickListener(){      
-    	    public void onClick(View v) {	
-    	    	if (selectButton.getText().toString().equals("Select On")) {
-    	    		selectButton.setText("Remove On", TextView.BufferType.NORMAL);
-    	    		pointsOverlay.remove();
-    	    	} else {
-    	    		selectButton.setText("Select On", TextView.BufferType.NORMAL);
-    	    		pointsOverlay.select();
-    	    	}
-    	    }
-    	});
     }
 
     @Override
@@ -163,6 +149,22 @@ public class MapEditor extends MapActivity {
                 return true;
             }
         });
+        
+        menu.add("Select On");
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        	@Override
+    	    public boolean onMenuItemClick(MenuItem item) {	
+    	    	if (item.getTitle().toString().equals("Select On")) {
+    	    		item.setTitle("Remove On");
+    	    		pointsOverlay.remove();
+    	    	} else {
+    	    		item.setTitle("Select On");
+    	    		pointsOverlay.select();
+    	    	}
+    	    	return true;
+    	    }
+    	});
+        
         return true;
     }
     
