@@ -155,7 +155,7 @@ public class GameMapView extends MapActivity {
 			if (mazeOverlay != null)
 				this.mapView.getOverlays().remove(mazeOverlay);
 			
-			mazeOverlay = new MazeOverlay(defaultMarker, nodesAndRoutes);
+			mazeOverlay = new MazeOverlay(nodesAndRoutes.toNodes());
 			this.mapView.getOverlays().add(mazeOverlay);			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

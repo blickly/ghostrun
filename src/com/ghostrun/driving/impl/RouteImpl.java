@@ -23,10 +23,12 @@ public class RouteImpl implements Route
 		super();
 		
 		this.setTotalDistance((String) map.get("distance"));
+		@SuppressWarnings("unchecked")
 		List<Object> tmpPoints = (List<Object>) map.get("geopoints");
 		Object[] geopoints = (Object[]) tmpPoints.toArray();
 		for (int i = 0; i < geopoints.length; i ++) {
-			Map<Object, Object> pt = (Map)geopoints[i];
+			@SuppressWarnings("unchecked")
+			Map<Object, Object> pt = (Map<Object, Object>)geopoints[i];
 			this.addGeoPoint(new GeoPoint(((Long)pt.get("lat")).intValue(), 
 					((Long)pt.get("lng")).intValue()));
 		}
@@ -35,6 +37,7 @@ public class RouteImpl implements Route
 	public Map<Object, Object> toJson() {
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		map.put("distance", this.totalDistance);
+		@SuppressWarnings("unchecked")
 		Map<Object, Object>[] geopoints = 
 			new HashMap[this.geoPoints.size()];
 		int index = 0;

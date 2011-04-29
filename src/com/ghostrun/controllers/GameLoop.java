@@ -6,6 +6,7 @@ import java.util.List;
 
 import android.os.Handler;
 
+import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.MazeGraphPoint;
 import com.ghostrun.model.Player;
@@ -19,7 +20,7 @@ public class GameLoop implements Runnable {
     public final int ROBOT_START_SPACING = 10000;
     
     Handler h = new Handler();
-    private MazeGraph maze = new MazeGraph();
+    private MazeGraph maze;
     private Player player = new Player();
     private List<Robot> robots = new ArrayList<Robot>();
     private RobotsItemizedOverlay robotOverlay;
@@ -35,7 +36,13 @@ public class GameLoop implements Runnable {
     }
 
     public GameLoop() {
-        maze.createSimpleMap();
+    	maze = new MazeGraph();
+    	maze.createSimpleMap();
+    	createRandomRobots(2);
+    }
+    
+    public GameLoop(List<Node> nodes) {
+    	maze = new MazeGraph(nodes);
         createRandomRobots(2);
     }
 
