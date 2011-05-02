@@ -33,13 +33,22 @@ public class IconifiedTextListAdapter extends BaseAdapter {
         return mItems.get(position).isSelectable();
     }
 
-    /** Use the array index as a unique id. */
+    /** Use the array index as a unique id. 
+     *  @param position The position of the item within the adapter's data set
+     *    whose row id we want.
+     *  @return The id of the item at the specified position.
+     */
     public long getItemId(int position) {
         return position;
     }
 
-    /** @param convertView The old view to overwrite, if one is passed
-     * @returns a IconifiedTextView that holds wraps around an IconifiedText */
+    /**
+     *  @param position The position of the item within the adapter's data set
+     *    of the item whose view we want.
+     *  @param convertView The old view to overwrite, if one is passed
+     *  @param parent The parent that this view will eventually be attached to
+     *  @return a IconifiedTextView that holds wraps around an IconifiedText
+     */
     public View getView(int position, View convertView, ViewGroup parent) {
         IconifiedTextView btv;
         if (convertView == null) {

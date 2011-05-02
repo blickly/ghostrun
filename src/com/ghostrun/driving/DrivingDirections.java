@@ -9,6 +9,7 @@ public abstract class DrivingDirections
 		 * Invoked when driving directions have become available.
 		 * 
 		 * @param route The route that defines the driving path.
+		 * @param mode The mode of directions requested.
 		 */
 		public abstract void onDirectionsAvailable (Route route, Mode mode);
 		

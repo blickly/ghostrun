@@ -44,15 +44,7 @@ public class FileBrowserView extends ListActivity {
                   finish();
               }
           });
-          //browseToRoot();
           browseToSDcard();
-     }
-
-     /**
-      * This function browses to the root-directory of the file-system.
-      */
-     private void browseToRoot() {
-          browseTo( new File( "/" ) );
      }
      
      /**
@@ -243,6 +235,10 @@ public class FileBrowserView extends ListActivity {
 
      /**
       * Checks whether checkItsEnd ends with one of the Strings from fileEndings
+      * @param checkItsEnd String whose ending will be checked.
+      * @param fileEndings File endings to check for.
+      * @return True, if the string ends with one of the file endings.
+      *   False, otherwise.
       */
      private boolean checkEndsWithInStringArray( String checkItsEnd,
                String[] fileEndings ) {

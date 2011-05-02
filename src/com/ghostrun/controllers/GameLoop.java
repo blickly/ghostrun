@@ -33,8 +33,7 @@ public class GameLoop implements Runnable {
     }
 
     public GameLoop() {
-    	maze = new MazeGraph();
-    	maze.createSimpleMap();
+    	maze = MazeGraph.createSimpleMap();
     	robots = Robot.createRandomRobots(2, maze, player);
     }
     

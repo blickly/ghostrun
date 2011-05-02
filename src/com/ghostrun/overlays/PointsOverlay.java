@@ -74,7 +74,8 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	
 	public String getJson() {
 		Map<Object, Object> m = new HashMap<Object, Object>();
-		Map<Object, Object>[] jsonNodes = new HashMap[this.nodes.size()];
+		@SuppressWarnings("unchecked")
+                Map<Object, Object>[] jsonNodes = new HashMap[this.nodes.size()];
 		for (int i = 0; i < jsonNodes.length; i ++) {
 			jsonNodes[i] = this.nodes.get(i).toJson();
 		}
