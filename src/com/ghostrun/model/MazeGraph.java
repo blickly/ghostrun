@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import com.ghostrun.driving.Node;
+import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 
 public class MazeGraph {
@@ -44,10 +44,9 @@ public class MazeGraph {
     }
 
     public MazeGraphPoint getRandomPoint() {
-        Random rand = new Random();
         int nPoints = points.size();
         if (nPoints > 0) {
-            return points.get(rand.nextInt(nPoints));
+            return points.get(RandUtils.nextInt(nPoints));
         } else {
             return null;
         }

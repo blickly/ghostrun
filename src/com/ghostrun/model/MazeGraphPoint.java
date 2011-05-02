@@ -2,8 +2,8 @@ package com.ghostrun.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Random;
 
+import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 
 public class MazeGraphPoint {
@@ -25,7 +25,7 @@ public class MazeGraphPoint {
         if (neighbors.isEmpty()) {
             return null;
         }
-        int index = (new Random()).nextInt(neighbors.size());
+        int index = RandUtils.nextInt(neighbors.size());
         return neighbors.get(index);
     }
 
