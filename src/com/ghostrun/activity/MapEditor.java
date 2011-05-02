@@ -44,6 +44,7 @@ public class MapEditor extends MapActivity {
 
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
+        mapView.getController().setZoom(17);
 
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
