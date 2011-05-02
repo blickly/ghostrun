@@ -108,7 +108,9 @@ public class GameMapView extends MapActivity {
     @Override
     public void onPause() {
         super.onPause();
-        mp.pause();
+        if (soundOn) {
+            mp.pause();
+        }
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
     }
@@ -116,7 +118,9 @@ public class GameMapView extends MapActivity {
     @Override
     public void onResume() {
         super.onResume();
-        mp.start();
+        if (soundOn) {
+            mp.start();
+        }
         if (locationOverlay != null)
         	locationOverlay.enableMyLocation();
     }
