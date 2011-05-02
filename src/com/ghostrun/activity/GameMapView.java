@@ -35,7 +35,6 @@ public class GameMapView extends MapActivity {
     MapView mapView;
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
-    Drawable defaultMarker;
     GameLoop gameLoop;
     
     @Override
@@ -56,7 +55,6 @@ public class GameMapView extends MapActivity {
             }
         });
         
-        this.defaultMarker = this.getResources().getDrawable(R.drawable.blue);
         this.mazeOverlay = null;
     }
 
@@ -178,6 +176,5 @@ public class GameMapView extends MapActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-    	
     }
 }
