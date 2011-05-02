@@ -34,12 +34,12 @@ public class GameLoop implements Runnable {
 
     public GameLoop() {
     	maze = MazeGraph.createSimpleMap();
-    	robots = Robot.createRandomRobots(2, maze, player);
+    	robots = Robot.createRandomRobots(4, maze, player);
     }
     
     public GameLoop(List<Node> nodes) {
     	maze = new MazeGraph(nodes);
-    	robots = Robot.createRandomRobots(2, maze, player);
+    	robots = Robot.createRandomRobots(4, maze, player);
     }
 
     @Override
