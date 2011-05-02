@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.location.Criteria;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -36,6 +37,8 @@ public class GameMapView extends MapActivity {
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
     GameLoop gameLoop;
+    MediaPlayer mp;
+    boolean soundOn;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,15 @@ public class GameMapView extends MapActivity {
         });
         
         this.mazeOverlay = null;
+        
+        soundOn = true;
+        mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_sound);
+        if (mp!=null) {
+            try {
+                mp.start();
+                mp.setLooping(true);
+            } catch (Exception e){}
+        }
     }
 
     public void addGameLoop(List<Node> nodes) {
@@ -96,6 +108,7 @@ public class GameMapView extends MapActivity {
     @Override
     public void onPause() {
         super.onPause();
+        mp.pause();
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
     }
@@ -103,7 +116,7 @@ public class GameMapView extends MapActivity {
     @Override
     public void onResume() {
         super.onResume();
-        
+        mp.start();
         if (locationOverlay != null)
         	locationOverlay.enableMyLocation();
     }
@@ -147,6 +160,22 @@ public class GameMapView extends MapActivity {
        
         // TODO: what about sound on?
         menu.add("Sound On");
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                // TODO Auto-generated method stub
+                if (soundOn) {
+                    soundOn = false;
+                    item.setTitle("Sound Off");
+                    mp.pause();
+                } else {
+                    soundOn = true;
+                    item.setTitle("Sound On");
+                    mp.start();
+                }
+                return true;
+            }
+        });
         return true;
     }
     
