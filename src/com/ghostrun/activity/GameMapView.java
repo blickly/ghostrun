@@ -45,6 +45,7 @@ public class GameMapView extends MapActivity {
 
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
+        mapView.getController().setZoom(17);
 
         // Stop the current activity and return to the previous view.
         Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
