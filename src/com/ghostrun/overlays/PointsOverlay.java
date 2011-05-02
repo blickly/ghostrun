@@ -45,6 +45,39 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	Drawable marker, selectedMarker;
 	MapEditor editor;
 	
+	public PointsOverlay(Drawable marker, Drawable selectedMarker, MapEditor editor, List<Node> nodes) {
+		this(marker, selectedMarker, editor);
+		
+		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+		for (Node n : nodes) {
+			this.nodes.add(n);
+			nodeMap.put(n.id, n);
+		}
+		
+		for (Node n1 : nodes) {
+			final Node f1 = n1; 
+			for (Node n2 : n1.neighbors) {
+				final Node f2 = n2;
+				DrivingDirections directions = DrivingDirectionsFactory.createDrivingDirections();
+				directions.driveTo(n1.latlng, n2.latlng, 
+						DrivingDirections.Mode.DRIVING, 
+						new DrivingDirections.IDirectionsListener() {
+							public void onDirectionsAvailable (Route route, Mode mode) {
+								routesMap.put(new NodePair(f1.id, f2.id), route);
+							}
+					
+							public void onDirectionsNotAvailable () {
+					
+							}
+					});
+			}
+		}		
+		this.setLastFocusedIndex(-1);
+		this.selected = this.nodes.size() -1;
+		this.mapView.invalidate();
+		this.populate();
+	}
+	
 	public PointsOverlay(Drawable marker, Drawable selectedMarker, MapEditor editor) {
 		super(boundCenterBottom(marker));
 		
@@ -55,11 +88,6 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		this.mapView = editor.mapView;
 		this.nodes = new ArrayList<Node>();
 		this.routesMap = new HashMap<NodePair, Route>();
-		
-		/*
-		this.gestureDetector = new GestureDetector((OnGestureListener)this);
-		this.gestureDetector.setOnDoubleTapListener((OnDoubleTapListener)this);
-		*/
 		
         this.mPaint = new Paint();
         this.mPaint.setDither(true);

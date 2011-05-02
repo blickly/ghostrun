@@ -1,5 +1,9 @@
 package com.ghostrun.driving;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -15,6 +19,8 @@ import java.util.Set;
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import android.app.Activity;
 
 import com.ghostrun.driving.impl.RouteImpl;
 import com.google.android.maps.GeoPoint;
@@ -53,7 +59,16 @@ public class NodeFactory {
 					node1.removeNeighbor(node2);
 					node2.removeNeighbor(node1);
 				}
-				for (GeoPoint pt : ((RouteImpl)r).getGeoPoints()) {
+				
+				if (!result.contains(node1)) {
+					result.add(node1);
+				}
+				
+				if (!result.contains(node2)) {
+					result.add(node2);
+				}
+				
+				for (GeoPoint pt : lst) {
 					// combine pts into nodes
 					Node node = new Node(pt, max_id++);
 					lastNode.addNeighbor(node);
@@ -74,7 +89,8 @@ public class NodeFactory {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Node> fromStaticMap(String serialized) {
+	public static List<Node> fromStaticMap(String serialized) {
+		
 		List<Node> results = new ArrayList<Node>();
 		JSONParser parser = new JSONParser();
 		ContainerFactory containerFactory = new ContainerFactory(){
@@ -99,27 +115,29 @@ public class NodeFactory {
 		Collection<Object> values = map.values();
 		for (Object val : values) {
 			Map<String, Object> tmp = (HashMap<String, Object>)val;
+			System.out.println("ERROR CAST: " + (Double)tmp.get("lat"));
 			Node n = new Node(new GeoPoint(
-						(int)(new Double((String)tmp.get("lat")) * 1e6), 
-						(int)(new Double((String)tmp.get("lng")) * 1e6)),
-						new Integer((String)tmp.get("id")));
-			nodeMap.put(new Integer((String)tmp.get("id")), n);
+						(int)((Double)tmp.get("lat") * 1e6), 
+						(int)((Double)tmp.get("lng") * 1e6)),
+						((Long)tmp.get("id")).intValue());
+			nodeMap.put(((Long)tmp.get("id")).intValue(), n);
 			
 			results.add(n);
 		}
 		
 		for (Object val : values) {
 			Map<String, Object> tmp = (HashMap<String, Object>)val;
-			Node n = nodeMap.get(new Integer((String)tmp.get("id")));
+			Node n = nodeMap.get(((Long) tmp.get("id")).intValue());
 			for (Object neighborId : (List<Integer>)tmp.get("neighbors")) {
-				Node tmpNode = nodeMap.get(new Integer((String)neighborId));
+				Node tmpNode = nodeMap.get(((Long)neighborId).intValue());
 				n.addNeighbor(tmpNode);				
 			}
 		}
 		return results;
 	}
 	
-	public List<Node> generateRandomMap(List<Node> nodes) {
+	public static List<Node> generateRandomMap(String serialized) {
+		List<Node> nodes = fromStaticMap(serialized);
 		List<Node> results = new ArrayList<Node>();
 		Set<Node> doneNodes = new HashSet<Node>();
 		final double randomTh = 0.7;

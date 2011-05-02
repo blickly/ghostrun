@@ -1,9 +1,12 @@
 package com.ghostrun.activity;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 
 import android.app.Activity;
@@ -23,6 +26,8 @@ import android.widget.EditText;
 
 import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
+import com.ghostrun.driving.Node;
+import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.PointsOverlay;
 import com.google.android.maps.MapActivity;
@@ -34,7 +39,6 @@ import com.google.android.maps.Overlay;
  */
 public class MapEditor extends MapActivity {
     public MapView mapView;
-    MyLocationOverlay locationOverlay;
     PointsOverlay pointsOverlay;
     
     @Override
@@ -44,17 +48,12 @@ public class MapEditor extends MapActivity {
 
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
+        
+        mapView.getController().setZoom(17);
 
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
         
-        GameLoop gameLoop = new GameLoop();
-
-        // Add player overlay
-        locationOverlay = new PlayerOverlay(this, mapView,
-                gameLoop.getPlayer());
-        registerLocationUpdates(locationOverlay);
-        mapOverlays.add(locationOverlay);
         
         // Add points
         newPointsOverlay();
@@ -70,23 +69,35 @@ public class MapEditor extends MapActivity {
     }
     
     public void newPointsOverlay() {
+    	if (this.pointsOverlay != null)
+    		this.mapView.getOverlays().remove(this.pointsOverlay);
+    	
     	Drawable marker = this.getResources().getDrawable(R.drawable.blue);
         Drawable selectedMarker = this.getResources().getDrawable(R.drawable.blue_dot);
-        final PointsOverlay pointsOverlay = new PointsOverlay(marker, selectedMarker, this);
+        this.pointsOverlay = new PointsOverlay(marker, selectedMarker, this);
         this.mapView.getOverlays().add(pointsOverlay);
-        this.pointsOverlay = pointsOverlay;
+    }
+    
+    public void newPointsOverlay(List<Node> nodes) {
+    	if (this.pointsOverlay != null)
+    		this.mapView.getOverlays().remove(this.pointsOverlay);
+    	
+    	Drawable marker = this.getResources().getDrawable(R.drawable.blue);
+        Drawable selectedMarker = this.getResources().getDrawable(R.drawable.blue_dot);
+        this.pointsOverlay = new PointsOverlay(marker, selectedMarker, this, nodes);
+        this.mapView.getOverlays().add(pointsOverlay);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        locationOverlay.disableMyLocation();
+        //locationOverlay.disableMyLocation();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        locationOverlay.enableMyLocation();
+        //locationOverlay.enableMyLocation();
     }
 
     @Override
@@ -162,6 +173,33 @@ public class MapEditor extends MapActivity {
     	    	return true;
     	    }
     	});
+        
+        menu.add("Random Map");
+        menu.getItem(2).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+            	String filename = "data1.json";
+        		InputStreamReader input = null;
+    			try {
+					input = new InputStreamReader(
+							getAssets().open(filename));
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+        		BufferedReader bufRead = new BufferedReader(input);
+            	List<Node> randNodes = null;
+				try {
+					randNodes = NodeFactory.generateRandomMap(bufRead.readLine());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            	System.out.println("size of random nodes: " + randNodes.size());
+            	newPointsOverlay(randNodes);
+                return true;
+            }
+        });
         
         return true;
     }
