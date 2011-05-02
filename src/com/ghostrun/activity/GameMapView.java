@@ -19,6 +19,7 @@ import android.widget.Button;
 
 import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
+import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
@@ -35,6 +36,7 @@ public class GameMapView extends MapActivity {
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
     Drawable defaultMarker;
+    GameLoop gameLoop;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,12 +46,24 @@ public class GameMapView extends MapActivity {
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
 
-        List<Overlay> mapOverlays = mapView.getOverlays();
-        mapOverlays.clear();
+        // Stop the current activity and return to the previous view.
+        Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
+        logobutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         
-        GameLoop gameLoop = new GameLoop();
+        this.defaultMarker = this.getResources().getDrawable(R.drawable.blue);
+        this.mazeOverlay = null;
+    }
 
-        // Add player overlay
+    public void addGameLoop(List<Node> nodes) {
+    	List<Overlay> mapOverlays = mapView.getOverlays();
+        mapOverlays.clear();
+    	this.gameLoop = new GameLoop(nodes);
+    	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
                 gameLoop.getPlayer());
         registerLocationUpdates(locationOverlay);
@@ -67,29 +81,21 @@ public class GameMapView extends MapActivity {
         gameLoop.setRobotOverlay(robotOverlay);
         handler.post(gameLoop);
         
-        // Stop the current activity and return to the previous view.
-        Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
-        logobutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        
-        this.defaultMarker = this.getResources().getDrawable(R.drawable.blue);
-        this.mazeOverlay = null;
     }
-
+    
     @Override
     public void onPause() {
         super.onPause();
-        locationOverlay.disableMyLocation();
+        if (locationOverlay != null)
+        	locationOverlay.disableMyLocation();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        locationOverlay.enableMyLocation();
+        
+        if (locationOverlay != null)
+        	locationOverlay.enableMyLocation();
     }
 
     @Override
@@ -120,7 +126,6 @@ public class GameMapView extends MapActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.add("Select Map");
-        menu.add("Sound is on");
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -129,6 +134,9 @@ public class GameMapView extends MapActivity {
                 return true;
             }
         });
+       
+        // TODO: what about sound on?
+        menu.add("Sound On");
         return true;
     }
     
@@ -155,8 +163,10 @@ public class GameMapView extends MapActivity {
 			if (mazeOverlay != null)
 				this.mapView.getOverlays().remove(mazeOverlay);
 			
-			mazeOverlay = new MazeOverlay(nodesAndRoutes.toNodes());
-			this.mapView.getOverlays().add(mazeOverlay);			
+			List<Node> nodes = nodesAndRoutes.toNodes();
+			this.addGameLoop(nodes);
+			mazeOverlay = new MazeOverlay(nodes);
+			this.mapView.getOverlays().add(mazeOverlay);	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

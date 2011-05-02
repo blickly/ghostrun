@@ -23,7 +23,7 @@ public class MazeOverlay extends Overlay {
 		super();
 
 		this.nodes = nodes;
-		System.out.println("MazeOverlay: nodes size" + this.nodes.size());
+		System.out.println("MazeOverlay: number of nodes " + this.nodes.size());
 		
         this.mPaint = new Paint();
         this.mPaint.setDither(true);
