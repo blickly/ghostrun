@@ -62,6 +62,11 @@ public class GameMapView extends MapActivity {
     	List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes);
+    	
+        // Add maze overlay
+        mazeOverlay = new MazeOverlay(nodes);
+        mapOverlays.add(mazeOverlay);
+    	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
                 gameLoop.getPlayer());
@@ -165,13 +170,8 @@ public class GameMapView extends MapActivity {
 			System.out.println(nodesAndRoutes.nodes.size());
 			System.out.println(nodesAndRoutes.routesMap.size());
 			
-			if (mazeOverlay != null)
-				this.mapView.getOverlays().remove(mazeOverlay);
-			
 			List<Node> nodes = nodesAndRoutes.toNodes();
-			this.addGameLoop(nodes);
-			mazeOverlay = new MazeOverlay(nodes);
-			this.mapView.getOverlays().add(mazeOverlay);	
+			this.addGameLoop(nodes);	
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
