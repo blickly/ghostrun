@@ -13,14 +13,9 @@ import com.google.android.maps.GeoPoint;
 public class Robot {
     final int ROBOT_SPEED = 20;
 
-    final int CHARGE_DISTANCE = 1000;
-
     private GeoPoint location;
-
     private MazeGraphPoint destination;
-
     private Player player;
-
     private RobotStrategy ai;
 
     ////////////////////////////////////////////////////////////////////////
@@ -92,30 +87,17 @@ public class Robot {
         if (destination == null) {
             return;
         }
-        if (distanceFromPlayer() < CHARGE_DISTANCE) {
-            moveTowardPoint(player.getLocationAsGeoPoint());
-        } else {
-            moveTowardPoint(destination.getLocation());
-            if (destination.getLocation().equals(location)) {
-                GeoPoint playerLoc = player.getLocationAsGeoPoint();
-                if (playerLoc == null) return;
-                setDestination(ai.getNextWaypoint(destination, playerLoc));
-            }
+        moveTowardPoint(destination.getLocation());
+        if (destination.getLocation().equals(location)) {
+            GeoPoint playerLoc = player.getLocationAsGeoPoint();
+            if (playerLoc == null) return;
+            setDestination(ai.getNextWaypoint(destination, playerLoc));
         }
     }
 
     ////////////////////////////////////////////////////////////////////////
     //                          private methods
     ////////////////////////////////////////////////////////////////////////
-    private double distanceFromPlayer() {
-        GeoPoint playerLocation = player.getLocationAsGeoPoint();
-        if (playerLocation == null) {
-            return Double.POSITIVE_INFINITY;
-        }
-        GeoPointOffset toPlayer = new GeoPointOffset(this.getLocation(),
-                playerLocation);
-        return toPlayer.getLength();
-    }
 
     /** Move robot toward the given point by a distance up to ROBOT_SPEED
      *  (or to the point if it is closer than ROBOT_SPEED.
