@@ -52,12 +52,11 @@
         	android:apiKey="@string/mapsApiKey" />
             <!-- To add your Google Maps API key, create a file in res/values
                  called keys.xml with the following content:
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="mapsApiKey">YOUR_API_KEY_GOES_HERE</string>
-</resources>
+				<?xml version="1.0" encoding="utf-8"?>
+				<resources>
+				<string name="mapsApiKey">YOUR_API_KEY_GOES_HERE</string>
+				</resources>
             -->
-		
 	</FrameLayout>
        
 </LinearLayout>
