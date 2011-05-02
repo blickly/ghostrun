@@ -71,10 +71,16 @@ public class GameMapView extends MapActivity {
         mapOverlays.add(locationOverlay);
 
         // Add robot overlay
-        Drawable robotIcon = this.getResources().getDrawable(
-                R.drawable.androidmarker);
+        Drawable redIcon = this.getResources().getDrawable(
+                R.drawable.game_redghost);
+        Drawable orangeIcon = this.getResources().getDrawable(
+                R.drawable.game_orangeghost);
+        Drawable blueIcon = this.getResources().getDrawable(
+                R.drawable.game_blueghost);
+        Drawable pinkIcon = this.getResources().getDrawable(
+                R.drawable.game_pinkghost);
         RobotsItemizedOverlay robotOverlay = new RobotsItemizedOverlay(
-                    robotIcon, gameLoop.getRobots());
+                    redIcon, orangeIcon, pinkIcon, blueIcon, gameLoop.getRobots());
         mapOverlays.add(robotOverlay);
         
         // Start game loop
