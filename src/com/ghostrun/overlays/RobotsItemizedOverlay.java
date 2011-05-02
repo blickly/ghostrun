@@ -15,10 +15,10 @@ public class RobotsItemizedOverlay extends ItemizedOverlay<OverlayItem> {
     public RobotsItemizedOverlay(Drawable redMarker, Drawable orangeMarker
             , Drawable pinkMarker, Drawable blueMarker, List<Robot> robots) {
         super(boundCenterBottom(redMarker));
-        this.redMarker = redMarker;
-        this.orangeMarker = orangeMarker;
-        this.pinkMarker = pinkMarker;
-        this.blueMarker = blueMarker;
+        this.redMarker = boundCenterBottom(redMarker);
+        this.orangeMarker = boundCenterBottom(orangeMarker);
+        this.pinkMarker = boundCenterBottom(pinkMarker);
+        this.blueMarker = boundCenterBottom(blueMarker);
         this.robots = robots;
 
         populate();
