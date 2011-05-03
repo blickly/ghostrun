@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Vibrator;
 
+import com.ghostrun.activity.GameMapView;
 import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.Player;
@@ -26,7 +27,7 @@ public class GameLoop implements Runnable {
     private Player player = new Player();
     private List<Robot> robots;
     private RobotsItemizedOverlay robotOverlay;
-    private Activity activity;
+    private GameMapView activity;
 
     public Player getPlayer() {
         return player;
@@ -38,7 +39,7 @@ public class GameLoop implements Runnable {
         this.robotOverlay = robotOverlay;
     }
     
-    public GameLoop(List<Node> nodes, Activity a) {
+    public GameLoop(List<Node> nodes, GameMapView a) {
         activity = a;
     	maze = new MazeGraph(nodes);
     	robots = Robot.createRandomRobots(4, maze, player);
@@ -48,7 +49,7 @@ public class GameLoop implements Runnable {
     public void run() {
         updateRobotPositions();
         if (isGameOver()) {
-            handlePlayerDeath();
+            activity.handlePlayerDeath();
             return;
         }
         robotOverlay.refresh();
@@ -76,20 +77,5 @@ public class GameLoop implements Runnable {
             }
         }
         return false;
-    }
-
-    private void handlePlayerDeath() {
-        Vibrator v = (Vibrator)activity.getSystemService(Context.VIBRATOR_SERVICE);
-        v.vibrate(900);
-        
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setMessage("You died!")
-               .setCancelable(false)
-               .setPositiveButton("Aww, shit...", new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
-                        System.exit(0);
-                   }
-               });
-        builder.create().show();
     }
 }
