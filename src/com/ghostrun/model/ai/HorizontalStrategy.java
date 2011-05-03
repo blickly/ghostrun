@@ -17,12 +17,16 @@ public class HorizontalStrategy implements RobotStrategy {
                 closestDistance = currentDistance;
                 closestPoint = n;
             }
-        }
+        }/*
         if (closestPoint != null) {
             return closestPoint;
         } else {
             return location.getRandomNeighbor();
+        }*/
+        if (closestPoint == null) {
+            return location.getRandomNeighbor();
         }
+        return closestPoint;
     }
 
 }

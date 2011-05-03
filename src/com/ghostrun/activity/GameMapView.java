@@ -81,6 +81,7 @@ public class GameMapView extends MapActivity {
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
+        this.mapView.getController().setCenter(nodes.get(0).latlng);
     	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
@@ -207,10 +208,6 @@ public class GameMapView extends MapActivity {
 			
 			List<Node> nodes = nodesAndRoutes.toNodes();
 			this.addGameLoop(nodes);
-			mazeOverlay = new MazeOverlay(nodes);
-			this.mapView.getOverlays().add(mazeOverlay);
-			this.mapView.getController().setCenter(nodes.get(0).latlng);
-			//System.out.println("Done setting center");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
