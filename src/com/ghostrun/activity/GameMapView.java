@@ -5,13 +5,18 @@ import java.io.FileReader;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,8 +40,9 @@ public class GameMapView extends MapActivity {
     MapView mapView;
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
-    Drawable defaultMarker;
     GameLoop gameLoop;
+    MediaPlayer mp;
+    boolean soundOn;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,14 +62,22 @@ public class GameMapView extends MapActivity {
             }
         });
         
-        this.defaultMarker = this.getResources().getDrawable(R.drawable.blue);
         this.mazeOverlay = null;
+        
+        soundOn = false;
+        mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_sound);
+        mp.setLooping(true);
     }
 
     public void addGameLoop(List<Node> nodes) {
     	List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
-    	this.gameLoop = new GameLoop(nodes);
+    	this.gameLoop = new GameLoop(nodes, this);
+    	
+        // Add maze overlay
+        mazeOverlay = new MazeOverlay(nodes);
+        mapOverlays.add(mazeOverlay);
+    	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
                 gameLoop.getPlayer());
@@ -71,10 +85,16 @@ public class GameMapView extends MapActivity {
         mapOverlays.add(locationOverlay);
 
         // Add robot overlay
-        Drawable robotIcon = this.getResources().getDrawable(
-                R.drawable.androidmarker);
+        Drawable redIcon = this.getResources().getDrawable(
+                R.drawable.game_redghost);
+        Drawable orangeIcon = this.getResources().getDrawable(
+                R.drawable.game_orangeghost);
+        Drawable blueIcon = this.getResources().getDrawable(
+                R.drawable.game_blueghost);
+        Drawable pinkIcon = this.getResources().getDrawable(
+                R.drawable.game_pinkghost);
         RobotsItemizedOverlay robotOverlay = new RobotsItemizedOverlay(
-                    robotIcon, gameLoop.getRobots());
+                    redIcon, orangeIcon, pinkIcon, blueIcon, gameLoop.getRobots());
         mapOverlays.add(robotOverlay);
         
         // Start game loop
@@ -87,6 +107,9 @@ public class GameMapView extends MapActivity {
     @Override
     public void onPause() {
         super.onPause();
+        if (soundOn) {
+            mp.pause();
+        }
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
     }
@@ -94,7 +117,9 @@ public class GameMapView extends MapActivity {
     @Override
     public void onResume() {
         super.onResume();
-        
+        if (soundOn) {
+            mp.start();
+        }
         if (locationOverlay != null)
         	locationOverlay.enableMyLocation();
     }
@@ -136,8 +161,23 @@ public class GameMapView extends MapActivity {
             }
         });
        
-        // TODO: what about sound on?
-        menu.add("Sound On");
+        menu.add("Sound Off");
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                // TODO Auto-generated method stub
+                if (soundOn) {
+                    soundOn = false;
+                    item.setTitle("Sound Off");
+                    mp.pause();
+                } else {
+                    soundOn = true;
+                    item.setTitle("Sound On");
+                    mp.start();
+                }
+                return true;
+            }
+        });
         return true;
     }
     
@@ -161,9 +201,6 @@ public class GameMapView extends MapActivity {
 			//System.out.println(nodesAndRoutes.nodes.size());
 			//System.out.println(nodesAndRoutes.routesMap.size());
 			
-			if (mazeOverlay != null)
-				this.mapView.getOverlays().remove(mazeOverlay);
-			
 			List<Node> nodes = nodesAndRoutes.toNodes();
 			this.addGameLoop(nodes);
 			mazeOverlay = new MazeOverlay(nodes);
@@ -174,6 +211,26 @@ public class GameMapView extends MapActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-    	
+    }
+    
+    /** Handle the death of the player.
+     * This includes things like displaying a message to the player,
+     * saving high scores, etc.
+     */
+    public void handlePlayerDeath() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(900);
+        MediaPlayer pacman_death_mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_death);
+        pacman_death_mp.start();
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("You died!")
+               .setCancelable(false)
+               .setPositiveButton("Aww, shit...", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        System.exit(0);
+                   }
+               });
+        builder.create().show();
     }
 }

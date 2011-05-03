@@ -54,6 +54,9 @@
 			
 		<activity android:name="com.ghostrun.activity.ScoreGraphView" android:label="ScoreGraphView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+			
+		<activity android:name="com.ghostrun.activity.GuideView" android:label="GuideView"
+			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
 		
 
         <!-- ************************************* -->
@@ -61,5 +64,7 @@
         <!-- ************************************* -->
 
    </application>
+
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
 
 </manifest>

@@ -4,16 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 import com.ghostrun.driving.Node;
+import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 
 public class MazeGraph {
-	
-	public MazeGraph() {
-		
-	}
 	
 	public MazeGraph(List<Node> nodes) {
 		Map<Integer, MazeGraphPoint> nodeMap = new HashMap<Integer, MazeGraphPoint>();
@@ -44,30 +40,12 @@ public class MazeGraph {
     }
 
     public MazeGraphPoint getRandomPoint() {
-        Random rand = new Random();
         int nPoints = points.size();
         if (nPoints > 0) {
-            return points.get(rand.nextInt(nPoints));
+            return points.get(RandUtils.nextInt(nPoints));
         } else {
             return null;
         }
-    }
-
-    public static MazeGraph createSimpleMap() {
-        MazeGraph m = new MazeGraph();
-
-        // Campanile
-        MazeGraphPoint campanilePoint = m.addPoint(new GeoPoint(37871944, -122257778));
-        // NE corner of campus
-        MazeGraphPoint neCornerPoint = m.addPoint(new GeoPoint(37875522,-122256825));
-        // NW corner of campus
-        MazeGraphPoint nwCornerPoint = m.addPoint(new GeoPoint(37875522,-122256825));
-
-        // Edges
-        m.addEdge(neCornerPoint, nwCornerPoint);
-        m.addEdge(neCornerPoint, campanilePoint);
-        
-        return m;
     }
 
     private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();

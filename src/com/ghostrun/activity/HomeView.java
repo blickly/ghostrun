@@ -44,5 +44,15 @@ public class HomeView extends Activity {
                 startActivity(i);
             }
         });
+        
+        Button guide = (Button)findViewById(R.id.guide);
+        guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i= new Intent(HomeView.this, GuideView.class);
+                startActivity(i);
+            }
+        });
     }
 }

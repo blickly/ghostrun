@@ -11,12 +11,19 @@ import com.ghostrun.model.ai.VerticalStrategy;
 import com.google.android.maps.GeoPoint;
 
 public class Robot {
-    final int ROBOT_SPEED = 20;
+    public enum RobotType {
+        BLINKY,
+        PINKY,
+        INKY,
+        CLYDE
+    }
 
+    final int ROBOT_SPEED = 20;
     private GeoPoint location;
     private MazeGraphPoint destination;
     private Player player;
     private RobotStrategy ai;
+    private final RobotType type;
 
     ////////////////////////////////////////////////////////////////////////
     //                          constructors/factories
@@ -27,15 +34,16 @@ public class Robot {
         int i = 0;
         for (MazeGraphPoint point : startingPoints) {
             RobotStrategy s;
+            RobotType t;
             switch (i) {
-            case 0: s = new RandomStrategy(); break;
-            case 1: s = new HorizontalStrategy(); break;
-            case 2: s = new VerticalStrategy(); break;
-            case 3: s = new DirectStrategy(); break;
-            default: throw new RuntimeException("Unknown RobotStrategy:" + i);
+            case 0: s = new RandomStrategy(); t = RobotType.BLINKY; break;
+            case 1: s = new HorizontalStrategy(); t = RobotType.PINKY; break;
+            case 2: s = new VerticalStrategy(); t = RobotType.INKY; break;
+            case 3: s = new DirectStrategy(); t = RobotType.CLYDE; break;
+            default: throw new RuntimeException("Unknown RobotType:" + i);
             }
             i = (i + 1) % 4;
-            result.add(new Robot(point, following, s));
+            result.add(new Robot(point, following, s, t));
         }
         return result;
     }
@@ -50,11 +58,12 @@ public class Robot {
     }
 
     public Robot(MazeGraphPoint startingPoint, Player following,
-            RobotStrategy strategy) {
+            RobotStrategy strategy, RobotType robotType) {
         this.setDestination(startingPoint);
         this.setLocation(startingPoint.getLocation());
         this.player = following;
         this.ai = strategy;
+        this.type = robotType;
     }
 
     public Robot(MazeGraphPoint startingPoint, Player following) {
@@ -62,6 +71,7 @@ public class Robot {
         this.setLocation(startingPoint.getLocation());
         this.player = following;
         this.ai = new RandomStrategy();
+        this.type = RobotType.BLINKY;
     }
 
     ////////////////////////////////////////////////////////////////////////
@@ -77,6 +87,10 @@ public class Robot {
 
     public MazeGraphPoint getDestination() {
         return destination;
+    }
+    
+    public RobotType getRobotType() {
+        return type;
     }
 
     public void setDestination(MazeGraphPoint destination) {

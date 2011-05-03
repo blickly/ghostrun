@@ -2,8 +2,14 @@ package com.ghostrun.controllers;
 
 import java.util.List;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Handler;
+import android.os.Vibrator;
 
+import com.ghostrun.activity.GameMapView;
 import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.Player;
@@ -21,6 +27,7 @@ public class GameLoop implements Runnable {
     private Player player = new Player();
     private List<Robot> robots;
     private RobotsItemizedOverlay robotOverlay;
+    private GameMapView activity;
 
     public Player getPlayer() {
         return player;
@@ -31,22 +38,19 @@ public class GameLoop implements Runnable {
     public void setRobotOverlay(RobotsItemizedOverlay robotOverlay) {
         this.robotOverlay = robotOverlay;
     }
-
-    public GameLoop() {
-    	maze = MazeGraph.createSimpleMap();
-    	robots = Robot.createRandomRobots(2, maze, player);
-    }
     
-    public GameLoop(List<Node> nodes) {
+    public GameLoop(List<Node> nodes, GameMapView a) {
+        activity = a;
     	maze = new MazeGraph(nodes);
-    	robots = Robot.createRandomRobots(2, maze, player);
+    	robots = Robot.createRandomRobots(4, maze, player);
     }
 
     @Override
     public void run() {
         updateRobotPositions();
         if (isGameOver()) {
-            System.exit(0);
+            activity.handlePlayerDeath();
+            return;
         }
         robotOverlay.refresh();
         h.postDelayed(this, ROBOT_UPDATE_RATE_MS);
