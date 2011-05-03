@@ -73,7 +73,7 @@ public class GameMapView extends MapActivity {
     public void addGameLoop(List<Node> nodes) {
     	List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
-    	this.gameLoop = new GameLoop(nodes);
+    	this.gameLoop = new GameLoop(nodes, this);
     	
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);

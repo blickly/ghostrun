@@ -2,6 +2,9 @@ package com.ghostrun.controllers;
 
 import java.util.List;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Handler;
 
 import com.ghostrun.driving.Node;
@@ -21,6 +24,7 @@ public class GameLoop implements Runnable {
     private Player player = new Player();
     private List<Robot> robots;
     private RobotsItemizedOverlay robotOverlay;
+    private Activity activity;
 
     public Player getPlayer() {
         return player;
@@ -32,7 +36,8 @@ public class GameLoop implements Runnable {
         this.robotOverlay = robotOverlay;
     }
     
-    public GameLoop(List<Node> nodes) {
+    public GameLoop(List<Node> nodes, Activity a) {
+        activity = a;
     	maze = new MazeGraph(nodes);
     	robots = Robot.createRandomRobots(4, maze, player);
     }
@@ -71,6 +76,14 @@ public class GameLoop implements Runnable {
     }
 
     private void handlePlayerDeath() {
-        System.exit(0);
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setMessage("You died!")
+               .setCancelable(false)
+               .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        System.exit(0);
+                   }
+               });
+        builder.create().show();
     }
 }
