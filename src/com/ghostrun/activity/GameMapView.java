@@ -27,6 +27,7 @@ import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
 import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
+import com.ghostrun.overlays.DotsOverlay;
 import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
@@ -41,6 +42,7 @@ public class GameMapView extends MapActivity {
     MapView mapView;
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
+    DotsOverlay dotsOverlay;
     GameLoop gameLoop;
     MediaPlayer begin_game_mp;
     MediaPlayer pacman_death_mp;
@@ -81,6 +83,11 @@ public class GameMapView extends MapActivity {
         mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
         this.mapView.getController().setCenter(nodes.get(0).latlng);
+        
+        // Add Food dots overlay
+        Drawable marker = this.getResources().getDrawable(R.drawable.androidmarker);
+        this.dotsOverlay = new DotsOverlay(marker);
+        this.gameLoop.setDotsOverlay(dotsOverlay);
     	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
