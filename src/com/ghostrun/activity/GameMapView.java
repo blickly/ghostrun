@@ -60,14 +60,9 @@ public class GameMapView extends MapActivity {
         
         this.mazeOverlay = null;
         
-        soundOn = true;
+        soundOn = false;
         mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_sound);
-        if (mp!=null) {
-            try {
-                mp.start();
-                mp.setLooping(true);
-            } catch (Exception e){}
-        }
+        mp.setLooping(true);
     }
 
     public void addGameLoop(List<Node> nodes) {
@@ -162,8 +157,7 @@ public class GameMapView extends MapActivity {
             }
         });
        
-        // TODO: what about sound on?
-        menu.add("Sound On");
+        menu.add("Sound Off");
         menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
