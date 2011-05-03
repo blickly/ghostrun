@@ -5,6 +5,9 @@ import java.io.FileReader;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
@@ -13,6 +16,7 @@ import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -203,5 +207,24 @@ public class GameMapView extends MapActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+    }
+    
+    /** Handle the death of the player.
+     * This includes things like displaying a message to the player,
+     * saving high scores, etc.
+     */
+    public void handlePlayerDeath() {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(900);
+        
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("You died!")
+               .setCancelable(false)
+               .setPositiveButton("Aww, shit...", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        System.exit(0);
+                   }
+               });
+        builder.create().show();
     }
 }
