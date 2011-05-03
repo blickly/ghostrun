@@ -3,19 +3,14 @@ package com.ghostrun.activity;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
-import android.location.Criteria;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Menu;
@@ -25,14 +20,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.ghostrun.R;
-import com.ghostrun.controllers.GameLoop;
 import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
-import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.PointsOverlay;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
-import com.google.android.maps.MyLocationOverlay;
 import com.google.android.maps.Overlay;
 
 /** Map Activity for showing the status of a game in progress.
@@ -106,23 +98,6 @@ public class MapEditor extends MapActivity {
     ///////////////////////////////////////////////////////////////////
     //                     private methods
     ///////////////////////////////////////////////////////////////////
-
-    private void registerLocationUpdates(LocationListener listener) {
-        LocationManager locationManager = (LocationManager) getSystemService(
-                Activity.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-        criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        criteria.setAltitudeRequired(true);
-        String bestLocationProvider = locationManager.getBestProvider(
-                criteria, false);
-        if (bestLocationProvider == null
-                || !locationManager.isProviderEnabled(bestLocationProvider)) {
-            android.util.Log.d("registerLocationUpdates",
-                    "Provider not available or not enabled");
-            return;
-        }
-        locationManager.requestLocationUpdates(bestLocationProvider, 0, 0, listener);
-    }
     
     // Menu will hold "Sound" button and "Map Selection" button.
     public boolean onCreateOptionsMenu(Menu menu) {

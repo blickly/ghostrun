@@ -2,12 +2,7 @@ package com.ghostrun.controllers;
 
 import java.util.List;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Handler;
-import android.os.Vibrator;
 
 import com.ghostrun.activity.GameMapView;
 import com.ghostrun.driving.Node;

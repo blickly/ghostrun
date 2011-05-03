@@ -1,9 +1,5 @@
 package com.ghostrun.driving;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -20,8 +16,6 @@ import java.util.Set;
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-import android.app.Activity;
 
 import com.ghostrun.driving.impl.RouteImpl;
 import com.google.android.maps.GeoPoint;
