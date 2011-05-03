@@ -62,4 +62,6 @@
 
    </application>
 
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+
 </manifest>

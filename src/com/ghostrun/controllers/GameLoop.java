@@ -4,8 +4,10 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Handler;
+import android.os.Vibrator;
 
 import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
@@ -47,6 +49,7 @@ public class GameLoop implements Runnable {
         updateRobotPositions();
         if (isGameOver()) {
             handlePlayerDeath();
+            return;
         }
         robotOverlay.refresh();
         h.postDelayed(this, ROBOT_UPDATE_RATE_MS);
@@ -76,10 +79,13 @@ public class GameLoop implements Runnable {
     }
 
     private void handlePlayerDeath() {
+        Vibrator v = (Vibrator)activity.getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(900);
+        
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setMessage("You died!")
                .setCancelable(false)
-               .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+               .setPositiveButton("Aww, shit...", new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                         System.exit(0);
                    }
