@@ -69,7 +69,7 @@ public class GameMapView extends MapActivity {
         
         this.mazeOverlay = null;
         
-        soundOn = false;
+        soundOn = true;
     }
 
     public void addGameLoop(List<Node> nodes) {
