@@ -163,7 +163,7 @@ public class MapEditor extends MapActivity {
         menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
         	@Override
     	    public boolean onMenuItemClick(MenuItem item) {	
-    	    	if (item.getTitle().toString().equals("Select On")) {
+    	    	if (item.getTitle().equals("Select On")) {
     	    		item.setTitle("Remove On");
     	    		pointsOverlay.remove();
     	    	} else {
@@ -178,7 +178,7 @@ public class MapEditor extends MapActivity {
         menu.getItem(2).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-            	String filename = "data1.json";
+            	String filename = "map.png";
         		InputStreamReader input = null;
     			try {
 					input = new InputStreamReader(
@@ -196,6 +196,7 @@ public class MapEditor extends MapActivity {
 					e.printStackTrace();
 				}
             	System.out.println("size of random nodes: " + randNodes.size());
+            	mapView.getController().setCenter(randNodes.get(0).latlng);
             	newPointsOverlay(randNodes);
                 return true;
             }

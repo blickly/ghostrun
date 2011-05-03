@@ -8,8 +8,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import com.google.gson.Gson;
-
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -31,6 +29,7 @@ import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 import com.google.android.maps.Projection;
+import com.google.gson.Gson;
 
 public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	int node_id = 0;
@@ -54,10 +53,21 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 			nodeMap.put(n.id, n);
 		}
 		
+		/*
+		int processedNodes = 0;
 		for (Node n1 : nodes) {
 			final Node f1 = n1; 
 			for (Node n2 : n1.neighbors) {
 				final Node f2 = n2;
+				if (processedNodes % 20 == 0) {
+					try {
+						Thread.sleep(10000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				processedNodes ++;
 				DrivingDirections directions = DrivingDirectionsFactory.createDrivingDirections();
 				directions.driveTo(n1.latlng, n2.latlng, 
 						DrivingDirections.Mode.DRIVING, 
@@ -71,7 +81,8 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 							}
 					});
 			}
-		}		
+		}
+		*/		
 		this.setLastFocusedIndex(-1);
 		this.selected = this.nodes.size() -1;
 		this.mapView.invalidate();
@@ -208,27 +219,29 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
         super.draw(canvas, mapv, shadow);
         
         Collection<Route> routes = routesMap.values();
+        Projection projection = mapv.getProjection();
         for (Route route : routes) {
         	List<GeoPoint> geoPoints = route.getGeoPoints();
-        	GeoPoint lastPt = geoPoints.get(0);
+        	GeoPoint pt1 = geoPoints.get(0);
+        	Point p1 = new Point();
+        	projection.toPixels(pt1, p1);
+        	
         	for (int i = 1; i < geoPoints.size(); i++) {
-        		GeoPoint curPt = geoPoints.get(i);
-                Point p1 = new Point();
+        		GeoPoint pt2 = geoPoints.get(i); 
                 Point p2 = new Point();
 
                 Path path = new Path();
-                Projection projection = mapv.getProjection();
-                projection.toPixels(lastPt, p1);
-                projection.toPixels(curPt, p2);
+                projection.toPixels(pt2, p2);
 
                 path.moveTo(p2.x, p2.y);
-                path.lineTo(p1.x,p1.y);
+                path.lineTo(p1.x, p1.y);
         		canvas.drawPath(path, this.mPaint);
         		
-        		lastPt = curPt;
+        		pt1 = pt2;
+        		p1 = p2;
         	}
         }
-        this.mapView.invalidate();
+        //this.mapView.invalidate();
     }
 	
 	public boolean onTap(GeoPoint p, MapView mapView) { 

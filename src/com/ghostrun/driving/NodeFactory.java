@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -52,8 +53,18 @@ public class NodeFactory {
 				
 				Node lastNode = node1;
 				List<GeoPoint> lst = ((RouteImpl)r).getGeoPoints();
-				lst.remove(0);
-				lst.remove(lst.size()-1);
+				
+				/*
+				if (!lst.get(0).equals(node1.latlng) || !lst.get(lst.size()-1).equals(node2.latlng))
+					System.out.println("endpoints don't match...");
+				*/
+				
+				if (lst.get(0).equals(node1.latlng)) {
+					lst.remove(0);
+				}
+				if (lst.get(lst.size()-1).equals(node2.latlng)) {
+					lst.remove(lst.size()-1);
+				}
 				
 				if (lst.size() > 0) {
 					node1.removeNeighbor(node2);
@@ -62,8 +73,7 @@ public class NodeFactory {
 				
 				if (!result.contains(node1)) {
 					result.add(node1);
-				}
-				
+				}	
 				if (!result.contains(node2)) {
 					result.add(node2);
 				}
@@ -115,12 +125,13 @@ public class NodeFactory {
 		Collection<Object> values = map.values();
 		for (Object val : values) {
 			Map<String, Object> tmp = (HashMap<String, Object>)val;
-			System.out.println("ERROR CAST: " + (Double)tmp.get("lat"));
-			Node n = new Node(new GeoPoint(
-						(int)((Double)tmp.get("lat") * 1e6), 
-						(int)((Double)tmp.get("lng") * 1e6)),
-						((Long)tmp.get("id")).intValue());
-			nodeMap.put(((Long)tmp.get("id")).intValue(), n);
+			//System.out.println("ERROR CAST: " + (Double)tmp.get("lat"));
+			int id = ((Long)tmp.get("id")).intValue();
+			//System.out.println("id: " + id);
+			Node n = new Node(new GeoPoint(((Long)tmp.get("lat")).intValue(), 
+					((Long)tmp.get("lng")).intValue()), id);
+			//System.out.println(n.latlng);
+			nodeMap.put(id, n);
 			
 			results.add(n);
 		}
@@ -130,7 +141,8 @@ public class NodeFactory {
 			Node n = nodeMap.get(((Long) tmp.get("id")).intValue());
 			for (Object neighborId : (List<Integer>)tmp.get("neighbors")) {
 				Node tmpNode = nodeMap.get(((Long)neighborId).intValue());
-				n.addNeighbor(tmpNode);				
+				n.addNeighbor(tmpNode);
+				tmpNode.addNeighbor(n);
 			}
 		}
 		return results;
@@ -140,31 +152,58 @@ public class NodeFactory {
 		List<Node> nodes = fromStaticMap(serialized);
 		List<Node> results = new ArrayList<Node>();
 		Set<Node> doneNodes = new HashSet<Node>();
-		final double randomTh = 0.7;
-		Random random = new Random();
+		final double randomTh = 0.3;
+		Random random = new Random(new Date().getTime());
+		
+		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+		for (Node n: nodes) {
+			nodeMap.put(n.id, n);
+		}
 		
 		Queue<Node> queue = new LinkedList<Node>();
-		Node n = nodes.get(random.nextInt(nodes.size()));
+		Node n = nodes.get(random.nextInt(nodes.size())).clone();
 		queue.offer(n);
 		doneNodes.add(n);
+		
+		System.out.println("Picked node: " + n.id);
+		
+		/*
+		int rand = 100;
+		while (rand > 0) {
+			Node n1 = nodes.get(random.nextInt(nodes.size())).clone();
+			if (!results.contains(n1)) {
+				results.add(n1);
+			}
+			rand --;
+		}
+		*/
+		
 		while (queue.size() > 0) {
 			Node curNode = queue.poll();
-			Node newNode = curNode.clone();
+			Node newNode = curNode;
 			
 			results.add(newNode);
+			System.out.println("number of neighbors: " + n.neighbors.size());
 			
-			for (Node neighbor : n.neighbors) {
+			for (Node neighbor : nodeMap.get(newNode.id).neighbors) {
 				if (!doneNodes.contains(neighbor)) {
-					double r = random.nextDouble();
-					if (r < randomTh) {
-						queue.offer(neighbor);
-						doneNodes.add(neighbor);
-						newNode.addNeighbor(neighbor);
+					if (results.size() < 20 || (results.size() < 50 && random.nextDouble() < randomTh)) {
+						System.out.println("adding neighbor: " + results.size() + " queue size: " + queue.size());
+						Node n1 = neighbor.clone();
+						queue.offer(n1);
+						doneNodes.add(n1);
+						newNode.addNeighbor(n1);
+						n1.addNeighbor(newNode);
 					}
 				}
 			}
 		}
 		
+		/*
+		if (results.size() < 15) {
+			return generateRandomMap(serialized);
+		}
+		*/
 		return results;
 	}
 	

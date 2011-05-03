@@ -153,13 +153,13 @@ public class GameMapView extends MapActivity {
 			BufferedReader bufRead = new BufferedReader(input);
 			String json = bufRead.readLine();
 			
-			System.out.println(json);
+			//System.out.println(json);
 			
 			NodeFactory factory = new NodeFactory();
 			NodeFactory.NodesAndRoutes nodesAndRoutes = factory.fromMap(json);
 			
-			System.out.println(nodesAndRoutes.nodes.size());
-			System.out.println(nodesAndRoutes.routesMap.size());
+			//System.out.println(nodesAndRoutes.nodes.size());
+			//System.out.println(nodesAndRoutes.routesMap.size());
 			
 			if (mazeOverlay != null)
 				this.mapView.getOverlays().remove(mazeOverlay);
@@ -167,7 +167,9 @@ public class GameMapView extends MapActivity {
 			List<Node> nodes = nodesAndRoutes.toNodes();
 			this.addGameLoop(nodes);
 			mazeOverlay = new MazeOverlay(nodes);
-			this.mapView.getOverlays().add(mazeOverlay);	
+			this.mapView.getOverlays().add(mazeOverlay);
+			this.mapView.getController().setCenter(nodes.get(0).latlng);
+			//System.out.println("Done setting center");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
