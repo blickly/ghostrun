@@ -20,6 +20,7 @@ import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 
 import com.ghostrun.R;
@@ -52,6 +53,9 @@ public class GameMapView extends MapActivity {
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
         mapView.getController().setZoom(17);
+        
+        // Keep screen on when game is visible.
+        getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         // Stop the current activity and return to the previous view.
         Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
