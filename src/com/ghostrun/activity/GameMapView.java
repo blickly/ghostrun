@@ -216,6 +216,8 @@ public class GameMapView extends MapActivity {
     public void handlePlayerDeath() {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(900);
+        MediaPlayer pacman_death_mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_death);
+        pacman_death_mp.start();
         
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("You died!")
