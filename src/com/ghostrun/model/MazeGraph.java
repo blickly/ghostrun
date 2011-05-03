@@ -34,6 +34,10 @@ public class MazeGraph {
         return mgPoint;
     }
     
+    public List<MazeGraphPoint> getPoints() {
+    	return this.points;
+    }
+    
     public void addEdge(MazeGraphPoint p1, MazeGraphPoint p2) {
         p1.addConncetionTo(p2);
         p2.addConncetionTo(p1);

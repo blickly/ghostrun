@@ -9,6 +9,7 @@ import com.ghostrun.driving.Node;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
+import com.ghostrun.overlays.DotsOverlay;
 import com.ghostrun.overlays.RobotsItemizedOverlay;
 import com.ghostrun.util.GeoPointUtils;
 
@@ -23,6 +24,7 @@ public class GameLoop implements Runnable {
     private List<Robot> robots;
     private RobotsItemizedOverlay robotOverlay;
     private GameMapView activity;
+    private DotsOverlay dotsOverlay;
 
     public Player getPlayer() {
         return player;
@@ -32,6 +34,10 @@ public class GameLoop implements Runnable {
     }
     public void setRobotOverlay(RobotsItemizedOverlay robotOverlay) {
         this.robotOverlay = robotOverlay;
+    }
+    
+    public void setDotsOverlay(DotsOverlay dotsOverlay) {
+    	this.dotsOverlay = dotsOverlay;
     }
     
     public GameLoop(List<Node> nodes, GameMapView a) {
