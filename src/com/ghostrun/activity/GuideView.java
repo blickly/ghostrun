@@ -21,5 +21,13 @@ public class GuideView extends Activity {
                 finish();
             }
         });
+        
+        Button leftarrow=(Button)findViewById(R.id.left_arrow_page1);
+        leftarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

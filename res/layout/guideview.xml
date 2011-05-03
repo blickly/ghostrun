@@ -9,5 +9,64 @@
 		android:layout_height="wrap_content" 
 		android:id="@+id/guideview_paclogo"
 		android:background="@drawable/pac_log_clicked" />
+	
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="440px"
+		android:background="@color/white" 
+		android:paddingLeft = "5px" 
+		android:paddingTop = "5px" >
+		
+		<TextView android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:text = "Step 1: Generate the map "
+ 			android:textSize = "20px" 
+ 			android:textColor = "@color/black"/>
+ 			
+ 		<TextView android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:text = "- Click on the map to generate vertices and edges."
+ 			android:textColor = "@color/black" />
+ 			
+ 		<TextView android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:text = "- Click Select On from menu to remove vertices."
+ 			android:textColor = "@color/black"/>
+ 			
+ 		<TextView android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:text = "- Click Random Map from menu to generate a random map."
+ 			android:textColor = "@color/black"/>
+		
+		<Button android:layout_width = "wrap_content" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/guide_generate_map"
+			android:background="@drawable/guide_generate_map" />
+		
+	</LinearLayout>
  	
+ 	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		android:paddingTop="10px">
+		
+		<Button android:layout_width = "wrap_content" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/left_arrow_page1"
+			android:background="@drawable/left_clicked" />
+			
+		<TextView android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			android:text = "      " />
+			
+		<Button android:layout_width = "wrap_content" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/right_arrow_page1"
+			android:background="@drawable/right_clicked" />
+	
+	</LinearLayout>
+	
 </LinearLayout>
