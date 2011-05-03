@@ -152,7 +152,7 @@ public class NodeFactory {
 		List<Node> nodes = fromStaticMap(serialized);
 		List<Node> results = new ArrayList<Node>();
 		Set<Node> doneNodes = new HashSet<Node>();
-		final double randomTh = 0.3;
+		final double randomTh = 0.2;
 		Random random = new Random(new Date().getTime());
 		
 		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
@@ -187,7 +187,7 @@ public class NodeFactory {
 			
 			for (Node neighbor : nodeMap.get(newNode.id).neighbors) {
 				if (!doneNodes.contains(neighbor)) {
-					if (results.size() < 20 || (results.size() < 50 && random.nextDouble() < randomTh)) {
+					if (results.size() < 10 || (results.size() < 50 && random.nextDouble() < randomTh)) {
 						System.out.println("adding neighbor: " + results.size() + " queue size: " + queue.size());
 						Node n1 = neighbor.clone();
 						queue.offer(n1);

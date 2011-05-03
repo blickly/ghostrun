@@ -50,10 +50,10 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
 		for (Node n : nodes) {
 			this.nodes.add(n);
+			System.out.println("adding node: " + n.latlng);
 			nodeMap.put(n.id, n);
 		}
 		
-		/*
 		int processedNodes = 0;
 		for (Node n1 : nodes) {
 			final Node f1 = n1; 
@@ -81,8 +81,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 							}
 					});
 			}
-		}
-		*/		
+		}		
 		this.setLastFocusedIndex(-1);
 		this.selected = this.nodes.size() -1;
 		this.mapView.invalidate();
