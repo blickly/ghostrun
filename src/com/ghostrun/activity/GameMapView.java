@@ -20,6 +20,7 @@ import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 
 import com.ghostrun.R;
@@ -41,7 +42,8 @@ public class GameMapView extends MapActivity {
     MyLocationOverlay locationOverlay;
     MazeOverlay mazeOverlay;
     GameLoop gameLoop;
-    MediaPlayer mp;
+    MediaPlayer begin_game_mp;
+    MediaPlayer pacman_death_mp;
     boolean soundOn;
     
     @Override
@@ -52,6 +54,9 @@ public class GameMapView extends MapActivity {
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
         mapView.getController().setZoom(17);
+        
+        // Keep screen on when game is visible.
+        getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         // Stop the current activity and return to the previous view.
         Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
@@ -64,9 +69,7 @@ public class GameMapView extends MapActivity {
         
         this.mazeOverlay = null;
         
-        soundOn = false;
-        mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_sound);
-        mp.setLooping(true);
+        soundOn = true;
     }
 
     public void addGameLoop(List<Node> nodes) {
@@ -77,6 +80,7 @@ public class GameMapView extends MapActivity {
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
+        this.mapView.getController().setCenter(nodes.get(0).latlng);
     	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
@@ -97,6 +101,12 @@ public class GameMapView extends MapActivity {
                     redIcon, orangeIcon, pinkIcon, blueIcon, gameLoop.getRobots());
         mapOverlays.add(robotOverlay);
         
+        // Add beginning sound.
+        if (soundOn) {
+            begin_game_mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_beginning);
+            begin_game_mp.start();
+        }
+        
         // Start game loop
         Handler handler = new Handler();
         gameLoop.setRobotOverlay(robotOverlay);
@@ -107,9 +117,6 @@ public class GameMapView extends MapActivity {
     @Override
     public void onPause() {
         super.onPause();
-        if (soundOn) {
-            mp.pause();
-        }
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
     }
@@ -117,9 +124,6 @@ public class GameMapView extends MapActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (soundOn) {
-            mp.start();
-        }
         if (locationOverlay != null)
         	locationOverlay.enableMyLocation();
     }
@@ -161,7 +165,7 @@ public class GameMapView extends MapActivity {
             }
         });
        
-        menu.add("Sound Off");
+        menu.add("Sound On");
         menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -169,11 +173,9 @@ public class GameMapView extends MapActivity {
                 if (soundOn) {
                     soundOn = false;
                     item.setTitle("Sound Off");
-                    mp.pause();
                 } else {
                     soundOn = true;
                     item.setTitle("Sound On");
-                    mp.start();
                 }
                 return true;
             }
@@ -203,10 +205,6 @@ public class GameMapView extends MapActivity {
 			
 			List<Node> nodes = nodesAndRoutes.toNodes();
 			this.addGameLoop(nodes);
-			mazeOverlay = new MazeOverlay(nodes);
-			this.mapView.getOverlays().add(mazeOverlay);
-			this.mapView.getController().setCenter(nodes.get(0).latlng);
-			//System.out.println("Done setting center");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -220,8 +218,10 @@ public class GameMapView extends MapActivity {
     public void handlePlayerDeath() {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         v.vibrate(900);
-        MediaPlayer pacman_death_mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_death);
-        pacman_death_mp.start();
+        if (soundOn) {
+            pacman_death_mp = MediaPlayer.create(GameMapView.this, R.raw.pacman_death);
+            pacman_death_mp.start();
+        }
         
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("You died!")

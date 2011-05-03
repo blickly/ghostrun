@@ -1,12 +1,7 @@
 package com.ghostrun.driving;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -14,16 +9,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
-import java.util.Random;
 import java.util.Set;
 
 import org.json.simple.parser.ContainerFactory;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import android.app.Activity;
-
 import com.ghostrun.driving.impl.RouteImpl;
+import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 
 public class NodeFactory {
@@ -153,7 +146,6 @@ public class NodeFactory {
 		List<Node> results = new ArrayList<Node>();
 		Set<Node> doneNodes = new HashSet<Node>();
 		final double randomTh = 0.2;
-		Random random = new Random(new Date().getTime());
 		
 		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
 		for (Node n: nodes) {
@@ -161,7 +153,7 @@ public class NodeFactory {
 		}
 		
 		Queue<Node> queue = new LinkedList<Node>();
-		Node n = nodes.get(random.nextInt(nodes.size())).clone();
+		Node n = nodes.get(RandUtils.nextInt(nodes.size())).clone();
 		queue.offer(n);
 		doneNodes.add(n);
 		
@@ -170,7 +162,7 @@ public class NodeFactory {
 		/*
 		int rand = 100;
 		while (rand > 0) {
-			Node n1 = nodes.get(random.nextInt(nodes.size())).clone();
+			Node n1 = nodes.get(RandUtils.nextInt(nodes.size())).clone();
 			if (!results.contains(n1)) {
 				results.add(n1);
 			}
@@ -187,7 +179,7 @@ public class NodeFactory {
 			
 			for (Node neighbor : nodeMap.get(newNode.id).neighbors) {
 				if (!doneNodes.contains(neighbor)) {
-					if (results.size() < 10 || (results.size() < 50 && random.nextDouble() < randomTh)) {
+					if (results.size() < 10 || (results.size() < 50 && RandUtils.nextDouble() < randomTh)) {
 						System.out.println("adding neighbor: " + results.size() + " queue size: " + queue.size());
 						Node n1 = neighbor.clone();
 						queue.offer(n1);
