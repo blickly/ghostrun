@@ -31,11 +31,6 @@ public class GameLoop implements Runnable {
     public void setRobotOverlay(RobotsItemizedOverlay robotOverlay) {
         this.robotOverlay = robotOverlay;
     }
-
-    public GameLoop() {
-    	maze = MazeGraph.createSimpleMap();
-    	robots = Robot.createRandomRobots(4, maze, player);
-    }
     
     public GameLoop(List<Node> nodes) {
     	maze = new MazeGraph(nodes);
@@ -46,7 +41,7 @@ public class GameLoop implements Runnable {
     public void run() {
         updateRobotPositions();
         if (isGameOver()) {
-            System.exit(0);
+            handlePlayerDeath();
         }
         robotOverlay.refresh();
         h.postDelayed(this, ROBOT_UPDATE_RATE_MS);
@@ -73,5 +68,9 @@ public class GameLoop implements Runnable {
             }
         }
         return false;
+    }
+
+    private void handlePlayerDeath() {
+        System.exit(0);
     }
 }
