@@ -2,6 +2,7 @@ package com.ghostrun.activity;
 
 import com.ghostrun.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,12 +23,5 @@ public class GuideView extends Activity {
             }
         });
         
-        Button leftarrow=(Button)findViewById(R.id.left_arrow_page1);
-        leftarrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 }

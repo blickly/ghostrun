@@ -57,7 +57,6 @@
 			
 		<activity android:name="com.ghostrun.activity.GuideView" android:label="GuideView"
 			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
-		
 
         <!-- ************************************* -->
         <!--      VIEW/WIDGET PACKAGE SAMPLES      -->

@@ -5,68 +5,137 @@
     android:layout_height="fill_parent"
     >
     
- 	<Button android:layout_width = "wrap_content" 
+	<Button android:layout_width = "wrap_content" 
 		android:layout_height="wrap_content" 
 		android:id="@+id/guideview_paclogo"
 		android:background="@drawable/pac_log_clicked" />
-	
-	<LinearLayout 
-		android:orientation="vertical"
-		android:layout_width="fill_parent" 
-		android:layout_height="440px"
-		android:background="@color/white" 
-		android:paddingLeft = "5px" 
-		android:paddingTop = "5px" >
-		
-		<TextView android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:text = "Step 1: Generate the map "
- 			android:textSize = "20px" 
- 			android:textColor = "@color/black"/>
- 			
- 		<TextView android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:text = "- Click on the map to generate vertices and edges."
- 			android:textColor = "@color/black" />
- 			
- 		<TextView android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:text = "- Click Select On from menu to remove vertices."
- 			android:textColor = "@color/black"/>
- 			
- 		<TextView android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:text = "- Click Random Map from menu to generate a random map."
- 			android:textColor = "@color/black"/>
-		
-		<Button android:layout_width = "wrap_content" 
-			android:layout_height="wrap_content" 
-			android:id="@+id/guide_generate_map"
-			android:background="@drawable/guide_generate_map" />
-		
-	</LinearLayout>
- 	
- 	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" 
-		android:gravity="center"
-		android:paddingTop="10px">
-		
-		<Button android:layout_width = "wrap_content" 
-			android:layout_height="wrap_content" 
-			android:id="@+id/left_arrow_page1"
-			android:background="@drawable/left_clicked" />
+    
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+    	
+    	<LinearLayout
+    		android:orientation="vertical"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+			android:background="@color/white" 
+			android:paddingLeft = "5px" >
+				
+			<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "Step 1: Generate the map "
+	 			android:textSize = "20px" 
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Select Mazes from the HomeView."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Click on the map to generate vertices and edges."
+	 			android:textColor = "@color/black" />
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Click Select On from menu to remove vertices."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Click Random Map from menu to generate a random map."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Click Save Map from menu when done."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center" 
+				android:paddingTop="2px"
+				android:paddingBottom="2px" >
+				
+				<Button android:layout_width = "wrap_content" 
+					android:layout_height="wrap_content" 
+					android:id="@+id/step1_a"
+					android:background="@drawable/step1_a" />
+					
+			</LinearLayout>
 			
-		<TextView android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			android:text = "      " />
+			<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "Step 2: Play the game"
+	 			android:textSize = "20px" 
+	 			android:textColor = "@color/black"
+	 			android:paddingTop = "5px"/>
+	 			
+	 		<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Choose Select Map from menu."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center" 
+				android:paddingTop="2px"
+				android:paddingBottom="2px" >
 			
-		<Button android:layout_width = "wrap_content" 
-			android:layout_height="wrap_content" 
-			android:id="@+id/right_arrow_page1"
-			android:background="@drawable/right_clicked" />
-	
-	</LinearLayout>
+				<Button android:layout_width = "wrap_content" 
+					android:layout_height="wrap_content" 
+					android:id="@+id/step2_a"
+					android:background="@drawable/step2_a" />
+					
+			</LinearLayout>
+			
+			<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Select a valid map with a pacman icon."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center" 
+				android:paddingTop="2px"
+				android:paddingBottom="2px" >
+				
+				<Button android:layout_width = "wrap_content" 
+					android:layout_height="wrap_content" 
+					android:id="@+id/step2_b"
+					android:background="@drawable/step2_b" />
+					
+			</LinearLayout>
+			
+			<TextView android:layout_width="wrap_content"
+	 			android:layout_height="wrap_content"
+	 			android:text = "- Here is how the map looks like after selecting the map."
+	 			android:textColor = "@color/black"/>
+	 			
+	 		<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center" 
+				android:paddingTop="2px"
+				android:paddingBottom="2px" >
+				
+				<Button android:layout_width = "wrap_content" 
+					android:layout_height="wrap_content" 
+					android:id="@+id/step2_c"
+					android:background="@drawable/step2_c" />
+					
+			</LinearLayout>
+		 	
+		</LinearLayout>
+		
+	</ScrollView>
 	
 </LinearLayout>
