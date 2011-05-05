@@ -6,11 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import com.ghostrun.util.GeoPointOffset;
 import com.ghostrun.util.GeoPointUtils;
 import com.google.android.maps.GeoPoint;
 
 public class Dots {
-    private List<GeoPoint> items;
+    private List<GeoPoint> dotList;
     
     public final double INCREMENT = 200.0;
     public final int EATING_DISTANCE = 200;
@@ -41,7 +42,7 @@ public class Dots {
     }
 
     public void setMazeGraph(MazeGraph maze) {
-        this.items = new ArrayList<GeoPoint>();
+        this.dotList = new ArrayList<GeoPoint>();
         Set<PointPair> doneSet = new HashSet<PointPair>();
         for (MazeGraphPoint p : maze.getPoints()) {
             for (MazeGraphPoint n : p.getNeighbors()) {
@@ -53,12 +54,12 @@ public class Dots {
             }
         }
 
-        System.out.println("Done adding maze points: " + items.size());
+        System.out.println("Done adding maze points: " + dotList.size());
     }
 
     public int eatDotsAt(GeoPoint playerLocation) {
         int pointIncrement = 0; 
-        Iterator<GeoPoint> iter = items.iterator();
+        Iterator<GeoPoint> iter = dotList.iterator();
         while (iter.hasNext()) {
             GeoPoint pt = iter.next();
             if ((int) GeoPointUtils.getDistance(playerLocation, pt) < EATING_DISTANCE) {
@@ -69,39 +70,27 @@ public class Dots {
         return pointIncrement;
     }
 
-    private int getDifference(double slope, double distance, int direction) {
-        return (int)(direction * (Math.sqrt((distance * distance) / (slope * slope + 1))));
-    }
-
     private void generateDotsAlongEdge(PointPair p) {
-        double slope = (double)(p.pt1.getLocation().getLatitudeE6() - p.pt2.getLocation().getLatitudeE6())/
-        (double)(p.pt1.getLocation().getLongitudeE6() - p.pt2.getLocation().getLongitudeE6());
-
-        GeoPoint pt1 = p.pt1.getLocation();
-        GeoPoint pt2 = p.pt2.getLocation();
-
-        GeoPoint curPoint = p.pt2.getLocation();
-        int direction = (pt1.getLongitudeE6() > pt2.getLongitudeE6() ? 1 : -1);
-
-        double totalDistance = GeoPointUtils.getDistance(p.pt2.getLocation(), p.pt1.getLocation());
+        GeoPointOffset slope = new GeoPointOffset(p.pt1.getLocation(), p.pt2.getLocation());
+        double totalDistance = slope.getLength();
         int times = (int)(totalDistance / INCREMENT);
-        int difference = getDifference(slope, INCREMENT, direction);
+        slope.scaleBy(1.0 / times);
 
+        GeoPoint curPoint = p.pt1.getLocation();
         while (times > 0) {
-            curPoint = new GeoPoint((int)(curPoint.getLatitudeE6() + slope * difference),
-                    (int)(curPoint.getLongitudeE6() + difference));
-            items.add(curPoint);
-            times --;
+            curPoint = slope.addTo(curPoint);
+            dotList.add(curPoint);
+            times--;
         }
 
-        System.out.println("added points: " + items.size());
+        System.out.println("added points: " + dotList.size());
     }
 
     public GeoPoint get(int i) {
-        return items.get(i);
+        return dotList.get(i);
     }
 
     public int remaining() {
-        return items.size();
+        return dotList.size();
     }
 }
