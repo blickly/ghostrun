@@ -10,8 +10,7 @@ import com.ghostrun.util.GeoPointUtils;
 import com.google.android.maps.GeoPoint;
 
 public class Dots {
-    public List<GeoPoint> items;
-    public MazeGraph maze;
+    private List<GeoPoint> items;
     
     public final double INCREMENT = 200.0;
     public final int EATING_DISTANCE = 200;
@@ -42,7 +41,6 @@ public class Dots {
     }
 
     public void setMazeGraph(MazeGraph maze) {
-        this.maze = maze;
         this.items = new ArrayList<GeoPoint>();
 
         Set<PointPair> doneSet = new HashSet<PointPair>();
@@ -105,5 +103,13 @@ public class Dots {
         }
 
         System.out.println("added points: " + items.size());
+    }
+
+    public GeoPoint get(int i) {
+        return items.get(i);
+    }
+
+    public int remaining() {
+        return items.size();
     }
 }

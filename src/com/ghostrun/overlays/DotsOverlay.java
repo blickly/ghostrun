@@ -26,13 +26,11 @@ public class DotsOverlay extends ItemizedOverlay<OverlayItem>{
 
     @Override
     protected OverlayItem createItem(int i) {
-        // TODO Auto-generated method stub
-        return new OverlayItem(dots.items.get(i), "", "");
+        return new OverlayItem(dots.get(i), "", "");
     }
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        return dots.items.size();
+        return dots.remaining();
     }
 }
