@@ -69,9 +69,8 @@ public class GameLoop implements Runnable {
             activity.handlePlayerDeath();
             return;
         }
-        
         if (player.hasLocation()) {
-        	this.currentPoints += dots.refresh(player.getLocationAsGeoPoint());
+        	this.currentPoints += dots.eatDotsAt(player.getLocationAsGeoPoint());
         	this.textView.setText(this.currentPoints + " points");
         }
         dotsOverlay.refresh();

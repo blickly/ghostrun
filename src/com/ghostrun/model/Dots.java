@@ -7,20 +7,14 @@ import java.util.List;
 import java.util.Set;
 
 import com.ghostrun.util.GeoPointUtils;
-import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 
 public class Dots {
     public List<GeoPoint> items;
-
     public MazeGraph maze;
-
-    public final double DENSITY = 1.0;
     
     public final double INCREMENT = 200.0;
-
-    public final int EATING_DISTANCE = 150;
-
+    public final int EATING_DISTANCE = 200;
     public final int DOT_POINTS = 10;
 
     public Dots(MazeGraph mazeGraph) {
@@ -47,9 +41,6 @@ public class Dots {
         }
     }
 
-
-
-
     public void setMazeGraph(MazeGraph maze) {
         this.maze = maze;
         this.items = new ArrayList<GeoPoint>();
@@ -73,20 +64,18 @@ public class Dots {
         System.out.println("Done adding maze points: " + items.size());
     }
 
-
-    public int refresh(GeoPoint playerLocation) {
-        // TODO: eat dots!
-        int points = 0; 
+    public int eatDotsAt(GeoPoint playerLocation) {
+        int pointIncrement = 0; 
         Iterator<GeoPoint> iter = items.iterator();
         while (iter.hasNext()) {
             GeoPoint pt = iter.next();
             //System.out.println("Distance: " + distance(playerLocation, pt));
             if ((int) GeoPointUtils.getDistance(playerLocation, pt) < EATING_DISTANCE) {
-                points += DOT_POINTS;
+                pointIncrement += DOT_POINTS;
                 iter.remove();
             }
         }
-        return points;
+        return pointIncrement;
     }
 
     private int getDifference(double slope, double distance, int direction) {
@@ -111,9 +100,7 @@ public class Dots {
         while (times > 0) {
             curPoint = new GeoPoint((int)(curPoint.getLatitudeE6() + slope * difference),
                     (int)(curPoint.getLongitudeE6() + difference));
-            if (RandUtils.nextDouble() < DENSITY) {
-                items.add(curPoint);
-            }
+            items.add(curPoint);
             times --;
         }
 
