@@ -37,7 +37,8 @@ public class Node {
 	}
 	
 	public void addNeighbor(Node n) {
-		this.neighbors.add(n);
+		if (!this.neighbors.contains(n))
+			this.neighbors.add(n);
 	}
 	public void removeNeighbor(Node n) {
 		this.neighbors.remove(n);

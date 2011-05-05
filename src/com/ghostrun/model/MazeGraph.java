@@ -15,14 +15,12 @@ public class MazeGraph {
 		Map<Integer, MazeGraphPoint> nodeMap = new HashMap<Integer, MazeGraphPoint>();
 		for (Node node : nodes) {
 			nodeMap.put(node.id, addPoint(node.latlng));
-			//System.out.println("added: " + node.id);
 		}
 		
 		for (Node node : nodes) {
 			MazeGraphPoint p1 = nodeMap.get(node.id);
 			for (Node n : node.neighbors) {
 				MazeGraphPoint p2 = nodeMap.get(n.id);
-				//System.out.println(p1 + " " + p2);
 				addEdge(p1, p2);
 			}
 		}

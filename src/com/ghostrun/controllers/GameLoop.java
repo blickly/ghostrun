@@ -3,6 +3,7 @@ package com.ghostrun.controllers;
 import java.util.List;
 
 import android.os.Handler;
+import android.widget.TextView;
 
 import com.ghostrun.activity.GameMapView;
 import com.ghostrun.driving.Node;
@@ -25,6 +26,9 @@ public class GameLoop implements Runnable {
     private RobotsItemizedOverlay robotOverlay;
     private GameMapView activity;
     private DotsOverlay dotsOverlay;
+    private TextView textView;
+    
+    private int currentPoints;
 
     public Player getPlayer() {
         return player;
@@ -38,12 +42,18 @@ public class GameLoop implements Runnable {
     
     public void setDotsOverlay(DotsOverlay dotsOverlay) {
     	this.dotsOverlay = dotsOverlay;
+    	this.dotsOverlay.setMazeGraph(this.maze);
+    }
+    
+    public void setTextView(TextView textView) {
+    	this.textView = textView;
     }
     
     public GameLoop(List<Node> nodes, GameMapView a) {
         activity = a;
     	maze = new MazeGraph(nodes);
     	robots = Robot.createRandomRobots(4, maze, player);
+    	this.currentPoints = 0;
     }
 
     @Override
@@ -52,6 +62,11 @@ public class GameLoop implements Runnable {
         if (isGameOver()) {
             activity.handlePlayerDeath();
             return;
+        }
+        
+        if (player.hasLocation()) {
+        	this.currentPoints += dotsOverlay.refresh(player.getLocationAsGeoPoint());
+        	this.textView.setText(this.currentPoints + " points");
         }
         robotOverlay.refresh();
         h.postDelayed(this, ROBOT_UPDATE_RATE_MS);

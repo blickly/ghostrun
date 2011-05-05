@@ -37,6 +37,7 @@ public class NodeFactory {
 				nodeMap.put(n.id, n);
 				max_id = Math.max(n.id, max_id);
 			}
+			max_id ++;
 			for (Map.Entry<NodePair, Route> entry : routesMap.entrySet()) {
 				NodePair p = entry.getKey();
 				Route r = entry.getValue();
@@ -47,14 +48,11 @@ public class NodeFactory {
 				Node lastNode = node1;
 				List<GeoPoint> lst = ((RouteImpl)r).getGeoPoints();
 				
-				/*
-				if (!lst.get(0).equals(node1.latlng) || !lst.get(lst.size()-1).equals(node2.latlng))
-					System.out.println("endpoints don't match...");
-				*/
 				
 				if (lst.get(0).equals(node1.latlng)) {
 					lst.remove(0);
 				}
+				
 				if (lst.get(lst.size()-1).equals(node2.latlng)) {
 					lst.remove(lst.size()-1);
 				}

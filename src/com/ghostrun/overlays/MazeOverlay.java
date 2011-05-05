@@ -31,8 +31,7 @@ public class MazeOverlay extends Overlay {
         this.mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         this.mPaint.setStrokeJoin(Paint.Join.ROUND);
         this.mPaint.setStrokeCap(Paint.Cap.ROUND);
-        this.mPaint.setStrokeWidth(2);
-                
+        this.mPaint.setStrokeWidth(2); 
 	}
 	
 	@Override
@@ -45,7 +44,11 @@ public class MazeOverlay extends Overlay {
         	doneNodes.add(node);
         	
         	for (Node n : node.neighbors) {
-        		if (!doneNodes.contains(n)) {
+        		//if (!doneNodes.contains(n)) {
+        			/*
+        		 	if (node.latlng.equals(n.latlng))
+        		 		System.out.println("neighbor with itself...." + node.latlng);
+        		 	*/
 					Point p1 = new Point();
 					Point p2 = new Point();
 					  
@@ -55,9 +58,9 @@ public class MazeOverlay extends Overlay {
 					projection.toPixels(n.latlng, p2);
   
 	                path.moveTo(p2.x, p2.y);
-	                path.lineTo(p1.x,p1.y);
+	                path.lineTo(p1.x, p1.y);
 	          		canvas.drawPath(path, this.mPaint);
-        		}
+        		//}
         	}
         }
         mapv.invalidate();

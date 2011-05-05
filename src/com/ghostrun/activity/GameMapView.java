@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
@@ -79,15 +80,18 @@ public class GameMapView extends MapActivity {
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes, this);
     	
+    	this.gameLoop.setTextView((TextView)findViewById(R.id.points));
+    	
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
         this.mapView.getController().setCenter(nodes.get(0).latlng);
         
         // Add Food dots overlay
-        Drawable marker = this.getResources().getDrawable(R.drawable.androidmarker);
-        this.dotsOverlay = new DotsOverlay(marker);
-        this.gameLoop.setDotsOverlay(dotsOverlay);
+        Drawable marker = this.getResources().getDrawable(R.drawable.dot);
+        this.dotsOverlay = new DotsOverlay(marker, this.mapView);
+        this.gameLoop.setDotsOverlay(this.dotsOverlay);
+        mapOverlays.add(this.dotsOverlay);
     	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
