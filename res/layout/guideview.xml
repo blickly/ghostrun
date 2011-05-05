@@ -47,7 +47,22 @@
 	 			android:text = "- Click Random Map from menu to generate a random map."
 	 			android:textColor = "@color/black"/>
 	 			
-	 		<TextView android:layout_width="wrap_content"
+	 		<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center" 
+				android:paddingTop="2px"
+				android:paddingBottom="2px" >
+				
+				<Button android:layout_width = "wrap_content" 
+					android:layout_height="wrap_content" 
+					android:id="@+id/step1_a"
+					android:background="@drawable/step1_a" />
+					
+			</LinearLayout>
+			
+			<TextView android:layout_width="wrap_content"
 	 			android:layout_height="wrap_content"
 	 			android:text = "- Click Save Map from menu when done."
 	 			android:textColor = "@color/black"/>
@@ -62,8 +77,8 @@
 				
 				<Button android:layout_width = "wrap_content" 
 					android:layout_height="wrap_content" 
-					android:id="@+id/step1_a"
-					android:background="@drawable/step1_a" />
+					android:id="@+id/step1_b"
+					android:background="@drawable/step1_b" />
 					
 			</LinearLayout>
 			

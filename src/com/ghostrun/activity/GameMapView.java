@@ -78,13 +78,14 @@ public class GameMapView extends MapActivity {
         soundOn = true;
     }
     
-    public void updateScore(String score) {
+    public void updateScore(int score) {
     	this.textView.setText(score + " points");
     	// TODO: add eating sound
     }
 
     public void addGameLoop(List<Node> nodes) {
-    	List<Overlay> mapOverlays = mapView.getOverlays();
+    	
+        List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes, this);
     	
@@ -94,8 +95,8 @@ public class GameMapView extends MapActivity {
         this.mapView.getController().setCenter(nodes.get(0).latlng);
         
         // Add Food dots overlay
-        Drawable marker = this.getResources().getDrawable(R.drawable.dot);
-        this.dotsOverlay = new DotsOverlay(marker, this.mapView);
+        Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
+        this.dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
         this.gameLoop.setDotsOverlay(this.dotsOverlay);
         mapOverlays.add(this.dotsOverlay);
     	
