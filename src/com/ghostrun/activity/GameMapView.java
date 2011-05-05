@@ -76,11 +76,13 @@ public class GameMapView extends MapActivity {
     }
 
     public void addGameLoop(List<Node> nodes) {
-    	List<Overlay> mapOverlays = mapView.getOverlays();
+    	
+        List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes, this);
     	
     	this.gameLoop.setTextView((TextView)findViewById(R.id.points));
+    	
     	
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);
@@ -89,7 +91,7 @@ public class GameMapView extends MapActivity {
         
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.dot);
-        this.dotsOverlay = new DotsOverlay(marker, this.mapView);
+        this.dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
         this.gameLoop.setDotsOverlay(this.dotsOverlay);
         mapOverlays.add(this.dotsOverlay);
     	
