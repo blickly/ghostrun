@@ -40,16 +40,17 @@ import com.google.android.maps.Overlay;
 /** Map Activity for showing the status of a game in progress.
  */
 public class GameMapView extends MapActivity {
-    MapView mapView;
-    MyLocationOverlay locationOverlay;
-    MazeOverlay mazeOverlay;
-    DotsOverlay dotsOverlay;
-    GameLoop gameLoop;
-    MediaPlayer begin_game_mp;
-    MediaPlayer pacman_death_mp;
-    boolean soundOn;
-    TextView textView;
-    
+    private MapView mapView;
+    private MyLocationOverlay locationOverlay;
+
+    private GameLoop gameLoop;
+    private Handler gameLoopHandler;
+
+    private MediaPlayer begin_game_mp;
+    private MediaPlayer pacman_death_mp;
+    private boolean soundOn;
+    private TextView textView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +74,6 @@ public class GameMapView extends MapActivity {
             }
         });
         
-        this.mazeOverlay = null;
-        
         soundOn = true;
     }
     
@@ -88,17 +87,17 @@ public class GameMapView extends MapActivity {
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes, this);
-    	
+
         // Add maze overlay
-        mazeOverlay = new MazeOverlay(nodes);
+        MazeOverlay mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
         this.mapView.getController().setCenter(nodes.get(0).latlng);
         
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
-        this.dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
-        this.gameLoop.setDotsOverlay(this.dotsOverlay);
-        mapOverlays.add(this.dotsOverlay);
+        DotsOverlay dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
+        this.gameLoop.setDotsOverlay(dotsOverlay);
+        mapOverlays.add(dotsOverlay);
     	
     	// Add player overlay
         locationOverlay = new PlayerOverlay(this, mapView,
@@ -126,9 +125,9 @@ public class GameMapView extends MapActivity {
         }
         
         // Start game loop
-        Handler handler = new Handler();
+        gameLoopHandler = new Handler();
         gameLoop.setRobotOverlay(robotOverlay);
-        handler.post(gameLoop);
+        gameLoopHandler.post(gameLoop);
         
     }
     
@@ -137,6 +136,7 @@ public class GameMapView extends MapActivity {
         super.onPause();
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
+        gameLoopHandler.removeCallbacks(gameLoop);
     }
 
     @Override

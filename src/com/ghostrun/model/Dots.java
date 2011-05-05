@@ -42,16 +42,11 @@ public class Dots {
 
     public void setMazeGraph(MazeGraph maze) {
         this.items = new ArrayList<GeoPoint>();
-
         Set<PointPair> doneSet = new HashSet<PointPair>();
         for (MazeGraphPoint p : maze.getPoints()) {
-            //this.items.add(p.getLocation());
             for (MazeGraphPoint n : p.getNeighbors()) {
                 PointPair pair = new PointPair(p, n);
                 if (!doneSet.contains(pair)) {
-                    //System.out.println("p: " + p.getLocation() + " n: " + n.getLocation());
-                    //this.items.add(n.getLocation());
-
                     generateDotsAlongEdge(pair);
                     doneSet.add(pair);
                 }
