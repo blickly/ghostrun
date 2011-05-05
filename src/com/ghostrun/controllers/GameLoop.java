@@ -15,7 +15,7 @@ import com.ghostrun.overlays.RobotsOverlay;
 import com.ghostrun.util.GeoPointUtils;
 
 public class GameLoop implements Runnable {
-    public final int DEATH_DISTANCE = 500;
+    public final int DEATH_DISTANCE = 150;
     public final int ROBOT_UPDATE_RATE_MS = 500;
     public final int ROBOT_START_SPACING = 10000;
     

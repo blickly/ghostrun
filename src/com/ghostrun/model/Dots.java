@@ -53,7 +53,6 @@ public class Dots {
             }
         }
 
-
         System.out.println("Done adding maze points: " + items.size());
     }
 
@@ -62,7 +61,6 @@ public class Dots {
         Iterator<GeoPoint> iter = items.iterator();
         while (iter.hasNext()) {
             GeoPoint pt = iter.next();
-            //System.out.println("Distance: " + distance(playerLocation, pt));
             if ((int) GeoPointUtils.getDistance(playerLocation, pt) < EATING_DISTANCE) {
                 pointIncrement += DOT_POINTS;
                 iter.remove();
@@ -76,7 +74,6 @@ public class Dots {
     }
 
     private void generateDotsAlongEdge(PointPair p) {
-        //System.out.println("generating dots along the edge...");
         double slope = (double)(p.pt1.getLocation().getLatitudeE6() - p.pt2.getLocation().getLatitudeE6())/
         (double)(p.pt1.getLocation().getLongitudeE6() - p.pt2.getLocation().getLongitudeE6());
 
