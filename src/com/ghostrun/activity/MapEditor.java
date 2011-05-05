@@ -6,10 +6,12 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Date;
 import java.util.List;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
@@ -125,7 +127,7 @@ public class MapEditor extends MapActivity {
     	});
     	final AlertDialog dialog = alert.create();
     	
-        menu.add("Save Map");
+        menu.add("Save");
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -134,8 +136,23 @@ public class MapEditor extends MapActivity {
             }
         });
         
-        menu.add("Select On");
+        menu.add("Play");
         menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Date d=new Date();
+                String value = d.getTime()+".pac";
+                // Do something with value!
+                writeToFile(value);
+                Intent i= new Intent(MapEditor.this, GameMapView.class);
+                i.putExtra("filename",  "/sdcard/"+value);
+                startActivity(i);
+                return true;
+            }
+        });
+        
+        menu.add("Select On");
+        menu.getItem(2).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
         	@Override
     	    public boolean onMenuItemClick(MenuItem item) {	
     	    	if (item.getTitle().equals("Select On")) {
@@ -150,7 +167,7 @@ public class MapEditor extends MapActivity {
     	});
         
         menu.add("Random Map");
-        menu.getItem(2).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.getItem(3).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
             	String filename = "map.png";

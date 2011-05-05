@@ -75,6 +75,12 @@ public class GameMapView extends MapActivity {
         });
         
         soundOn = true;
+        
+        Bundle b = getIntent().getExtras();
+        if (b!=null) {
+            String filename = b.getString("filename");
+            generateGame(filename);
+        }
     }
     
     public void updateScore(int score) {
@@ -208,25 +214,29 @@ public class GameMapView extends MapActivity {
     	    return;
     	}
     	String filename = data.getStringExtra("filename");
-		try {
-			FileReader input = new FileReader(filename);
-			BufferedReader bufRead = new BufferedReader(input);
-			String json = bufRead.readLine();
-			
-			//System.out.println(json);
-			
-			NodeFactory factory = new NodeFactory();
-			NodeFactory.NodesAndRoutes nodesAndRoutes = factory.fromMap(json);
-			
-			//System.out.println(nodesAndRoutes.nodes.size());
-			//System.out.println(nodesAndRoutes.routesMap.size());
-			
-			List<Node> nodes = nodesAndRoutes.toNodes();
-			this.addGameLoop(nodes);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+		generateGame(filename);
+    }
+    
+    void generateGame(String filename) {
+        try {
+            FileReader input = new FileReader(filename);
+            BufferedReader bufRead = new BufferedReader(input);
+            String json = bufRead.readLine();
+            
+            //System.out.println(json);
+            
+            NodeFactory factory = new NodeFactory();
+            NodeFactory.NodesAndRoutes nodesAndRoutes = factory.fromMap(json);
+            
+            //System.out.println(nodesAndRoutes.nodes.size());
+            //System.out.println(nodesAndRoutes.routesMap.size());
+            
+            List<Node> nodes = nodesAndRoutes.toNodes();
+            this.addGameLoop(nodes);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
     
     /** Handle the death of the player.
