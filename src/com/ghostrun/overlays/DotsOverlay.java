@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable;
 
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.MazeGraphPoint;
+import com.ghostrun.util.GeoPointUtils;
 import com.ghostrun.util.RandUtils;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
@@ -84,7 +85,7 @@ public class DotsOverlay extends ItemizedOverlay<OverlayItem>{
 		while (iter.hasNext()) {
 			GeoPoint pt = iter.next();
 			//System.out.println("Distance: " + distance(playerLocation, pt));
-			if ((int) distance(playerLocation, pt) < EATING_DISTANCE) {
+			if ((int) GeoPointUtils.getDistance(playerLocation, pt) < EATING_DISTANCE) {
 				points += DOT_POINTS;
 				iter.remove();
 			}
@@ -113,7 +114,7 @@ public class DotsOverlay extends ItemizedOverlay<OverlayItem>{
 		GeoPoint curPoint = p.pt2.getLocation();
 		int direction = (pt1.getLongitudeE6() > pt2.getLongitudeE6() ? 1 : -1);
 
-		double totalDistance = distance(p.pt2.getLocation(), p.pt1.getLocation());
+		double totalDistance = GeoPointUtils.getDistance(p.pt2.getLocation(), p.pt1.getLocation());
 		int times = (int)(totalDistance / INCREMENT);
 		int difference = getDifference(slope, INCREMENT, direction);
 		
@@ -131,12 +132,6 @@ public class DotsOverlay extends ItemizedOverlay<OverlayItem>{
 		this.setLastFocusedIndex(-1);
 		this.populate();
 		this.mapView.invalidate();
-	}
-	
-	private double distance(GeoPoint p1, GeoPoint p2) {
-		double d1 = (double)(p1.getLatitudeE6() - p2.getLatitudeE6());
-		double d2 = (double)(p1.getLongitudeE6() - p2.getLongitudeE6());
-		return Math.sqrt(d1 * d1 + d2 * d2);
 	}
 
 	@Override
