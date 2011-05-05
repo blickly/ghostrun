@@ -48,6 +48,7 @@ public class GameMapView extends MapActivity {
     MediaPlayer begin_game_mp;
     MediaPlayer pacman_death_mp;
     boolean soundOn;
+    TextView textView;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,8 @@ public class GameMapView extends MapActivity {
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
         mapView.getController().setZoom(17);
+        
+        textView = (TextView) findViewById(R.id.points);
         
         // Keep screen on when game is visible.
         getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -74,15 +77,17 @@ public class GameMapView extends MapActivity {
         
         soundOn = true;
     }
+    
+    public void updateScore(int score) {
+    	this.textView.setText(score + " points");
+    	// TODO: add eating sound
+    }
 
     public void addGameLoop(List<Node> nodes) {
     	
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
     	this.gameLoop = new GameLoop(nodes, this);
-    	
-    	this.gameLoop.setTextView((TextView)findViewById(R.id.points));
-    	
     	
         // Add maze overlay
         mazeOverlay = new MazeOverlay(nodes);

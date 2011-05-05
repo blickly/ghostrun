@@ -28,7 +28,6 @@ public class GameLoop implements Runnable {
     private GameMapView activity;
     private Dots dots;
     private DotsOverlay dotsOverlay;
-    private TextView textView;
     
     private int currentPoints;
 
@@ -44,10 +43,6 @@ public class GameLoop implements Runnable {
     
     public void setDotsOverlay(DotsOverlay dotsOverlay) {
     	this.dotsOverlay = dotsOverlay;
-    }
-    
-    public void setTextView(TextView textView) {
-    	this.textView = textView;
     }
     
     public GameLoop(List<Node> nodes, GameMapView a) {
@@ -70,8 +65,11 @@ public class GameLoop implements Runnable {
             return;
         }
         if (player.hasLocation()) {
-        	this.currentPoints += dots.eatDotsAt(player.getLocationAsGeoPoint());
-        	this.textView.setText(this.currentPoints + " points");
+            int points = dots.eatDotsAt(player.getLocationAsGeoPoint());
+            if (points > 0) {
+                this.currentPoints += points;			
+                this.activity.updateScore(this.currentPoints);
+            }
         }
         dotsOverlay.refresh();
         robotOverlay.refresh();
