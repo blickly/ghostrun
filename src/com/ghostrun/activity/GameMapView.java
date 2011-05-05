@@ -90,7 +90,7 @@ public class GameMapView extends MapActivity {
         this.mapView.getController().setCenter(nodes.get(0).latlng);
         
         // Add Food dots overlay
-        Drawable marker = this.getResources().getDrawable(R.drawable.dot);
+        Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
         this.dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
         this.gameLoop.setDotsOverlay(this.dotsOverlay);
         mapOverlays.add(this.dotsOverlay);
