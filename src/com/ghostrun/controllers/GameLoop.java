@@ -15,9 +15,9 @@ import com.ghostrun.overlays.RobotsOverlay;
 import com.ghostrun.util.GeoPointUtils;
 
 public class GameLoop implements Runnable {
+    // 0.000150 degrees of arc = about 55 feet
     public final int DEATH_DISTANCE = 150;
     public final int ROBOT_UPDATE_RATE_MS = 500;
-    public final int ROBOT_START_SPACING = 10000;
     
     Handler h = new Handler();
     private MazeGraph maze;
