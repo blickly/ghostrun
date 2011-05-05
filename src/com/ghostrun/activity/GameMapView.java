@@ -31,7 +31,7 @@ import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.overlays.DotsOverlay;
 import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
-import com.ghostrun.overlays.RobotsItemizedOverlay;
+import com.ghostrun.overlays.RobotsOverlay;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.MyLocationOverlay;
@@ -115,7 +115,7 @@ public class GameMapView extends MapActivity {
                 R.drawable.game_blueghost);
         Drawable pinkIcon = this.getResources().getDrawable(
                 R.drawable.game_pinkghost);
-        RobotsItemizedOverlay robotOverlay = new RobotsItemizedOverlay(
+        RobotsOverlay robotOverlay = new RobotsOverlay(
                     redIcon, orangeIcon, pinkIcon, blueIcon, gameLoop.getRobots());
         mapOverlays.add(robotOverlay);
         

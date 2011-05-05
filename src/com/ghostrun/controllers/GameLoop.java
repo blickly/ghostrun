@@ -3,7 +3,6 @@ package com.ghostrun.controllers;
 import java.util.List;
 
 import android.os.Handler;
-import android.widget.TextView;
 
 import com.ghostrun.activity.GameMapView;
 import com.ghostrun.driving.Node;
@@ -12,7 +11,7 @@ import com.ghostrun.model.MazeGraph;
 import com.ghostrun.model.Player;
 import com.ghostrun.model.Robot;
 import com.ghostrun.overlays.DotsOverlay;
-import com.ghostrun.overlays.RobotsItemizedOverlay;
+import com.ghostrun.overlays.RobotsOverlay;
 import com.ghostrun.util.GeoPointUtils;
 
 public class GameLoop implements Runnable {
@@ -24,7 +23,7 @@ public class GameLoop implements Runnable {
     private MazeGraph maze;
     private Player player = new Player();
     private List<Robot> robots;
-    private RobotsItemizedOverlay robotOverlay;
+    private RobotsOverlay robotOverlay;
     private GameMapView activity;
     private Dots dots;
     private DotsOverlay dotsOverlay;
@@ -37,7 +36,7 @@ public class GameLoop implements Runnable {
     public List<Robot> getRobots() {
         return robots;
     }
-    public void setRobotOverlay(RobotsItemizedOverlay robotOverlay) {
+    public void setRobotOverlay(RobotsOverlay robotOverlay) {
         this.robotOverlay = robotOverlay;
     }
     
