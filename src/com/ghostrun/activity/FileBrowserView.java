@@ -41,7 +41,8 @@ public class FileBrowserView extends ListActivity {
           logobutton.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                  finish();
+                  Intent i = new Intent(FileBrowserView.this, HomeView.class);
+                  startActivity(i);
               }
           });
           browseToSDcard();
@@ -121,15 +122,23 @@ public class FileBrowserView extends ListActivity {
           startActivity( myIntent );*/
     	 //Toast.makeText(getBaseContext(), aFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
     	 //DisplayImage.fileName=aFile.getAbsolutePath();
-    	 Intent newIntent = new Intent();
+         Intent newIntent = new Intent(FileBrowserView.this,GameMapView.class);
     	 try {
 			newIntent.putExtra("filename", aFile.getCanonicalPath());
-		} catch (IOException e) {
+    	 } catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-    	 setResult(0, newIntent);
-    	 finish();
+    	     e.printStackTrace();
+    	 } 
+    	 Bundle b = getIntent().getExtras();
+    	 if (b!=null) {
+    	     boolean v = b.getBoolean("GameMapView");
+    	     if (v) {
+    	         setResult(0, newIntent);
+    	         finish();
+    	     }
+    	 } else {
+    	     startActivity(newIntent);
+    	 }
      }
 
      private void fill( File[] files ) {

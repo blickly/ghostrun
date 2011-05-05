@@ -21,7 +21,7 @@ public class HomeView extends Activity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(HomeView.this, GameMapView.class);
+                Intent i = new Intent(HomeView.this, FileBrowserView.class);
                 startActivity(i);
             }
         });

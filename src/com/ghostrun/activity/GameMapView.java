@@ -48,7 +48,7 @@ public class GameMapView extends MapActivity {
 
     private MediaPlayer begin_game_mp;
     private MediaPlayer pacman_death_mp;
-    private boolean soundOn;
+    private boolean soundOn=true;
     private TextView textView;
 
     @Override
@@ -70,16 +70,20 @@ public class GameMapView extends MapActivity {
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(GameMapView.this, HomeView.class);
+                startActivity(i);
             }
         });
         
-        soundOn = true;
-        
         Bundle b = getIntent().getExtras();
         if (b!=null) {
-            String filename = b.getString("filename");
-            generateGame(filename);
+            String filename = b.getString("filename_mapeditor");
+            if (filename == null) {
+                filename = b.getString("filename");
+            }
+            if (filename!=null) {
+                generateGame(filename);
+            }
         }
     }
     
@@ -186,6 +190,7 @@ public class GameMapView extends MapActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Intent i= new Intent(GameMapView.this, FileBrowserView.class);
+                i.putExtra("GameMapView", true);
                 startActivityForResult(i, 0);
                 return true;
             }
@@ -208,6 +213,7 @@ public class GameMapView extends MapActivity {
         });
         return true;
     }
+    
     
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

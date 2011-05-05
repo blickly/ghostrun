@@ -145,7 +145,7 @@ public class MapEditor extends MapActivity {
                 // Do something with value!
                 writeToFile(value);
                 Intent i= new Intent(MapEditor.this, GameMapView.class);
-                i.putExtra("filename",  "/sdcard/"+value);
+                i.putExtra("filename_mapeditor",  "/sdcard/"+value);
                 startActivity(i);
                 return true;
             }
