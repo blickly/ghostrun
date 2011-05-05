@@ -36,7 +36,7 @@ public class Dots {
             return false;
         }
         public int hashCode() {
-            return 0;
+            return pt1.hashCode() ^ pt2.hashCode();
         }
     }
 

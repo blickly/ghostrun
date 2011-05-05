@@ -40,6 +40,9 @@ public class MazeGraphPoint {
     	}
     	return false;
     }
+    public int hashCode() {
+        return location.hashCode();
+    }
 
     private GeoPoint location;
     private ArrayList<MazeGraphPoint> neighbors;
