@@ -142,7 +142,9 @@ public class GameMapView extends MapActivity {
         super.onPause();
         if (locationOverlay != null)
         	locationOverlay.disableMyLocation();
-        gameLoopHandler.removeCallbacks(gameLoop);
+        if (gameLoopHandler != null) {
+            gameLoopHandler.removeCallbacks(gameLoop);
+        }
     }
 
     @Override
