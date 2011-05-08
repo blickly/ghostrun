@@ -1,7 +1,13 @@
 package com.ghostrun.activity;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 
 import android.app.Activity;
@@ -15,8 +21,10 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +58,7 @@ public class GameMapView extends MapActivity {
     private MediaPlayer pacman_death_mp;
     private boolean soundOn=true;
     private TextView textView;
+    private String file;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -83,6 +92,8 @@ public class GameMapView extends MapActivity {
             }
             if (filename!=null) {
                 generateGame(filename);
+                file=filename.substring(filename.indexOf("."));
+                file+=".score";
             }
         }
     }
@@ -268,5 +279,49 @@ public class GameMapView extends MapActivity {
                    }
                });
         builder.create().show();
+        
+        int[] score=new int[5];
+        int i=0;
+        try {
+            File root = Environment.getExternalStorageDirectory();
+            if (root.canRead()){
+                File inputFile = new File(file);
+                BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
+                String s=in.readLine();
+                while (s!=null) {
+                    score[i]=Integer.parseInt(s);
+                    System.out.println(score[i]);
+                    ++i;
+                    s=in.readLine();
+                }
+                in.close();
+                File outputfile = new File(file);
+                FileWriter outputwriter = new FileWriter(outputfile);
+                BufferedWriter out = new BufferedWriter(outputwriter);
+                System.out.println("VALUE "+i);
+                for (int j=1;j<=4;++j) {
+                    out.write(score[j]+"\n");
+                }
+                out.write(textView.getText().toString());
+                out.close();
+            }
+        } catch (IOException e) {
+            Log.e("Oops", "No file exists. Generate new file. " + e.getMessage());
+            try {
+                File root = Environment.getExternalStorageDirectory();
+                if (root.canWrite()){
+                    File outputfile = new File(file);
+                    FileWriter gpxwriter = new FileWriter(outputfile);
+                    BufferedWriter out = new BufferedWriter(gpxwriter);
+                    for (int j=1;j<=4;++j) {
+                        out.write(0+"\n");
+                    }
+                    out.write(textView.getText().toString());
+                    out.close();
+                }
+            } catch(IOException e2) {
+                Log.e("Oops", "Write error. " + e.getMessage());
+            }
+        }
     }
 }

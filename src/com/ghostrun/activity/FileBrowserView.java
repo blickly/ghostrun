@@ -136,6 +136,16 @@ public class FileBrowserView extends ListActivity {
     	         setResult(0, newIntent);
     	         finish();
     	     }
+    	     v = b.getBoolean("graph");
+    	     if (v) {
+    	         Intent i=new Intent(FileBrowserView.this,ScoreGraphView.class);
+    	         try{
+    	             i.putExtra("graphname", aFile.getCanonicalPath());
+    	             startActivity(i);
+    	         } catch (IOException e) {
+    	             e.printStackTrace();
+    	         }
+    	     }
     	 } else {
     	     startActivity(newIntent);
     	 }
