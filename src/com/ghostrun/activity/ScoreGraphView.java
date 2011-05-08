@@ -46,7 +46,8 @@ public class ScoreGraphView extends Activity
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(ScoreGraphView.this, HomeView.class);
+                startActivity(i);
             }
         });
  
