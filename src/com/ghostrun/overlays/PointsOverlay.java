@@ -39,7 +39,8 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	GestureDetector gestureDetector;
 	MapView mapView;
 	Paint mPaint;
-	boolean select;
+	int mode;
+	int connect_selected = -1;
 	
 	Drawable marker, selectedMarker;
 	MapEditor editor;
@@ -92,7 +93,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		super(boundCenterBottom(marker));
 		
 		this.editor = editor;
-		this.select = true;
+		this.mode = 0;
 		this.marker = marker;
 		this.selectedMarker = selectedMarker;
 		this.mapView = editor.mapView;
@@ -158,11 +159,19 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	}
 	
 	public synchronized void select() {
-		select = true;
+		mode = 0;
+		this.connect_selected = -1;
 	}
 	
 	public synchronized void remove() {
-		select = false;
+		mode = 1;
+		this.connect_selected = -1;
+		this.selected = -1;
+	}
+	
+	public synchronized void connect() {
+		mode = 2;
+		this.selected = -1;
 	}
 	
 	public void addMarker(GeoPoint p) throws Exception {
@@ -172,15 +181,17 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 
 		if (nodes.size() > 0) {
 			final Node startPt = nodes.get(selected);
-			startPt.addNeighbor(endPt);
-			endPt.addNeighbor(startPt);
+			//startPt.addNeighbor(endPt);
+			//endPt.addNeighbor(startPt);
 			
 			DrivingDirections directions = DrivingDirectionsFactory.createDrivingDirections();
 			directions.driveTo(startPt.latlng, endPt.latlng, 
-					DrivingDirections.Mode.DRIVING, 
+					DrivingDirections.Mode.WALKING, 
 					new DrivingDirections.IDirectionsListener() {
 						public void onDirectionsAvailable (Route route, Mode mode) {
-							routesMap.put(new NodePair(startPt.id, endPt.id), route);
+							addRoute(startPt, endPt, route);
+							//routesMap.put(new NodePair(startPt.id, endPt.id), route);
+							//mapView.invalidate();
 						}
 				
 						public void onDirectionsNotAvailable () {
@@ -200,7 +211,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		
 		OverlayItem item = new OverlayItem(this.nodes.get(i).latlng, "", "");
 		
-		if (this.selected == i)
+		if (this.selected == i || this.connect_selected == i)
 			item.setMarker(boundCenterBottom(this.selectedMarker));
 		
 		return item;
@@ -246,7 +257,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	public boolean onTap(GeoPoint p, MapView mapView) { 
 		try {
 			boolean tapped = super.onTap(p, mapView);
-			if (tapped){            
+			if (tapped){
 				//do what you want to do when you hit an item           
 		    }           
 		    else{
@@ -262,14 +273,15 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	
 	@Override
 	public boolean onTap(int index) {
-		System.out.println("tapped: " + index);
-		if (this.select) {
+		// TODO: connect two nodes together
+		switch (mode) {
+		case 0:
 			if (index == this.selected)
 				this.selected = -1;
 			else
 				this.selected = index;
-			System.out.println("selecting: " + this.selected);
-		} else {
+			break;
+		case 1:
 			this.selected = -1;
 			Node n = this.nodes.get(index);
 			for (Node neighbor : n.neighbors) {
@@ -279,10 +291,54 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 			}
 			this.setLastFocusedIndex(-1);
 			this.nodes.remove(index);
-			this.populate();
+			break;
+		case 2:
+			if (connect_selected == -1)
+				connect_selected = index;
+			else {
+				final Node n1 = this.nodes.get(connect_selected);
+				final Node n2 = this.nodes.get(index);
+				
+				if (n1.neighbors.contains(n2))
+					break;
+	
+				DrivingDirections directions = DrivingDirectionsFactory.createDrivingDirections();
+				directions.driveTo(n1.latlng, n2.latlng, 
+						DrivingDirections.Mode.WALKING, 
+						new DrivingDirections.IDirectionsListener() {
+							public void onDirectionsAvailable (Route route, Mode mode) {
+								addRoute(n1, n2, route);
+							}
+					
+							public void onDirectionsNotAvailable () {
+					
+							}
+					});
+				
+				connect_selected = -1;
+			}
+
 		}
+
 		this.populate();
 		this.mapView.invalidate();
 		return true;
+	}
+	
+	public void addRoute(Node n1, Node n2, Route route) {
+		// TODO: add intersection code
+		/*
+		List<GeoPoint> lst = route.getGeoPoints();
+		GeoPoint curPoint = lst.get(0);
+		for(int i = 1; i < lst.size(); i++) {
+			GeoPoint nextPoint = lst.get(i);
+			
+			for (NodePair )
+		}
+		*/
+		routesMap.put(new NodePair(n1.id, n2.id), route);
+		n1.addNeighbor(n2);
+		n2.addNeighbor(n1);
+		mapView.invalidate();
 	}
 }

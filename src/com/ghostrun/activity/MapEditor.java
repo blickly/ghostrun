@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.ghostrun.R;
 import com.ghostrun.driving.Node;
@@ -34,6 +35,13 @@ import com.google.android.maps.Overlay;
 public class MapEditor extends MapActivity {
     public MapView mapView;
     PointsOverlay pointsOverlay;
+    ImageButton button;
+    int mode = 0;
+    
+    public synchronized int getNextMode() {
+    	this.mode ++;
+    	return this.mode % 3; 
+    }
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,12 +56,39 @@ public class MapEditor extends MapActivity {
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
         
+        final Drawable cone = this.getResources().getDrawable(R.drawable.cone);
+        final Drawable cross = this.getResources().getDrawable(R.drawable.cross);
+        final Drawable connect = this.getResources().getDrawable(R.drawable.connect);
+        
+        button = (ImageButton) findViewById(R.id.modebutton);
+        button.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				ImageButton button = (ImageButton) arg0;
+				switch (getNextMode()) {
+				case 0:
+					button.setImageDrawable(cone);
+					pointsOverlay.select();
+					break;
+				case 1:
+					button.setImageDrawable(cross);
+					pointsOverlay.remove();
+					break;
+				case 2:
+					button.setImageDrawable(connect);
+					pointsOverlay.connect();
+					break;
+				}
+			}
+        });
         
         // Add points
         newPointsOverlay();
         
         // Stop the current activity and return to the previous view.
-        Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
+        Button logobutton = (Button)findViewById(R.id.mapview_paclogo);
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
