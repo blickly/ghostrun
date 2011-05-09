@@ -1,5 +1,10 @@
 package com.ghostrun.activity;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
@@ -11,6 +16,8 @@ import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Shader;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,13 +46,41 @@ public class ScoreGraphView extends Activity
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent i = new Intent(ScoreGraphView.this, HomeView.class);
+                startActivity(i);
             }
         });
  
         scoreXYPlot = (XYPlot) findViewById(R.id.scoreXYPlot);
-        scoreXYPlot.setTitle("Data series on maze ...");
-        Number[] scores = {5, 8, 9, 2, 5};
+        scoreXYPlot.setTitle("Scores on Maze ...");
+        Number[] scores = {0,0,0,0,0};
+        Bundle b = getIntent().getExtras();
+        if (b!=null) {
+            String filename = b.getString("graphname");
+            scoreXYPlot.setTitle("Scores on Maze "+filename.substring(filename.indexOf("card/")+"card/".length()));
+            System.out.println(filename);
+            if (filename!=null && filename.contains(".score")) {
+                int i=0;
+                try {
+                    File root = Environment.getExternalStorageDirectory();
+                    if (root.canRead()){
+                        File inputFile = new File(filename);
+                        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile)));
+                        String s=in.readLine();
+                        while (s!=null) {
+                            scores[i]=Integer.parseInt(s);
+                            System.out.println(scores[i]);
+                            ++i;
+                            s=in.readLine();
+                        }
+                        in.close();
+                    }
+                } catch (IOException e) {
+                    Log.e("Oops","Read file error " + e.getMessage());
+                }
+            }
+        }
+        
         Number[] games = {1, 2, 3, 4, 5 };
         
         scoreXYPlot.getGraphWidget().getGridBackgroundPaint().setColor(Color.WHITE);
@@ -92,13 +127,13 @@ public class ScoreGraphView extends Activity
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        menu.add("Select Map");
+        menu.add("Select Maze.score");
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 Intent i= new Intent(ScoreGraphView.this, FileBrowserView.class);
-                startActivityForResult(i, 0);
+                i.putExtra("graph", true);
+                startActivity(i);
                 return true;
             }
         });

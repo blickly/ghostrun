@@ -40,7 +40,8 @@ public class HomeView extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i= new Intent(HomeView.this, ScoreGraphView.class);
+                Intent i= new Intent(HomeView.this, FileBrowserView.class);
+                i.putExtra("graph", true);
                 startActivity(i);
             }
         });
