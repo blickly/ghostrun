@@ -36,6 +36,7 @@ import com.ghostrun.R;
 import com.ghostrun.controllers.GameLoop;
 import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
+import com.ghostrun.model.MazeGraph;
 import com.ghostrun.overlays.DotsOverlay;
 import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
@@ -107,7 +108,8 @@ public class GameMapView extends MapActivity {
     	
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
-    	this.gameLoop = new GameLoop(nodes, this);
+        MazeGraph graph = new MazeGraph(nodes);
+    	this.gameLoop = new GameLoop(graph, this);
 
         // Add maze overlay
         MazeOverlay mazeOverlay = new MazeOverlay(nodes);
@@ -117,7 +119,6 @@ public class GameMapView extends MapActivity {
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
         DotsOverlay dotsOverlay = new DotsOverlay(marker, gameLoop.getDots());
-        this.gameLoop.setDotsOverlay(dotsOverlay);
         mapOverlays.add(dotsOverlay);
     	
     	// Add player overlay
@@ -148,6 +149,7 @@ public class GameMapView extends MapActivity {
         // Start game loop
         gameLoopHandler = new Handler();
         gameLoop.setRobotOverlay(robotOverlay);
+        gameLoop.setDotsOverlay(dotsOverlay);
         gameLoopHandler.post(gameLoop);
         
     }
@@ -280,6 +282,10 @@ public class GameMapView extends MapActivity {
                });
         builder.create().show();
         
+        saveHighScore();
+    }
+
+    private void saveHighScore() {
         int[] score=new int[5];
         int i=0;
         try {
