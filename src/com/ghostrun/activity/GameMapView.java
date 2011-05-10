@@ -38,7 +38,6 @@ import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.model.MazeGraph;
 import com.ghostrun.overlays.DotsOverlay;
-import com.ghostrun.overlays.MazeOverlay;
 import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.RobotsOverlay;
 import com.google.android.maps.MapActivity;
@@ -105,17 +104,20 @@ public class GameMapView extends MapActivity {
     }
 
     public void addGameLoop(List<Node> nodes) {
+        // Center on first node
+        this.mapView.getController().setCenter(nodes.get(0).latlng);
     	
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
         MazeGraph graph = new MazeGraph(nodes);
     	this.gameLoop = new GameLoop(graph, this);
 
+    	/* MazeOverlay is wildly inefficient, and probably not needed.
         // Add maze overlay
         MazeOverlay mazeOverlay = new MazeOverlay(nodes);
         mapOverlays.add(mazeOverlay);
-        this.mapView.getController().setCenter(nodes.get(0).latlng);
-        
+        */
+    	
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
         DotsOverlay dotsOverlay = new DotsOverlay(marker, gameLoop.getDots());
@@ -173,6 +175,10 @@ public class GameMapView extends MapActivity {
 
     @Override
     protected boolean isRouteDisplayed() { return false; }
+    
+    public void refreshMap() {
+        mapView.invalidate();
+    }
     
     ///////////////////////////////////////////////////////////////////
     //                     private methods

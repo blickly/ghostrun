@@ -87,6 +87,7 @@ public class GameLoop implements Runnable {
             this.activity.updateScore(this.currentPoints);
             dotsOverlay.refresh();
         }
+        activity.refreshMap();
         h.postAtTime(this, startTime + Constants.GAMELOOP_RATE_MS);
     }
 
