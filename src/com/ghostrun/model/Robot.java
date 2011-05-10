@@ -3,6 +3,7 @@ package com.ghostrun.model;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.ghostrun.config.Constants;
 import com.ghostrun.model.ai.DirectStrategy;
 import com.ghostrun.model.ai.HorizontalStrategy;
 import com.ghostrun.model.ai.RandomStrategy;
@@ -19,7 +20,6 @@ public class Robot {
         CLYDE
     }
 
-    final int ROBOT_SPEED = 20;
     private GeoPoint location;
     private MazeGraphPoint destination;
     private Player player;
@@ -124,10 +124,10 @@ public class Robot {
         }
         GeoPointOffset direction = new GeoPointOffset(location, point);
         double totalDistance = direction.getLength();
-        if (ROBOT_SPEED > totalDistance) {
+        if (Constants.ROBOT_SPEED > totalDistance) {
             location = point;
         } else {
-            direction.scaleBy(ROBOT_SPEED / totalDistance);
+            direction.scaleBy(Constants.ROBOT_SPEED / totalDistance);
             location = direction.addTo(location);
         }
     }

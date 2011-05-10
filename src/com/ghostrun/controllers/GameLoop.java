@@ -5,6 +5,7 @@ import java.util.List;
 import android.os.Handler;
 
 import com.ghostrun.activity.GameMapView;
+import com.ghostrun.config.Constants;
 import com.ghostrun.driving.Node;
 import com.ghostrun.model.Dots;
 import com.ghostrun.model.MazeGraph;
@@ -15,11 +16,7 @@ import com.ghostrun.overlays.RobotsOverlay;
 import com.ghostrun.util.GeoPointUtils;
 
 public class GameLoop implements Runnable {
-    // 0.000150 degrees of arc = about 55 feet
-    public final int DEATH_DISTANCE = 150;
-    public final int ROBOT_UPDATE_RATE_MS = 500;
-    
-    Handler h = new Handler();
+    private Handler h = new Handler();
     private MazeGraph maze;
     private Player player = new Player();
     private List<Robot> robots;
@@ -72,7 +69,7 @@ public class GameLoop implements Runnable {
         }
         dotsOverlay.refresh();
         robotOverlay.refresh();
-        h.postDelayed(this, ROBOT_UPDATE_RATE_MS);
+        h.postDelayed(this, Constants.GAMELOOP_RATE_MS);
     }
 
 
@@ -90,7 +87,7 @@ public class GameLoop implements Runnable {
         if (player.hasLocation()) {
             for (Robot r : robots) {
                 if (GeoPointUtils.getDistance(player.getLocationAsGeoPoint(),
-                        r.getLocation()) < DEATH_DISTANCE) {
+                        r.getLocation()) < Constants.DEATH_DISTANCE) {
                     return true;
                 }
             }

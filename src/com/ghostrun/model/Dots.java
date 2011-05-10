@@ -6,16 +6,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import com.ghostrun.config.Constants;
 import com.ghostrun.util.GeoPointOffset;
 import com.ghostrun.util.GeoPointUtils;
 import com.google.android.maps.GeoPoint;
 
 public class Dots {
     private List<GeoPoint> dotList;
-    
-    public final double INCREMENT = 200.0;
-    public final int EATING_DISTANCE = 200;
-    public final int DOT_POINTS = 10;
 
     public Dots(MazeGraph mazeGraph) {
         setMazeGraph(mazeGraph);
@@ -62,8 +59,8 @@ public class Dots {
         Iterator<GeoPoint> iter = dotList.iterator();
         while (iter.hasNext()) {
             GeoPoint pt = iter.next();
-            if ((int) GeoPointUtils.getDistance(playerLocation, pt) < EATING_DISTANCE) {
-                pointIncrement += DOT_POINTS;
+            if ((int) GeoPointUtils.getDistance(playerLocation, pt) < Constants.EATING_DISTANCE) {
+                pointIncrement += Constants.DOT_POINTS;
                 iter.remove();
             }
         }
@@ -73,7 +70,7 @@ public class Dots {
     private void generateDotsAlongEdge(PointPair p) {
         GeoPointOffset slope = new GeoPointOffset(p.pt1.getLocation(), p.pt2.getLocation());
         double totalDistance = slope.getLength();
-        int times = (int)(totalDistance / INCREMENT);
+        int times = (int)(totalDistance / Constants.DOT_SPACING);
         slope.scaleBy(1.0 / times);
 
         GeoPoint curPoint = p.pt1.getLocation();
