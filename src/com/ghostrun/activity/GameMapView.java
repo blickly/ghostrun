@@ -116,7 +116,7 @@ public class GameMapView extends MapActivity {
         
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
-        DotsOverlay dotsOverlay = new DotsOverlay(marker, this.mapView, gameLoop.getDots());
+        DotsOverlay dotsOverlay = new DotsOverlay(marker, gameLoop.getDots());
         this.gameLoop.setDotsOverlay(dotsOverlay);
         mapOverlays.add(dotsOverlay);
     	

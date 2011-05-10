@@ -60,6 +60,7 @@ public class GameLoop implements Runnable {
     public void run() {
         long startTime = SystemClock.uptimeMillis();
         updateRobotPositions();
+        robotOverlay.refresh();
         if (isGameOver()) {
             activity.handlePlayerDeath();
             return;
@@ -70,7 +71,6 @@ public class GameLoop implements Runnable {
             this.activity.updateScore(this.currentPoints);
             dotsOverlay.refresh();
         }
-        robotOverlay.refresh();
         h.postAtTime(this, startTime + Constants.GAMELOOP_RATE_MS);
     }
 
