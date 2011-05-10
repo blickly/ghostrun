@@ -3,6 +3,7 @@ package com.ghostrun.controllers;
 import java.util.List;
 
 import android.os.Handler;
+import android.os.SystemClock;
 
 import com.ghostrun.activity.GameMapView;
 import com.ghostrun.config.Constants;
@@ -55,6 +56,7 @@ public class GameLoop implements Runnable {
 
     @Override
     public void run() {
+        long startTime = SystemClock.uptimeMillis();
         updateRobotPositions();
         if (isGameOver()) {
             activity.handlePlayerDeath();
@@ -69,7 +71,7 @@ public class GameLoop implements Runnable {
         }
         dotsOverlay.refresh();
         robotOverlay.refresh();
-        h.postDelayed(this, Constants.GAMELOOP_RATE_MS);
+        h.postAtTime(this, startTime + Constants.GAMELOOP_RATE_MS);
     }
 
 
