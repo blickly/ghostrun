@@ -64,13 +64,11 @@ public class GameLoop implements Runnable {
             activity.handlePlayerDeath();
             return;
         }
-        if (player.hasLocation()) {
-            int points = dots.eatDotsAt(player.getLocationAsGeoPoint());
-            if (points > 0) {
-                this.currentPoints += points;			
-                this.activity.updateScore(this.currentPoints);
-                dotsOverlay.refresh();
-            }
+        int points = dots.eatDotsAt(player.getLocationAsGeoPoint());
+        if (points > 0) {
+            this.currentPoints += points;			
+            this.activity.updateScore(this.currentPoints);
+            dotsOverlay.refresh();
         }
         robotOverlay.refresh();
         h.postAtTime(this, startTime + Constants.GAMELOOP_RATE_MS);

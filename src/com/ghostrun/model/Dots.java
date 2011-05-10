@@ -55,6 +55,7 @@ public class Dots {
     }
 
     public int eatDotsAt(GeoPoint playerLocation) {
+        if (playerLocation == null) { return 0; }
         int pointIncrement = 0; 
         Iterator<GeoPoint> iter = dotList.iterator();
         while (iter.hasNext()) {
