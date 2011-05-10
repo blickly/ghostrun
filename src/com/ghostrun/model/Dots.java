@@ -69,8 +69,8 @@ public class Dots {
 
     private void generateDotsAlongEdge(PointPair p) {
         GeoPointOffset slope = new GeoPointOffset(p.pt1.getLocation(), p.pt2.getLocation());
-        double totalDistance = slope.getLength();
-        int times = (int)(totalDistance / Constants.DOT_SPACING);
+        int totalDistance = (int)slope.getLength();
+        int times = totalDistance / Constants.DOT_SPACING;
         slope.scaleBy(1.0 / times);
 
         GeoPoint curPoint = p.pt1.getLocation();
