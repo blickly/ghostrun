@@ -36,10 +36,12 @@ public class GameLoop implements Runnable {
     }
     public void setRobotOverlay(RobotsOverlay robotOverlay) {
         this.robotOverlay = robotOverlay;
+        robotOverlay.refresh();
     }
     
     public void setDotsOverlay(DotsOverlay dotsOverlay) {
     	this.dotsOverlay = dotsOverlay;
+        dotsOverlay.refresh();
     }
     
     public GameLoop(List<Node> nodes, GameMapView a) {
@@ -67,9 +69,9 @@ public class GameLoop implements Runnable {
             if (points > 0) {
                 this.currentPoints += points;			
                 this.activity.updateScore(this.currentPoints);
+                dotsOverlay.refresh();
             }
         }
-        dotsOverlay.refresh();
         robotOverlay.refresh();
         h.postAtTime(this, startTime + Constants.GAMELOOP_RATE_MS);
     }
