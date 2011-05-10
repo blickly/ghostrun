@@ -49,6 +49,7 @@ public class Dots {
                     doneSet.add(pair);
                 }
             }
+            generateDotAtIntersection(p);
         }
 
         System.out.println("Done adding maze points: " + dotList.size());
@@ -69,12 +70,14 @@ public class Dots {
     }
 
     private void generateDotsAlongEdge(PointPair p) {
-        GeoPointOffset slope = new GeoPointOffset(p.pt1.getLocation(), p.pt2.getLocation());
+        GeoPointOffset slope = new GeoPointOffset(p.pt1.getLocation(),
+                p.pt2.getLocation());
         int totalDistance = (int)slope.getLength();
         int times = totalDistance / Constants.DOT_SPACING;
         slope.scaleBy(1.0 / times);
 
         GeoPoint curPoint = p.pt1.getLocation();
+        times--;
         while (times > 0) {
             curPoint = slope.addTo(curPoint);
             dotList.add(curPoint);
@@ -82,6 +85,11 @@ public class Dots {
         }
 
         System.out.println("added points: " + dotList.size());
+    }
+
+    private void generateDotAtIntersection(MazeGraphPoint p) {
+        dotList.add(p.getLocation());
+        // TODO: Add power pellets? This would be the logical place...
     }
 
     public GeoPoint get(int i) {
