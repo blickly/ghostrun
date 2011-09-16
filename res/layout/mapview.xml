@@ -24,32 +24,15 @@
     android:orientation="vertical"
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent">
-    
-    <LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content" >
-		
-		<Button android:layout_width = "wrap_content" 
-			android:layout_height="wrap_content" 
-			android:id="@+id/mapview_paclogo"
-			android:background="@drawable/pac_log_clicked" />
-	
-	</LinearLayout>
-	
-	<LinearLayout 
-		android:orientation="horizontal"
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content"
-		android:background="@color/white">
-    	
+
     	<com.google.android.maps.MapView
     		android:id="@+id/mapview"
         	android:layout_width="fill_parent" 
-        	android:layout_height="440px"
+        	android:layout_height="wrap_content"
         	android:enabled="true"
         	android:clickable="true"
-			android:apiKey="@string/mapsApiKey" />
+			android:apiKey="@string/mapsApiKey"
+			android:layout_weight="10" />
             <!-- To add your Google Maps API key, create a file in res/values
                  called keys.xml with the following content:
 <?xml version="1.0" encoding="utf-8"?>
@@ -57,26 +40,16 @@
 	<string name="mapsApiKey">YOUR_API_KEY_GOES_HERE</string>
 </resources>
             -->
-			
-	</LinearLayout>
-       
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent" 
-		android:gravity="center_vertical"
-		android:paddingLeft="10px">
-		
-		<TextView
+		    <TextView
 			android:id="@+id/points"
  			android:text="0 points"
  			android:textStyle="bold"
  			android:textColor="@color/white"
- 			android:textSize="25px"
+ 			android:textSize="20sp"
  			android:layout_width="wrap_content"
- 			android:layout_height="wrap_content" />
+ 			android:layout_height="wrap_content"
+ 			android:layout_weight="0.5"
+ 			android:paddingLeft="10sp" />
 
-	</LinearLayout>
-	
 </LinearLayout>
 

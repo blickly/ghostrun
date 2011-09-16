@@ -27,9 +27,7 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager.LayoutParams;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.ghostrun.R;
@@ -73,16 +71,6 @@ public class GameMapView extends MapActivity {
         
         // Keep screen on when game is visible.
         getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-        // Stop the current activity and return to the previous view.
-        Button logobutton=(Button)findViewById(R.id.mapview_paclogo);
-        logobutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(GameMapView.this, HomeView.class);
-                startActivity(i);
-            }
-        });
         
         Bundle b = getIntent().getExtras();
         if (b!=null) {
