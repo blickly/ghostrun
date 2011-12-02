@@ -2,6 +2,7 @@
 #
 import cgi
 import datetime
+import json
 
 from google.appengine.ext import webapp, db
 from google.appengine.api import users
@@ -79,9 +80,8 @@ class GameMoveHandler(webapp.RequestHandler):
             p.put()
             all_players = Player.gql("WHERE game_id = :1", gid)
 
-            self.response.out.write("</br>".join(
-              [str(p.player_id) + ": " + str(p.location)
-                 for p in all_players]))
+            self.response.out.write(json.dumps(
+              dict((p.player_id,str(p.location)) for p in all_players)))
 
         except Exception as e:
             self.response.out.write(str(e))
