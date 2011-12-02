@@ -11,6 +11,5 @@
 # generated GUI files
 *R.java
 
-# Google Maps API key/other
+# Google Maps API key
 res/values/keys.xml
-.settings/
