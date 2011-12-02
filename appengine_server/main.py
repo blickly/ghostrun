@@ -71,6 +71,11 @@ class GameMoveHandler(webapp.RequestHandler):
         geopt = db.GeoPt(float(lat), float(lng))
 
         try:
+            others = Player.gql("WHERE game_id = :1 AND player_id != :2",
+                gid, pid)
+            self.response.out.write(json.dumps(
+              dict((p.player_id,str(p.location)) for p in others)))
+
             p = Player.gql("WHERE player_id = :1", pid).get()
             if not p:
                 p = Player(player_id=pid)
@@ -78,10 +83,6 @@ class GameMoveHandler(webapp.RequestHandler):
             p.location = geopt
             p.last_checkin = datetime.datetime.now()
             p.put()
-            all_players = Player.gql("WHERE game_id = :1", gid)
-
-            self.response.out.write(json.dumps(
-              dict((p.player_id,str(p.location)) for p in all_players)))
 
         except Exception as e:
             self.response.out.write(str(e))
