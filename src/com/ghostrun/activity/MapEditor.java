@@ -10,22 +10,23 @@ import java.util.Date;
 import java.util.List;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.ghostrun.R;
 import com.ghostrun.driving.Node;
-import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.overlays.PointsOverlay;
+import com.ghostrun.util.LocationHelper;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
@@ -37,6 +38,7 @@ public class MapEditor extends MapActivity {
     PointsOverlay pointsOverlay;
     ImageButton button;
     int mode = 0;
+    LocationHelper locationHelper;
     
     public synchronized int getNextMode() {
     	this.mode ++;
@@ -47,12 +49,15 @@ public class MapEditor extends MapActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mapeditor);
-
+        
+        locationHelper = new LocationHelper(this);
+        
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
         
         mapView.getController().setZoom(17);
-
+        mapView.getController().setCenter(locationHelper.getLastKnownLocation());
+        		
         List<Overlay> mapOverlays = mapView.getOverlays();
         mapOverlays.clear();
         
@@ -88,6 +93,7 @@ public class MapEditor extends MapActivity {
         newPointsOverlay();
         
         // Stop the current activity and return to the previous view.
+        /*
         Button logobutton = (Button)findViewById(R.id.mapview_paclogo);
         logobutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +101,7 @@ public class MapEditor extends MapActivity {
                 finish();
             }
         });
+        */
     }
     
     public void newPointsOverlay() {
@@ -216,12 +223,14 @@ public class MapEditor extends MapActivity {
 				}
         		BufferedReader bufRead = new BufferedReader(input);
             	List<Node> randNodes = null;
+            	/*
 				try {
 					randNodes = NodeFactory.generateRandomMap(bufRead.readLine());
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				*/
             	System.out.println("size of random nodes: " + randNodes.size());
             	mapView.getController().setCenter(randNodes.get(0).latlng);
             	newPointsOverlay(randNodes);
