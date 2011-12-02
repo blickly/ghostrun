@@ -2,7 +2,7 @@
 #
 import cgi
 import datetime
-import json
+import simplejson
 
 from google.appengine.ext import webapp, db
 from google.appengine.api import users
@@ -73,7 +73,7 @@ class GameMoveHandler(webapp.RequestHandler):
         try:
             others = Player.gql("WHERE game_id = :1 AND player_id != :2",
                 gid, pid)
-            self.response.out.write(json.dumps(
+            self.response.out.write(simplejson.dumps(
               dict((p.player_id,str(p.location)) for p in others)))
 
             p = Player.gql("WHERE player_id = :1", pid).get()
@@ -83,8 +83,7 @@ class GameMoveHandler(webapp.RequestHandler):
             p.location = geopt
             p.last_checkin = datetime.datetime.now()
             p.put()
-
-        except Exception as e:
+        except Exception, e:
             self.response.out.write(str(e))
             self.response.out.write('false')
 
