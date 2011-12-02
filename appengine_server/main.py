@@ -26,12 +26,9 @@ class Map(db.Model):
 
 class Player(db.Model):
     player_id = db.IntegerProperty()
+    game_id = db.IntegerProperty()
     location = db.GeoPtProperty()
     last_checkin = db.DateTimeProperty()
-
-class Game(db.Model):
-    index = db.IntegerProperty()
-    players = db.ListProperty(int)
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
@@ -62,11 +59,7 @@ class NewPlayerHandler(webapp.RequestHandler):
 
 class NewGameHandler(webapp.RequestHandler):
     def get(self):
-        index = update_and_get_count(gc_counter)
-        g = Game(index=index)
-        g.put()
-
-        self.response.out.write(str(g.index))
+        self.response.out.write(update_and_get_count(gc_counter))
 
 class GameMoveHandler(webapp.RequestHandler):
     def get(self):
@@ -77,17 +70,14 @@ class GameMoveHandler(webapp.RequestHandler):
         geopt = db.GeoPt(float(lat), float(lng))
 
         try:
-            g = Game.gql("WHERE index = :1", gid).get()
             p = Player.gql("WHERE player_id = :1", pid).get()
-            if pid not in g.players:
-                g.players.append(pid)
-                g.put()
             if not p:
                 p = Player(player_id=pid)
+            p.game_id = gid
             p.location = geopt
             p.last_checkin = datetime.datetime.now()
             p.put()
-            all_players = Player.gql("WHERE player_id IN :1", g.players)
+            all_players = Player.gql("WHERE game_id = :1", gid)
 
             self.response.out.write("</br>".join(
               [str(p.player_id) + ": " + str(p.location)
@@ -100,7 +90,7 @@ class GameMoveHandler(webapp.RequestHandler):
 class DeleteAllHandler(webapp.RequestHandler):
     def get(self):
         db.delete(Map.all())
-        db.delete(Game.all())
+        db.delete(Player.all())
 
 pc_counter = None
 mc_counter = None
