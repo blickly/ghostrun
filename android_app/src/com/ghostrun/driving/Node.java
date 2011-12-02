@@ -7,29 +7,30 @@ import java.util.Map;
 
 import com.google.android.maps.GeoPoint;
 
+/**
+ * @author Darren
+ * Node class representing individual points on mapview.
+ */
 public class Node {
 
-	public int id;
-	public GeoPoint latlng;
+	public final int id;
+	public final GeoPoint latlng;
 	public List<Node> neighbors;
+	public boolean user_added;
 	
-	public Node(GeoPoint latlng, int id) {
+	public Node(GeoPoint latlng, int id, boolean user_added) {
 		this.id = id;
-		
 		this.latlng = latlng;
+		this.user_added = user_added;
 		this.neighbors = new ArrayList<Node>();
 	}
 	
 	public Node clone() {
-		return new Node(this.latlng, this.id);
+		return new Node(this.latlng, this.id, this.user_added);
 	}
 	
 	public boolean equals(Object o) {
-		if (o instanceof Node) {
-			Node n = (Node)o;
-			return n.id == this.id;
-		}
-		return false;
+		return (o instanceof Node) && ((Node)o).id == this.id;
 	}
 	
 	public int hashCode() {
@@ -40,6 +41,7 @@ public class Node {
 		if (!this.neighbors.contains(n))
 			this.neighbors.add(n);
 	}
+	
 	public void removeNeighbor(Node n) {
 		this.neighbors.remove(n);
 	}
@@ -53,11 +55,13 @@ public class Node {
 		}
 		return array;
 	}
+	
 	public Map<Object, Object> toJson() {
 		Map<Object, Object> map = new HashMap<Object, Object>();
-		map.put("id", new Integer(id));
-		map.put("lat", new Integer(latlng.getLatitudeE6()));
-		map.put("lng", new Integer(latlng.getLongitudeE6()));
+		map.put("id", new Integer(this.id));
+		map.put("user_added", new Boolean(this.user_added));
+		map.put("lat", new Integer(this.latlng.getLatitudeE6()));
+		map.put("lng", new Integer(this.latlng.getLongitudeE6()));
 		map.put("neighbors", getJsonNeighbors());
 		return map;
 	}

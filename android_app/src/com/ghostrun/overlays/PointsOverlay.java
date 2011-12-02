@@ -1,8 +1,8 @@
 package com.ghostrun.overlays;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -21,6 +21,7 @@ import com.ghostrun.driving.DrivingDirections;
 import com.ghostrun.driving.DrivingDirections.Mode;
 import com.ghostrun.driving.DrivingDirectionsFactory;
 import com.ghostrun.driving.Node;
+import com.ghostrun.driving.NodeFactory;
 import com.ghostrun.driving.NodePair;
 import com.ghostrun.driving.Route;
 import com.ghostrun.driving.impl.RouteImpl;
@@ -32,20 +33,18 @@ import com.google.android.maps.Projection;
 import com.google.gson.Gson;
 
 public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
-	int node_id = 0;
-	int selected = -1;
-	HashMap<NodePair, Route> routesMap;
-	List<Node> nodes;
-	GestureDetector gestureDetector;
-	MapView mapView;
-	Paint mPaint;
-	int mode;
-	int connect_selected = -1;
+	private int node_id = 0, selected = -1, connect_selected = -1, mode = 0;	
+	//private HashMap<NodePair, Route> routesMap;
+	private List<Node> nodes;
+	private GestureDetector gestureDetector;
+	private MapView mapView;
+	private Paint mPaint;
 	
-	Drawable marker, selectedMarker;
-	MapEditor editor;
+	private Drawable marker, selectedMarker;
+	private MapEditor editor;
 	
-	public PointsOverlay(Drawable marker, Drawable selectedMarker, MapEditor editor, List<Node> nodes) {
+	public PointsOverlay(Drawable marker, Drawable selectedMarker, 
+						 MapEditor editor, List<Node> nodes) {
 		this(marker, selectedMarker, editor);
 		
 		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
@@ -55,6 +54,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 			nodeMap.put(n.id, n);
 		}
 		
+		/*
 		int processedNodes = 0;
 		for (Node n1 : nodes) {
 			final Node f1 = n1; 
@@ -82,7 +82,8 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 							}
 					});
 			}
-		}		
+		}
+		*/
 		this.setLastFocusedIndex(-1);
 		this.selected = this.nodes.size() -1;
 		this.mapView.invalidate();
@@ -93,12 +94,11 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		super(boundCenterBottom(marker));
 		
 		this.editor = editor;
-		this.mode = 0;
 		this.marker = marker;
 		this.selectedMarker = selectedMarker;
 		this.mapView = editor.mapView;
 		this.nodes = new ArrayList<Node>();
-		this.routesMap = new HashMap<NodePair, Route>();
+		//this.routesMap = new HashMap<NodePair, Route>();
 		
         this.mPaint = new Paint();
         this.mPaint.setDither(true);
@@ -112,25 +112,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	}
 	
 	public String getJson() {
-		Map<Object, Object> m = new HashMap<Object, Object>();
-		@SuppressWarnings("unchecked")
-		Map<Object, Object>[] jsonNodes = new HashMap[this.nodes.size()];
-		for (int i = 0; i < jsonNodes.length; i ++) {
-			jsonNodes[i] = this.nodes.get(i).toJson();
-		}
-		m.put("nodes", jsonNodes);
-		
-		Map<Object, Object> jsonRoutes = new HashMap<Object, Object>();
-		Set<Entry<NodePair, Route>> entries = this.routesMap.entrySet();
-		for (Entry<NodePair, Route> entry : entries) {
-			jsonRoutes.put(entry.getKey().id1 + " " + entry.getKey().id2, 
-					((RouteImpl)entry.getValue()).toJson());
-		}
-		m.put("routes", jsonRoutes);
-		Gson gson = new Gson();
-		String json = gson.toJson(m);
-		System.out.println(json);
-		return json;
+		return NodeFactory.getJsonFromNodes(nodes);
 	}
 
 	protected void assertTrue(boolean t, String s) {
@@ -145,7 +127,15 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 					public void onDirectionsAvailable (Route route, Mode mode) {
 						List<GeoPoint> points = route.getGeoPoints();
 						try {
-							addMarker(points.get(points.size()-1));
+							GeoPoint pt = points.get(points.size()-1);
+							addMarker(pt);
+							
+							/*
+							GeoPoint pt2 = new ReverseGeocodeIntersection().
+								getClosestIntersection(pt.getLatitudeE6()/1000000.0,
+														pt.getLongitudeE6()/1000000.0);
+							addMarker(pt2);
+							*/
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -177,7 +167,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	public void addMarker(GeoPoint p) throws Exception {
 		assertTrue(selected != -1 || nodes.size() == 0, "No points selected");
 		
-		final Node endPt = new Node(p, node_id++);
+		final Node endPt = new Node(p, node_id++, true);
 
 		if (nodes.size() > 0) {
 			final Node startPt = nodes.get(selected);
@@ -228,30 +218,28 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	public void draw(Canvas canvas, MapView mapv, boolean shadow){
         super.draw(canvas, mapv, shadow);
         
-        Collection<Route> routes = routesMap.values();
+        Set<Integer> done = new HashSet<Integer>();
+        
         Projection projection = mapv.getProjection();
-        for (Route route : routes) {
-        	List<GeoPoint> geoPoints = route.getGeoPoints();
-        	GeoPoint pt1 = geoPoints.get(0);
-        	Point p1 = new Point();
-        	projection.toPixels(pt1, p1);
-        	
-        	for (int i = 1; i < geoPoints.size(); i++) {
-        		GeoPoint pt2 = geoPoints.get(i); 
-                Point p2 = new Point();
-
-                Path path = new Path();
-                projection.toPixels(pt2, p2);
-
-                path.moveTo(p2.x, p2.y);
-                path.lineTo(p1.x, p1.y);
-        		canvas.drawPath(path, this.mPaint);
+        for (Node n1 : nodes) {
+        	for (Node n2 : n1.neighbors) {
         		
-        		pt1 = pt2;
-        		p1 = p2;
+        		if (done.contains(n2.id))
+        			continue;
+        		
+        		Point p1 = new Point();
+        		Point p2 = new Point();
+     
+        		projection.toPixels(n1.latlng, p1);
+        		projection.toPixels(n2.latlng, p2);
+        		
+        		Path path = new Path();
+        		path.moveTo(p2.x, p2.y);
+        		path.lineTo(p1.x, p1.y);
+        		canvas.drawPath(path, this.mPaint);		
         	}
+        	done.add(n1.id);
         }
-        //this.mapView.invalidate();
     }
 	
 	public boolean onTap(GeoPoint p, MapView mapView) { 
@@ -285,8 +273,6 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 			this.selected = -1;
 			Node n = this.nodes.get(index);
 			for (Node neighbor : n.neighbors) {
-				assertTrue(routesMap.remove(new NodePair(n.id, neighbor.id)) != null, 
-					"route map should contain key");
 				neighbor.removeNeighbor(n);
 			}
 			this.setLastFocusedIndex(-1);
@@ -326,19 +312,20 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	}
 	
 	public void addRoute(Node n1, Node n2, Route route) {
-		// TODO: add intersection code
-		/*
-		List<GeoPoint> lst = route.getGeoPoints();
-		GeoPoint curPoint = lst.get(0);
-		for(int i = 1; i < lst.size(); i++) {
-			GeoPoint nextPoint = lst.get(i);
-			
-			for (NodePair )
-		}
-		*/
-		routesMap.put(new NodePair(n1.id, n2.id), route);
-		n1.addNeighbor(n2);
-		n2.addNeighbor(n1);
-		mapView.invalidate();
+
+		Node lastNode = n1;
+    	for (GeoPoint pt : route.getGeoPoints()) {
+    		Node newNode = new Node(pt, node_id++, false);
+    		nodes.add(newNode);
+    		newNode.addNeighbor(lastNode);
+    		lastNode.addNeighbor(newNode);
+    		lastNode = newNode;
+    		this.mapView.invalidate();
+    		this.populate();
+    	}
+    	n2.addNeighbor(lastNode);
+    	lastNode.addNeighbor(n2);
+    	this.mapView.invalidate();
+    	this.populate();
 	}
 }

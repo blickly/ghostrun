@@ -237,16 +237,11 @@ public class GameMapView extends MapActivity {
             FileReader input = new FileReader(filename);
             BufferedReader bufRead = new BufferedReader(input);
             String json = bufRead.readLine();
-            
-            //System.out.println(json);
-            
-            NodeFactory factory = new NodeFactory();
-            NodeFactory.NodesAndRoutes nodesAndRoutes = factory.fromMap(json);
-            
-            //System.out.println(nodesAndRoutes.nodes.size());
-            //System.out.println(nodesAndRoutes.routesMap.size());
-            
-            List<Node> nodes = nodesAndRoutes.toNodes();
+            bufRead.close();
+
+            List<Node> nodes = NodeFactory.getNodesFromJson(json);
+            System.out.println("json: " + json);
+            System.out.println("Number of nodes: " + nodes.size());
             this.addGameLoop(nodes);
         } catch (Exception e) {
             // TODO Auto-generated catch block
