@@ -8,24 +8,29 @@ import (
   "rand"
 )
 
+const DEBUG = true;
+
 func main() {
   num_phones := 5
-  for i := -num_phones; i < 0; i++ {
-    go run_phone(i, 2)
+  run_time := 60 * int64(1000000000)   // in ns
+  update_rate := 5 * int64(1000000000) // in ns between requests
+
+  simulator_offset := 100000
+  for i := simulator_offset; i < simulator_offset+num_phones; i++ {
+    go run_phone(i, update_rate)
   }
-  time.Sleep(60*1000000000)
+  time.Sleep(run_time)
   fmt.Println("Quitting...")
 }
 
-func run_phone(pid int, iterations int) {
+func run_phone(pid int, update_rate int64) {
   gid := 1
-  for i := 0; i < iterations; i++ {
+  for ;; {
     lat := rand.Float32() * 90
     lng := rand.Float32() * 90
     post_position(gid, pid, lat, lng)
-    time.Sleep(5000000000) // in ns
+    time.Sleep(update_rate)
   }
-  fmt.Printf("Done with phone %d\n", pid)
 }
 
 func post_position(gid int, pid int, lat float32, lng float32) {
@@ -37,7 +42,9 @@ func post_position(gid int, pid int, lat float32, lng float32) {
   }
   ccon := http.NewClientConn(con, nil)
   defer ccon.Close()
-  fmt.Println("Will post to ", url)
+  if DEBUG {
+    fmt.Println("Will post to ", url)
+  }
   req, err := http.NewRequest("GET", url, nil)
   if err != nil {
     fmt.Println(err)
