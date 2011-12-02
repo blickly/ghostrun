@@ -1,0 +1,16 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated GUI files
+*R.java
+
+# Google Maps API key/other
+res/values/keys.xml
+.settings/
