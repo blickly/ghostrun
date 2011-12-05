@@ -1,0 +1,40 @@
+#!/usr/bin/expect -f
+
+# Author: Ben Lickly
+#
+# Expect script for deploying to google app engine. To use, create
+# a file called "login.txt" with your email and application specific password,
+# separated by a newline. Then run this script.
+
+if {[llength $argv] == 0} {
+ set timeout 60
+} else {
+ set timeout $argv
+}
+puts "Timeout: ${timeout}s"
+set EMAIL [string trim [exec head -1 login.txt]]
+set ASP [string trim [exec tail -1 login.txt]]
+spawn appcfg.py update .
+expect {
+ "Email:" {
+   send "$EMAIL\r";
+   expect "Password for $EMAIL:";
+   send "$ASP\r";
+   exp_continue;
+ }
+ "Deployment successful." {
+   puts "=====Success====="
+   expect eof
+ }
+ "rollback" {
+   puts "=====Rollback====="
+   system appcfg.py rollback .
+   system exec ./deploy.exp $timeout
+ }
+ timeout {
+   puts "=====Timeout====="
+   expect eof
+   system exec ./deploy.exp [expr 2*$timeout]
+ }
+}
+
