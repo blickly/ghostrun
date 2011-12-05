@@ -5,7 +5,6 @@ import (
     "appengine/datastore"
     "fmt"
     "http"
-    "io"
     "json"
     "os"
     "time"
@@ -15,8 +14,7 @@ import (
 type Player struct {
     PlayerId int
     GameId   int
-    Lat      float32
-    Lng      float32
+    Location []float32
     LastSeen datastore.Time
 }
 
@@ -28,7 +26,7 @@ func init() {
 func serveError(c appengine.Context, w http.ResponseWriter, err os.Error) {
         w.WriteHeader(http.StatusInternalServerError)
         w.Header().Set("Content-Type", "text/plain")
-        io.WriteString(w, "Internal Server Error")
+        fmt.Fprintln(w, "Error:", err)
         c.Errorf("%v", err)
 }
 
@@ -47,7 +45,7 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
     k := datastore.NewKey(c, "Player", "", int64(pid), nil)
     e := new(Player)
     datastore.Get(c, k, e)
-    e = &Player{pid, gid, lat, lng, now}
+    e = &Player{pid, gid, []float32{lat, lng}, now}
     if _, err := datastore.Put(c, k, e); err != nil {
         serveError(c, w, err)
         return
