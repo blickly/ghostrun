@@ -55,7 +55,7 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
 
     q := datastore.NewQuery("Player").
             Filter("GameId =", gid)
-    enc := json.NewEncoder(w)
+    players := make([]Player, 0, 50)
     for t := q.Run(c); ; {
         var p Player
         _, err := t.Next(&p)
@@ -66,9 +66,10 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
                 serveError(c, w, err)
                 return
         }
-        if p.PlayerId == pid {
-                continue
+        if p.PlayerId != pid {
+                players = append(players, p)
         }
-        enc.Encode(p)
     }
+    enc := json.NewEncoder(w)
+    enc.Encode(players)
 }
