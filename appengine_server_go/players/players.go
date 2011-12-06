@@ -23,6 +23,10 @@ func init() {
     http.HandleFunc("/post_position", postPosition)
 }
 
+func helloWorld(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprint(w, "Hello, world!")
+}
+
 func serveError(c appengine.Context, w http.ResponseWriter, err os.Error) {
         w.WriteHeader(http.StatusInternalServerError)
         w.Header().Set("Content-Type", "text/plain")
@@ -30,8 +34,12 @@ func serveError(c appengine.Context, w http.ResponseWriter, err os.Error) {
         c.Errorf("%v", err)
 }
 
-func helloWorld(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "Hello, world!")
+func savePlayer(c appengine.Context, p *Player) {
+    k := datastore.NewKey(c, "Player", "", int64(p.PlayerId), nil)
+    if _, err := datastore.Put(c, k, p); err != nil {
+        //serveError(c, w, err)
+        return
+    }
 }
 
 func postPosition(w http.ResponseWriter, r *http.Request) {
@@ -42,18 +50,11 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
     lng, _ := strconv.Atof32(r.FormValue("lng"))
     now := datastore.SecondsToTime(time.Seconds())
 
-    k := datastore.NewKey(c, "Player", "", int64(pid), nil)
-    e := new(Player)
-    datastore.Get(c, k, e)
-    e = &Player{pid, gid, []float32{lat, lng}, now}
-    if _, err := datastore.Put(c, k, e); err != nil {
-        serveError(c, w, err)
-        return
-    }
+    go savePlayer(c, &Player{pid, gid, []float32{lat, lng}, now})
 
     q := datastore.NewQuery("Player").
             Filter("GameId =", gid)
-    players := make([]Player, 0, 50)
+    players := make([]Player, 0, 10)
     for t := q.Run(c); ; {
         var p Player
         _, err := t.Next(&p)
