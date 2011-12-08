@@ -37,6 +37,21 @@
 \section{Background}
 \section{System Architecture}
 \section{Results}
+\subsection{Measuring Latency}
+There are many difficulties with trying to measure latency in a distributed system.  The most naive solution would be to simply time from when one GPS reading is calculated on one phone to when that updated position is displayed on another. The problem with this, of course, is time itself is not totally ordered in a distributed system~\cite{Lamport:1978:TCO}.
+
+One solution would be to synchronize the notion of time on the phone.  If they could be synchronized within some known time bound, then we could use timestamps and have a bound on the error of that calculation.  Since phones include GPS and GPS includes a notion of time, this is a feasible solution.
+
+Another solution would be to measure a round trip time.  It is important to make sure that the round trip time includes multiple phones, since we are interested in the time that it takes to propagate information from one phone to another.  One approach would be to time the round trip time of the following set of events.  On a single phone acquire a GPS reading, post it to the server, and then subsequently request updates of other phones' positions from the server until they change.  Under certain atomicity assumptions (namely that the reading of positions and posting of GPS update is all done in an atomic and isolated fashion) and network assumptions (that the network delivers packets in order), getting an updated position from another phone after posting your own update would be enough to guarantee that the other phone had seen the original GPS reading.  Unfortunately, this approach is complex and brittle, and many of the assumptions do not necessarily hold in practice.
+
+A third approach is one that combines observation on the phone with observation on the server.  Rather than try to get an exact measurement of any particular point-to-point or round-trip flow of information, it merely tries to measure statistically certain subflows that can be summed up to find a statistical measure of a likely point-to-point flow.  The basic idea is that the latency for a GPS reading to move from the GPS receiver on one phone to the screen on another is made up of three parts:
+\begin{enumerate}
+\item the time that it takes to get from the GPS receiver on the first phone to the server,
+\item the time that the reading waits on the server before it is queried by the second phone, and
+\item the time that the reading takes to get from the server to the screen of the second phone.
+\end{enumerate}
+Since the second part is handled completely on the server, measuring it is easier than the first and third part.  The key insight for solving this problem is noticing that there is a certain degree of symmetry among the phones, especially if we average over many measurements.  It is likely that the latency for a reading to get from the server to one phone will be very close to the latency to get from the server to another.  Making this (reasonable) assumption allows us to measure the sum of the first and third parts by simply measuring the roundtrip time of two separate GPS measurements as seen by a single phone.  That is, if we assume a certain degree of symmetry among the phones, we can measure the time it takes to upload one GPS measurement and then receive a different GPS measurement from the server, and take that as a proxy for the sum of the first and third measurements.  Summing this with the time measured on the server between the GPS measurement being posted and being read by another phone gives us a very accurate overall latency for reading-to-display across multiple phones.
+
 \section{Conclusion}
 \bibliographystyle{plain}
 \bibliography{refs}
