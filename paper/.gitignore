@@ -1,0 +1,16 @@
+.DS_Store
+*.aux
+*.bbl
+*.blg
+*.log
+*.idx
+*.maf
+*.mtc
+*.mtc?
+*.out
+*.toc
+*~
+*.swp
+*.ilg
+*.ind
+
