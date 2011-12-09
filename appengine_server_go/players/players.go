@@ -70,6 +70,7 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
                 players = append(players, p)
         }
     }
+    m := map[string]interface{}{"players":players, "dead":false}
     enc := json.NewEncoder(w)
-    enc.Encode(players)
+    enc.Encode(m)
 }
