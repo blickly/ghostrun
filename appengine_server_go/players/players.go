@@ -12,10 +12,11 @@ import (
 )
 
 type Player struct {
-    PlayerId int
-    GameId   int
-    Location []float32
-    LastSeen datastore.Time
+    PlayerId  int
+    GameId    int
+    Lat       float32
+    Long      float32
+    LastSeen  datastore.Time
 }
 
 func init() {
@@ -50,7 +51,7 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
     lng, _ := strconv.Atof32(r.FormValue("lng"))
     now := datastore.SecondsToTime(time.Seconds())
 
-    go savePlayer(c, &Player{pid, gid, []float32{lat, lng}, now})
+    go savePlayer(c, &Player{pid, gid, lat, lng, now})
 
     q := datastore.NewQuery("Player").
             Filter("GameId =", gid)
