@@ -6,17 +6,16 @@ import (
     "fmt"
     "http"
     "json"
+    "log"
     "os"
     "time"
     "strconv"
 )
 
 type Player struct {
-    PlayerId  int
-    GameId    int
-    Lat       float32
-    Long      float32
-    LastSeen  datastore.Time
+    PlayerId, GameId  int
+    Lat, Long         float32
+    LastSeen          datastore.Time
 }
 
 func init() {
@@ -38,7 +37,7 @@ func serveError(c appengine.Context, w http.ResponseWriter, err os.Error) {
 func savePlayer(c appengine.Context, p *Player) {
     k := datastore.NewKey(c, "Player", "", int64(p.PlayerId), nil)
     if _, err := datastore.Put(c, k, p); err != nil {
-        //serveError(c, w, err)
+        log.Println("Error:", err)
         return
     }
 }
