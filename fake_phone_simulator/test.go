@@ -13,7 +13,7 @@ import (
 )
 
 //const SERVER = "localhost:8080";
-const SERVER = "pacmanplusplus.appspot.com:80";
+const SERVER = "ghostrungo.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
