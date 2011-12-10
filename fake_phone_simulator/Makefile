@@ -8,4 +8,4 @@ clean:
 	$(RM) *.6 *~ *.swp *.out
 
 run: 6.out
-	./6.out
+	time ./6.out
