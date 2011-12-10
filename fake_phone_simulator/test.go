@@ -1,12 +1,14 @@
 package main
 
 import (
+  "flag"
   "fmt"
   "http"
   "json"
   "log"
-  //"net"
+  "os"
   "rand"
+  "strconv"
   "time"
 )
 
@@ -15,9 +17,18 @@ const SERVER = "pacmanplusplus.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
-  num_phones := 3
-  run_time := 20 * int64(1000000000)   // in ns
-  update_rate := 10*int64(1000000000)/2   // in ns between requests
+  run_time := 30*int64(1000000000)     // in ns
+  update_rate := int64(1000000000)/2    // in ns between requests
+  flag.Parse()
+  num_phones := 4
+  if flag.NArg() > 0 {
+    var err os.Error
+    num_phones, err = strconv.Atoi(flag.Arg(0))
+    if err != nil {
+      log.Println("[ERR] Cannot parse number of phones:", flag.Arg(0))
+      return
+    }
+  }
 
   pid_offset := 100000
   for i := pid_offset; i < pid_offset+num_phones; i++ {
@@ -50,6 +61,9 @@ func post_position(gid int, pid int, lat float32, lng float32) {
   }
   v := make(map[string]interface{},9)
   json.NewDecoder(resp.Body).Decode(&v)
-  log.Printf("Request '%s' at local time %v, Response %v at time %v",
-              url, requestTime, v["locations"], responseTime)
+  totalTime := responseTime - requestTime
+  log.Printf("[INFO] Request '%s' at time %v, Response %v at time %v, " +
+             "total time: %d",
+             url, requestTime, v["locations"], responseTime,
+             totalTime)
 }
