@@ -17,7 +17,7 @@ const SERVER = "ghostrungo.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
-  run_time := 30*int64(1000000000)     // in ns
+  run_time := 60*int64(1000000000)     // in ns
   update_rate := int64(1000000000)/2    // in ns between requests
   flag.Parse()
   num_phones := 4
@@ -52,8 +52,9 @@ func run_phone(pid int, update_rate int64) {
 func post_position(gid int, pid int, lat float32, lng float32) {
   url := fmt.Sprintf("/post_position?gid=%d&pid=%d&lat=%f&lng=%f",
                      gid, pid, lat, lng)
+  fullUrl := "http://" + SERVER + url
   requestTime := time.Nanoseconds()
-  resp, _, err := http.Get("http://" + SERVER + url)
+  resp, _, err := http.Get(fullUrl)
   responseTime := time.Nanoseconds()
   if err != nil {
     log.Printf("[ERR] from phone %d: %s", pid, err)
@@ -64,6 +65,5 @@ func post_position(gid int, pid int, lat float32, lng float32) {
   totalTime := responseTime - requestTime
   log.Printf("[INFO] Request '%s' at time %v, Response %v at time %v, " +
              "total time: %d",
-             url, requestTime, v["locations"], responseTime,
-             totalTime)
+             fullUrl, requestTime, v, responseTime, totalTime)
 }
