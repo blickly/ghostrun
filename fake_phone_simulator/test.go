@@ -40,7 +40,7 @@ func main() {
 
 func run_phone(simid int, update_rate int64) {
   gid := 1
-  pid := get_pid(gid, simid)
+  pid := simid //get_pid(gid, simid)
   time.Sleep(rand.Int63n(update_rate))
   for ;; {
     lat := rand.Intn(4000) +  37875505 - 2000
