@@ -39,7 +39,7 @@ func main() {
 }
 
 func run_phone(simid int, update_rate int64) {
-  gid := 1
+  gid := rand.Intn(65536)
   pid := simid //get_pid(gid, simid)
   time.Sleep(rand.Int63n(update_rate))
   for ;; {
