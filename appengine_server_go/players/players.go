@@ -14,7 +14,7 @@ import (
 
 type Player struct {
     PlayerId, GameId  int
-    Lat, Long         float32
+    Lat, Long         int
     LastSeen          datastore.Time
 }
 
@@ -46,8 +46,8 @@ func postPosition(w http.ResponseWriter, r *http.Request) {
     c := appengine.NewContext(r)
     gid, _ := strconv.Atoi(r.FormValue("gid"))
     pid, _ := strconv.Atoi(r.FormValue("pid"))
-    lat, _ := strconv.Atof32(r.FormValue("lat"))
-    lng, _ := strconv.Atof32(r.FormValue("lng"))
+    lat, _ := strconv.Atoi(r.FormValue("lat"))
+    lng, _ := strconv.Atoi(r.FormValue("lng"))
     now := datastore.SecondsToTime(time.Seconds())
 
     go savePlayer(c, &Player{pid, gid, lat, lng, now})

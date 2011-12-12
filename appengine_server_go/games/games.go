@@ -11,6 +11,6 @@ func init() {
 }
 
 func joinGame(w http.ResponseWriter, r *http.Request) {
-  v := map[string]int{"pid" : rand.Int()}
+  v := map[string]int{"pid" : rand.Intn(65536)}
   json.NewEncoder(w).Encode(v)
 }
