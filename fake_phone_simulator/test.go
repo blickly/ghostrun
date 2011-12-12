@@ -40,6 +40,7 @@ func main() {
 
 func run_phone(simid int, update_rate int64) {
   gid := 1
+  pid := simid //get_pid(gid, simid)
   time.Sleep(rand.Int63n(update_rate))
   for ;; {
     lat := rand.Intn(4000) +  37875505 - 2000
@@ -47,6 +48,22 @@ func run_phone(simid int, update_rate int64) {
     post_position(gid, pid, lat, lng)
     time.Sleep(update_rate)
   }
+}
+
+func get_pid(gid, simid int) int {
+  url := fmt.Sprintf("/join_game?gid=%d&lat=%d&lng=%d&pacman=true",
+    gid,rand.Intn(90000000),rand.Intn(90000000))
+  fullUrl := "http://" + SERVER + url
+  resp, _, err := http.Get(fullUrl)
+  defer resp.Body.Close()
+  if err != nil {
+    log.Println("[ERR] On join game:", err)
+  }
+  v := make(map[string]int,9)
+  json.NewDecoder(resp.Body).Decode(&v)
+  log.Printf("[INFO] Request '%s', Response %v", fullUrl, v)
+  pid := v["pid"]
+  return pid
 }
 
 func post_position(gid int, pid int, lat int, lng int) {
