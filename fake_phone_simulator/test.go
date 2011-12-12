@@ -68,6 +68,7 @@ func post_position(gid int, pid int, lat int, lng int) {
   requestTime := time.Nanoseconds()
   resp, _, err := http.Get(fullUrl)
   responseTime := time.Nanoseconds()
+  defer resp.Body.Close()
   if err != nil {
     log.Printf("[ERR] from phone %d: %s", pid, err)
     return
