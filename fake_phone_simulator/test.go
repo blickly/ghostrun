@@ -12,8 +12,8 @@ import (
   "time"
 )
 
-const SERVER = "localhost:8080";
-//const SERVER = "ghostrungo.appspot.com:80";
+//const SERVER = "localhost:8080";
+const SERVER = "ghostrungo.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
