@@ -12,12 +12,12 @@ import (
   "time"
 )
 
-const SERVER = "localhost:8080";
-//const SERVER = "pacmanplusplus.appspot.com:80";
+//const SERVER = "localhost:8080";
+const SERVER = "pacmanplusplus.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
-  run_time := 10*int64(1000000000)    // in ns
+  run_time := 30*int64(1000000000)    // in ns
   update_rate := int64(1000000000)    // in ns between requests
   flag.Parse()
   num_phones := 4
@@ -77,5 +77,5 @@ func post_position(gid int, pid int, lat int, lng int) {
   totalTime := responseTime - requestTime
   log.Printf("[INFO] Request '%s' at time %v, Response %v at time %v, " +
              "total time: %d",
-             fullUrl, requestTime, v, responseTime, totalTime)
+             fullUrl, requestTime/1000000, v, responseTime/1000000, totalTime/1000000)
 }

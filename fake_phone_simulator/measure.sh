@@ -7,7 +7,7 @@ run_simulation() {
     echo "Simulating round $i";
     LOGNAME="logs/out$i.log";
     ./6.out $i &> $LOGNAME;
-    #sleep 30
+    sleep 30
   done
 }
 
