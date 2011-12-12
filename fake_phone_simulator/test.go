@@ -17,8 +17,8 @@ const SERVER = "localhost:8080";
 const LOGINFO = true;
 
 func main() {
-  run_time := 60*int64(1000000000)     // in ns
-  update_rate := int64(1000000000)/2    // in ns between requests
+  run_time := 30*int64(1000000000)     // in ns
+  update_rate := int64(1000000000)    // in ns between requests
   flag.Parse()
   num_phones := 4
   if flag.NArg() > 0 {
