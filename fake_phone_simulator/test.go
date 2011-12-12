@@ -77,5 +77,5 @@ func post_position(gid int, pid int, lat int, lng int) {
   totalTime := responseTime - requestTime
   log.Printf("[INFO] Request '%s' at time %v, Response %v at time %v, " +
              "total time: %d",
-             fullUrl, requestTime/1000000, v, responseTime/1000000, totalTime/1000000)
+             fullUrl, requestTime, v, responseTime, totalTime)
 }
