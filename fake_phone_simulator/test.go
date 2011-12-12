@@ -12,13 +12,13 @@ import (
   "time"
 )
 
-//const SERVER = "localhost:8080";
-const SERVER = "ghostrungo.appspot.com:80";
+const SERVER = "localhost:8080";
+//const SERVER = "pacmanplusplus.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
-  run_time := 60*int64(1000000000)     // in ns
-  update_rate := int64(1000000000)/2    // in ns between requests
+  run_time := 10*int64(1000000000)    // in ns
+  update_rate := int64(1000000000)    // in ns between requests
   flag.Parse()
   num_phones := 4
   if flag.NArg() > 0 {
@@ -30,27 +30,39 @@ func main() {
     }
   }
 
-  pid_offset := 100000
-  for i := pid_offset; i < pid_offset+num_phones; i++ {
-    go run_phone(i, update_rate)
+  //pid_offset := 100000
+  //for i := pid_offset; i < pid_offset+num_phones; i++ {
+  for i := 0; i < num_phones; i++ {
+    go run_phone(update_rate)
   }
   time.Sleep(run_time)
   log.Println("Quitting...")
 }
 
-func run_phone(pid int, update_rate int64) {
+func run_phone(update_rate int64) {
   gid := 1
+  url := fmt.Sprintf("/join_game?gid=%d&lat=%d&lng=%d&pacman=true",
+    gid,rand.Intn(90000000),rand.Intn(90000000))
+  fullUrl := "http://" + SERVER + url
   time.Sleep(rand.Int63n(update_rate))
+  resp, _, err := http.Get(fullUrl)
+  if err != nil {
+    log.Println("[ERR] On join game:", err)
+  }
+  v := make(map[string]int,9)
+  json.NewDecoder(resp.Body).Decode(&v)
+  log.Printf("[INFO] Request '%s', Response %v", fullUrl, v)
+  pid := v["pid"]
   for ;; {
-    lat := rand.Float32() * 90
-    lng := rand.Float32() * 90
+    lat := rand.Intn(4000) +  37875505 - 2000
+    lng := rand.Intn(4000) - 122257438 - 2000
     post_position(gid, pid, lat, lng)
     time.Sleep(update_rate)
   }
 }
 
-func post_position(gid int, pid int, lat float32, lng float32) {
-  url := fmt.Sprintf("/post_position?gid=%d&pid=%d&lat=%f&lng=%f",
+func post_position(gid int, pid int, lat int, lng int) {
+  url := fmt.Sprintf("/post_position?gid=%d&pid=%d&lat=%d&lng=%d",
                      gid, pid, lat, lng)
   fullUrl := "http://" + SERVER + url
   requestTime := time.Nanoseconds()
