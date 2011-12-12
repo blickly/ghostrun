@@ -25,7 +25,7 @@
     android:layout_width="fill_parent" 
     android:layout_height="fill_parent">
     
-    <!-- 
+
     <LinearLayout
 		android:orientation="horizontal"
 		android:layout_width="fill_parent"
@@ -37,7 +37,7 @@
 			android:background="@drawable/pac_log_clicked" />
 	
 	</LinearLayout>
-	-->
+
 	
 	<FrameLayout 
 		android:orientation="horizontal"
@@ -51,7 +51,7 @@
         	android:layout_height="fill_parent"
         	android:enabled="true"
         	android:clickable="true"
-        	android:apiKey="0z-SInnYFdnTCruVFdCbWgdCdkZlGiWywdpUKbA" />
+        	android:apiKey="@string/mapsApiKey"/>
             <!-- To add your Google Maps API key, create a file in res/values
                  called keys.xml with the following content:
 				<?xml version="1.0" encoding="utf-8"?>

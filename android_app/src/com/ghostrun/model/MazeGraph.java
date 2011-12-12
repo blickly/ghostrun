@@ -11,6 +11,8 @@ import com.google.android.maps.GeoPoint;
 
 public class MazeGraph {
 	
+    private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();
+	
 	public MazeGraph(List<Node> nodes) {
 		Map<Integer, MazeGraphPoint> nodeMap = new HashMap<Integer, MazeGraphPoint>();
 		for (Node node : nodes) {
@@ -45,11 +47,7 @@ public class MazeGraph {
         int nPoints = points.size();
         if (nPoints > 0) {
             return points.get(RandUtils.nextInt(nPoints));
-        } else {
-            return null;
-        }
+        } 
+        return null;
     }
-
-    private ArrayList<MazeGraphPoint> points = new ArrayList<MazeGraphPoint>();
-
 }

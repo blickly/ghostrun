@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import android.graphics.Canvas;
@@ -22,15 +21,12 @@ import com.ghostrun.driving.DrivingDirections.Mode;
 import com.ghostrun.driving.DrivingDirectionsFactory;
 import com.ghostrun.driving.Node;
 import com.ghostrun.driving.NodeFactory;
-import com.ghostrun.driving.NodePair;
 import com.ghostrun.driving.Route;
-import com.ghostrun.driving.impl.RouteImpl;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 import com.google.android.maps.Projection;
-import com.google.gson.Gson;
 
 public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	private int node_id = 0, selected = -1, connect_selected = -1, mode = 0;	
@@ -50,7 +46,6 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		Map<Integer, Node> nodeMap = new HashMap<Integer, Node>();
 		for (Node n : nodes) {
 			this.nodes.add(n);
-			System.out.println("adding node: " + n.latlng);
 			nodeMap.put(n.id, n);
 		}
 		
@@ -98,8 +93,7 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 		this.selectedMarker = selectedMarker;
 		this.mapView = editor.mapView;
 		this.nodes = new ArrayList<Node>();
-		//this.routesMap = new HashMap<NodePair, Route>();
-		
+	
         this.mPaint = new Paint();
         this.mPaint.setDither(true);
         this.mPaint.setColor(Color.RED);
@@ -210,7 +204,6 @@ public class PointsOverlay extends ItemizedOverlay<OverlayItem> {
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
-		//System.out.println("Size: " + this.nodes.size());
 		return this.nodes.size();
 	}
 	

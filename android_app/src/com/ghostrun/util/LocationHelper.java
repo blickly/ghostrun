@@ -1,23 +1,30 @@
 package com.ghostrun.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.maps.GeoPoint;
+import com.google.android.maps.MapView;
 
 public class LocationHelper {
     private LocationManager locationManager;
     private LocationResult locationResult = new LocationResult();
     private boolean gpsEnabled = false;
     private boolean networkEnabled = false;
+    private List<LocationListener> locationListeners = new ArrayList<LocationListener>();
+    private MapView mapView;
     
-    public LocationHelper(Context context) {
+    public LocationHelper(Context context, MapView mapView) {
+    	this.mapView = mapView;
     	locationManager = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
-        
-        //exceptions thrown if provider not enabled
+
         try {
         	gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             networkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
@@ -34,6 +41,19 @@ public class LocationHelper {
         getLastLocation();
     }
     
+    public void stop() {
+    	locationManager.removeUpdates(locationListenerGps);
+    	locationManager.removeUpdates(locationListenerNetwork);
+    }
+    
+    public void addLocationListener(LocationListener locationListener) {
+    	locationListeners.add(locationListener);
+    }
+    
+    public void removeLocationListener(LocationListener locationListener) {
+    	locationListeners.remove(locationListener);
+    }
+    
     public GeoPoint getLastKnownLocation() {
     	return locationResult.getLocation();
     }
@@ -42,9 +62,6 @@ public class LocationHelper {
         public void onLocationChanged(Location location)
         {
             locationResult.gotLocation(location);
-            locationManager.removeUpdates(this);
-            locationManager.removeUpdates(locationListenerNetwork);
-
         }
         public void onProviderDisabled(String provider) {}
         public void onProviderEnabled(String provider) {}
@@ -55,9 +72,6 @@ public class LocationHelper {
         public void onLocationChanged(Location location)
         {	
             locationResult.gotLocation(location);
-            locationManager.removeUpdates(this);
-            locationManager.removeUpdates(locationListenerGps);
-
         }
         public void onProviderDisabled(String provider) {}
         public void onProviderEnabled(String provider) {}
@@ -76,22 +90,28 @@ public class LocationHelper {
 
     	//if there are both values use the latest one
     	if(gpsLocation != null && networkLocation != null) {
-    		if(gpsLocation.getTime() > networkLocation.getTime())
-    			locationResult.gotLocation(gpsLocation);
-    		else
-    			locationResult.gotLocation(networkLocation);
+    		locationResult.gotLocation(gpsLocation);
+    		locationResult.gotLocation(networkLocation);
     	}
     }
 
-    public static class LocationResult {
-    	Location loc;
+    public class LocationResult {
+    	Location loc = null;
+    	
         public void gotLocation(Location location) {
-        	loc = location;
+        	if (loc == null || location.getTime() - loc.getTime() > 500) {
+        		loc = location;
+        		for (LocationListener listener : locationListeners) {
+        			listener.onLocationChanged(loc);
+        		}
+        	}
         }
       
         public GeoPoint getLocation() {
-        	return new GeoPoint((int)(loc.getLatitude() * Math.pow(10, 6)), 
-								(int)(loc.getLongitude() * Math.pow(10, 6))); 
+        	if (loc == null)
+        		return null;
+        	return new GeoPoint((int)(loc.getLatitude() * 1e6), 
+								(int)(loc.getLongitude() * 1e6)); 
         }
     }
 }

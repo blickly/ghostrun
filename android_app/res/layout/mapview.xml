@@ -31,7 +31,7 @@
         	android:layout_height="wrap_content"
         	android:enabled="true"
         	android:clickable="true"
-			android:apiKey="0z-SInnYFdnTCruVFdCbWgdCdkZlGiWywdpUKbA"
+			android:apiKey="@string/mapsApiKey"
 			android:layout_weight="10" />
             <!-- To add your Google Maps API key, create a file in res/values
                  called keys.xml with the following content:
@@ -50,6 +50,13 @@
  			android:layout_height="wrap_content"
  			android:layout_weight="0.5"
  			android:paddingLeft="10sp" />
+ 			
+ 			<Button
+ 			android:id="@+id/seperate"
+ 			android:text="seperate"
+ 			android:layout_width="wrap_content"
+ 			android:layout_height="wrap_content"
+ 			></Button>
 
 </LinearLayout>
 

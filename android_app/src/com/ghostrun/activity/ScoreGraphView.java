@@ -58,8 +58,7 @@ public class ScoreGraphView extends Activity
         if (b!=null) {
             String filename = b.getString("graphname");
             scoreXYPlot.setTitle("Scores on Maze "+filename.substring(filename.indexOf("card/")+"card/".length()));
-            System.out.println(filename);
-            if (filename!=null && filename.contains(".score")) {
+           if (filename!=null && filename.contains(".score")) {
                 int i=0;
                 try {
                     File root = Environment.getExternalStorageDirectory();
@@ -69,7 +68,6 @@ public class ScoreGraphView extends Activity
                         String s=in.readLine();
                         while (s!=null) {
                             scores[i]=Integer.parseInt(s);
-                            System.out.println(scores[i]);
                             ++i;
                             s=in.readLine();
                         }

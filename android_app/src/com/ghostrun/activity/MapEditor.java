@@ -1,44 +1,38 @@
 package com.ghostrun.activity;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.ghostrun.R;
+import com.ghostrun.client.ServerRequest;
 import com.ghostrun.driving.Node;
+import com.ghostrun.overlays.PlayerOverlay;
 import com.ghostrun.overlays.PointsOverlay;
 import com.ghostrun.util.LocationHelper;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
-import com.google.android.maps.Overlay;
+import com.google.android.maps.MyLocationOverlay;
 
 /** Map Activity for showing the status of a game in progress.
  */
 public class MapEditor extends MapActivity {
     public MapView mapView;
-    PointsOverlay pointsOverlay;
-    ImageButton button;
-    int mode = 0;
-    LocationHelper locationHelper;
+    private PointsOverlay pointsOverlay;
+    private ImageButton button;
+    private int mode = 0;
+    private LocationHelper locationHelper;
+    private MyLocationOverlay locationOverlay;
     
     public synchronized int getNextMode() {
     	this.mode ++;
@@ -50,16 +44,17 @@ public class MapEditor extends MapActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mapeditor);
         
-        locationHelper = new LocationHelper(this);
-        
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.setBuiltInZoomControls(true);
+        mapView.setSatellite(true);
+        mapView.getController().setZoom(17);		
+        //mapView.getOverlays().clear();
         
-        mapView.getController().setZoom(17);
-        mapView.getController().setCenter(locationHelper.getLastKnownLocation());
-        		
-        List<Overlay> mapOverlays = mapView.getOverlays();
-        mapOverlays.clear();
+        locationHelper = new LocationHelper(this, mapView);
+        
+        locationOverlay = new PlayerOverlay(this, mapView, null);
+        mapView.getOverlays().add(locationOverlay);
+        locationHelper.addLocationListener(locationOverlay);
         
         final Drawable cone = this.getResources().getDrawable(R.drawable.cone);
         final Drawable cross = this.getResources().getDrawable(R.drawable.cross);
@@ -91,17 +86,6 @@ public class MapEditor extends MapActivity {
         
         // Add points
         newPointsOverlay();
-        
-        // Stop the current activity and return to the previous view.
-        /*
-        Button logobutton = (Button)findViewById(R.id.mapview_paclogo);
-        logobutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        */
     }
     
     public void newPointsOverlay() {
@@ -125,15 +109,17 @@ public class MapEditor extends MapActivity {
     }
 
     @Override
-    public void onPause() {
+    public void onPause() {    
         super.onPause();
-        //locationOverlay.disableMyLocation();
+        if (locationOverlay != null)
+        	locationOverlay.disableMyLocation();
+        
+        locationHelper.stop();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        //locationOverlay.enableMyLocation();
     }
 
     @Override
@@ -146,34 +132,12 @@ public class MapEditor extends MapActivity {
     // Menu will hold "Sound" button and "Map Selection" button.
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-    	alert.setTitle("Save Map");
-    	alert.setMessage("Map Name");
-
-    	// Set an EditText view to get user input 
-    	final EditText input = new EditText(this);
-    	alert.setView(input);
-    	
-    	alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-	    	public void onClick(DialogInterface dialog, int whichButton) {
-	    	  String value = input.getText().toString()+".pac";
-	    	  // Do something with value!
-	    	  writeToFile(value);
-	    	}});
-
-    	alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-    	  public void onClick(DialogInterface dialog, int whichButton) {
-    	    // Canceled.
-    	  }
-    	});
-    	final AlertDialog dialog = alert.create();
     	
         menu.add("Save");
         menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-            	dialog.show();
+            	saveMap(false);
                 return true;
             }
         });
@@ -182,12 +146,9 @@ public class MapEditor extends MapActivity {
         menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                Date d=new Date();
-                String value = d.getTime()+".pac";
-                // Do something with value!
-                writeToFile(value);
+            	saveMap(true);
                 Intent i= new Intent(MapEditor.this, GameMapView.class);
-                i.putExtra("filename_mapeditor",  "/sdcard/"+value);
+                i.putExtra("map", pointsOverlay.getJson());
                 startActivity(i);
                 return true;
             }
@@ -207,53 +168,38 @@ public class MapEditor extends MapActivity {
     	    	return true;
     	    }
     	});
-        
-        menu.add("Random Map");
-        menu.getItem(3).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-            	String filename = "map.png";
-        		InputStreamReader input = null;
-    			try {
-					input = new InputStreamReader(
-							getAssets().open(filename));
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-        		BufferedReader bufRead = new BufferedReader(input);
-            	List<Node> randNodes = null;
-            	/*
-				try {
-					randNodes = NodeFactory.generateRandomMap(bufRead.readLine());
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				*/
-            	System.out.println("size of random nodes: " + randNodes.size());
-            	mapView.getController().setCenter(randNodes.get(0).latlng);
-            	newPointsOverlay(randNodes);
-                return true;
-            }
-        });
-        
+
         return true;
     }
     
-    private void writeToFile(String fileName) {
+    private void saveMap(boolean silent) {
     	String json = pointsOverlay.getJson();
-        try {
-            File root = Environment.getExternalStorageDirectory();
-            if (root.canWrite()){
-                File outputfile = new File(root, fileName);
-                FileWriter filewriter = new FileWriter(outputfile);
-                BufferedWriter out = new BufferedWriter(filewriter);
-                out.write(json);
-                out.close();
-            }
-        } catch (IOException e) {
-            
-        }
+    	Map<String, String> m = new HashMap<String, String>();
+    	m.put("map", json);
+    	
+    	ServerRequest request = new ServerRequest("save_map", m);
+    	
+    	int map_index = 0;
+    	
+    	while (true) {
+    		try {
+    			map_index = new Integer(request.makeRequest(false));
+    			break;
+    		} catch(Exception e) {
+    			e.printStackTrace();
+    		}
+    	}
+        
+    	if (!silent) {
+    		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+    		alert.setTitle("Saved on the server with index: " + map_index);
+    		alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+    			public void onClick(DialogInterface dialog, int whichButton) {
+    			}});
+    	
+    		AlertDialog dialog = alert.create();
+    		dialog.show();
+    	}
     }
 }

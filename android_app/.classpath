@@ -4,14 +4,10 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="lib/Androidplot-core-0.4a-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/Androidplot-core-0.4a-release.jar"/>
-	<classpathentry kind="lib" path="lib/decarta-wsclient-4.5.1sp01.jar"/>
 	<classpathentry kind="lib" path="lib/gson-1.7.1.jar"/>
 	<classpathentry kind="lib" path="lib/json_simple-1.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="lib" path="lib/jaxb-libs.jar"/>
-	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="lib/jaxb-impl.jar"/>
-	<classpathentry kind="lib" path="lib/relaxngDatatype.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Darren/workspace/ghostrun/android_app/lib/commons-io-2.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

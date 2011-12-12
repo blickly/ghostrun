@@ -7,8 +7,9 @@ public class GeoPointUtils {
         if (loc1 == null || loc2 == null) {
             return Integer.MAX_VALUE;
         }
-        int deltaLat = loc1.getLatitudeE6() - loc2.getLatitudeE6();
-        int deltaLon = loc1.getLongitudeE6() - loc2.getLongitudeE6();
+        long deltaLat = (long)loc1.getLatitudeE6() - (long)loc2.getLatitudeE6();
+        long deltaLon = (long)loc1.getLongitudeE6() - (long)loc2.getLongitudeE6();
+        
         return (int) Math.sqrt(deltaLon * deltaLon + deltaLat * deltaLat);
     }
 }

@@ -45,7 +45,7 @@ import com.google.android.maps.Overlay;
 
 /** Map Activity for showing the status of a game in progress.
  */
-public class GameMapView extends MapActivity {
+public class GameMapView extends MapActivity implements GameDisplay {
     private MapView mapView;
     private MyLocationOverlay locationOverlay;
 
@@ -99,12 +99,6 @@ public class GameMapView extends MapActivity {
         mapOverlays.clear();
         MazeGraph graph = new MazeGraph(nodes);
     	this.gameLoop = new GameLoop(graph, this);
-
-    	/* MazeOverlay is wildly inefficient, and probably not needed.
-        // Add maze overlay
-        MazeOverlay mazeOverlay = new MazeOverlay(nodes);
-        mapOverlays.add(mazeOverlay);
-        */
     	
         // Add Food dots overlay
         Drawable marker = this.getResources().getDrawable(R.drawable.food_icon);
@@ -240,8 +234,6 @@ public class GameMapView extends MapActivity {
             bufRead.close();
 
             List<Node> nodes = NodeFactory.getNodesFromJson(json);
-            System.out.println("json: " + json);
-            System.out.println("Number of nodes: " + nodes.size());
             this.addGameLoop(nodes);
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -285,7 +277,6 @@ public class GameMapView extends MapActivity {
                 String s=in.readLine();
                 while (s!=null) {
                     score[i]=Integer.parseInt(s);
-                    System.out.println(score[i]);
                     ++i;
                     s=in.readLine();
                 }
@@ -293,7 +284,6 @@ public class GameMapView extends MapActivity {
                 File outputfile = new File(file);
                 FileWriter outputwriter = new FileWriter(outputfile);
                 BufferedWriter out = new BufferedWriter(outputwriter);
-                System.out.println("VALUE "+i);
                 for (int j=1;j<=4;++j) {
                     out.write(score[j]+"\n");
                 }

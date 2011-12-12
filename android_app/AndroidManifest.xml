@@ -20,52 +20,76 @@
      own application, the package name must be changed from "com.example.*"
      to come from a domain that you own or have control over. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ghostrun">
+    	  package="com.ghostrun">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-sdk android:minSdkVersion="3" />
 
     <application android:label="@string/app_name"
-            android:icon="@drawable/app_icon" android:debuggable="true">
-            
+            	 android:icon="@drawable/app_icon" 
+            	 android:debuggable="true">
+     
        <uses-library android:name="com.google.android.maps" />
 
-       <activity android:name="com.ghostrun.activity.HomeView" android:label="Ghost Run"
-       		android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait">
+       <activity android:name="com.ghostrun.activity.HomeView" 
+       			 android:label="Ghost Run"
+	       		 android:theme="@android:style/Theme.NoTitleBar" 
+	       		 android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"></category>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         
-        <activity android:name="com.ghostrun.activity.GameMapView" android:label="MapView"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+        <activity android:name="com.ghostrun.activity.GameMapView" 
+        		  android:label="MapView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
 		
-		<activity android:name="com.ghostrun.activity.WebMapActivityJSInterface" android:label="WebMapActivityJSInterface"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		<activity android:name="com.ghostrun.activity.WebMapActivityJSInterface" 
+				  android:label="WebMapActivityJSInterface"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
 			
-		<activity android:name="com.ghostrun.activity.FileBrowserView" android:label="FileBrowserView"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		<activity android:name="com.ghostrun.activity.FileBrowserView" 
+				  android:label="FileBrowserView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
 			
-		<activity android:name="com.ghostrun.activity.MapEditor" android:label="MapEditor"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		<activity android:name="com.ghostrun.activity.MapEditor" 
+			      android:label="MapEditor"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
 			
-		<activity android:name="com.ghostrun.activity.ScoreGraphView" android:label="ScoreGraphView"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		<activity android:name="com.ghostrun.activity.ScoreGraphView" 
+				  android:label="ScoreGraphView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
 			
-		<activity android:name="com.ghostrun.activity.GuideView" android:label="GuideView"
-			android:theme="@android:style/Theme.NoTitleBar" android:screenOrientation="portrait"/>
+		<activity android:name="com.ghostrun.activity.GuideView" 
+				  android:label="GuideView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
+			
+		<activity android:name="com.ghostrun.activity.GameMenu" 
+				  android:label="GameMenuView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
+		
+		<activity android:name="com.ghostrun.activity.MultiplayerMapView" 
+				  android:label="MultiplayerMapView"
+				  android:theme="@android:style/Theme.NoTitleBar" 
+				  android:screenOrientation="portrait"/>
+		
+			
 
         <!-- ************************************* -->
         <!--      VIEW/WIDGET PACKAGE SAMPLES      -->
         <!-- ************************************* -->
 
    </application>
-
-<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
-
-<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
-
 </manifest>

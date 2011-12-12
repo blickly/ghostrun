@@ -5,7 +5,7 @@ import java.util.List;
 import android.os.Handler;
 import android.os.SystemClock;
 
-import com.ghostrun.activity.GameMapView;
+import com.ghostrun.activity.GameDisplay;
 import com.ghostrun.config.Constants;
 import com.ghostrun.model.Dots;
 import com.ghostrun.model.MazeGraph;
@@ -18,7 +18,7 @@ import com.ghostrun.util.GeoPointUtils;
 public class GameLoop implements Runnable {
     // Activities
     private Handler h = new Handler();
-    private GameMapView activity;
+    private GameDisplay activity;
 
     // Overlays
     private RobotsOverlay robotOverlay;
@@ -34,7 +34,7 @@ public class GameLoop implements Runnable {
     /////////////////////////////////////////////////////////////////
     //                       constructors
     /////////////////////////////////////////////////////////////////
-    public GameLoop(MazeGraph graph, GameMapView a) {
+    public GameLoop(MazeGraph graph, GameDisplay a) {
         activity = a;
         maze = graph;
         dots = new Dots(maze);
@@ -42,6 +42,13 @@ public class GameLoop implements Runnable {
         this.currentPoints = 0;
     }
     
+    public GameLoop(MazeGraph graph, Dots dots, GameDisplay a) {
+        activity = a;
+        maze = graph;
+        this.dots = dots;
+        robots = Robot.createRandomRobots(4, maze, player);
+        this.currentPoints = 0;
+    }
     /////////////////////////////////////////////////////////////////
     //                       public methods
     /////////////////////////////////////////////////////////////////
@@ -77,10 +84,12 @@ public class GameLoop implements Runnable {
         long startTime = SystemClock.uptimeMillis();
         updateRobotPositions();
         robotOverlay.refresh();
+        /*
         if (isGameOver()) {
             activity.handlePlayerDeath();
             return;
         }
+        */
         int pointIncrement = dots.eatDotsAt(player.getLocationAsGeoPoint());
         if (pointIncrement > 0) {
             this.currentPoints += pointIncrement;			
