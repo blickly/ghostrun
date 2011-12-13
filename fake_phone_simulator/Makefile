@@ -1,4 +1,4 @@
-6.out: *.6
+6.out: simulator.6
 	6l $^
 
 %.6: %.go
