@@ -47,8 +47,18 @@ their game machine and physically move around the real world as a logical
 extension of this progression
 
 \section{System Architecture}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{figs/ServerArchitecture}
+\label{fig:ServerArchitecture}
+\caption{A server on Google Appenigine is used to coordinate communication between the phone clients.}
+\end{figure}
+
 \section{Measurements}
 \subsection{Measuring Latency}
+
+There are many difficulties with trying to measure latency in a distributed system.  The most naive solution would be to simply time from when one GPS reading is calculated on one phone to when that updated position is displayed on another. The problem with this, of course, is time itself is not totally ordered in a distributed system~\cite{Lamport:1978:TCO}.
 
 \begin{figure}
 \centering
@@ -56,8 +66,6 @@ extension of this progression
 \label{fig:LatencyExplanation}
 \caption{Latency can be broken down into three constituent pieces.}
 \end{figure}
-
-There are many difficulties with trying to measure latency in a distributed system.  The most naive solution would be to simply time from when one GPS reading is calculated on one phone to when that updated position is displayed on another. The problem with this, of course, is time itself is not totally ordered in a distributed system~\cite{Lamport:1978:TCO}.
 
 One solution would be to synchronize the notion of time on the phone.  If they could be synchronized within some known time bound, then we could use timestamps and have a bound on the error of that calculation.  Since phones include GPS and GPS includes a notion of time, this is a feasible solution.
 
