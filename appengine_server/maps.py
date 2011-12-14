@@ -3,7 +3,6 @@ import json
 from google.appengine.ext import webapp, db
 
 DOT_SPACE = 300
-DOT_POINTS = 10
 
 ###############################################################################
 #####                             Models
