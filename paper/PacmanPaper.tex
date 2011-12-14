@@ -35,9 +35,28 @@
 
 \section{Introduction}
 \section{Background}
+Augmented reality refers to a view of the physical world that has been
+augmented with additional computer-generated information, creating a sort of
+hybrid between virtual reality and the real world. Existing applications
+include games, sightseeing guides, navigation aids, and automatic translators.
+
+Recent years have seen the success of a new class of video games with new
+methods of input, such as Dance Dance Revolution, Nintendo Wii, Playstation
+Move, and Microsoft Kinect. We see Augmented Reality games where players leave
+their game machine and physically move around the real world as a logical
+extension of this progression
+
 \section{System Architecture}
-\section{Results}
+\section{Measurements}
 \subsection{Measuring Latency}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{figs/LatencyExplanation}
+\label{fig:LatencyExplanation}
+\caption{Latency can be broken down into three constituent pieces.}
+\end{figure}
+
 There are many difficulties with trying to measure latency in a distributed system.  The most naive solution would be to simply time from when one GPS reading is calculated on one phone to when that updated position is displayed on another. The problem with this, of course, is time itself is not totally ordered in a distributed system~\cite{Lamport:1978:TCO}.
 
 One solution would be to synchronize the notion of time on the phone.  If they could be synchronized within some known time bound, then we could use timestamps and have a bound on the error of that calculation.  Since phones include GPS and GPS includes a notion of time, this is a feasible solution.
@@ -51,6 +70,9 @@ A third approach is one that combines observation on the phone with observation 
 \item the time that the reading takes to get from the server to the screen of the second phone.
 \end{enumerate}
 Since the second part is handled completely on the server, measuring it is easier than the first and third part.  The key insight for solving this problem is noticing that there is a certain degree of symmetry among the phones, especially if we average over many measurements.  It is likely that the latency for a reading to get from the server to one phone will be very close to the latency to get from the server to another.  Making this (reasonable) assumption allows us to measure the sum of the first and third parts by simply measuring the roundtrip time of two separate GPS measurements as seen by a single phone.  That is, if we assume a certain degree of symmetry among the phones, we can measure the time it takes to upload one GPS measurement and then receive a different GPS measurement from the server, and take that as a proxy for the sum of the first and third measurements.  Summing this with the time measured on the server between the GPS measurement being posted and being read by another phone gives us a very accurate overall latency for reading-to-display across multiple phones.
+
+\subsection{Phone Simulators}
+\subsection{Results}
 
 \section{Conclusion}
 \bibliographystyle{plain}
