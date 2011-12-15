@@ -48,8 +48,11 @@ class GameMoveHandler(webapp.RequestHandler):
       p.put()
       
       t = int(round(time.time() * 1000.0))
-      for p in others:
-        logging.info('LatencyStats %d %d %d %d' % (p.lastCheckin, p.lat, p.lng, t))
+      otherinfo = []
+      for o in others:
+        otherinfo.append((o.lastCheckin, o.pid, (o.lat,o.lng)))
+      logging.info('LatencyStats & now: %d & mypid: %d & mylatlng: (%d,%d) & others: %s' % (t, pid, lat, lng, str(otherinfo)))
+
 
       response = {'locations' : dict((p.key().id(), [{"lat" : p.lat, "lng" : p.lng}, p.isPacman]) for p in others),
                   'dead' : False,
