@@ -29,35 +29,45 @@ func main() {
       return
     }
   }
+  gid := rand.Intn(65536)
+  if flag.NArg() > 1 {
+    var err os.Error
+    gid, err = strconv.Atoi(flag.Arg(1))
+    if err != nil {
+      log.Println("[ERR] Cannot parse game id:", flag.Arg(1))
+      return
+    }
+  }
 
   pid_offset := 100000
   for i := pid_offset; i < pid_offset+num_phones; i++ {
-    go run_phone(i, update_rate)
+    go run_phone(gid, i, update_rate)
   }
   time.Sleep(run_time)
   log.Println("Quitting...")
 }
 
-func run_phone(simid int, update_rate int64) {
-  gid := 181139 //rand.Intn(65536)
-  pid := get_pid(gid, simid)
+func run_phone(gid, simid int, update_rate int64) {
+  centerlat, centerlng := 37875505,-122257438
+  radius := 2700
+  pid := get_pid(gid)
   time.Sleep(rand.Int63n(update_rate))
   for ;; {
-    lat := rand.Intn(4000) +  37875505 - 2000
-    lng := rand.Intn(4000) - 122257438 - 2000
+    lat := rand.Intn(2*radius) + centerlat - radius
+    lng := rand.Intn(2*radius) + centerlng - radius
     post_position(gid, pid, lat, lng)
     time.Sleep(update_rate)
   }
 }
 
-func get_pid(gid, simid int) int {
+func get_pid(gid int) int {
   url := fmt.Sprintf("/join_game?gid=%d&lat=%d&lng=%d&pacman=false",
     gid,rand.Intn(90000000),rand.Intn(90000000))
   fullUrl := "http://" + SERVER + url
   resp, _, err := http.Get(fullUrl)
   if err != nil {
     log.Println("[ERR] On join game of '%s': %v", fullUrl, err)
-    return get_pid(gid, simid)
+    return get_pid(gid)
   }
   body := resp.Body
   defer body.Close()
