@@ -13,12 +13,12 @@ import (
 )
 
 //const SERVER = "localhost:8080";
-const SERVER = "ghostrungo.appspot.com:80";
+const SERVER = "pacmanplusplus.appspot.com:80";
 const LOGINFO = true;
 
 func main() {
-  run_time := 30*int64(1000000000)     // in ns
-  update_rate := int64(1000000000)    // in ns between requests
+  run_time := 600*int64(1000000000)     // in ns
+  update_rate := int64(1000000000)/2    // in ns between requests
   flag.Parse()
   num_phones := 4
   if flag.NArg() > 0 {
@@ -39,7 +39,7 @@ func main() {
 }
 
 func run_phone(simid int, update_rate int64) {
-  gid := rand.Intn(65536)
+  gid := 178095 //rand.Intn(65536)
   pid := get_pid(gid, simid)
   time.Sleep(rand.Int63n(update_rate))
   for ;; {
@@ -51,12 +51,12 @@ func run_phone(simid int, update_rate int64) {
 }
 
 func get_pid(gid, simid int) int {
-  url := fmt.Sprintf("/join_game?gid=%d&lat=%d&lng=%d&pacman=true",
+  url := fmt.Sprintf("/join_game?gid=%d&lat=%d&lng=%d&pacman=false",
     gid,rand.Intn(90000000),rand.Intn(90000000))
   fullUrl := "http://" + SERVER + url
   resp, _, err := http.Get(fullUrl)
   if err != nil {
-    log.Println("[ERR] On join game:", err)
+    log.Println("[ERR] On join game of '%s': %v", fullUrl, err)
     return get_pid(gid, simid)
   }
   body := resp.Body
