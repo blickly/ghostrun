@@ -33,8 +33,8 @@ class GameMoveHandler(webapp.RequestHandler):
     def get(self):
       gid = long(self.request.get('gid'))
       pid = long(self.request.get('pid'))
-      lat = self.request.get('lat')
-      lng = self.request.get('lng')
+      lat = long(self.request.get('lat'))
+      lng = long(self.request.get('lng'))
 
       others = Player.gql("WHERE gid = :1", gid)
       p = Player.get_by_id(pid)
@@ -42,15 +42,15 @@ class GameMoveHandler(webapp.RequestHandler):
 
       others = filter(lambda x: x.key().id() != pid, others)
 
-      p.lat = long(lat)
-      p.lng = long(lng)
+      p.lat = lat
+      p.lng = lng
       p.lastCheckin = int(time.time() * 1000)
       p.put()
       
       t = int(round(time.time() * 1000.0))
       otherinfo = []
       for o in others:
-        otherinfo.append((o.lastCheckin, o.pid, (o.lat,o.lng)))
+        otherinfo.append((o.lastCheckin, o.key().id(), (o.lat,o.lng)))
       logging.info('LatencyStats & now: %d & mypid: %d & mylatlng: (%d,%d) & others: %s' % (t, pid, lat, lng, str(otherinfo)))
 
 
