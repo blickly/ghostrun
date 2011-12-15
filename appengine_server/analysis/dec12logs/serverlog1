@@ -1,0 +1,378 @@
+128.32.38.73 - - [14/Dec/2011:16:42:12 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875343&lng=-122258808 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909732.083000 LatencyStats & t: 1323909732083 & pid: 177059 & latlng: (37875659, -122257370) & lastCheckin: 1323909731288
+66.87.2.190 - - [14/Dec/2011:16:42:12 -0800] "GET /post_position?gid=175061&lng=-122257371&lat=37875658&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909732.295000 LatencyStats & t: 1323909732295 & pid: 180065 & latlng: (37875343, -122258808) & lastCheckin: 1323909732048
+128.32.38.73 - - [14/Dec/2011:16:42:13 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876003&lng=-122256093 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909733.186000 LatencyStats & t: 1323909733186 & pid: 177059 & latlng: (37875658, -122257371) & lastCheckin: 1323909732208
+66.87.2.190 - - [14/Dec/2011:16:42:13 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909733.838000 LatencyStats & t: 1323909733838 & pid: 180065 & latlng: (37876003, -122256093) & lastCheckin: 1323909733154
+128.32.38.73 - - [14/Dec/2011:16:42:13 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874493&lng=-122256563 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909733.889000 LatencyStats & t: 1323909733889 & pid: 177059 & latlng: (37875656, -122257372) & lastCheckin: 1323909733802
+66.87.2.190 - - [14/Dec/2011:16:42:14 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909734.303000 LatencyStats & t: 1323909734303 & pid: 180065 & latlng: (37874493, -122256563) & lastCheckin: 1323909733854
+128.32.38.73 - - [14/Dec/2011:16:42:14 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874667&lng=-122255472 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909734.657000 LatencyStats & t: 1323909734657 & pid: 177059 & latlng: (37875656, -122257372) & lastCheckin: 1323909734264
+66.87.2.190 - - [14/Dec/2011:16:42:15 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909735.476000 LatencyStats & t: 1323909735476 & pid: 180065 & latlng: (37874667, -122255472) & lastCheckin: 1323909734620
+66.87.2.190 - - [14/Dec/2011:16:42:16 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909736.222000 LatencyStats & t: 1323909736222 & pid: 180065 & latlng: (37874667, -122255472) & lastCheckin: 1323909734620
+128.32.38.73 - - [14/Dec/2011:16:42:16 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876216&lng=-122256486 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909736.306000 LatencyStats & t: 1323909736306 & pid: 177059 & latlng: (37875656, -122257372) & lastCheckin: 1323909736188
+66.87.2.190 - - [14/Dec/2011:16:42:17 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909737.266000 LatencyStats & t: 1323909737266 & pid: 180065 & latlng: (37876216, -122256486) & lastCheckin: 1323909736270
+128.32.38.73 - - [14/Dec/2011:16:42:17 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875584&lng=-122258640 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909737.935000 LatencyStats & t: 1323909737935 & pid: 177059 & latlng: (37875656, -122257372) & lastCheckin: 1323909737231
+66.87.2.190 - - [14/Dec/2011:16:42:18 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875657&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909738.275000 LatencyStats & t: 1323909738275 & pid: 180065 & latlng: (37875584, -122258640) & lastCheckin: 1323909737892
+128.32.38.73 - - [14/Dec/2011:16:42:19 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874052&lng=-122256838 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909738.963000 LatencyStats & t: 1323909738963 & pid: 177059 & latlng: (37875657, -122257372) & lastCheckin: 1323909738241
+66.87.2.190 - - [14/Dec/2011:16:42:19 -0800] "GET /post_position?gid=175061&lng=-122257373&lat=37875657&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909739.202000 LatencyStats & t: 1323909739202 & pid: 180065 & latlng: (37874052, -122256838) & lastCheckin: 1323909738929
+128.32.38.73 - - [14/Dec/2011:16:42:20 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877112&lng=-122257145 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909740.111000 LatencyStats & t: 1323909740110 & pid: 177059 & latlng: (37875657, -122257373) & lastCheckin: 1323909739166
+66.87.2.190 - - [14/Dec/2011:16:42:20 -0800] "GET /post_position?gid=175061&lng=-122257373&lat=37875657&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909740.219000 LatencyStats & t: 1323909740219 & pid: 180065 & latlng: (37877112, -122257145) & lastCheckin: 1323909740077
+128.32.38.73 - - [14/Dec/2011:16:42:20 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876631&lng=-122257481 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909740.846000 LatencyStats & t: 1323909740846 & pid: 177059 & latlng: (37875657, -122257373) & lastCheckin: 1323909740164
+66.87.2.190 - - [14/Dec/2011:16:42:21 -0800] "GET /post_position?gid=175061&lng=-122257374&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909741.522000 LatencyStats & t: 1323909741522 & pid: 180065 & latlng: (37876631, -122257481) & lastCheckin: 1323909740774
+128.32.38.73 - - [14/Dec/2011:16:42:21 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875706&lng=-122257039 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909741.547000 LatencyStats & t: 1323909741547 & pid: 177059 & latlng: (37875657, -122257373) & lastCheckin: 1323909740164
+128.32.38.73 - - [14/Dec/2011:16:42:22 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874916&lng=-122256355 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909742.431000 LatencyStats & t: 1323909742431 & pid: 177059 & latlng: (37875656, -122257374) & lastCheckin: 1323909741488
+66.87.2.190 - - [14/Dec/2011:16:42:22 -0800] "GET /post_position?gid=175061&lng=-122257374&lat=37875657&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909742.433000 LatencyStats & t: 1323909742433 & pid: 180065 & latlng: (37875706, -122257039) & lastCheckin: 1323909741514
+66.87.2.190 - - [14/Dec/2011:16:42:23 -0800] "GET /post_position?gid=175061&lng=-122257376&lat=37875656&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909743.210000 LatencyStats & t: 1323909743210 & pid: 180065 & latlng: (37874916, -122256355) & lastCheckin: 1323909742398
+128.32.38.73 - - [14/Dec/2011:16:42:23 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875459&lng=-122259161 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909743.557000 LatencyStats & t: 1323909743557 & pid: 177059 & latlng: (37875656, -122257376) & lastCheckin: 1323909743174
+66.87.2.190 - - [14/Dec/2011:16:42:24 -0800] "GET /post_position?gid=175061&lng=-122257395&lat=37875636&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909744.216000 LatencyStats & t: 1323909744216 & pid: 180065 & latlng: (37875459, -122259161) & lastCheckin: 1323909743522
+128.32.38.73 - - [14/Dec/2011:16:42:24 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874724&lng=-122259094 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909744.926000 LatencyStats & t: 1323909744926 & pid: 177059 & latlng: (37875636, -122257395) & lastCheckin: 1323909744184
+66.87.2.190 - - [14/Dec/2011:16:42:25 -0800] "GET /post_position?gid=175061&lng=-122257443&lat=37875585&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909745.249000 LatencyStats & t: 1323909745249 & pid: 180065 & latlng: (37874724, -122259094) & lastCheckin: 1323909744889
+128.32.38.73 - - [14/Dec/2011:16:42:25 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876779&lng=-122258466 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909745.958000 LatencyStats & t: 1323909745958 & pid: 177059 & latlng: (37875585, -122257443) & lastCheckin: 1323909745178
+66.87.2.190 - - [14/Dec/2011:16:42:26 -0800] "GET /post_position?gid=175061&lng=-122257443&lat=37875585&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909746.431000 LatencyStats & t: 1323909746431 & pid: 180065 & latlng: (37876779, -122258466) & lastCheckin: 1323909745922
+128.32.38.73 - - [14/Dec/2011:16:42:26 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877046&lng=-122258652 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909746.668000 LatencyStats & t: 1323909746668 & pid: 177059 & latlng: (37875585, -122257443) & lastCheckin: 1323909746380
+66.87.2.190 - - [14/Dec/2011:16:42:27 -0800] "GET /post_position?gid=175061&lng=-122257444&lat=37875585&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909747.194000 LatencyStats & t: 1323909747193 & pid: 180065 & latlng: (37877046, -122258652) & lastCheckin: 1323909746629
+128.32.38.73 - - [14/Dec/2011:16:42:27 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873794&lng=-122255537 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909747.360000 LatencyStats & t: 1323909747360 & pid: 177059 & latlng: (37875585, -122257444) & lastCheckin: 1323909747148
+128.32.38.73 - - [14/Dec/2011:16:42:28 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876448&lng=-122257908 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909748.161000 LatencyStats & t: 1323909748161 & pid: 177059 & latlng: (37875585, -122257444) & lastCheckin: 1323909747148
+66.87.2.190 - - [14/Dec/2011:16:42:28 -0800] "GET /post_position?gid=175061&lng=-122257455&lat=37875574&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909748.195000 LatencyStats & t: 1323909748195 & pid: 180065 & latlng: (37873794, -122255537) & lastCheckin: 1323909747327
+128.32.38.73 - - [14/Dec/2011:16:42:29 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876430&lng=-122255750 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909749.297000 LatencyStats & t: 1323909749297 & pid: 177059 & latlng: (37875574, -122257455) & lastCheckin: 1323909748160
+66.87.2.190 - - [14/Dec/2011:16:42:29 -0800] "GET /post_position?gid=175061&lng=-122257454&lat=37875575&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909749.535000 LatencyStats & t: 1323909749535 & pid: 180065 & latlng: (37876430, -122255750) & lastCheckin: 1323909749262
+128.32.38.73 - - [14/Dec/2011:16:42:30 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873768&lng=-122258488 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909750.007000 LatencyStats & t: 1323909750007 & pid: 177059 & latlng: (37875575, -122257454) & lastCheckin: 1323909749496
+66.87.2.190 - - [14/Dec/2011:16:42:30 -0800] "GET /post_position?gid=175061&lng=-122256716&lat=37874767&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909750.432000 LatencyStats & t: 1323909750432 & pid: 180065 & latlng: (37873768, -122258488) & lastCheckin: 1323909749969
+128.32.38.73 - - [14/Dec/2011:16:42:30 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875741&lng=-122258338 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909750.730000 LatencyStats & t: 1323909750730 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:31 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875707&lng=-122257529 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909751.588000 LatencyStats & t: 1323909751588 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:32 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874673&lng=-122255959 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909752.304000 LatencyStats & t: 1323909752304 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:33 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876583&lng=-122255667 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909753.291000 LatencyStats & t: 1323909753290 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:34 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875812&lng=-122258396 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909754.057000 LatencyStats & t: 1323909754057 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:35 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875031&lng=-122256828 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909755.045000 LatencyStats & t: 1323909755045 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:36 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876714&lng=-122256281 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909755.856000 LatencyStats & t: 1323909755856 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:37 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876311&lng=-122256625 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909757.406000 LatencyStats & t: 1323909757406 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:38 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875638&lng=-122257505 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909758.465000 LatencyStats & t: 1323909758465 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:39 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874354&lng=-122258969 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909759.236000 LatencyStats & t: 1323909759236 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:40 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876355&lng=-122259087 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909760.018000 LatencyStats & t: 1323909760018 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:40 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877101&lng=-122256754 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909760.828000 LatencyStats & t: 1323909760828 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:42 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874565&lng=-122255917 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909762.025000 LatencyStats & t: 1323909762024 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:43 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876495&lng=-122256688 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909763.130000 LatencyStats & t: 1323909763130 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:43 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875395&lng=-122257206 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909763.833000 LatencyStats & t: 1323909763833 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:44 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875308&lng=-122257235 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909764.554000 LatencyStats & t: 1323909764554 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:45 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874504&lng=-122257839 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909765.431000 LatencyStats & t: 1323909765431 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:46 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876227&lng=-122256064 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909766.205000 LatencyStats & t: 1323909766205 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+128.32.38.73 - - [14/Dec/2011:16:42:46 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875158&lng=-122258752 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909766.893000 LatencyStats & t: 1323909766893 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909750271
+66.87.2.190 - - [14/Dec/2011:16:42:47 -0800] "GET /post_position?gid=175061&lng=-122257409&lat=37875601&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909767.132000 LatencyStats & t: 1323909767132 & pid: 180065 & latlng: (37875158, -122258752) & lastCheckin: 1323909766857
+66.87.2.190 - - [14/Dec/2011:16:42:47 -0800] "GET /post_position?gid=175061&lng=-122257409&lat=37875602&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909767.781000 LatencyStats & t: 1323909767781 & pid: 180065 & latlng: (37875158, -122258752) & lastCheckin: 1323909766857
+128.32.38.73 - - [14/Dec/2011:16:42:47 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877254&lng=-122258822 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909767.784000 LatencyStats & t: 1323909767784 & pid: 177059 & latlng: (37875601, -122257409) & lastCheckin: 1323909767099
+128.32.38.73 - - [14/Dec/2011:16:42:49 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874497&lng=-122255957 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909769.058000 LatencyStats & t: 1323909769058 & pid: 177059 & latlng: (37875602, -122257409) & lastCheckin: 1323909767749
+66.87.2.190 - - [14/Dec/2011:16:42:49 -0800] "GET /post_position?gid=175061&lng=-122257409&lat=37875602&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909769.113000 LatencyStats & t: 1323909769113 & pid: 180065 & latlng: (37877254, -122258822) & lastCheckin: 1323909767750
+66.87.2.190 - - [14/Dec/2011:16:42:49 -0800] "GET /post_position?gid=175061&lng=-122257408&lat=37875600&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909769.578000 LatencyStats & t: 1323909769578 & pid: 180065 & latlng: (37874497, -122255957) & lastCheckin: 1323909768941
+128.32.38.73 - - [14/Dec/2011:16:42:50 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875214&lng=-122258129 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909770.151000 LatencyStats & t: 1323909770150 & pid: 177059 & latlng: (37875600, -122257408) & lastCheckin: 1323909769541
+66.87.2.190 - - [14/Dec/2011:16:42:50 -0800] "GET /post_position?gid=175061&lng=-122257409&lat=37875601&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909770.396000 LatencyStats & t: 1323909770396 & pid: 180065 & latlng: (37875214, -122258129) & lastCheckin: 1323909770096
+128.32.38.73 - - [14/Dec/2011:16:42:51 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873984&lng=-122256865 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909771.273000 LatencyStats & t: 1323909771273 & pid: 177059 & latlng: (37875601, -122257409) & lastCheckin: 1323909770364
+66.87.2.190 - - [14/Dec/2011:16:42:51 -0800] "GET /post_position?gid=175061&lng=-122257409&lat=37875601&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909771.276000 LatencyStats & t: 1323909771275 & pid: 180065 & latlng: (37875214, -122258129) & lastCheckin: 1323909770096
+128.32.38.73 - - [14/Dec/2011:16:42:52 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875988&lng=-122259208 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909772.412000 LatencyStats & t: 1323909772412 & pid: 177059 & latlng: (37875601, -122257409) & lastCheckin: 1323909771243
+66.87.2.190 - - [14/Dec/2011:16:42:52 -0800] "GET /post_position?gid=175061&lng=-122257404&lat=37875600&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909772.417000 LatencyStats & t: 1323909772417 & pid: 180065 & latlng: (37873984, -122256865) & lastCheckin: 1323909771238
+66.87.2.190 - - [14/Dec/2011:16:42:53 -0800] "GET /post_position?gid=175061&lng=-122257404&lat=37875600&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909773.228000 LatencyStats & t: 1323909773228 & pid: 180065 & latlng: (37875988, -122259208) & lastCheckin: 1323909772379
+128.32.38.73 - - [14/Dec/2011:16:42:53 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874253&lng=-122257095 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909773.808000 LatencyStats & t: 1323909773808 & pid: 177059 & latlng: (37875600, -122257404) & lastCheckin: 1323909773177
+66.87.2.190 - - [14/Dec/2011:16:42:54 -0800] "GET /post_position?gid=175061&lng=-122257401&lat=37875605&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909774.191000 LatencyStats & t: 1323909774191 & pid: 180065 & latlng: (37874253, -122257095) & lastCheckin: 1323909773773
+128.32.38.73 - - [14/Dec/2011:16:42:54 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877087&lng=-122257447 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909774.829000 LatencyStats & t: 1323909774829 & pid: 177059 & latlng: (37875605, -122257401) & lastCheckin: 1323909774157
+66.87.2.190 - - [14/Dec/2011:16:42:55 -0800] "GET /post_position?gid=175061&lng=-122257401&lat=37875606&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909775.239000 LatencyStats & t: 1323909775239 & pid: 180065 & latlng: (37877087, -122257447) & lastCheckin: 1323909774795
+128.32.38.73 - - [14/Dec/2011:16:42:55 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875544&lng=-122256730 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909775.951000 LatencyStats & t: 1323909775951 & pid: 177059 & latlng: (37875606, -122257401) & lastCheckin: 1323909775206
+66.87.2.190 - - [14/Dec/2011:16:42:56 -0800] "GET /post_position?gid=175061&lng=-122257399&lat=37875607&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909776.406000 LatencyStats & t: 1323909776405 & pid: 180065 & latlng: (37875544, -122256730) & lastCheckin: 1323909775916
+128.32.38.73 - - [14/Dec/2011:16:42:57 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875080&lng=-122258081 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909777.316000 LatencyStats & t: 1323909777316 & pid: 177059 & latlng: (37875607, -122257399) & lastCheckin: 1323909776326
+66.87.2.190 - - [14/Dec/2011:16:42:57 -0800] "GET /post_position?gid=175061&lng=-122257399&lat=37875608&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909777.371000 LatencyStats & t: 1323909777371 & pid: 180065 & latlng: (37875544, -122256730) & lastCheckin: 1323909775916
+66.87.2.190 - - [14/Dec/2011:16:42:58 -0800] "GET /post_position?gid=175061&lng=-122257398&lat=37875609&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909778.497000 LatencyStats & t: 1323909778496 & pid: 180065 & latlng: (37875080, -122258081) & lastCheckin: 1323909777281
+128.32.38.73 - - [14/Dec/2011:16:42:58 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877213&lng=-122256373 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909778.514000 LatencyStats & t: 1323909778514 & pid: 177059 & latlng: (37875608, -122257399) & lastCheckin: 1323909777284
+66.87.2.190 - - [14/Dec/2011:16:42:59 -0800] "GET /post_position?gid=175061&lng=-122257398&lat=37875607&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909779.513000 LatencyStats & t: 1323909779513 & pid: 180065 & latlng: (37877213, -122256373) & lastCheckin: 1323909778482
+128.32.38.73 - - [14/Dec/2011:16:42:59 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875214&lng=-122258147 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909779.827000 LatencyStats & t: 1323909779827 & pid: 177059 & latlng: (37875607, -122257398) & lastCheckin: 1323909779418
+66.87.2.190 - - [14/Dec/2011:16:43:00 -0800] "GET /post_position?gid=175061&lng=-122257397&lat=37875608&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909780.317000 LatencyStats & t: 1323909780317 & pid: 180065 & latlng: (37875214, -122258147) & lastCheckin: 1323909779795
+128.32.38.73 - - [14/Dec/2011:16:43:00 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876048&lng=-122256277 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909780.876000 LatencyStats & t: 1323909780876 & pid: 177059 & latlng: (37875608, -122257397) & lastCheckin: 1323909780282
+66.87.2.190 - - [14/Dec/2011:16:43:01 -0800] "GET /post_position?gid=175061&lng=-122257398&lat=37875606&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909781.208000 LatencyStats & t: 1323909781208 & pid: 180065 & latlng: (37876048, -122256277) & lastCheckin: 1323909780844
+128.32.38.73 - - [14/Dec/2011:16:43:01 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873735&lng=-122257185 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909781.567000 LatencyStats & t: 1323909781566 & pid: 177059 & latlng: (37875606, -122257398) & lastCheckin: 1323909781174
+128.32.38.73 - - [14/Dec/2011:16:43:02 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874703&lng=-122256310 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909782.290000 LatencyStats & t: 1323909782290 & pid: 177059 & latlng: (37875606, -122257398) & lastCheckin: 1323909781174
+66.87.2.190 - - [14/Dec/2011:16:43:02 -0800] "GET /post_position?gid=175061&lng=-122257396&lat=37875607&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909782.350000 LatencyStats & t: 1323909782350 & pid: 180065 & latlng: (37873735, -122257185) & lastCheckin: 1323909781533
+128.32.38.73 - - [14/Dec/2011:16:43:03 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875386&lng=-122259384 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909783.180000 LatencyStats & t: 1323909783180 & pid: 177059 & latlng: (37875607, -122257396) & lastCheckin: 1323909782317
+66.87.2.190 - - [14/Dec/2011:16:43:03 -0800] "GET /post_position?gid=175061&lng=-122257397&lat=37875606&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909783.207000 LatencyStats & t: 1323909783207 & pid: 180065 & latlng: (37874703, -122256310) & lastCheckin: 1323909782258
+128.32.38.73 - - [14/Dec/2011:16:43:04 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876755&lng=-122256846 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909784.359000 LatencyStats & t: 1323909784359 & pid: 177059 & latlng: (37875606, -122257397) & lastCheckin: 1323909783173
+66.87.2.190 - - [14/Dec/2011:16:43:04 -0800] "GET /post_position?gid=175061&lng=-122257397&lat=37875606&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909784.363000 LatencyStats & t: 1323909784362 & pid: 180065 & latlng: (37875386, -122259384) & lastCheckin: 1323909783147
+66.87.2.190 - - [14/Dec/2011:16:43:05 -0800] "GET /post_position?gid=175061&lng=-122257395&lat=37875607&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909785.349000 LatencyStats & t: 1323909785349 & pid: 180065 & latlng: (37876755, -122256846) & lastCheckin: 1323909784326
+128.32.38.73 - - [14/Dec/2011:16:43:05 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874001&lng=-122258216 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909785.771000 LatencyStats & t: 1323909785771 & pid: 177059 & latlng: (37875607, -122257395) & lastCheckin: 1323909785171
+66.87.2.190 - - [14/Dec/2011:16:43:06 -0800] "GET /post_position?gid=175061&lng=-122257393&lat=37875608&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909786.231000 LatencyStats & t: 1323909786231 & pid: 180065 & latlng: (37874001, -122258216) & lastCheckin: 1323909785705
+128.32.38.73 - - [14/Dec/2011:16:43:06 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874297&lng=-122258946 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909786.913000 LatencyStats & t: 1323909786913 & pid: 177059 & latlng: (37875608, -122257393) & lastCheckin: 1323909786195
+66.87.2.190 - - [14/Dec/2011:16:43:07 -0800] "GET /post_position?gid=175061&lng=-122257392&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909787.365000 LatencyStats & t: 1323909787365 & pid: 180065 & latlng: (37874297, -122258946) & lastCheckin: 1323909786881
+128.32.38.73 - - [14/Dec/2011:16:43:07 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874203&lng=-122256857 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909787.808000 LatencyStats & t: 1323909787808 & pid: 177059 & latlng: (37875612, -122257392) & lastCheckin: 1323909787319
+66.87.2.190 - - [14/Dec/2011:16:43:08 -0800] "GET /post_position?gid=175061&lng=-122257391&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909788.221000 LatencyStats & t: 1323909788221 & pid: 180065 & latlng: (37874203, -122256857) & lastCheckin: 1323909787773
+128.32.38.73 - - [14/Dec/2011:16:43:08 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875816&lng=-122255924 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909788.581000 LatencyStats & t: 1323909788581 & pid: 177059 & latlng: (37875612, -122257391) & lastCheckin: 1323909788172
+66.87.2.190 - - [14/Dec/2011:16:43:09 -0800] "GET /post_position?gid=175061&lng=-122257391&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909789.254000 LatencyStats & t: 1323909789254 & pid: 180065 & latlng: (37875816, -122255924) & lastCheckin: 1323909788542
+128.32.38.73 - - [14/Dec/2011:16:43:09 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876320&lng=-122256907 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909789.282000 LatencyStats & t: 1323909789282 & pid: 177059 & latlng: (37875612, -122257391) & lastCheckin: 1323909788172
+128.32.38.73 - - [14/Dec/2011:16:43:10 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876681&lng=-122257717 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909790.121000 LatencyStats & t: 1323909790121 & pid: 177059 & latlng: (37875612, -122257391) & lastCheckin: 1323909789215
+66.87.2.190 - - [14/Dec/2011:16:43:10 -0800] "GET /post_position?gid=175061&lng=-122257387&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909790.268000 LatencyStats & t: 1323909790267 & pid: 180065 & latlng: (37876681, -122257717) & lastCheckin: 1323909790090
+128.32.38.73 - - [14/Dec/2011:16:43:11 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873694&lng=-122256663 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909791.163000 LatencyStats & t: 1323909791163 & pid: 177059 & latlng: (37875612, -122257387) & lastCheckin: 1323909790171
+66.87.2.190 - - [14/Dec/2011:16:43:11 -0800] "GET /post_position?gid=175061&lng=-122257385&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909791.361000 LatencyStats & t: 1323909791361 & pid: 180065 & latlng: (37873694, -122256663) & lastCheckin: 1323909790941
+66.87.2.190 - - [14/Dec/2011:16:43:12 -0800] "GET /post_position?gid=175061&lng=-122257385&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909792.456000 LatencyStats & t: 1323909792456 & pid: 180065 & latlng: (37873694, -122256663) & lastCheckin: 1323909790941
+128.32.38.73 - - [14/Dec/2011:16:43:12 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875945&lng=-122257629 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909792.457000 LatencyStats & t: 1323909792457 & pid: 177059 & latlng: (37875612, -122257385) & lastCheckin: 1323909791330
+66.87.2.190 - - [14/Dec/2011:16:43:13 -0800] "GET /post_position?gid=175061&lng=-122257385&lat=37875609&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909793.187000 LatencyStats & t: 1323909793187 & pid: 180065 & latlng: (37875945, -122257629) & lastCheckin: 1323909792424
+128.32.38.73 - - [14/Dec/2011:16:43:13 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876565&lng=-122257872 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909793.600000 LatencyStats & t: 1323909793600 & pid: 177059 & latlng: (37875609, -122257385) & lastCheckin: 1323909793154
+66.87.2.190 - - [14/Dec/2011:16:43:14 -0800] "GET /post_position?gid=175061&lng=-122257385&lat=37875609&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909794.237000 LatencyStats & t: 1323909794237 & pid: 180065 & latlng: (37876565, -122257872) & lastCheckin: 1323909793567
+128.32.38.73 - - [14/Dec/2011:16:43:14 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876160&lng=-122258778 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909794.822000 LatencyStats & t: 1323909794822 & pid: 177059 & latlng: (37875609, -122257385) & lastCheckin: 1323909794187
+66.87.2.190 - - [14/Dec/2011:16:43:15 -0800] "GET /post_position?gid=175061&lng=-122257385&lat=37875613&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909795.244000 LatencyStats & t: 1323909795244 & pid: 180065 & latlng: (37876160, -122258778) & lastCheckin: 1323909794776
+128.32.38.73 - - [14/Dec/2011:16:43:15 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875635&lng=-122257125 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909795.564000 LatencyStats & t: 1323909795564 & pid: 177059 & latlng: (37875613, -122257385) & lastCheckin: 1323909795210
+66.87.2.190 - - [14/Dec/2011:16:43:16 -0800] "GET /post_position?gid=175061&lng=-122257383&lat=37875614&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909796.182000 LatencyStats & t: 1323909796182 & pid: 180065 & latlng: (37875635, -122257125) & lastCheckin: 1323909795529
+128.32.38.73 - - [14/Dec/2011:16:43:17 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875376&lng=-122257656 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909796.736000 LatencyStats & t: 1323909796736 & pid: 177059 & latlng: (37875614, -122257383) & lastCheckin: 1323909796150
+66.87.2.190 - - [14/Dec/2011:16:43:17 -0800] "GET /post_position?gid=175061&lng=-122257382&lat=37875613&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909797.228000 LatencyStats & t: 1323909797228 & pid: 180065 & latlng: (37875376, -122257656) & lastCheckin: 1323909796701
+128.32.38.73 - - [14/Dec/2011:16:43:17 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874549&lng=-122258979 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909797.838000 LatencyStats & t: 1323909797838 & pid: 177059 & latlng: (37875613, -122257382) & lastCheckin: 1323909797195
+66.87.2.190 - - [14/Dec/2011:16:43:18 -0800] "GET /post_position?gid=175061&lng=-122257381&lat=37875612&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909798.445000 LatencyStats & t: 1323909798444 & pid: 180065 & latlng: (37874549, -122258979) & lastCheckin: 1323909797806
+128.32.38.73 - - [14/Dec/2011:16:43:18 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875351&lng=-122257142 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909798.839000 LatencyStats & t: 1323909798839 & pid: 177059 & latlng: (37875612, -122257381) & lastCheckin: 1323909798408
+66.87.2.190 - - [14/Dec/2011:16:43:19 -0800] "GET /post_position?gid=175061&lng=-122257380&lat=37875613&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909799.392000 LatencyStats & t: 1323909799392 & pid: 180065 & latlng: (37875351, -122257142) & lastCheckin: 1323909798805
+66.87.2.190 - - [14/Dec/2011:16:43:20 -0800] "GET /post_position?gid=175061&lng=-122256716&lat=37874767&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909800.536000 LatencyStats & t: 1323909800536 & pid: 180065 & latlng: (37875351, -122257142) & lastCheckin: 1323909798805
+128.32.38.73 - - [14/Dec/2011:16:43:20 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877476&lng=-122258325 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909800.556000 LatencyStats & t: 1323909800556 & pid: 177059 & latlng: (37875613, -122257380) & lastCheckin: 1323909799355
+128.32.38.73 - - [14/Dec/2011:16:43:21 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873792&lng=-122258018 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909801.542000 LatencyStats & t: 1323909801542 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:22 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877381&lng=-122256954 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909802.431000 LatencyStats & t: 1323909802431 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:23 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875715&lng=-122257421 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909803.183000 LatencyStats & t: 1323909803183 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:24 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877415&lng=-122256096 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909804.025000 LatencyStats & t: 1323909804025 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:25 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875647&lng=-122256365 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909805.302000 LatencyStats & t: 1323909805302 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:26 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875025&lng=-122258605 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909806.479000 LatencyStats & t: 1323909806479 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:27 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876229&lng=-122258870 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909807.249000 LatencyStats & t: 1323909807249 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:28 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876359&lng=-122258482 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909808.032000 LatencyStats & t: 1323909808032 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:28 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875356&lng=-122256143 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909808.814000 LatencyStats & t: 1323909808814 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:29 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874884&lng=-122258301 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909809.510000 LatencyStats & t: 1323909809510 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:30 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875061&lng=-122255666 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909810.228000 LatencyStats & t: 1323909810228 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:31 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874648&lng=-122258430 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909811.102000 LatencyStats & t: 1323909811102 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:31 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876216&lng=-122256580 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909811.832000 LatencyStats & t: 1323909811832 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:32 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874757&lng=-122259253 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909812.580000 LatencyStats & t: 1323909812580 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:33 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874699&lng=-122256116 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909813.608000 LatencyStats & t: 1323909813607 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:34 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875701&lng=-122257113 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909814.543000 LatencyStats & t: 1323909814543 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:35 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874385&lng=-122257823 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909815.384000 LatencyStats & t: 1323909815384 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:36 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876674&lng=-122257916 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909816.110000 LatencyStats & t: 1323909816110 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+128.32.38.73 - - [14/Dec/2011:16:43:36 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875309&lng=-122257522 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909816.970000 LatencyStats & t: 1323909816969 & pid: 177059 & latlng: (37874767, -122256716) & lastCheckin: 1323909800501
+66.87.2.190 - - [14/Dec/2011:16:43:37 -0800] "GET /post_position?gid=175061&lng=-122257375&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909817.537000 LatencyStats & t: 1323909817537 & pid: 180065 & latlng: (37875309, -122257522) & lastCheckin: 1323909816938
+128.32.38.73 - - [14/Dec/2011:16:43:38 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875749&lng=-122257485 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909817.996000 LatencyStats & t: 1323909817996 & pid: 177059 & latlng: (37875622, -122257375) & lastCheckin: 1323909817481
+66.87.2.190 - - [14/Dec/2011:16:43:38 -0800] "GET /post_position?gid=175061&lng=-122257376&lat=37875621&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909818.390000 LatencyStats & t: 1323909818390 & pid: 180065 & latlng: (37875749, -122257485) & lastCheckin: 1323909817781
+128.32.38.73 - - [14/Dec/2011:16:43:39 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874607&lng=-122257580 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909819.433000 LatencyStats & t: 1323909819433 & pid: 177059 & latlng: (37875621, -122257376) & lastCheckin: 1323909818355
+66.87.2.190 - - [14/Dec/2011:16:43:39 -0800] "GET /post_position?gid=175061&lng=-122257376&lat=37875621&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909819.441000 LatencyStats & t: 1323909819441 & pid: 180065 & latlng: (37875749, -122257485) & lastCheckin: 1323909817781
+66.87.2.190 - - [14/Dec/2011:16:43:40 -0800] "GET /post_position?gid=175061&lng=-122257376&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909820.636000 LatencyStats & t: 1323909820636 & pid: 180065 & latlng: (37874607, -122257580) & lastCheckin: 1323909819398
+128.32.38.73 - - [14/Dec/2011:16:43:40 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875461&lng=-122257979 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909820.639000 LatencyStats & t: 1323909820639 & pid: 177059 & latlng: (37875621, -122257376) & lastCheckin: 1323909819405
+66.87.2.190 - - [14/Dec/2011:16:43:41 -0800] "GET /post_position?gid=175061&lng=-122257376&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909821.236000 LatencyStats & t: 1323909821236 & pid: 180065 & latlng: (37875461, -122257979) & lastCheckin: 1323909820604
+128.32.38.73 - - [14/Dec/2011:16:43:41 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874193&lng=-122258019 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909821.337000 LatencyStats & t: 1323909821337 & pid: 177059 & latlng: (37875622, -122257376) & lastCheckin: 1323909821178
+66.87.2.190 - - [14/Dec/2011:16:43:42 -0800] "GET /post_position?gid=175061&lng=-122257377&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909822.424000 LatencyStats & t: 1323909822424 & pid: 180065 & latlng: (37874193, -122258019) & lastCheckin: 1323909821301
+128.32.38.73 - - [14/Dec/2011:16:43:42 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875998&lng=-122256096 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909822.907000 LatencyStats & t: 1323909822907 & pid: 177059 & latlng: (37875622, -122257377) & lastCheckin: 1323909822390
+66.87.2.190 - - [14/Dec/2011:16:43:43 -0800] "GET /post_position?gid=175061&lng=-122257377&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909823.225000 LatencyStats & t: 1323909823225 & pid: 180065 & latlng: (37875998, -122256096) & lastCheckin: 1323909822872
+128.32.38.73 - - [14/Dec/2011:16:43:43 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874799&lng=-122259318 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909823.601000 LatencyStats & t: 1323909823601 & pid: 177059 & latlng: (37875622, -122257377) & lastCheckin: 1323909823190
+66.87.2.190 - - [14/Dec/2011:16:43:44 -0800] "GET /post_position?gid=175061&lng=-122257377&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909824.222000 LatencyStats & t: 1323909824222 & pid: 180065 & latlng: (37874799, -122259318) & lastCheckin: 1323909823567
+128.32.38.73 - - [14/Dec/2011:16:43:44 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875666&lng=-122256549 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909824.305000 LatencyStats & t: 1323909824305 & pid: 177059 & latlng: (37875622, -122257377) & lastCheckin: 1323909824154
+128.32.38.73 - - [14/Dec/2011:16:43:45 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876288&lng=-122257343 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909825.230000 LatencyStats & t: 1323909825230 & pid: 177059 & latlng: (37875622, -122257377) & lastCheckin: 1323909824154
+66.87.2.190 - - [14/Dec/2011:16:43:45 -0800] "GET /post_position?gid=175061&lng=-122257375&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909825.243000 LatencyStats & t: 1323909825243 & pid: 180065 & latlng: (37875666, -122256549) & lastCheckin: 1323909824272
+128.32.38.73 - - [14/Dec/2011:16:43:46 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876014&lng=-122257657 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909826.317000 LatencyStats & t: 1323909826317 & pid: 177059 & latlng: (37875622, -122257375) & lastCheckin: 1323909825204
+66.87.2.190 - - [14/Dec/2011:16:43:46 -0800] "GET /post_position?gid=175061&lng=-122257374&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909826.332000 LatencyStats & t: 1323909826332 & pid: 180065 & latlng: (37876288, -122257343) & lastCheckin: 1323909825153
+66.87.2.190 - - [14/Dec/2011:16:43:47 -0800] "GET /post_position?gid=175061&lng=-122257373&lat=37875623&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909827.473000 LatencyStats & t: 1323909827473 & pid: 180065 & latlng: (37876014, -122257657) & lastCheckin: 1323909826284
+128.32.38.73 - - [14/Dec/2011:16:43:47 -0800] "GET /post_position?gid=175061&pid=177059&lat=37873714&lng=-122256342 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909827.476000 LatencyStats & t: 1323909827476 & pid: 177059 & latlng: (37875622, -122257374) & lastCheckin: 1323909826297
+66.87.2.190 - - [14/Dec/2011:16:43:48 -0800] "GET /post_position?gid=175061&lng=-122257372&lat=37875622&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909828.314000 LatencyStats & t: 1323909828314 & pid: 180065 & latlng: (37873714, -122256342) & lastCheckin: 1323909827440
+128.32.38.73 - - [14/Dec/2011:16:43:48 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875877&lng=-122259017 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909828.491000 LatencyStats & t: 1323909828491 & pid: 177059 & latlng: (37875623, -122257373) & lastCheckin: 1323909827440
+66.87.2.190 - - [14/Dec/2011:16:43:49 -0800] "GET /post_position?gid=175061&lng=-122257370&lat=37875623&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909829.232000 LatencyStats & t: 1323909829232 & pid: 180065 & latlng: (37875877, -122259017) & lastCheckin: 1323909828302
+128.32.38.73 - - [14/Dec/2011:16:43:49 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874437&lng=-122255996 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909829.486000 LatencyStats & t: 1323909829486 & pid: 177059 & latlng: (37875623, -122257370) & lastCheckin: 1323909829200
+66.87.2.190 - - [14/Dec/2011:16:43:50 -0800] "GET /post_position?gid=175061&lng=-122257370&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909830.247000 LatencyStats & t: 1323909830247 & pid: 180065 & latlng: (37874437, -122255996) & lastCheckin: 1323909829451
+128.32.38.73 - - [14/Dec/2011:16:43:50 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876650&lng=-122255583 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909830.539000 LatencyStats & t: 1323909830539 & pid: 177059 & latlng: (37875624, -122257370) & lastCheckin: 1323909830212
+128.32.38.73 - - [14/Dec/2011:16:43:51 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875438&lng=-122257989 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909831.237000 LatencyStats & t: 1323909831237 & pid: 177059 & latlng: (37875624, -122257370) & lastCheckin: 1323909830212
+66.87.2.190 - - [14/Dec/2011:16:43:51 -0800] "GET /post_position?gid=175061&lng=-122257370&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909831.266000 LatencyStats & t: 1323909831266 & pid: 180065 & latlng: (37876650, -122255583) & lastCheckin: 1323909830499
+128.32.38.73 - - [14/Dec/2011:16:43:52 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874780&lng=-122255613 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909832.181000 LatencyStats & t: 1323909832181 & pid: 177059 & latlng: (37875624, -122257370) & lastCheckin: 1323909831234
+66.87.2.190 - - [14/Dec/2011:16:43:52 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909832.191000 LatencyStats & t: 1323909832191 & pid: 180065 & latlng: (37875438, -122257989) & lastCheckin: 1323909831203
+128.32.38.73 - - [14/Dec/2011:16:43:53 -0800] "GET /post_position?gid=175061&pid=177059&lat=37876391&lng=-122256932 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909833.323000 LatencyStats & t: 1323909833323 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909832159
+66.87.2.190 - - [14/Dec/2011:16:43:53 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909833.456000 LatencyStats & t: 1323909833456 & pid: 180065 & latlng: (37876391, -122256932) & lastCheckin: 1323909833286
+66.87.2.190 - - [14/Dec/2011:16:43:54 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875625&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909834.479000 LatencyStats & t: 1323909834479 & pid: 180065 & latlng: (37876391, -122256932) & lastCheckin: 1323909833286
+128.32.38.73 - - [14/Dec/2011:16:43:54 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877158&lng=-122257787 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909834.481000 LatencyStats & t: 1323909834481 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909833424
+66.87.2.190 - - [14/Dec/2011:16:43:55 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909835.217000 LatencyStats & t: 1323909835217 & pid: 180065 & latlng: (37877158, -122257787) & lastCheckin: 1323909834442
+128.32.38.73 - - [14/Dec/2011:16:43:55 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874329&lng=-122258082 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909835.675000 LatencyStats & t: 1323909835675 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909835180
+66.87.2.190 - - [14/Dec/2011:16:43:56 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909836.195000 LatencyStats & t: 1323909836195 & pid: 180065 & latlng: (37874329, -122258082) & lastCheckin: 1323909835643
+128.32.38.73 - - [14/Dec/2011:16:43:56 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875583&lng=-122256273 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909836.798000 LatencyStats & t: 1323909836797 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909836157
+66.87.2.190 - - [14/Dec/2011:16:43:57 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909837.237000 LatencyStats & t: 1323909837237 & pid: 180065 & latlng: (37875583, -122256273) & lastCheckin: 1323909836763
+128.32.38.73 - - [14/Dec/2011:16:43:57 -0800] "GET /post_position?gid=175061&pid=177059&lat=37874497&lng=-122259244 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909837.560000 LatencyStats & t: 1323909837560 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909837204
+66.87.2.190 - - [14/Dec/2011:16:43:58 -0800] "GET /post_position?gid=175061&lng=-122257370&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909838.263000 LatencyStats & t: 1323909838263 & pid: 180065 & latlng: (37874497, -122259244) & lastCheckin: 1323909837503
+128.32.38.73 - - [14/Dec/2011:16:43:58 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875612&lng=-122259232 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909838.290000 LatencyStats & t: 1323909838290 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909837204
+128.32.38.73 - - [14/Dec/2011:16:43:59 -0800] "GET /post_position?gid=175061&pid=177059&lat=37877233&lng=-122258664 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909839.170000 LatencyStats & t: 1323909839170 & pid: 177059 & latlng: (37875624, -122257370) & lastCheckin: 1323909838230
+66.87.2.190 - - [14/Dec/2011:16:43:59 -0800] "GET /post_position?gid=175061&lng=-122257369&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909839.183000 LatencyStats & t: 1323909839183 & pid: 180065 & latlng: (37875612, -122259232) & lastCheckin: 1323909838254
+128.32.38.73 - - [14/Dec/2011:16:43:59 -0800] "GET /post_position?gid=175061&pid=177059&lat=37875065&lng=-122257431 HTTP/1.1" 200 186 - "Go http package"
+	1:1323909839.936000 LatencyStats & t: 1323909839935 & pid: 177059 & latlng: (37875624, -122257369) & lastCheckin: 1323909839151
+66.87.2.190 - - [14/Dec/2011:16:44:00 -0800] "GET /post_position?gid=175061&lng=-122257370&lat=37875624&pid=180065 HTTP/1.1" 200 187 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323909840.361000 LatencyStats & t: 1323909840361 & pid: 180065 & latlng: (37875065, -122257431) & lastCheckin: 1323909839900
