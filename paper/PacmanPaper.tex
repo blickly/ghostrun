@@ -36,15 +36,16 @@
 \section{Introduction}
 \section{Background}
 Augmented reality refers to a view of the physical world that has been
-augmented with additional computer-generated information, creating a sort of
-hybrid between virtual reality and the real world. Existing applications
-include games, sightseeing guides, navigation aids, and automatic translators.
+augmented with additional computer-generated information, creating a
+sort of hybrid between virtual reality and the real world. Existing
+applications include games, sightseeing guides, navigation aids, and
+automatic translators.
 
-Recent years have seen the success of a new class of video games with new
-methods of input, such as Dance Dance Revolution, Nintendo Wii, Playstation
-Move, and Microsoft Kinect. We see Augmented Reality games where players leave
-their game machine and physically move around the real world as a logical
-extension of this progression
+Recent years have seen the success of a new class of video games with
+new methods of input, such as Dance Dance Revolution, Nintendo Wii,
+Playstation Move, and Microsoft Kinect. We see Augmented Reality games
+where players leave their game machine and physically move around the
+real world as a logical extension of this progression
 
 \section{System Architecture}
 
@@ -55,10 +56,107 @@ extension of this progression
 \caption{A server on Google Appenigine is used to coordinate communication between the phone clients.}
 \end{figure}
 
-\section{Measurements}
-\subsection{Measuring Latency}
+Our augmented reality Pacman game is build on top of the Android 2.2
+platform, with a appengine server as it's counter part. The general
+framework is very simple. The server provides a set of protocol to be
+queried those HTTP connections and the clients use those protocols to
+play games of pacman with their friends using this app.
 
-There are many difficulties with trying to measure latency in a distributed system.  The most naive solution would be to simply time from when one GPS reading is calculated on one phone to when that updated position is displayed on another. The problem with this, of course, is time itself is not totally ordered in a distributed system~\cite{Lamport:1978:TCO}.
+\subsection{Server}
+
+We used a python webserver running on top of Google's Appengine
+service. Google's Appengine service provides many advantage for our
+Android app. The service has a built-in high replication datastore,
+which implements the Paxos Algorithm to synchronize data across data
+centers in real time. The datastore supports high availability for
+reads and writes, making it suitable for our purposes.
+
+The server is responsible for the following features:
+
+\begin{enumerate}
+\item Keeping track of where all the players are.
+\item Keeping track of which dots (food dots) still exists.
+\item Resolve if a pacman is killed by a ghost
+\item Allow storing and retrieving of maps.
+\item Allow querying for current on-going games and maps.
+\end{enumerate}
+
+\subsubsection{Tracking players}
+Since the server is required to know where all the players are, it
+must have some way to retrieve the most updated location of each
+player and store it for other players to retrive that
+information. This protocol is designed to wait on the client. Despite
+the existence of various technologies for servers to push data to
+clients, we decide to go with the simple implementation of client
+driven update.
+
+When the client (player's phone) receives a GPS update, we will post
+that location to the server to update our current position and
+propagate our location to other players. As a response, the client
+will receive a list of other player's locations. In this
+implementation, we introduced wait time (queue time) for each
+player's location on the server. There is this notion of how ``fresh''
+the location data is, since the staleness of the location information
+of each player, solely depends on how often the client decides to send
+in their location. 
+
+\subsubsection{Eating dots}
+Initially, we had the server resolve eating of dots. Now, we offset
+that some of that responsibility to the client. The client will
+specify which dot it wants to eat. The server will response with the
+number of points the client gain. If the client was attempting to eat
+a dot that has already been eaten, then the server will return 0
+points for the dot. In this implementation, we would not have to
+enumerate through all the available dots with the player's updated
+location to determine which dot is eaten. The delay caused by this
+calculation would increase the latency of the request.
+
+\subsubsection{Pacman being caught by the ghost}
+This feature is also semi implemented on the client. The client will
+send out a request when it detects the player captured a ghost (if the
+player is a pacman). However, there are more steps to verify here than
+eating dots. The server will check if the players are indeed close
+together using the server location information about each player.
+
+\subsubsection{Storing and allowing retrieval of Game elements}
+Besides all the basic information for gameplay experience, the server
+is also responsible for storing maps and allowing players to retrieve
+and use those maps. Furthermore, allowing players to use those maps to
+create games of pacman. Here, we, again, make use of Appengine's
+datastore to store our maps using the \texttt{TextProperty}. There was
+a slight complication when we first chose
+\texttt{StringProperty}. \texttt{StringProperty} can only store up to
+500 characters and the value could be indexed for filtering and
+ordering operations. It is not until we hit the 500 characters limit
+when it became obvious that we would not require the indexing property
+of \texttt{StringProperty}.
+
+
+\subsection{Client}
+
+The number of our client devices are limited. We each own a LG Optimus
+V smartphone that were used for testing. To simulate the various
+situations for latency measures, we also implemented ``fakephones''
+that uses the same server protocol to simulate players in the
+game. The concept and design of ``fakephones'' will be discussed more
+in depth in \ref{measuring}.
+
+
+
+
+
+\subsubsection{Responsbilities}
+
+
+\section{Measurements}
+\subsection{Measuring Latency}\label{measuring}
+
+There are many difficulties with trying to measure latency in a
+distributed system.  The most naive solution would be to simply time
+from when one GPS reading is calculated on one phone to when that
+updated position is displayed on another. The problem with this, of
+course, is time itself is not totally ordered in a distributed
+system~\cite{Lamport:1978:TCO}.
 
 \begin{figure}
 \centering
@@ -67,27 +165,139 @@ There are many difficulties with trying to measure latency in a distributed syst
 \caption{Latency can be broken down into three constituent pieces.}
 \end{figure}
 
-One solution would be to synchronize the notion of time on the phone.  If they could be synchronized within some known time bound, then we could use timestamps and have a bound on the error of that calculation.  Since phones include GPS and GPS includes a notion of time, this is a feasible solution.
+One solution would be to synchronize the notion of time on the phone.
+If they could be synchronized within some known time bound, then we
+could use timestamps and have a bound on the error of that
+calculation.  Since phones include GPS and GPS includes a notion of
+time, this is a feasible solution.
 
-Another solution would be to measure a round trip time.  It is important to make sure that the round trip time includes multiple phones, since we are interested in the time that it takes to propagate information from one phone to another.  One approach would be to time the round trip time of the following set of events.  On a single phone acquire a GPS reading, post it to the server, and then subsequently request updates of other phones' positions from the server until they change.  Under certain atomicity assumptions (namely that the reading of positions and posting of GPS update is all done in an atomic and isolated fashion) and network assumptions (that the network delivers packets in order), getting an updated position from another phone after posting your own update would be enough to guarantee that the other phone had seen the original GPS reading.  Unfortunately, this approach is complex and brittle, and many of the assumptions do not necessarily hold in practice.
+Another solution would be to measure a round trip time.  It is
+important to make sure that the round trip time includes multiple
+phones, since we are interested in the time that it takes to propagate
+information from one phone to another.  One approach would be to time
+the round trip time of the following set of events.  On a single phone
+acquire a GPS reading, post it to the server, and then subsequently
+request updates of other phones' positions from the server until they
+change.  Under certain atomicity assumptions (namely that the reading
+of positions and posting of GPS update is all done in an atomic and
+isolated fashion) and network assumptions (that the network delivers
+packets in order), getting an updated position from another phone
+after posting your own update would be enough to guarantee that the
+other phone had seen the original GPS reading.  Unfortunately, this
+approach is complex and brittle, and many of the assumptions do not
+necessarily hold in practice.
 
-A third approach is one that combines observation on the phone with observation on the server.  Rather than try to get an exact measurement of any particular point-to-point or round-trip flow of information, it merely tries to measure statistically certain subflows that can be summed up to find a statistical measure of a likely point-to-point flow.  The basic idea is that the latency for a GPS reading to move from the GPS receiver on one phone to the screen on another is made up of three parts:
+A third approach is one that combines observation on the phone with
+observation on the server.  Rather than try to get an exact
+measurement of any particular point-to-point or round-trip flow of
+information, it merely tries to measure statistically certain subflows
+that can be summed up to find a statistical measure of a likely
+point-to-point flow.  The basic idea is that the latency for a GPS
+reading to move from the GPS receiver on one phone to the screen on
+another is made up of three parts:
+
 \begin{enumerate}
 \item the time that it takes to get from the GPS receiver on the first phone to the server,
 \item the time that the reading waits on the server before it is queried by the second phone, and
 \item the time that the reading takes to get from the server to the screen of the second phone.
 \end{enumerate}
-Since the second part is handled completely on the server, measuring it is easier than the first and third part.  The key insight for solving this problem is noticing that there is a certain degree of symmetry among the phones, especially if we average over many measurements.  It is likely that the latency for a reading to get from the server to one phone will be very close to the latency to get from the server to another.  Making this (reasonable) assumption allows us to measure the sum of the first and third parts by simply measuring the roundtrip time of two separate GPS measurements as seen by a single phone.  That is, if we assume a certain degree of symmetry among the phones, we can measure the time it takes to upload one GPS measurement and then receive a different GPS measurement from the server, and take that as a proxy for the sum of the first and third measurements.  Summing this with the time measured on the server between the GPS measurement being posted and being read by another phone gives us a very accurate overall latency for reading-to-display across multiple phones.
+
+Since the second part is handled completely on the server, measuring
+it is easier than the first and third part.  The key insight for
+solving this problem is noticing that there is a certain degree of
+symmetry among the phones, especially if we average over many
+measurements.  It is likely that the latency for a reading to get from
+the server to one phone will be very close to the latency to get from
+the server to another.  Making this (reasonable) assumption allows us
+to measure the sum of the first and third parts by simply measuring
+the roundtrip time of two separate GPS measurements as seen by a
+single phone.  That is, if we assume a certain degree of symmetry
+among the phones, we can measure the time it takes to upload one GPS
+measurement and then receive a different GPS measurement from the
+server, and take that as a proxy for the sum of the first and third
+measurements.  Summing this with the time measured on the server
+between the GPS measurement being posted and being read by another
+phone gives us a very accurate overall latency for reading-to-display
+across multiple phones.
 
 \subsection{Phone Simulators}
-In order to get a meaningful evaluation of the entire architecture, we need to have more than just measurements of latency in the simple two-phones case.  In order to get a clear picture of how well the architecture will scale, we would like measurements of how well the system handles increasing load.  The most natural way to measure load in our system is by increasing the number of phones playing the game, but acquiring that number of hardware phones only for testing was infeasible.  Instead, we built a phone simulator that can be run on the computer and simulate the interaction of any number of phones interacting with the server. We still do the latency measurements from the real phones, since we want to take into account the potential differences in latency between 3G and Wifi connections, but phone simulators allow us to vary the load on the server in a realistic way. Since creating more players for the game also means that the real phones need to display more players on the screen, this load test is also a way of testing how efficiently the players are drawn on the screen of the handheld devices.
+In order to get a meaningful evaluation of the entire architecture, we
+need to have more than just measurements of latency in the simple
+two-phones case.  In order to get a clear picture of how well the
+architecture will scale, we would like measurements of how well the
+system handles increasing load.  The most natural way to measure load
+in our system is by increasing the number of phones playing the game,
+but acquiring that number of hardware phones only for testing was
+infeasible.  Instead, we built a phone simulator that can be run on
+the computer and simulate the interaction of any number of phones
+interacting with the server. We still do the latency measurements from
+the real phones, since we want to take into account the potential
+differences in latency between 3G and Wifi connections, but phone
+simulators allow us to vary the load on the server in a realistic
+way. Since creating more players for the game also means that the real
+phones need to display more players on the screen, this load test is
+also a way of testing how efficiently the players are drawn on the
+screen of the handheld devices.
 
 \subsubsection{Simulator Architecture}
-The phone simulator is written in Go, and can create an arbitrary number of concurrent threads that each simulate a single phone.  Each simulated phone first queries the server requesting to join a specific game, and gets back it's player id.  It then uses that player id to generate random movement around a fixed point at a given update rate (in the examples here, we have used a 1 second update rate as that is the update rate used by the real phones). The simulator also logs all of the responses from the server and when all communications are sent and received, which would allow computation of server latency.  Since we are more interested in the server latencies for real phones, however, we do not use the simulator latencies in the results in the following section.
+The phone simulator is written in Go, and can create an arbitrary
+number of concurrent threads that each simulate a single phone.  Each
+simulated phone first queries the server requesting to join a specific
+game, and gets back it's player id.  It then uses that player id to
+generate random movement around a fixed point at a given update rate
+(in the examples here, we have used a 1 second update rate as that is
+the update rate used by the real phones). The simulator also logs all
+of the responses from the server and when all communications are sent
+and received, which would allow computation of server latency.  Since
+we are more interested in the server latencies for real phones,
+however, we do not use the simulator latencies in the results in the
+following section.
 
 \subsection{Results}
 
 \section{Conclusion}
+
+\section{Future work}
+
+There is much to be done with this project. Our implementation did not
+take into account of all the security issue and potential unfairness
+that could be caused by such a simple API. For example, a malicious
+player could obtain all the dot information and request to eat all the
+dots using a script. The lack of authenication makes it possible for
+anyone to interfere with the gameplay. In the extreme case, players
+could write their own Android app that sends out fake GPS
+locations. More work to make the interaction between the server and
+the client more security could make the game more fair.
+
+Currently, the icons of the player updates through ``teleportation''
+due to the lag cause of latency. More work can be done to predict and
+display the diretion and speed of each player to make the animation of
+each player's movement be more smooth, without making the gameplay
+slow.
+
+Furthermore, the Android mapview is somewhat slow, since the overlay
+items (a ghost or a pacman) includes other useful features (click
+listerns, dragging support, etc), which are useless features for our
+purposes. A new implementation that only support displaying of the
+icons will speed up the system. Also, during gameplay, a specific map
+has a limited area that has dots, we can some how limit the map to
+only displaya set area to allow for some optimization on map tile
+drawing and icon projections.
+
+Another interesting, yet unrelated, direction would be to construct an
+AI that runs as a seperate thread on the server. The AI would be
+either a ghost or a pacman and acts like another client (i.e. sends
+locations and gets other player's locations back, eats dots, etc). The
+AI could allow players to works as a team or enable an intelligent
+single player mode. Aside from making the gameplay more appealing, the
+AI could also be allowed to have more power over the game as a game
+regulator. Currently, our server does not identify games that has
+ended or has been abandoned by the players. A game lives on forever
+until we delete the data from the datastore on Appengine. The AI could
+serve as a garbage collector for our server and terminate games that
+does not have any players in it.
+
+
 \bibliographystyle{plain}
 \bibliography{refs}
 \end{document}

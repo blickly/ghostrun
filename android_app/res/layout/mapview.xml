@@ -51,12 +51,5 @@
  			android:layout_weight="0.5"
  			android:paddingLeft="10sp" />
  			
- 			<Button
- 			android:id="@+id/seperate"
- 			android:text="seperate"
- 			android:layout_width="wrap_content"
- 			android:layout_height="wrap_content"
- 			></Button>
-
 </LinearLayout>
 
