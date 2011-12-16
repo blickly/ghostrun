@@ -62,6 +62,45 @@ framework is very simple. The server provides a set of protocol to be
 queried those HTTP connections and the clients use those protocols to
 play games of pacman with their friends using this app.
 
+In practice, there are three methods used for sending data from the server to
+an application running on an Android device:
+\begin{itemize}
+\item Phone-initiated polling of the server for data.
+\item Interception of specifically crafted SMS messages.
+\item Android Cloud to Device Messaging
+\end{itemize}
+
+Polling is the simplest approach, where the phone simply queries the server at
+a given interval. The disadvantages depend on the polling rate. At low polling
+rates, polling suffers from high latency, and at high polling rates, it can
+consume more power and shorten battery life compared to other techniques.
+
+Receiving information from the server through SMS is a much lower power
+solution. In this approach, the app must register for the permission to read
+incoming SMS messages, and then relies on the server to send messages from a
+specific number with a given format. This approach has the disadvantage that it
+requires unconventional permissions that may make users suspicious, and it is
+difficult and expensive to deploy widely, especially when dealing with
+international phone numbers. It is also unusable on devices like tablets that
+may have 3G data coverage, but no phone number.
+
+Android Cloud to Device Messaging (ACDM) is a service created by Google
+specifically for push notifications, and is newest and most advanced approach.
+ACDM uses Google infrastructure to allow communication of lightweight messages
+of up to 1024 bytes. Servers communicate directly to Google servers, from which
+the messages are relayed to Android phones through their Google user accounts.
+The disadvantages of ACDM are that it is not available for versions of Android
+prior to 2.2, and also that it can only send messages to phones that are logged
+in to a Google user account.
+
+Since the game mechanics require phones to contact the server regularly anyway
+to update their locations, the overhead of the polling approach seemed most
+reasonable. The ACDM could be another option that could potentially lower the
+latency in some situations. The restriction of message size to 1024 bytes,
+however, meant that updates in larger games would not always fit in a single
+message, increasing complexity.
+
+
 \subsection{Server}
 
 We used a python webserver running on top of Google's Appengine
