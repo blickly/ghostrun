@@ -1,0 +1,1190 @@
+128.32.112.135 - - [12/Dec/2011:11:13:31 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875323&lng=-122257175 HTTP/1.1" 200 184 - -
+	1:1323717211.928000 LatencyStats 1323717208831 37874765 -122256717 1323717211883
+128.32.112.135 - - [12/Dec/2011:11:13:35 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877336&lng=-122257071 HTTP/1.1" 200 184 - -
+	1:1323717215.361000 LatencyStats 1323717208831 37874765 -122256717 1323717215309
+128.32.112.135 - - [12/Dec/2011:11:13:38 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876558&lng=-122261576 HTTP/1.1" 200 184 - -
+	1:1323717218.881000 LatencyStats 1323717208831 37874765 -122256717 1323717218830
+128.32.112.135 - - [12/Dec/2011:11:13:42 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875989&lng=-122257584 HTTP/1.1" 200 184 - -
+	1:1323717222.272000 LatencyStats 1323717208831 37874765 -122256717 1323717222220
+128.32.112.135 - - [12/Dec/2011:11:13:45 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874772&lng=-122257332 HTTP/1.1" 200 184 - -
+	1:1323717225.830000 LatencyStats 1323717208831 37874765 -122256717 1323717225779
+128.32.112.135 - - [12/Dec/2011:11:13:49 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876975&lng=-122260923 HTTP/1.1" 200 184 - -
+	1:1323717229.259000 LatencyStats 1323717208831 37874765 -122256717 1323717229210
+128.32.112.135 - - [12/Dec/2011:11:13:52 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872807&lng=-122258796 HTTP/1.1" 200 184 - -
+	1:1323717232.713000 LatencyStats 1323717208831 37874765 -122256717 1323717232607
+128.32.112.135 - - [12/Dec/2011:11:13:56 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873269&lng=-122259910 HTTP/1.1" 200 184 - -
+	1:1323717236.146000 LatencyStats 1323717208831 37874765 -122256717 1323717236093
+128.32.112.135 - - [12/Dec/2011:11:13:59 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875350&lng=-122260056 HTTP/1.1" 200 184 - -
+	1:1323717239.511000 LatencyStats 1323717208831 37874765 -122256717 1323717239459
+128.32.112.135 - - [12/Dec/2011:11:14:02 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873259&lng=-122256936 HTTP/1.1" 200 184 - -
+	1:1323717242.794000 LatencyStats 1323717208831 37874765 -122256717 1323717242740
+128.32.112.135 - - [12/Dec/2011:11:14:06 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872825&lng=-122260071 HTTP/1.1" 200 184 - -
+	1:1323717246.209000 LatencyStats 1323717208831 37874765 -122256717 1323717246114
+128.32.112.135 - - [12/Dec/2011:11:14:09 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877119&lng=-122258290 HTTP/1.1" 200 184 - -
+	1:1323717249.794000 LatencyStats 1323717208831 37874765 -122256717 1323717249740
+128.32.112.135 - - [12/Dec/2011:11:14:13 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876530&lng=-122259027 HTTP/1.1" 200 184 - -
+	1:1323717253.378000 LatencyStats 1323717208831 37874765 -122256717 1323717253208
+128.32.112.135 - - [12/Dec/2011:11:14:16 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877638&lng=-122260112 HTTP/1.1" 200 184 - -
+	1:1323717256.825000 LatencyStats 1323717208831 37874765 -122256717 1323717256769
+128.32.112.135 - - [12/Dec/2011:11:14:20 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877484&lng=-122258582 HTTP/1.1" 200 184 - -
+	1:1323717260.333000 LatencyStats 1323717208831 37874765 -122256717 1323717260279
+128.32.112.135 - - [12/Dec/2011:11:14:23 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874508&lng=-122260470 HTTP/1.1" 200 184 - -
+	1:1323717263.764000 LatencyStats 1323717208831 37874765 -122256717 1323717263688
+128.32.112.135 - - [12/Dec/2011:11:14:27 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877709&lng=-122260382 HTTP/1.1" 200 184 - -
+	1:1323717267.226000 LatencyStats 1323717208831 37874765 -122256717 1323717267163
+66.87.4.100 - - [12/Dec/2011:11:14:28 -0800] "GET /flush_log HTTP/1.1" 500 0 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	3:1323717268.931000 Traceback (most recent call last):
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 269, in main
+	:     util.run_wsgi_app(application)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 98, in run_wsgi_app
+	:     run_bare_wsgi_app(add_wsgi_middleware(application))
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 116, in run_bare_wsgi_app
+	:     result = application(env, _start_response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1505, in __call__
+	:     rv = self.router.dispatch(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1253, in default_dispatcher
+	:     return route.handler_adapter(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1077, in __call__
+	:     return handler.dispatch()
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 545, in dispatch
+	:     return method(*args, **kwargs)
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 241, in get
+	:     for l in ls:
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/db/__init__.py", line 2237, in next
+	:     return self.__model_class.from_entity(self.__iterator.next())
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/db/__init__.py", line 1414, in from_entity
+	:     return cls(None, _from_entity=entity, **entity_values)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/db/__init__.py", line 956, in __init__
+	:     if isinstance(_from_entity, datastore.Entity) and _from_entity.is_saved():
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore.py", line 809, in is_saved
+	:     self.__key.has_id_or_name())
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore_types.py", line 559, in has_id_or_name
+	:     return self.id_or_name() is not None
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore_types.py", line 551, in id_or_name
+	:     return self.id()
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore_types.py", line 535, in id
+	:     if elems and elems[-1].has_id() and elems[-1].id():
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/_internal/proto1/internal/cpp_message.py", line 262, in __getitem__
+	:     return subclass(__cmessage=cmessages, __root_cmessage=self._root)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/_internal/proto1/internal/cpp_message.py", line 556, in Init
+	:     for field_name, field_value in kwargs.iteritems():
+	: DeadlineExceededError
+	: 
+128.32.112.135 - - [12/Dec/2011:11:14:30 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874304&lng=-122256850 HTTP/1.1" 200 184 - -
+	1:1323717270.652000 LatencyStats 1323717208831 37874765 -122256717 1323717270603
+128.32.112.135 - - [12/Dec/2011:11:14:34 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874735&lng=-122261122 HTTP/1.1" 200 184 - -
+	1:1323717274.112000 LatencyStats 1323717208831 37874765 -122256717 1323717274061
+66.87.4.100 - - [12/Dec/2011:11:14:34 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717274.534000 LatencyStats 1323717274024 37874735 -122261122 1323717274481
+66.87.4.100 - - [12/Dec/2011:11:14:35 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717275.444000 LatencyStats 1323717274024 37874735 -122261122 1323717275389
+66.87.4.100 - - [12/Dec/2011:11:14:36 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717276.037000 LatencyStats 1323717274024 37874735 -122261122 1323717275986
+128.32.112.135 - - [12/Dec/2011:11:14:37 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875432&lng=-122257497 HTTP/1.1" 200 184 - -
+	1:1323717277.597000 LatencyStats 1323717275951 37874765 -122256717 1323717277543
+66.87.4.100 - - [12/Dec/2011:11:14:37 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717277.599000 LatencyStats 1323717274024 37874735 -122261122 1323717277543
+66.87.4.100 - - [12/Dec/2011:11:14:38 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717278.473000 LatencyStats 1323717277501 37875432 -122257497 1323717278248
+66.87.4.100 - - [12/Dec/2011:11:14:39 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717279.206000 LatencyStats 1323717277501 37875432 -122257497 1323717279155
+66.87.4.100 - - [12/Dec/2011:11:14:39 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717279.958000 LatencyStats 1323717277501 37875432 -122257497 1323717279901
+66.87.4.100 - - [12/Dec/2011:11:14:40 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717280.966000 LatencyStats 1323717277501 37875432 -122257497 1323717280910
+128.32.112.135 - - [12/Dec/2011:11:14:41 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876138&lng=-122257230 HTTP/1.1" 200 184 - -
+	1:1323717281.035000 LatencyStats 1323717279866 37874765 -122256717 1323717280882
+66.87.4.100 - - [12/Dec/2011:11:14:42 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717282.136000 LatencyStats 1323717280846 37876138 -122257230 1323717282082
+66.87.4.100 - - [12/Dec/2011:11:14:43 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717283.316000 LatencyStats 1323717280846 37876138 -122257230 1323717283261
+66.87.4.100 - - [12/Dec/2011:11:14:44 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717284.397000 LatencyStats 1323717280846 37876138 -122257230 1323717284340
+128.32.112.135 - - [12/Dec/2011:11:14:44 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872976&lng=-122257609 HTTP/1.1" 200 184 - -
+	1:1323717284.425000 LatencyStats 1323717283223 37874765 -122256717 1323717284373
+66.87.4.100 - - [12/Dec/2011:11:14:45 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717285.198000 LatencyStats 1323717284339 37872976 -122257609 1323717285151
+66.87.4.100 - - [12/Dec/2011:11:14:46 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717286.716000 LatencyStats 1323717284339 37872976 -122257609 1323717286664
+66.87.4.100 - - [12/Dec/2011:11:14:47 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717287.301000 LatencyStats 1323717284339 37872976 -122257609 1323717287242
+66.87.4.100 - - [12/Dec/2011:11:14:47 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717287.933000 LatencyStats 1323717284339 37872976 -122257609 1323717287883
+128.32.112.135 - - [12/Dec/2011:11:14:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874441&lng=-122259511 HTTP/1.1" 200 184 - -
+	1:1323717287.938000 LatencyStats 1323717287210 37874765 -122256717 1323717287885
+66.87.4.100 - - [12/Dec/2011:11:14:48 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717288.561000 LatencyStats 1323717287852 37874441 -122259511 1323717288501
+66.87.4.100 - - [12/Dec/2011:11:14:49 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717289.130000 LatencyStats 1323717287852 37874441 -122259511 1323717289071
+66.87.4.100 - - [12/Dec/2011:11:14:49 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717289.557000 LatencyStats 1323717287852 37874441 -122259511 1323717289501
+66.87.4.100 - - [12/Dec/2011:11:14:50 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717290.283000 LatencyStats 1323717287852 37874441 -122259511 1323717290226
+66.87.4.100 - - [12/Dec/2011:11:14:51 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717290.992000 LatencyStats 1323717287852 37874441 -122259511 1323717290941
+128.32.112.135 - - [12/Dec/2011:11:14:51 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876120&lng=-122261046 HTTP/1.1" 200 184 - -
+	1:1323717291.423000 LatencyStats 1323717290905 37874765 -122256717 1323717291372
+66.87.4.100 - - [12/Dec/2011:11:14:52 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717292.100000 LatencyStats 1323717291334 37876120 -122261046 1323717292026
+66.87.4.100 - - [12/Dec/2011:11:14:52 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717292.610000 LatencyStats 1323717291334 37876120 -122261046 1323717292552
+66.87.4.100 - - [12/Dec/2011:11:14:53 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717293.138000 LatencyStats 1323717291334 37876120 -122261046 1323717293089
+66.87.4.100 - - [12/Dec/2011:11:14:54 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717293.997000 LatencyStats 1323717291334 37876120 -122261046 1323717293693
+66.87.4.100 - - [12/Dec/2011:11:14:54 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717294.588000 LatencyStats 1323717291334 37876120 -122261046 1323717294475
+128.32.112.135 - - [12/Dec/2011:11:14:54 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873390&lng=-122257216 HTTP/1.1" 200 184 - -
+	1:1323717294.898000 LatencyStats 1323717294441 37874765 -122256717 1323717294845
+66.87.4.100 - - [12/Dec/2011:11:14:55 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717295.501000 LatencyStats 1323717294811 37873390 -122257216 1323717295446
+66.87.4.100 - - [12/Dec/2011:11:14:56 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717296.092000 LatencyStats 1323717294811 37873390 -122257216 1323717296036
+66.87.4.100 - - [12/Dec/2011:11:14:56 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717296.528000 LatencyStats 1323717294811 37873390 -122257216 1323717296474
+66.87.4.100 - - [12/Dec/2011:11:14:57 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717297.265000 LatencyStats 1323717294811 37873390 -122257216 1323717297213
+66.87.4.100 - - [12/Dec/2011:11:14:58 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717298.466000 LatencyStats 1323717294811 37873390 -122257216 1323717298402
+128.32.112.135 - - [12/Dec/2011:11:14:58 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876064&lng=-122258621 HTTP/1.1" 200 184 - -
+	1:1323717298.467000 LatencyStats 1323717297180 37874765 -122256717 1323717298405
+66.87.4.100 - - [12/Dec/2011:11:14:59 -0800] "GET /post_position?gid=84558&lng=-122256336&lat=37874625&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717299.388000 LatencyStats 1323717298368 37876064 -122258621 1323717299194
+66.87.4.100 - - [12/Dec/2011:11:15:00 -0800] "GET /post_position?gid=84558&lng=-122256336&lat=37874625&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717300.625000 LatencyStats 1323717298368 37876064 -122258621 1323717300574
+66.87.4.100 - - [12/Dec/2011:11:15:01 -0800] "GET /post_position?gid=84558&lng=-122256336&lat=37874625&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717301.280000 LatencyStats 1323717298368 37876064 -122258621 1323717301229
+128.32.112.135 - - [12/Dec/2011:11:15:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875407&lng=-122257775 HTTP/1.1" 200 184 - -
+	1:1323717301.875000 LatencyStats 1323717301194 37874625 -122256336 1323717301821
+66.87.4.100 - - [12/Dec/2011:11:15:01 -0800] "GET /post_position?gid=84558&lng=-122256336&lat=37874625&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717301.950000 LatencyStats 1323717301729 37875407 -122257775 1323717301895
+66.87.4.100 - - [12/Dec/2011:11:15:02 -0800] "GET /post_position?gid=84558&lng=-122256336&lat=37874625&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717302.517000 LatencyStats 1323717301729 37875407 -122257775 1323717302460
+66.87.4.100 - - [12/Dec/2011:11:15:03 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717303.256000 LatencyStats 1323717301729 37875407 -122257775 1323717303200
+66.87.4.100 - - [12/Dec/2011:11:15:04 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717304.084000 LatencyStats 1323717301729 37875407 -122257775 1323717304032
+66.87.4.100 - - [12/Dec/2011:11:15:05 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717305.228000 LatencyStats 1323717301729 37875407 -122257775 1323717305175
+128.32.112.135 - - [12/Dec/2011:11:15:05 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876217&lng=-122261265 HTTP/1.1" 200 184 - -
+	1:1323717305.239000 LatencyStats 1323717304000 37874765 -122256717 1323717305182
+66.87.4.100 - - [12/Dec/2011:11:15:06 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717305.974000 LatencyStats 1323717305145 37876217 -122261265 1323717305925
+66.87.4.100 - - [12/Dec/2011:11:15:06 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717306.903000 LatencyStats 1323717305145 37876217 -122261265 1323717306846
+66.87.4.100 - - [12/Dec/2011:11:15:07 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717307.575000 LatencyStats 1323717305145 37876217 -122261265 1323717307518
+66.87.4.100 - - [12/Dec/2011:11:15:08 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717308.260000 LatencyStats 1323717305145 37876217 -122261265 1323717308202
+128.32.112.135 - - [12/Dec/2011:11:15:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875013&lng=-122260790 HTTP/1.1" 200 184 - -
+	1:1323717308.792000 LatencyStats 1323717308119 37874765 -122256717 1323717308731
+66.87.4.100 - - [12/Dec/2011:11:15:08 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717308.979000 LatencyStats 1323717308697 37875013 -122260790 1323717308928
+66.87.4.100 - - [12/Dec/2011:11:15:11 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717311.073000 LatencyStats 1323717308697 37875013 -122260790 1323717310976
+128.32.112.135 - - [12/Dec/2011:11:15:12 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877758&lng=-122259518 HTTP/1.1" 200 184 - -
+	1:1323717312.226000 LatencyStats 1323717310941 37874765 -122256717 1323717312175
+66.87.4.100 - - [12/Dec/2011:11:15:12 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717312.227000 LatencyStats 1323717308697 37875013 -122260790 1323717312175
+66.87.4.100 - - [12/Dec/2011:11:15:12 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717312.898000 LatencyStats 1323717312140 37877758 -122259518 1323717312844
+66.87.4.100 - - [12/Dec/2011:11:15:13 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717313.617000 LatencyStats 1323717312140 37877758 -122259518 1323717313567
+66.87.4.100 - - [12/Dec/2011:11:15:14 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717314.146000 LatencyStats 1323717312140 37877758 -122259518 1323717314097
+66.87.4.100 - - [12/Dec/2011:11:15:14 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717314.963000 LatencyStats 1323717312140 37877758 -122259518 1323717314910
+66.87.4.100 - - [12/Dec/2011:11:15:15 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717315.718000 LatencyStats 1323717312140 37877758 -122259518 1323717315664
+128.32.112.135 - - [12/Dec/2011:11:15:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876511&lng=-122257711 HTTP/1.1" 200 184 - -
+	1:1323717315.984000 LatencyStats 1323717314873 37874765 -122256717 1323717315677
+66.87.4.100 - - [12/Dec/2011:11:15:16 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717316.384000 LatencyStats 1323717315640 37876511 -122257711 1323717316336
+66.87.4.100 - - [12/Dec/2011:11:15:17 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717317.399000 LatencyStats 1323717315640 37876511 -122257711 1323717317345
+66.87.4.100 - - [12/Dec/2011:11:15:19 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717319.139000 LatencyStats 1323717315640 37876511 -122257711 1323717319087
+128.32.112.135 - - [12/Dec/2011:11:15:19 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876449&lng=-122261503 HTTP/1.1" 200 184 - -
+	1:1323717319.677000 LatencyStats 1323717319056 37874765 -122256717 1323717319627
+66.87.4.100 - - [12/Dec/2011:11:15:20 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717320.419000 LatencyStats 1323717319595 37876449 -122261503 1323717320367
+66.87.4.100 - - [12/Dec/2011:11:15:21 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717321.064000 LatencyStats 1323717319595 37876449 -122261503 1323717320995
+66.87.4.100 - - [12/Dec/2011:11:15:22 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717322.598000 LatencyStats 1323717319595 37876449 -122261503 1323717322549
+66.87.4.100 - - [12/Dec/2011:11:15:23 -0800] "GET /post_position?gid=84558&lng=-122256546&lat=37874727&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717323.544000 LatencyStats 1323717319595 37876449 -122261503 1323717323386
+128.32.112.135 - - [12/Dec/2011:11:15:24 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873421&lng=-122256675 HTTP/1.1" 200 184 - -
+	1:1323717324.049000 LatencyStats 1323717323337 37874727 -122256546 1323717323995
+66.87.4.100 - - [12/Dec/2011:11:15:24 -0800] "GET /post_position?gid=84558&lng=-122256599&lat=37874749&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717324.173000 LatencyStats 1323717323948 37873421 -122256675 1323717324122
+66.87.4.100 - - [12/Dec/2011:11:15:25 -0800] "GET /post_position?gid=84558&lng=-122256615&lat=37874754&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717325.149000 LatencyStats 1323717323948 37873421 -122256675 1323717325094
+66.87.4.100 - - [12/Dec/2011:11:15:26 -0800] "GET /post_position?gid=84558&lng=-122256647&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717326.068000 LatencyStats 1323717323948 37873421 -122256675 1323717326013
+66.87.4.100 - - [12/Dec/2011:11:15:27 -0800] "GET /post_position?gid=84558&lng=-122256674&lat=37874781&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717327.356000 LatencyStats 1323717323948 37873421 -122256675 1323717327305
+128.32.112.135 - - [12/Dec/2011:11:15:27 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875060&lng=-122257962 HTTP/1.1" 200 184 - -
+	1:1323717327.360000 LatencyStats 1323717325982 37874765 -122256647 1323717327309
+66.87.4.100 - - [12/Dec/2011:11:15:27 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717327.958000 LatencyStats 1323717327269 37875060 -122257962 1323717327906
+128.32.112.135 - - [12/Dec/2011:11:15:30 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875084&lng=-122260604 HTTP/1.1" 200 184 - -
+	1:1323717330.721000 LatencyStats 1323717327869 37874767 -122256716 1323717330670
+128.32.112.135 - - [12/Dec/2011:11:15:34 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874438&lng=-122258235 HTTP/1.1" 200 184 - -
+	1:1323717334.212000 LatencyStats 1323717327869 37874767 -122256716 1323717334161
+128.32.112.135 - - [12/Dec/2011:11:15:37 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873573&lng=-122257593 HTTP/1.1" 200 184 - -
+	1:1323717337.727000 LatencyStats 1323717327869 37874767 -122256716 1323717337676
+128.32.112.135 - - [12/Dec/2011:11:15:41 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876534&lng=-122258216 HTTP/1.1" 200 184 - -
+	1:1323717341.218000 LatencyStats 1323717327869 37874767 -122256716 1323717341162
+128.32.112.135 - - [12/Dec/2011:11:15:44 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873125&lng=-122257139 HTTP/1.1" 200 184 - -
+	1:1323717344.727000 LatencyStats 1323717327869 37874767 -122256716 1323717344677
+128.32.112.135 - - [12/Dec/2011:11:15:48 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876716&lng=-122259040 HTTP/1.1" 200 184 - -
+	1:1323717348.138000 LatencyStats 1323717327869 37874767 -122256716 1323717348078
+128.32.112.135 - - [12/Dec/2011:11:15:51 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875476&lng=-122261032 HTTP/1.1" 200 184 - -
+	1:1323717351.505000 LatencyStats 1323717327869 37874767 -122256716 1323717351450
+128.32.112.135 - - [12/Dec/2011:11:15:54 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873247&lng=-122258360 HTTP/1.1" 200 184 - -
+	1:1323717354.967000 LatencyStats 1323717327869 37874767 -122256716 1323717354916
+128.32.112.135 - - [12/Dec/2011:11:15:58 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873137&lng=-122259254 HTTP/1.1" 200 184 - -
+	1:1323717358.489000 LatencyStats 1323717327869 37874767 -122256716 1323717358412
+128.32.112.135 - - [12/Dec/2011:11:16:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874720&lng=-122259048 HTTP/1.1" 200 184 - -
+	1:1323717361.968000 LatencyStats 1323717327869 37874767 -122256716 1323717361918
+128.32.112.135 - - [12/Dec/2011:11:16:05 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877091&lng=-122256802 HTTP/1.1" 200 184 - -
+	1:1323717365.560000 LatencyStats 1323717327869 37874767 -122256716 1323717365448
+128.32.112.135 - - [12/Dec/2011:11:16:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874178&lng=-122259748 HTTP/1.1" 200 184 - -
+	1:1323717368.918000 LatencyStats 1323717327869 37874767 -122256716 1323717368861
+128.32.112.135 - - [12/Dec/2011:11:16:12 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873190&lng=-122259922 HTTP/1.1" 200 184 - -
+	1:1323717372.295000 LatencyStats 1323717327869 37874767 -122256716 1323717372243
+128.32.112.135 - - [12/Dec/2011:11:16:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873114&lng=-122259886 HTTP/1.1" 200 184 - -
+	1:1323717375.822000 LatencyStats 1323717327869 37874767 -122256716 1323717375740
+128.32.112.135 - - [12/Dec/2011:11:16:19 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873891&lng=-122260577 HTTP/1.1" 200 184 - -
+	1:1323717379.269000 LatencyStats 1323717327869 37874767 -122256716 1323717379219
+128.32.112.135 - - [12/Dec/2011:11:16:22 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876435&lng=-122260969 HTTP/1.1" 200 184 - -
+	1:1323717382.725000 LatencyStats 1323717327869 37874767 -122256716 1323717382669
+128.32.112.135 - - [12/Dec/2011:11:16:26 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873795&lng=-122260574 HTTP/1.1" 200 184 - -
+	1:1323717385.993000 LatencyStats 1323717327869 37874767 -122256716 1323717385942
+66.87.4.100 - - [12/Dec/2011:11:16:28 -0800] "GET /flush_log HTTP/1.1" 500 0 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	3:1323717388.435000 Traceback (most recent call last):
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 269, in main
+	:     util.run_wsgi_app(application)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 98, in run_wsgi_app
+	:     run_bare_wsgi_app(add_wsgi_middleware(application))
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 116, in run_bare_wsgi_app
+	:     result = application(env, _start_response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1505, in __call__
+	:     rv = self.router.dispatch(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1253, in default_dispatcher
+	:     return route.handler_adapter(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1077, in __call__
+	:     return handler.dispatch()
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 545, in dispatch
+	:     return method(*args, **kwargs)
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 241, in get
+	:     for l in ls:
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/db/__init__.py", line 2237, in next
+	:     return self.__model_class.from_entity(self.__iterator.next())
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2655, in next
+	:     next_batch = self.__batcher.next()
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2525, in next
+	:     return self.next_batch(self.AT_LEAST_ONE)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2562, in next_batch
+	:     batch = self.__next_batch.get_result()
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/apiproxy_stub_map.py", line 592, in get_result
+	:     return self.__get_result_hook(self)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2340, in __query_result_hook
+	:     self.__results = self._process_results(query_result.result_list())
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2373, in _process_results
+	:     for result in results]
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_rpc.py", line 135, in pb_to_query_result
+	:     return self.pb_to_entity(pb)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore.py", line 346, in pb_to_entity
+	:     return Entity._FromPb(pb)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore.py", line 1089, in _FromPb
+	:     _app=pb.key().app(), namespace=namespace)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore.py", line 728, in __init__
+	:     _app = datastore_types.ResolveAppId(_app)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/api/datastore_types.py", line 218, in ResolveAppId
+	:     ValidateString(app, 'app', datastore_errors.BadArgumentError)
+	: DeadlineExceededError
+	: 
+128.32.112.135 - - [12/Dec/2011:11:16:29 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875477&lng=-122259202 HTTP/1.1" 200 184 - -
+	1:1323717389.581000 LatencyStats 1323717327869 37874767 -122256716 1323717389525
+66.87.4.100 - - [12/Dec/2011:11:16:31 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717391.836000 LatencyStats 1323717389488 37875477 -122259202 1323717391788
+66.87.4.100 - - [12/Dec/2011:11:16:32 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717392.447000 LatencyStats 1323717389488 37875477 -122259202 1323717392393
+128.32.112.135 - - [12/Dec/2011:11:16:33 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875058&lng=-122261139 HTTP/1.1" 200 184 - -
+	1:1323717393.086000 LatencyStats 1323717392360 37874765 -122256717 1323717392977
+66.87.4.100 - - [12/Dec/2011:11:16:33 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717393.228000 LatencyStats 1323717392943 37875058 -122261139 1323717393177
+66.87.4.100 - - [12/Dec/2011:11:16:34 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717394.009000 LatencyStats 1323717392943 37875058 -122261139 1323717393792
+66.87.4.100 - - [12/Dec/2011:11:16:34 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717394.587000 LatencyStats 1323717392943 37875058 -122261139 1323717394536
+66.87.4.100 - - [12/Dec/2011:11:16:35 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717395.409000 LatencyStats 1323717392943 37875058 -122261139 1323717395347
+66.87.4.100 - - [12/Dec/2011:11:16:35 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717395.970000 LatencyStats 1323717392943 37875058 -122261139 1323717395916
+128.32.112.135 - - [12/Dec/2011:11:16:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877327&lng=-122257867 HTTP/1.1" 200 184 - -
+	1:1323717396.558000 LatencyStats 1323717395886 37874765 -122256717 1323717396505
+66.87.4.100 - - [12/Dec/2011:11:16:36 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717396.589000 LatencyStats 1323717392943 37875058 -122261139 1323717396530
+66.87.4.100 - - [12/Dec/2011:11:16:37 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717397.314000 LatencyStats 1323717396469 37877327 -122257867 1323717397265
+66.87.4.100 - - [12/Dec/2011:11:16:38 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717398.352000 LatencyStats 1323717396469 37877327 -122257867 1323717398273
+66.87.4.100 - - [12/Dec/2011:11:16:38 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717398.858000 LatencyStats 1323717396469 37877327 -122257867 1323717398804
+66.87.4.100 - - [12/Dec/2011:11:16:39 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717399.449000 LatencyStats 1323717396469 37877327 -122257867 1323717399394
+128.32.112.135 - - [12/Dec/2011:11:16:40 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873502&lng=-122260033 HTTP/1.1" 200 184 - -
+	1:1323717400.024000 LatencyStats 1323717399361 37874765 -122256717 1323717399967
+66.87.4.100 - - [12/Dec/2011:11:16:40 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717400.025000 LatencyStats 1323717396469 37877327 -122257867 1323717399966
+66.87.4.100 - - [12/Dec/2011:11:16:40 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717400.740000 LatencyStats 1323717399937 37873502 -122260033 1323717400688
+66.87.4.100 - - [12/Dec/2011:11:16:41 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717401.695000 LatencyStats 1323717399937 37873502 -122260033 1323717401644
+66.87.4.100 - - [12/Dec/2011:11:16:42 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717402.519000 LatencyStats 1323717399937 37873502 -122260033 1323717402247
+66.87.4.100 - - [12/Dec/2011:11:16:43 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717402.999000 LatencyStats 1323717399937 37873502 -122260033 1323717402947
+128.32.112.135 - - [12/Dec/2011:11:16:43 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874379&lng=-122257614 HTTP/1.1" 200 184 - -
+	1:1323717403.451000 LatencyStats 1323717402906 37874765 -122256717 1323717403400
+66.87.4.100 - - [12/Dec/2011:11:16:43 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717403.901000 LatencyStats 1323717403367 37874379 -122257614 1323717403850
+66.87.4.100 - - [12/Dec/2011:11:16:44 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717404.553000 LatencyStats 1323717403367 37874379 -122257614 1323717404406
+66.87.4.100 - - [12/Dec/2011:11:16:45 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717405.172000 LatencyStats 1323717403367 37874379 -122257614 1323717405119
+66.87.4.100 - - [12/Dec/2011:11:16:45 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717405.842000 LatencyStats 1323717403367 37874379 -122257614 1323717405794
+66.87.4.100 - - [12/Dec/2011:11:16:46 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717406.933000 LatencyStats 1323717403367 37874379 -122257614 1323717406884
+128.32.112.135 - - [12/Dec/2011:11:16:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872931&lng=-122258856 HTTP/1.1" 200 184 - -
+	1:1323717407.470000 LatencyStats 1323717406852 37874765 -122256717 1323717407412
+66.87.4.100 - - [12/Dec/2011:11:16:48 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717407.924000 LatencyStats 1323717407380 37872931 -122258856 1323717407695
+66.87.4.100 - - [12/Dec/2011:11:16:48 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717408.787000 LatencyStats 1323717407380 37872931 -122258856 1323717408727
+66.87.4.100 - - [12/Dec/2011:11:16:49 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717409.300000 LatencyStats 1323717407380 37872931 -122258856 1323717409250
+66.87.4.100 - - [12/Dec/2011:11:16:50 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717410.417000 LatencyStats 1323717407380 37872931 -122258856 1323717410358
+128.32.112.135 - - [12/Dec/2011:11:16:51 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876498&lng=-122260917 HTTP/1.1" 200 184 - -
+	1:1323717411.009000 LatencyStats 1323717410326 37874765 -122256717 1323717410951
+66.87.4.100 - - [12/Dec/2011:11:16:51 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717411.523000 LatencyStats 1323717410915 37876498 -122260917 1323717411463
+66.87.4.100 - - [12/Dec/2011:11:16:52 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717412.679000 LatencyStats 1323717410915 37876498 -122260917 1323717412528
+66.87.4.100 - - [12/Dec/2011:11:16:53 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717413.191000 LatencyStats 1323717410915 37876498 -122260917 1323717413135
+66.87.4.100 - - [12/Dec/2011:11:16:53 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717413.830000 LatencyStats 1323717410915 37876498 -122260917 1323717413775
+128.32.112.135 - - [12/Dec/2011:11:16:54 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873655&lng=-122258771 HTTP/1.1" 200 184 - -
+	1:1323717414.301000 LatencyStats 1323717413743 37874765 -122256717 1323717414246
+66.87.4.100 - - [12/Dec/2011:11:16:54 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717414.471000 LatencyStats 1323717414197 37873655 -122258771 1323717414419
+66.87.4.100 - - [12/Dec/2011:11:16:55 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717415.080000 LatencyStats 1323717414197 37873655 -122258771 1323717415017
+66.87.4.100 - - [12/Dec/2011:11:16:56 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717416.139000 LatencyStats 1323717414197 37873655 -122258771 1323717415965
+66.87.4.100 - - [12/Dec/2011:11:16:57 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717416.918000 LatencyStats 1323717414197 37873655 -122258771 1323717416865
+128.32.112.135 - - [12/Dec/2011:11:16:57 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876564&lng=-122257795 HTTP/1.1" 200 184 - -
+	1:1323717417.643000 LatencyStats 1323717416833 37874767 -122256716 1323717417584
+66.87.4.100 - - [12/Dec/2011:11:16:58 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717418.496000 LatencyStats 1323717417545 37876564 -122257795 1323717418433
+66.87.4.100 - - [12/Dec/2011:11:16:59 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717419.032000 LatencyStats 1323717417545 37876564 -122257795 1323717418976
+66.87.4.100 - - [12/Dec/2011:11:16:59 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717419.989000 LatencyStats 1323717417545 37876564 -122257795 1323717419916
+66.87.4.100 - - [12/Dec/2011:11:17:00 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717420.645000 LatencyStats 1323717417545 37876564 -122257795 1323717420590
+128.32.112.135 - - [12/Dec/2011:11:17:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876946&lng=-122259119 HTTP/1.1" 200 184 - -
+	1:1323717421.082000 LatencyStats 1323717420557 37874765 -122256717 1323717421032
+66.87.4.100 - - [12/Dec/2011:11:17:01 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717421.653000 LatencyStats 1323717420997 37876946 -122259119 1323717421603
+66.87.4.100 - - [12/Dec/2011:11:17:02 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717422.257000 LatencyStats 1323717420997 37876946 -122259119 1323717422206
+66.87.4.100 - - [12/Dec/2011:11:17:02 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717422.844000 LatencyStats 1323717420997 37876946 -122259119 1323717422739
+66.87.4.100 - - [12/Dec/2011:11:17:03 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717423.428000 LatencyStats 1323717420997 37876946 -122259119 1323717423344
+66.87.4.100 - - [12/Dec/2011:11:17:04 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717424.529000 LatencyStats 1323717420997 37876946 -122259119 1323717424478
+128.32.112.135 - - [12/Dec/2011:11:17:04 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874635&lng=-122260929 HTTP/1.1" 200 184 - -
+	1:1323717424.539000 LatencyStats 1323717423310 37874765 -122256717 1323717424480
+66.87.4.100 - - [12/Dec/2011:11:17:05 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717425.769000 LatencyStats 1323717424445 37874635 -122260929 1323717425713
+66.87.4.100 - - [12/Dec/2011:11:17:06 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717426.463000 LatencyStats 1323717424445 37874635 -122260929 1323717426395
+66.87.4.100 - - [12/Dec/2011:11:17:07 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717427.052000 LatencyStats 1323717424445 37874635 -122260929 1323717426999
+66.87.4.100 - - [12/Dec/2011:11:17:07 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717427.579000 LatencyStats 1323717424445 37874635 -122260929 1323717427522
+128.32.112.135 - - [12/Dec/2011:11:17:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875589&lng=-122257747 HTTP/1.1" 200 184 - -
+	1:1323717428.019000 LatencyStats 1323717427485 37874765 -122256717 1323717427952
+66.87.4.100 - - [12/Dec/2011:11:17:08 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717428.116000 LatencyStats 1323717427916 37875589 -122257747 1323717428064
+66.87.4.100 - - [12/Dec/2011:11:17:08 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717428.714000 LatencyStats 1323717427916 37875589 -122257747 1323717428655
+66.87.4.100 - - [12/Dec/2011:11:17:09 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717429.296000 LatencyStats 1323717427916 37875589 -122257747 1323717429231
+66.87.4.100 - - [12/Dec/2011:11:17:09 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717429.859000 LatencyStats 1323717427916 37875589 -122257747 1323717429800
+66.87.4.100 - - [12/Dec/2011:11:17:10 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717430.615000 LatencyStats 1323717427916 37875589 -122257747 1323717430564
+66.87.4.100 - - [12/Dec/2011:11:17:11 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717431.152000 LatencyStats 1323717427916 37875589 -122257747 1323717431092
+128.32.112.135 - - [12/Dec/2011:11:17:11 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875257&lng=-122258965 HTTP/1.1" 200 184 - -
+	1:1323717431.597000 LatencyStats 1323717431058 37874765 -122256717 1323717431513
+66.87.4.100 - - [12/Dec/2011:11:17:11 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717431.937000 LatencyStats 1323717431466 37875257 -122258965 1323717431885
+66.87.4.100 - - [12/Dec/2011:11:17:12 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717432.701000 LatencyStats 1323717431466 37875257 -122258965 1323717432647
+66.87.4.100 - - [12/Dec/2011:11:17:13 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717433.334000 LatencyStats 1323717431466 37875257 -122258965 1323717433274
+66.87.4.100 - - [12/Dec/2011:11:17:14 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717434.012000 LatencyStats 1323717431466 37875257 -122258965 1323717433958
+66.87.4.100 - - [12/Dec/2011:11:17:14 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717434.572000 LatencyStats 1323717431466 37875257 -122258965 1323717434519
+128.32.112.135 - - [12/Dec/2011:11:17:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873519&lng=-122260312 HTTP/1.1" 200 184 - -
+	1:1323717435.127000 LatencyStats 1323717434488 37874765 -122256717 1323717435069
+66.87.4.100 - - [12/Dec/2011:11:17:15 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717435.171000 LatencyStats 1323717435037 37873519 -122260312 1323717435118
+66.87.4.100 - - [12/Dec/2011:11:17:16 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717436.230000 LatencyStats 1323717435037 37873519 -122260312 1323717436182
+66.87.4.100 - - [12/Dec/2011:11:17:17 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717437.364000 LatencyStats 1323717435037 37873519 -122260312 1323717437301
+66.87.4.100 - - [12/Dec/2011:11:17:18 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717438.153000 LatencyStats 1323717435037 37873519 -122260312 1323717438043
+128.32.112.135 - - [12/Dec/2011:11:17:18 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875789&lng=-122258793 HTTP/1.1" 200 184 - -
+	1:1323717438.518000 LatencyStats 1323717437996 37874765 -122256717 1323717438459
+66.87.4.100 - - [12/Dec/2011:11:17:18 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717438.968000 LatencyStats 1323717438417 37875789 -122258793 1323717438914
+66.87.4.100 - - [12/Dec/2011:11:17:19 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717439.782000 LatencyStats 1323717438417 37875789 -122258793 1323717439729
+66.87.4.100 - - [12/Dec/2011:11:17:20 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717440.768000 LatencyStats 1323717438417 37875789 -122258793 1323717440715
+66.87.4.100 - - [12/Dec/2011:11:17:21 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717441.385000 LatencyStats 1323717438417 37875789 -122258793 1323717441328
+66.87.4.100 - - [12/Dec/2011:11:17:21 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717441.889000 LatencyStats 1323717438417 37875789 -122258793 1323717441839
+128.32.112.135 - - [12/Dec/2011:11:17:21 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874769&lng=-122260968 HTTP/1.1" 200 184 - -
+	1:1323717441.977000 LatencyStats 1323717441808 37874767 -122256716 1323717441921
+66.87.4.100 - - [12/Dec/2011:11:17:22 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717442.545000 LatencyStats 1323717441886 37874769 -122260968 1323717442488
+66.87.4.100 - - [12/Dec/2011:11:17:23 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717443.366000 LatencyStats 1323717441886 37874769 -122260968 1323717443316
+66.87.4.100 - - [12/Dec/2011:11:17:24 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717444.207000 LatencyStats 1323717441886 37874769 -122260968 1323717444142
+66.87.4.100 - - [12/Dec/2011:11:17:25 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717444.971000 LatencyStats 1323717441886 37874769 -122260968 1323717444919
+128.32.112.135 - - [12/Dec/2011:11:17:25 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876460&lng=-122257388 HTTP/1.1" 200 184 - -
+	1:1323717445.696000 LatencyStats 1323717444655 37874765 -122256717 1323717445633
+66.87.4.100 - - [12/Dec/2011:11:17:25 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717445.789000 LatencyStats 1323717445539 37876460 -122257388 1323717445740
+66.87.4.100 - - [12/Dec/2011:11:17:26 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717446.534000 LatencyStats 1323717445539 37876460 -122257388 1323717446460
+66.87.4.100 - - [12/Dec/2011:11:17:27 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717447.094000 LatencyStats 1323717445539 37876460 -122257388 1323717447045
+66.87.4.100 - - [12/Dec/2011:11:17:27 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717447.719000 LatencyStats 1323717445539 37876460 -122257388 1323717447665
+66.87.4.100 - - [12/Dec/2011:11:17:28 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717448.220000 LatencyStats 1323717445539 37876460 -122257388 1323717448158
+66.87.4.100 - - [12/Dec/2011:11:17:28 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717448.877000 LatencyStats 1323717445539 37876460 -122257388 1323717448825
+128.32.112.135 - - [12/Dec/2011:11:17:29 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877129&lng=-122260292 HTTP/1.1" 200 184 - -
+	1:1323717449.291000 LatencyStats 1323717448785 37874765 -122256717 1323717449232
+66.87.4.100 - - [12/Dec/2011:11:17:29 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717449.532000 LatencyStats 1323717449201 37877129 -122260292 1323717449475
+66.87.4.100 - - [12/Dec/2011:11:17:30 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717450.138000 LatencyStats 1323717449201 37877129 -122260292 1323717450080
+66.87.4.100 - - [12/Dec/2011:11:17:31 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717451.016000 LatencyStats 1323717449201 37877129 -122260292 1323717450818
+66.87.4.100 - - [12/Dec/2011:11:17:31 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717451.673000 LatencyStats 1323717449201 37877129 -122260292 1323717451604
+66.87.4.100 - - [12/Dec/2011:11:17:32 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717452.414000 LatencyStats 1323717449201 37877129 -122260292 1323717452358
+128.32.112.135 - - [12/Dec/2011:11:17:32 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875739&lng=-122257076 HTTP/1.1" 200 184 - -
+	1:1323717452.685000 LatencyStats 1323717452324 37874765 -122256717 1323717452628
+66.87.4.100 - - [12/Dec/2011:11:17:33 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717453.008000 LatencyStats 1323717452594 37875739 -122257076 1323717452956
+66.87.4.100 - - [12/Dec/2011:11:17:33 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717453.569000 LatencyStats 1323717452594 37875739 -122257076 1323717453503
+66.87.4.100 - - [12/Dec/2011:11:17:34 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717454.155000 LatencyStats 1323717452594 37875739 -122257076 1323717454098
+66.87.4.100 - - [12/Dec/2011:11:17:35 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717455.022000 LatencyStats 1323717452594 37875739 -122257076 1323717454966
+66.87.4.100 - - [12/Dec/2011:11:17:35 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717455.822000 LatencyStats 1323717452594 37875739 -122257076 1323717455768
+128.32.112.135 - - [12/Dec/2011:11:17:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873581&lng=-122260856 HTTP/1.1" 200 184 - -
+	1:1323717456.124000 LatencyStats 1323717455735 37874765 -122256717 1323717456066
+66.87.4.100 - - [12/Dec/2011:11:17:36 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717456.440000 LatencyStats 1323717456029 37873581 -122260856 1323717456391
+66.87.4.100 - - [12/Dec/2011:11:17:37 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717457.010000 LatencyStats 1323717456029 37873581 -122260856 1323717456953
+128.32.112.135 - - [12/Dec/2011:11:17:39 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875979&lng=-122258630 HTTP/1.1" 200 184 - -
+	1:1323717459.445000 LatencyStats 1323717456919 37874765 -122256717 1323717459393
+128.32.112.135 - - [12/Dec/2011:11:17:42 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876047&lng=-122261092 HTTP/1.1" 200 184 - -
+	1:1323717462.864000 LatencyStats 1323717456919 37874765 -122256717 1323717462802
+128.32.112.135 - - [12/Dec/2011:11:17:46 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876582&lng=-122259286 HTTP/1.1" 200 184 - -
+	1:1323717466.396000 LatencyStats 1323717456919 37874765 -122256717 1323717466334
+128.32.112.135 - - [12/Dec/2011:11:17:49 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876959&lng=-122258671 HTTP/1.1" 200 184 - -
+	1:1323717469.904000 LatencyStats 1323717456919 37874765 -122256717 1323717469847
+128.32.112.135 - - [12/Dec/2011:11:17:53 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873278&lng=-122257007 HTTP/1.1" 200 184 - -
+	1:1323717473.499000 LatencyStats 1323717456919 37874765 -122256717 1323717473444
+128.32.112.135 - - [12/Dec/2011:11:17:57 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873736&lng=-122259643 HTTP/1.1" 200 184 - -
+	1:1323717477.144000 LatencyStats 1323717456919 37874765 -122256717 1323717477085
+128.32.112.135 - - [12/Dec/2011:11:18:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877391&lng=-122257969 HTTP/1.1" 200 184 - -
+	1:1323717481.407000 LatencyStats 1323717456919 37874765 -122256717 1323717481255
+128.32.112.135 - - [12/Dec/2011:11:18:05 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874005&lng=-122258074 HTTP/1.1" 200 184 - -
+	1:1323717485.489000 LatencyStats 1323717456919 37874765 -122256717 1323717485440
+128.32.112.135 - - [12/Dec/2011:11:18:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873696&lng=-122259793 HTTP/1.1" 200 184 - -
+	1:1323717488.892000 LatencyStats 1323717456919 37874765 -122256717 1323717488790
+128.32.112.135 - - [12/Dec/2011:11:18:12 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873131&lng=-122260673 HTTP/1.1" 200 184 - -
+	1:1323717492.177000 LatencyStats 1323717456919 37874765 -122256717 1323717492122
+128.32.112.135 - - [12/Dec/2011:11:18:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874037&lng=-122257430 HTTP/1.1" 200 184 - -
+	1:1323717495.614000 LatencyStats 1323717456919 37874765 -122256717 1323717495566
+128.32.112.135 - - [12/Dec/2011:11:18:19 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876555&lng=-122258215 HTTP/1.1" 200 184 - -
+	1:1323717499.152000 LatencyStats 1323717456919 37874765 -122256717 1323717499101
+128.32.112.135 - - [12/Dec/2011:11:18:22 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875113&lng=-122257328 HTTP/1.1" 200 184 - -
+	1:1323717502.606000 LatencyStats 1323717456919 37874765 -122256717 1323717502552
+128.32.112.135 - - [12/Dec/2011:11:18:26 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875041&lng=-122259081 HTTP/1.1" 200 184 - -
+	1:1323717506.070000 LatencyStats 1323717456919 37874765 -122256717 1323717506016
+128.32.112.135 - - [12/Dec/2011:11:18:29 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876869&lng=-122258616 HTTP/1.1" 200 184 - -
+	1:1323717509.611000 LatencyStats 1323717456919 37874765 -122256717 1323717509558
+128.32.112.135 - - [12/Dec/2011:11:18:33 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874179&lng=-122258294 HTTP/1.1" 200 184 - -
+	1:1323717513.143000 LatencyStats 1323717456919 37874765 -122256717 1323717513095
+128.32.112.135 - - [12/Dec/2011:11:18:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876646&lng=-122258476 HTTP/1.1" 200 184 - -
+	1:1323717516.660000 LatencyStats 1323717456919 37874765 -122256717 1323717516608
+66.87.4.100 - - [12/Dec/2011:11:18:37 -0800] "GET /flush_log HTTP/1.1" 500 0 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	3:1323717517.726000 Traceback (most recent call last):
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 269, in main
+	:     util.run_wsgi_app(application)
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 98, in run_wsgi_app
+	:     run_bare_wsgi_app(add_wsgi_middleware(application))
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/webapp/util.py", line 116, in run_bare_wsgi_app
+	:     result = application(env, _start_response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1505, in __call__
+	:     rv = self.router.dispatch(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1253, in default_dispatcher
+	:     return route.handler_adapter(request, response)
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 1077, in __call__
+	:     return handler.dispatch()
+	:   File "/base/python27_runtime/python27_lib/versions/third_party/webapp2-2.3/webapp2.py", line 545, in dispatch
+	:     return method(*args, **kwargs)
+	:   File "/base/data/home/apps/s~pacmanplusplus/1.355332352537461695/main.py", line 241, in get
+	:     for l in ls:
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/ext/db/__init__.py", line 2237, in next
+	:     return self.__model_class.from_entity(self.__iterator.next())
+	:   File "/base/python27_runtime/python27_lib/versions/1/google/appengine/datastore/datastore_query.py", line 2656, in next
+	:     if not next_batch:
+	: DeadlineExceededError
+	: 
+66.87.4.100 - - [12/Dec/2011:11:18:38 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717518.961000 LatencyStats 1323717516569 37876646 -122258476 1323717518903
+66.87.4.100 - - [12/Dec/2011:11:18:39 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717519.634000 LatencyStats 1323717516569 37876646 -122258476 1323717519577
+128.32.112.135 - - [12/Dec/2011:11:18:40 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874630&lng=-122261610 HTTP/1.1" 200 184 - -
+	1:1323717520.089000 LatencyStats 1323717519535 37874765 -122256717 1323717520035
+66.87.4.100 - - [12/Dec/2011:11:18:40 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717520.107000 LatencyStats 1323717516569 37876646 -122258476 1323717520049
+66.87.4.100 - - [12/Dec/2011:11:18:40 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717520.841000 LatencyStats 1323717519999 37874630 -122261610 1323717520789
+66.87.4.100 - - [12/Dec/2011:11:18:41 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717521.522000 LatencyStats 1323717519999 37874630 -122261610 1323717521469
+66.87.4.100 - - [12/Dec/2011:11:18:42 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717522.036000 LatencyStats 1323717519999 37874630 -122261610 1323717521984
+66.87.4.100 - - [12/Dec/2011:11:18:43 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717523.359000 LatencyStats 1323717519999 37874630 -122261610 1323717523171
+128.32.112.135 - - [12/Dec/2011:11:18:43 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872916&lng=-122261652 HTTP/1.1" 200 184 - -
+	1:1323717523.730000 LatencyStats 1323717523137 37874765 -122256717 1323717523501
+66.87.4.100 - - [12/Dec/2011:11:18:44 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717524.318000 LatencyStats 1323717523467 37872916 -122261652 1323717524267
+66.87.4.100 - - [12/Dec/2011:11:18:45 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717525.239000 LatencyStats 1323717523467 37872916 -122261652 1323717525185
+66.87.4.100 - - [12/Dec/2011:11:18:45 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717525.927000 LatencyStats 1323717523467 37872916 -122261652 1323717525868
+66.87.4.100 - - [12/Dec/2011:11:18:46 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717526.688000 LatencyStats 1323717523467 37872916 -122261652 1323717526634
+128.32.112.135 - - [12/Dec/2011:11:18:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876764&lng=-122257807 HTTP/1.1" 200 184 - -
+	1:1323717527.097000 LatencyStats 1323717526600 37874767 -122256716 1323717527044
+66.87.4.100 - - [12/Dec/2011:11:18:47 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717527.709000 LatencyStats 1323717527006 37876764 -122257807 1323717527648
+66.87.4.100 - - [12/Dec/2011:11:18:48 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717528.469000 LatencyStats 1323717527006 37876764 -122257807 1323717528405
+66.87.4.100 - - [12/Dec/2011:11:18:49 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717529.062000 LatencyStats 1323717527006 37876764 -122257807 1323717528998
+66.87.4.100 - - [12/Dec/2011:11:18:50 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717530.422000 LatencyStats 1323717527006 37876764 -122257807 1323717530205
+128.32.112.135 - - [12/Dec/2011:11:18:50 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876965&lng=-122257537 HTTP/1.1" 200 184 - -
+	1:1323717530.632000 LatencyStats 1323717530165 37874765 -122256717 1323717530581
+66.87.4.100 - - [12/Dec/2011:11:18:51 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717531.752000 LatencyStats 1323717530546 37876965 -122257537 1323717531700
+66.87.4.100 - - [12/Dec/2011:11:18:52 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717532.961000 LatencyStats 1323717530546 37876965 -122257537 1323717532906
+66.87.4.100 - - [12/Dec/2011:11:18:53 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717533.581000 LatencyStats 1323717530546 37876965 -122257537 1323717533523
+128.32.112.135 - - [12/Dec/2011:11:18:54 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874761&lng=-122259357 HTTP/1.1" 200 184 - -
+	1:1323717534.289000 LatencyStats 1323717533487 37874765 -122256717 1323717534229
+66.87.4.100 - - [12/Dec/2011:11:18:54 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717534.323000 LatencyStats 1323717534195 37874761 -122259357 1323717534273
+66.87.4.100 - - [12/Dec/2011:11:18:55 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717535.093000 LatencyStats 1323717534195 37874761 -122259357 1323717534907
+66.87.4.100 - - [12/Dec/2011:11:18:55 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717535.871000 LatencyStats 1323717534195 37874761 -122259357 1323717535801
+66.87.4.100 - - [12/Dec/2011:11:18:56 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717536.587000 LatencyStats 1323717534195 37874761 -122259357 1323717536536
+66.87.4.100 - - [12/Dec/2011:11:18:57 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717537.224000 LatencyStats 1323717534195 37874761 -122259357 1323717537170
+128.32.112.135 - - [12/Dec/2011:11:18:57 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875511&lng=-122259368 HTTP/1.1" 200 184 - -
+	1:1323717537.708000 LatencyStats 1323717537133 37874765 -122256717 1323717537657
+66.87.4.100 - - [12/Dec/2011:11:18:58 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717538.003000 LatencyStats 1323717537624 37875511 -122259368 1323717537927
+66.87.4.100 - - [12/Dec/2011:11:18:58 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717538.784000 LatencyStats 1323717537624 37875511 -122259368 1323717538724
+66.87.4.100 - - [12/Dec/2011:11:19:00 -0800] "GET /post_position?gid=84558&lng=-122256717&lat=37874765&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717540.056000 LatencyStats 1323717537624 37875511 -122259368 1323717540002
+66.87.4.100 - - [12/Dec/2011:11:19:01 -0800] "GET /post_position?gid=84558&lng=-122256814&lat=37874926&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717541.159000 LatencyStats 1323717537624 37875511 -122259368 1323717541100
+128.32.112.135 - - [12/Dec/2011:11:19:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876351&lng=-122257624 HTTP/1.1" 200 184 - -
+	1:1323717541.160000 LatencyStats 1323717539968 37874765 -122256717 1323717541103
+66.87.4.100 - - [12/Dec/2011:11:19:02 -0800] "GET /post_position?gid=84558&lng=-122256808&lat=37874926&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717542.108000 LatencyStats 1323717541066 37876351 -122257624 1323717541892
+66.87.4.100 - - [12/Dec/2011:11:19:02 -0800] "GET /post_position?gid=84558&lng=-122256824&lat=37874926&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717542.851000 LatencyStats 1323717541066 37876351 -122257624 1323717542802
+66.87.4.100 - - [12/Dec/2011:11:19:03 -0800] "GET /post_position?gid=84558&lng=-122256841&lat=37874926&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717543.800000 LatencyStats 1323717541066 37876351 -122257624 1323717543746
+128.32.112.135 - - [12/Dec/2011:11:19:04 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875612&lng=-122258392 HTTP/1.1" 200 184 - -
+	1:1323717544.603000 LatencyStats 1323717543714 37874926 -122256841 1323717544552
+66.87.4.100 - - [12/Dec/2011:11:19:04 -0800] "GET /post_position?gid=84558&lng=-122256787&lat=37874931&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717544.607000 LatencyStats 1323717541066 37876351 -122257624 1323717544551
+66.87.4.100 - - [12/Dec/2011:11:19:05 -0800] "GET /post_position?gid=84558&lng=-122256696&lat=37874942&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717545.319000 LatencyStats 1323717544517 37875612 -122258392 1323717545261
+66.87.4.100 - - [12/Dec/2011:11:19:06 -0800] "GET /post_position?gid=84558&lng=-122256749&lat=37874937&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717546.270000 LatencyStats 1323717544517 37875612 -122258392 1323717545958
+66.87.4.100 - - [12/Dec/2011:11:19:07 -0800] "GET /post_position?gid=84558&lng=-122256771&lat=37874953&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717547.004000 LatencyStats 1323717544517 37875612 -122258392 1323717546948
+66.87.4.100 - - [12/Dec/2011:11:19:08 -0800] "GET /post_position?gid=84558&lng=-122256760&lat=37874953&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717547.704000 LatencyStats 1323717544517 37875612 -122258392 1323717547650
+128.32.112.135 - - [12/Dec/2011:11:19:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877084&lng=-122258932 HTTP/1.1" 200 184 - -
+	1:1323717548.177000 LatencyStats 1323717547614 37874953 -122256760 1323717548120
+66.87.4.100 - - [12/Dec/2011:11:19:08 -0800] "GET /post_position?gid=84558&lng=-122256782&lat=37874969&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717548.867000 LatencyStats 1323717548085 37877084 -122258932 1323717548801
+66.87.4.100 - - [12/Dec/2011:11:19:09 -0800] "GET /post_position?gid=84558&lng=-122256787&lat=37874974&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717549.503000 LatencyStats 1323717548085 37877084 -122258932 1323717549450
+66.87.4.100 - - [12/Dec/2011:11:19:10 -0800] "GET /post_position?gid=84558&lng=-122256792&lat=37874979&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717550.505000 LatencyStats 1323717548085 37877084 -122258932 1323717550414
+128.32.112.135 - - [12/Dec/2011:11:19:11 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875549&lng=-122257214 HTTP/1.1" 200 184 - -
+	1:1323717551.737000 LatencyStats 1323717550250 37874979 -122256792 1323717551684
+66.87.4.100 - - [12/Dec/2011:11:19:11 -0800] "GET /post_position?gid=84558&lng=-122256792&lat=37874985&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717551.760000 LatencyStats 1323717548085 37877084 -122258932 1323717551705
+66.87.4.100 - - [12/Dec/2011:11:19:13 -0800] "GET /post_position?gid=84558&lng=-122256792&lat=37874985&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717553.018000 LatencyStats 1323717551636 37875549 -122257214 1323717552962
+66.87.4.100 - - [12/Dec/2011:11:19:13 -0800] "GET /post_position?gid=84558&lng=-122256798&lat=37874979&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717553.897000 LatencyStats 1323717551636 37875549 -122257214 1323717553843
+66.87.4.100 - - [12/Dec/2011:11:19:15 -0800] "GET /post_position?gid=84558&lng=-122256808&lat=37874996&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717555.119000 LatencyStats 1323717551636 37875549 -122257214 1323717555064
+128.32.112.135 - - [12/Dec/2011:11:19:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877478&lng=-122259483 HTTP/1.1" 200 184 - -
+	1:1323717555.383000 LatencyStats 1323717555028 37874996 -122256808 1323717555330
+66.87.4.100 - - [12/Dec/2011:11:19:15 -0800] "GET /post_position?gid=84558&lng=-122256830&lat=37875017&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717555.698000 LatencyStats 1323717555295 37877478 -122259483 1323717555648
+66.87.4.100 - - [12/Dec/2011:11:19:16 -0800] "GET /post_position?gid=84558&lng=-122256851&lat=37875044&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717556.447000 LatencyStats 1323717555295 37877478 -122259483 1323717556386
+66.87.4.100 - - [12/Dec/2011:11:19:17 -0800] "GET /post_position?gid=84558&lng=-122256851&lat=37875044&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717557.473000 LatencyStats 1323717555295 37877478 -122259483 1323717557417
+66.87.4.100 - - [12/Dec/2011:11:19:18 -0800] "GET /post_position?gid=84558&lng=-122256867&lat=37875055&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717558.959000 LatencyStats 1323717555295 37877478 -122259483 1323717558904
+128.32.112.135 - - [12/Dec/2011:11:19:19 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876982&lng=-122261305 HTTP/1.1" 200 184 - -
+	1:1323717558.995000 LatencyStats 1323717557361 37875044 -122256851 1323717558945
+66.87.4.100 - - [12/Dec/2011:11:19:20 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717560.004000 LatencyStats 1323717558909 37876982 -122261305 1323717559950
+66.87.4.100 - - [12/Dec/2011:11:19:21 -0800] "GET /post_position?gid=84558&lng=-122257071&lat=37875194&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717561.147000 LatencyStats 1323717558909 37876982 -122261305 1323717561093
+66.87.4.100 - - [12/Dec/2011:11:19:22 -0800] "GET /post_position?gid=84558&lng=-122257071&lat=37875199&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717562.632000 LatencyStats 1323717558909 37876982 -122261305 1323717562578
+128.32.112.135 - - [12/Dec/2011:11:19:22 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877636&lng=-122258013 HTTP/1.1" 200 184 - -
+	1:1323717562.632000 LatencyStats 1323717561053 37875194 -122257071 1323717562578
+66.87.4.100 - - [12/Dec/2011:11:19:23 -0800] "GET /post_position?gid=84558&lng=-122257071&lat=37875199&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717563.702000 LatencyStats 1323717562538 37877636 -122258013 1323717563649
+66.87.4.100 - - [12/Dec/2011:11:19:24 -0800] "GET /post_position?gid=84558&lng=-122257071&lat=37875199&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717564.482000 LatencyStats 1323717562538 37877636 -122258013 1323717564375
+66.87.4.100 - - [12/Dec/2011:11:19:25 -0800] "GET /post_position?gid=84558&lng=-122257077&lat=37875199&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717565.155000 LatencyStats 1323717562538 37877636 -122258013 1323717565104
+128.32.112.135 - - [12/Dec/2011:11:19:26 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877546&lng=-122259644 HTTP/1.1" 200 184 - -
+	1:1323717566.080000 LatencyStats 1323717565072 37875199 -122257077 1323717566026
+66.87.4.100 - - [12/Dec/2011:11:19:26 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717566.572000 LatencyStats 1323717565986 37877546 -122259644 1323717566352
+66.87.4.100 - - [12/Dec/2011:11:19:28 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717568.020000 LatencyStats 1323717565986 37877546 -122259644 1323717567970
+128.32.112.135 - - [12/Dec/2011:11:19:29 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873344&lng=-122257097 HTTP/1.1" 200 184 - -
+	1:1323717569.406000 LatencyStats 1323717567937 37875494 -122257554 1323717569354
+66.87.4.100 - - [12/Dec/2011:11:19:29 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717569.627000 LatencyStats 1323717569318 37873344 -122257097 1323717569565
+66.87.4.100 - - [12/Dec/2011:11:19:30 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717570.648000 LatencyStats 1323717569318 37873344 -122257097 1323717570598
+66.87.4.100 - - [12/Dec/2011:11:19:31 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717571.529000 LatencyStats 1323717569318 37873344 -122257097 1323717571462
+66.87.4.100 - - [12/Dec/2011:11:19:32 -0800] "GET /post_position?gid=84558&lng=-122257554&lat=37875494&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717572.700000 LatencyStats 1323717569318 37873344 -122257097 1323717572648
+128.32.112.135 - - [12/Dec/2011:11:19:32 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876400&lng=-122261605 HTTP/1.1" 200 184 - -
+	1:1323717572.764000 LatencyStats 1323717572611 37875494 -122257554 1323717572714
+66.87.4.100 - - [12/Dec/2011:11:19:33 -0800] "GET /post_position?gid=84558&lng=-122257393&lat=37875393&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717573.830000 LatencyStats 1323717572679 37876400 -122261605 1323717573771
+66.87.4.100 - - [12/Dec/2011:11:19:34 -0800] "GET /post_position?gid=84558&lng=-122257393&lat=37875393&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717574.439000 LatencyStats 1323717572679 37876400 -122261605 1323717574382
+66.87.4.100 - - [12/Dec/2011:11:19:35 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717575.098000 LatencyStats 1323717572679 37876400 -122261605 1323717575044
+128.32.112.135 - - [12/Dec/2011:11:19:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875578&lng=-122257316 HTTP/1.1" 200 184 - -
+	1:1323717576.174000 LatencyStats 1323717575005 37874767 -122256716 1323717576121
+128.32.112.135 - - [12/Dec/2011:11:19:39 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876712&lng=-122260115 HTTP/1.1" 200 184 - -
+	1:1323717579.700000 LatencyStats 1323717575005 37874767 -122256716 1323717579647
+128.32.112.135 - - [12/Dec/2011:11:19:43 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876353&lng=-122260628 HTTP/1.1" 200 184 - -
+	1:1323717583.088000 LatencyStats 1323717575005 37874767 -122256716 1323717583030
+66.87.4.100 - - [12/Dec/2011:11:19:43 -0800] "GET /post_position?gid=84558&lng=-122257372&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717583.327000 LatencyStats 1323717582995 37876353 -122260628 1323717583274
+66.87.4.100 - - [12/Dec/2011:11:19:44 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717584.289000 LatencyStats 1323717582995 37876353 -122260628 1323717584237
+66.87.4.100 - - [12/Dec/2011:11:19:45 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717585.361000 LatencyStats 1323717582995 37876353 -122260628 1323717585300
+128.32.112.135 - - [12/Dec/2011:11:19:46 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877281&lng=-122260479 HTTP/1.1" 200 184 - -
+	1:1323717586.495000 LatencyStats 1323717585267 37875382 -122257366 1323717586447
+66.87.4.100 - - [12/Dec/2011:11:19:46 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717586.511000 LatencyStats 1323717582995 37876353 -122260628 1323717586453
+66.87.4.100 - - [12/Dec/2011:11:19:47 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717587.456000 LatencyStats 1323717586415 37877281 -122260479 1323717587291
+66.87.4.100 - - [12/Dec/2011:11:19:48 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717588.308000 LatencyStats 1323717586415 37877281 -122260479 1323717588249
+66.87.4.100 - - [12/Dec/2011:11:19:49 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717589.345000 LatencyStats 1323717586415 37877281 -122260479 1323717589294
+128.32.112.135 - - [12/Dec/2011:11:19:50 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874889&lng=-122260178 HTTP/1.1" 200 184 - -
+	1:1323717589.995000 LatencyStats 1323717589261 37875382 -122257366 1323717589941
+66.87.4.100 - - [12/Dec/2011:11:19:50 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717590.302000 LatencyStats 1323717589906 37874889 -122260178 1323717590255
+66.87.4.100 - - [12/Dec/2011:11:19:51 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717591.302000 LatencyStats 1323717589906 37874889 -122260178 1323717591256
+66.87.4.100 - - [12/Dec/2011:11:19:52 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717592.326000 LatencyStats 1323717589906 37874889 -122260178 1323717592267
+66.87.4.100 - - [12/Dec/2011:11:19:53 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717593.542000 LatencyStats 1323717589906 37874889 -122260178 1323717593481
+128.32.112.135 - - [12/Dec/2011:11:19:53 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874156&lng=-122259216 HTTP/1.1" 200 184 - -
+	1:1323717593.828000 LatencyStats 1323717593436 37875382 -122257366 1323717593774
+66.87.4.100 - - [12/Dec/2011:11:19:54 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717594.598000 LatencyStats 1323717593738 37874156 -122259216 1323717594529
+66.87.4.100 - - [12/Dec/2011:11:19:55 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717595.765000 LatencyStats 1323717593738 37874156 -122259216 1323717595713
+66.87.4.100 - - [12/Dec/2011:11:19:56 -0800] "GET /post_position?gid=84558&lng=-122257366&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717596.483000 LatencyStats 1323717593738 37874156 -122259216 1323717596429
+128.32.112.135 - - [12/Dec/2011:11:19:57 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873577&lng=-122259301 HTTP/1.1" 200 184 - -
+	1:1323717597.429000 LatencyStats 1323717596396 37875382 -122257366 1323717597365
+66.87.4.100 - - [12/Dec/2011:11:19:57 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717597.548000 LatencyStats 1323717597331 37873577 -122259301 1323717597490
+66.87.4.100 - - [12/Dec/2011:11:19:58 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717598.300000 LatencyStats 1323717597331 37873577 -122259301 1323717598242
+66.87.4.100 - - [12/Dec/2011:11:19:59 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717599.319000 LatencyStats 1323717597331 37873577 -122259301 1323717599267
+66.87.4.100 - - [12/Dec/2011:11:20:00 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717600.500000 LatencyStats 1323717597331 37873577 -122259301 1323717600439
+128.32.112.135 - - [12/Dec/2011:11:20:00 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874472&lng=-122257880 HTTP/1.1" 200 184 - -
+	1:1323717600.757000 LatencyStats 1323717600380 37875376 -122257361 1323717600700
+66.87.4.100 - - [12/Dec/2011:11:20:01 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717601.579000 LatencyStats 1323717600665 37874472 -122257880 1323717601410
+66.87.4.100 - - [12/Dec/2011:11:20:02 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717602.884000 LatencyStats 1323717600665 37874472 -122257880 1323717602805
+66.87.4.100 - - [12/Dec/2011:11:20:03 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717603.759000 LatencyStats 1323717600665 37874472 -122257880 1323717603576
+128.32.112.135 - - [12/Dec/2011:11:20:04 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876239&lng=-122258168 HTTP/1.1" 200 184 - -
+	1:1323717604.071000 LatencyStats 1323717603544 37875376 -122257361 1323717604019
+128.32.112.135 - - [12/Dec/2011:11:20:07 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877103&lng=-122257471 HTTP/1.1" 200 184 - -
+	1:1323717607.523000 LatencyStats 1323717603544 37875376 -122257361 1323717607380
+128.32.112.135 - - [12/Dec/2011:11:20:11 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877470&lng=-122258314 HTTP/1.1" 200 184 - -
+	1:1323717611.041000 LatencyStats 1323717603544 37875376 -122257361 1323717610987
+66.87.4.100 - - [12/Dec/2011:11:20:13 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717613.164000 LatencyStats 1323717610951 37877470 -122258314 1323717613105
+128.32.112.135 - - [12/Dec/2011:11:20:14 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874725&lng=-122260788 HTTP/1.1" 200 184 - -
+	1:1323717614.654000 LatencyStats 1323717613070 37874767 -122256716 1323717614598
+128.32.112.135 - - [12/Dec/2011:11:20:18 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875277&lng=-122258968 HTTP/1.1" 200 184 - -
+	1:1323717618.092000 LatencyStats 1323717613070 37874767 -122256716 1323717618042
+128.32.112.135 - - [12/Dec/2011:11:20:21 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877464&lng=-122257073 HTTP/1.1" 200 184 - -
+	1:1323717621.483000 LatencyStats 1323717613070 37874767 -122256716 1323717621420
+128.32.112.135 - - [12/Dec/2011:11:20:25 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874605&lng=-122259469 HTTP/1.1" 200 184 - -
+	1:1323717625.106000 LatencyStats 1323717613070 37874767 -122256716 1323717625054
+128.32.112.135 - - [12/Dec/2011:11:20:28 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874524&lng=-122257000 HTTP/1.1" 200 184 - -
+	1:1323717628.554000 LatencyStats 1323717613070 37874767 -122256716 1323717628468
+66.87.4.100 - - [12/Dec/2011:11:20:30 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717630.207000 LatencyStats 1323717628430 37874524 -122257000 1323717630141
+66.87.4.100 - - [12/Dec/2011:11:20:30 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717630.725000 LatencyStats 1323717628430 37874524 -122257000 1323717630677
+66.87.4.100 - - [12/Dec/2011:11:20:31 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717631.913000 LatencyStats 1323717628430 37874524 -122257000 1323717631860
+128.32.112.135 - - [12/Dec/2011:11:20:32 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874698&lng=-122257238 HTTP/1.1" 200 184 - -
+	1:1323717632.374000 LatencyStats 1323717631819 37875376 -122257361 1323717632313
+66.87.4.100 - - [12/Dec/2011:11:20:32 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717632.658000 LatencyStats 1323717632281 37874698 -122257238 1323717632598
+66.87.4.100 - - [12/Dec/2011:11:20:33 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717633.552000 LatencyStats 1323717632281 37874698 -122257238 1323717633500
+66.87.4.100 - - [12/Dec/2011:11:20:34 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717634.863000 LatencyStats 1323717632281 37874698 -122257238 1323717634793
+66.87.4.100 - - [12/Dec/2011:11:20:35 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717635.832000 LatencyStats 1323717632281 37874698 -122257238 1323717635767
+128.32.112.135 - - [12/Dec/2011:11:20:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873798&lng=-122256673 HTTP/1.1" 200 184 - -
+	1:1323717636.051000 LatencyStats 1323717635733 37875376 -122257361 1323717635995
+66.87.4.100 - - [12/Dec/2011:11:20:36 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717636.485000 LatencyStats 1323717635957 37873798 -122256673 1323717636426
+66.87.4.100 - - [12/Dec/2011:11:20:37 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717637.282000 LatencyStats 1323717635957 37873798 -122256673 1323717637223
+66.87.4.100 - - [12/Dec/2011:11:20:38 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717638.853000 LatencyStats 1323717635957 37873798 -122256673 1323717638800
+128.32.112.135 - - [12/Dec/2011:11:20:39 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873934&lng=-122259914 HTTP/1.1" 200 184 - -
+	1:1323717639.378000 LatencyStats 1323717638758 37875376 -122257361 1323717639272
+66.87.4.100 - - [12/Dec/2011:11:20:40 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717640.189000 LatencyStats 1323717639235 37873934 -122259914 1323717640128
+66.87.4.100 - - [12/Dec/2011:11:20:41 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717641.140000 LatencyStats 1323717639235 37873934 -122259914 1323717640966
+66.87.4.100 - - [12/Dec/2011:11:20:42 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717642.382000 LatencyStats 1323717639235 37873934 -122259914 1323717642320
+128.32.112.135 - - [12/Dec/2011:11:20:42 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874955&lng=-122257600 HTTP/1.1" 200 184 - -
+	1:1323717642.661000 LatencyStats 1323717642287 37875376 -122257361 1323717642608
+66.87.4.100 - - [12/Dec/2011:11:20:43 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717643.468000 LatencyStats 1323717642571 37874955 -122257600 1323717643409
+66.87.4.100 - - [12/Dec/2011:11:20:44 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717644.650000 LatencyStats 1323717642571 37874955 -122257600 1323717644594
+66.87.4.100 - - [12/Dec/2011:11:20:45 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717645.815000 LatencyStats 1323717642571 37874955 -122257600 1323717645763
+128.32.112.135 - - [12/Dec/2011:11:20:45 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873735&lng=-122259816 HTTP/1.1" 200 184 - -
+	1:1323717645.936000 LatencyStats 1323717645730 37875376 -122257361 1323717645883
+66.87.4.100 - - [12/Dec/2011:11:20:46 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717646.570000 LatencyStats 1323717645848 37873735 -122259816 1323717646517
+66.87.4.100 - - [12/Dec/2011:11:20:47 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717647.653000 LatencyStats 1323717645848 37873735 -122259816 1323717647594
+128.32.112.135 - - [12/Dec/2011:11:20:49 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875533&lng=-122256901 HTTP/1.1" 200 184 - -
+	1:1323717649.335000 LatencyStats 1323717647538 37875376 -122257361 1323717649279
+66.87.4.100 - - [12/Dec/2011:11:20:49 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717649.348000 LatencyStats 1323717645848 37873735 -122259816 1323717649278
+66.87.4.100 - - [12/Dec/2011:11:20:50 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717650.090000 LatencyStats 1323717649241 37875533 -122256901 1323717650027
+66.87.4.100 - - [12/Dec/2011:11:20:51 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717651.172000 LatencyStats 1323717649241 37875533 -122256901 1323717651109
+66.87.4.100 - - [12/Dec/2011:11:20:52 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717652.130000 LatencyStats 1323717649241 37875533 -122256901 1323717652068
+128.32.112.135 - - [12/Dec/2011:11:20:52 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876581&lng=-122260414 HTTP/1.1" 200 184 - -
+	1:1323717652.911000 LatencyStats 1323717652019 37875376 -122257361 1323717652854
+66.87.4.100 - - [12/Dec/2011:11:20:53 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717653.233000 LatencyStats 1323717652816 37876581 -122260414 1323717653176
+66.87.4.100 - - [12/Dec/2011:11:20:54 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717654.076000 LatencyStats 1323717652816 37876581 -122260414 1323717654022
+66.87.4.100 - - [12/Dec/2011:11:20:55 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717655.247000 LatencyStats 1323717652816 37876581 -122260414 1323717655192
+128.32.112.135 - - [12/Dec/2011:11:20:56 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877310&lng=-122256960 HTTP/1.1" 200 184 - -
+	1:1323717656.414000 LatencyStats 1323717655145 37875376 -122257361 1323717656358
+66.87.4.100 - - [12/Dec/2011:11:20:56 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717656.421000 LatencyStats 1323717652816 37876581 -122260414 1323717656359
+66.87.4.100 - - [12/Dec/2011:11:20:57 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717657.631000 LatencyStats 1323717656305 37877310 -122256960 1323717657560
+66.87.4.100 - - [12/Dec/2011:11:20:58 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717658.247000 LatencyStats 1323717656305 37877310 -122256960 1323717658195
+66.87.4.100 - - [12/Dec/2011:11:20:59 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717659.273000 LatencyStats 1323717656305 37877310 -122256960 1323717659216
+128.32.112.135 - - [12/Dec/2011:11:21:00 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875071&lng=-122258093 HTTP/1.1" 200 184 - -
+	1:1323717660.046000 LatencyStats 1323717659175 37875376 -122257361 1323717659988
+66.87.4.100 - - [12/Dec/2011:11:21:01 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717661.262000 LatencyStats 1323717659939 37875071 -122258093 1323717661205
+66.87.4.100 - - [12/Dec/2011:11:21:02 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717662.245000 LatencyStats 1323717659939 37875071 -122258093 1323717662192
+66.87.4.100 - - [12/Dec/2011:11:21:03 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717663.510000 LatencyStats 1323717659939 37875071 -122258093 1323717663455
+128.32.112.135 - - [12/Dec/2011:11:21:03 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873000&lng=-122258831 HTTP/1.1" 200 184 - -
+	1:1323717663.957000 LatencyStats 1323717663422 37875376 -122257361 1323717663892
+66.87.4.100 - - [12/Dec/2011:11:21:04 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717664.342000 LatencyStats 1323717663827 37873000 -122258831 1323717664167
+66.87.4.100 - - [12/Dec/2011:11:21:05 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717665.508000 LatencyStats 1323717663827 37873000 -122258831 1323717665199
+128.32.112.135 - - [12/Dec/2011:11:21:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874952&lng=-122260300 HTTP/1.1" 200 184 - -
+	1:1323717668.301000 LatencyStats 1323717665166 37874767 -122256716 1323717668238
+128.32.112.135 - - [12/Dec/2011:11:21:11 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874165&lng=-122261104 HTTP/1.1" 200 184 - -
+	1:1323717671.661000 LatencyStats 1323717665166 37874767 -122256716 1323717671601
+128.32.112.135 - - [12/Dec/2011:11:21:14 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875401&lng=-122258389 HTTP/1.1" 200 184 - -
+	1:1323717674.959000 LatencyStats 1323717665166 37874767 -122256716 1323717674905
+128.32.112.135 - - [12/Dec/2011:11:21:18 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876041&lng=-122258963 HTTP/1.1" 200 184 - -
+	1:1323717678.324000 LatencyStats 1323717665166 37874767 -122256716 1323717678264
+66.87.4.100 - - [12/Dec/2011:11:21:19 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717679.452000 LatencyStats 1323717678228 37876041 -122258963 1323717679404
+66.87.4.100 - - [12/Dec/2011:11:21:20 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717680.443000 LatencyStats 1323717678228 37876041 -122258963 1323717680245
+66.87.4.100 - - [12/Dec/2011:11:21:21 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717681.332000 LatencyStats 1323717678228 37876041 -122258963 1323717681263
+128.32.112.135 - - [12/Dec/2011:11:21:21 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874200&lng=-122260810 HTTP/1.1" 200 184 - -
+	1:1323717681.780000 LatencyStats 1323717681230 37875382 -122257361 1323717681731
+66.87.4.100 - - [12/Dec/2011:11:21:22 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717682.571000 LatencyStats 1323717681692 37874200 -122260810 1323717682510
+66.87.4.100 - - [12/Dec/2011:11:21:24 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717684.010000 LatencyStats 1323717681692 37874200 -122260810 1323717683861
+66.87.4.100 - - [12/Dec/2011:11:21:25 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717685.334000 LatencyStats 1323717681692 37874200 -122260810 1323717684664
+128.32.112.135 - - [12/Dec/2011:11:21:25 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873718&lng=-122259634 HTTP/1.1" 200 184 - -
+	1:1323717685.413000 LatencyStats 1323717684628 37875382 -122257361 1323717685347
+66.87.4.100 - - [12/Dec/2011:11:21:25 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717685.901000 LatencyStats 1323717685308 37873718 -122259634 1323717685843
+66.87.4.100 - - [12/Dec/2011:11:21:26 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717686.941000 LatencyStats 1323717685308 37873718 -122259634 1323717686891
+66.87.4.100 - - [12/Dec/2011:11:21:27 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717687.722000 LatencyStats 1323717685308 37873718 -122259634 1323717687665
+128.32.112.135 - - [12/Dec/2011:11:21:28 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876055&lng=-122257760 HTTP/1.1" 200 184 - -
+	1:1323717688.899000 LatencyStats 1323717687631 37875382 -122257361 1323717688831
+66.87.4.100 - - [12/Dec/2011:11:21:28 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717688.987000 LatencyStats 1323717688794 37876055 -122257760 1323717688925
+66.87.4.100 - - [12/Dec/2011:11:21:30 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717690.546000 LatencyStats 1323717688794 37876055 -122257760 1323717690492
+66.87.4.100 - - [12/Dec/2011:11:21:31 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717691.193000 LatencyStats 1323717688794 37876055 -122257760 1323717691139
+66.87.4.100 - - [12/Dec/2011:11:21:32 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717692.368000 LatencyStats 1323717688794 37876055 -122257760 1323717692307
+128.32.112.135 - - [12/Dec/2011:11:21:32 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876038&lng=-122256671 HTTP/1.1" 200 184 - -
+	1:1323717692.370000 LatencyStats 1323717691100 37875382 -122257361 1323717692306
+66.87.4.100 - - [12/Dec/2011:11:21:33 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717693.021000 LatencyStats 1323717692265 37876038 -122256671 1323717692945
+66.87.4.100 - - [12/Dec/2011:11:21:33 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717693.910000 LatencyStats 1323717692265 37876038 -122256671 1323717693847
+66.87.4.100 - - [12/Dec/2011:11:21:34 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717694.692000 LatencyStats 1323717692265 37876038 -122256671 1323717694635
+66.87.4.100 - - [12/Dec/2011:11:21:35 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717695.797000 LatencyStats 1323717692265 37876038 -122256671 1323717695738
+128.32.112.135 - - [12/Dec/2011:11:21:35 -0800] "GET /post_position?gid=84558&pid=85539&lat=37872855&lng=-122259735 HTTP/1.1" 200 184 - -
+	1:1323717695.804000 LatencyStats 1323717694546 37875382 -122257361 1323717695739
+66.87.4.100 - - [12/Dec/2011:11:21:36 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717696.570000 LatencyStats 1323717695703 37872855 -122259735 1323717696516
+66.87.4.100 - - [12/Dec/2011:11:21:37 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717697.635000 LatencyStats 1323717695703 37872855 -122259735 1323717697562
+66.87.4.100 - - [12/Dec/2011:11:21:38 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875382&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717698.797000 LatencyStats 1323717695703 37872855 -122259735 1323717698743
+66.87.4.100 - - [12/Dec/2011:11:21:39 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717699.526000 LatencyStats 1323717695703 37872855 -122259735 1323717699470
+128.32.112.135 - - [12/Dec/2011:11:21:39 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877328&lng=-122257985 HTTP/1.1" 200 184 - -
+	1:1323717699.625000 LatencyStats 1323717699437 37875376 -122257361 1323717699565
+66.87.4.100 - - [12/Dec/2011:11:21:40 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717700.534000 LatencyStats 1323717699502 37877328 -122257985 1323717700479
+66.87.4.100 - - [12/Dec/2011:11:21:41 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717701.535000 LatencyStats 1323717699502 37877328 -122257985 1323717701482
+66.87.4.100 - - [12/Dec/2011:11:21:42 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717702.292000 LatencyStats 1323717699502 37877328 -122257985 1323717702239
+66.87.4.100 - - [12/Dec/2011:11:21:43 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717703.339000 LatencyStats 1323717699502 37877328 -122257985 1323717703254
+128.32.112.135 - - [12/Dec/2011:11:21:44 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873499&lng=-122260400 HTTP/1.1" 200 184 - -
+	1:1323717704.204000 LatencyStats 1323717703213 37875376 -122257361 1323717704145
+66.87.4.100 - - [12/Dec/2011:11:21:44 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717704.340000 LatencyStats 1323717704111 37873499 -122260400 1323717704285
+66.87.4.100 - - [12/Dec/2011:11:21:45 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717705.532000 LatencyStats 1323717704111 37873499 -122260400 1323717705475
+66.87.4.100 - - [12/Dec/2011:11:21:46 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717706.525000 LatencyStats 1323717704111 37873499 -122260400 1323717706461
+66.87.4.100 - - [12/Dec/2011:11:21:47 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717707.518000 LatencyStats 1323717704111 37873499 -122260400 1323717707444
+128.32.112.135 - - [12/Dec/2011:11:21:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873320&lng=-122258070 HTTP/1.1" 200 184 - -
+	1:1323717707.976000 LatencyStats 1323717707403 37875376 -122257356 1323717707900
+66.87.4.100 - - [12/Dec/2011:11:21:48 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717708.540000 LatencyStats 1323717707863 37873320 -122258070 1323717708479
+66.87.4.100 - - [12/Dec/2011:11:21:49 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717709.720000 LatencyStats 1323717707863 37873320 -122258070 1323717709661
+66.87.4.100 - - [12/Dec/2011:11:21:50 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717710.892000 LatencyStats 1323717707863 37873320 -122258070 1323717710809
+66.87.4.100 - - [12/Dec/2011:11:21:51 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717711.656000 LatencyStats 1323717707863 37873320 -122258070 1323717711565
+128.32.112.135 - - [12/Dec/2011:11:21:51 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873969&lng=-122256880 HTTP/1.1" 200 184 - -
+	1:1323717711.672000 LatencyStats 1323717710771 37875376 -122257361 1323717711584
+66.87.4.100 - - [12/Dec/2011:11:21:52 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717712.522000 LatencyStats 1323717711525 37873969 -122256880 1323717712432
+66.87.4.100 - - [12/Dec/2011:11:21:53 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717713.340000 LatencyStats 1323717711525 37873969 -122256880 1323717713276
+66.87.4.100 - - [12/Dec/2011:11:21:54 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717714.307000 LatencyStats 1323717711525 37873969 -122256880 1323717714245
+128.32.112.135 - - [12/Dec/2011:11:21:55 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874669&lng=-122258898 HTTP/1.1" 200 184 - -
+	1:1323717715.467000 LatencyStats 1323717714211 37874767 -122256716 1323717715413
+128.32.112.135 - - [12/Dec/2011:11:21:58 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877654&lng=-122256717 HTTP/1.1" 200 184 - -
+	1:1323717718.863000 LatencyStats 1323717714211 37874767 -122256716 1323717718803
+128.32.112.135 - - [12/Dec/2011:11:22:02 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873793&lng=-122259796 HTTP/1.1" 200 184 - -
+	1:1323717722.284000 LatencyStats 1323717714211 37874767 -122256716 1323717722232
+128.32.112.135 - - [12/Dec/2011:11:22:05 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876534&lng=-122258107 HTTP/1.1" 200 184 - -
+	1:1323717725.745000 LatencyStats 1323717714211 37874767 -122256716 1323717725684
+128.32.112.135 - - [12/Dec/2011:11:22:09 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874295&lng=-122257867 HTTP/1.1" 200 184 - -
+	1:1323717729.230000 LatencyStats 1323717714211 37874767 -122256716 1323717729175
+66.87.4.100 - - [12/Dec/2011:11:22:11 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717731.485000 LatencyStats 1323717729125 37874295 -122257867 1323717731428
+66.87.4.100 - - [12/Dec/2011:11:22:12 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717732.638000 LatencyStats 1323717729125 37874295 -122257867 1323717732587
+128.32.112.135 - - [12/Dec/2011:11:22:12 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876228&lng=-122261094 HTTP/1.1" 200 184 - -
+	1:1323717732.721000 LatencyStats 1323717732544 37875376 -122257356 1323717732635
+66.87.4.100 - - [12/Dec/2011:11:22:13 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717733.322000 LatencyStats 1323717732603 37876228 -122261094 1323717733268
+66.87.4.100 - - [12/Dec/2011:11:22:14 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717734.018000 LatencyStats 1323717732603 37876228 -122261094 1323717733958
+66.87.4.100 - - [12/Dec/2011:11:22:15 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717735.139000 LatencyStats 1323717732603 37876228 -122261094 1323717735048
+66.87.4.100 - - [12/Dec/2011:11:22:16 -0800] "GET /post_position?gid=84558&lng=-122257361&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717736.176000 LatencyStats 1323717732603 37876228 -122261094 1323717736106
+128.32.112.135 - - [12/Dec/2011:11:22:16 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876909&lng=-122260874 HTTP/1.1" 200 184 - -
+	1:1323717736.179000 LatencyStats 1323717734967 37875376 -122257356 1323717736106
+66.87.4.100 - - [12/Dec/2011:11:22:17 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717737.295000 LatencyStats 1323717736060 37876909 -122260874 1323717737123
+66.87.4.100 - - [12/Dec/2011:11:22:18 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717738.523000 LatencyStats 1323717736060 37876909 -122260874 1323717738466
+66.87.4.100 - - [12/Dec/2011:11:22:19 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717739.413000 LatencyStats 1323717736060 37876909 -122260874 1323717739259
+128.32.112.135 - - [12/Dec/2011:11:22:19 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876942&lng=-122258862 HTTP/1.1" 200 184 - -
+	1:1323717739.640000 LatencyStats 1323717739210 37875376 -122257356 1323717739585
+66.87.4.100 - - [12/Dec/2011:11:22:20 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717740.253000 LatencyStats 1323717739553 37876942 -122258862 1323717740201
+66.87.4.100 - - [12/Dec/2011:11:22:20 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717740.935000 LatencyStats 1323717739553 37876942 -122258862 1323717740879
+66.87.4.100 - - [12/Dec/2011:11:22:21 -0800] "GET /post_position?gid=84558&lng=-122257356&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717741.775000 LatencyStats 1323717739553 37876942 -122258862 1323717741546
+128.32.112.135 - - [12/Dec/2011:11:22:23 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874871&lng=-122258599 HTTP/1.1" 200 184 - -
+	1:1323717743.231000 LatencyStats 1323717741502 37875376 -122257356 1323717743119
+128.32.112.135 - - [12/Dec/2011:11:22:26 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874355&lng=-122259735 HTTP/1.1" 200 184 - -
+	1:1323717746.881000 LatencyStats 1323717741502 37875376 -122257356 1323717746824
+128.32.112.135 - - [12/Dec/2011:11:22:31 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873492&lng=-122258901 HTTP/1.1" 200 184 - -
+	1:1323717751.133000 LatencyStats 1323717741502 37875376 -122257356 1323717750971
+128.32.112.135 - - [12/Dec/2011:11:22:34 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876564&lng=-122257448 HTTP/1.1" 200 184 - -
+	1:1323717754.807000 LatencyStats 1323717741502 37875376 -122257356 1323717754741
+128.32.112.135 - - [12/Dec/2011:11:22:38 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874606&lng=-122261133 HTTP/1.1" 200 184 - -
+	1:1323717758.326000 LatencyStats 1323717741502 37875376 -122257356 1323717758270
+66.87.4.100 - - [12/Dec/2011:11:22:38 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717758.836000 LatencyStats 1323717758235 37874606 -122261133 1323717758771
+66.87.4.100 - - [12/Dec/2011:11:22:39 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717759.758000 LatencyStats 1323717758235 37874606 -122261133 1323717759694
+66.87.4.100 - - [12/Dec/2011:11:22:40 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717760.872000 LatencyStats 1323717758235 37874606 -122261133 1323717760811
+128.32.112.135 - - [12/Dec/2011:11:22:41 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873311&lng=-122256812 HTTP/1.1" 200 184 - -
+	1:1323717761.831000 LatencyStats 1323717760758 37875376 -122257350 1323717761764
+66.87.4.100 - - [12/Dec/2011:11:22:41 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717761.831000 LatencyStats 1323717758235 37874606 -122261133 1323717761764
+66.87.4.100 - - [12/Dec/2011:11:22:43 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717763.049000 LatencyStats 1323717761715 37873311 -122256812 1323717762946
+66.87.4.100 - - [12/Dec/2011:11:22:43 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717763.617000 LatencyStats 1323717761715 37873311 -122256812 1323717763564
+66.87.4.100 - - [12/Dec/2011:11:22:44 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717764.551000 LatencyStats 1323717761715 37873311 -122256812 1323717764499
+128.32.112.135 - - [12/Dec/2011:11:22:45 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873318&lng=-122261460 HTTP/1.1" 200 184 - -
+	1:1323717765.288000 LatencyStats 1323717764465 37874767 -122256716 1323717765225
+128.32.112.135 - - [12/Dec/2011:11:22:48 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877061&lng=-122261295 HTTP/1.1" 200 184 - -
+	1:1323717768.696000 LatencyStats 1323717764465 37874767 -122256716 1323717768636
+128.32.112.135 - - [12/Dec/2011:11:22:52 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876943&lng=-122260415 HTTP/1.1" 200 184 - -
+	1:1323717772.244000 LatencyStats 1323717764465 37874767 -122256716 1323717772187
+128.32.112.135 - - [12/Dec/2011:11:22:55 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873354&lng=-122257234 HTTP/1.1" 200 184 - -
+	1:1323717775.697000 LatencyStats 1323717764465 37874767 -122256716 1323717775566
+128.32.112.135 - - [12/Dec/2011:11:22:59 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876792&lng=-122260919 HTTP/1.1" 200 184 - -
+	1:1323717779.133000 LatencyStats 1323717764465 37874767 -122256716 1323717779066
+66.87.4.100 - - [12/Dec/2011:11:23:00 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717780.586000 LatencyStats 1323717779032 37876792 -122260919 1323717780531
+66.87.4.100 - - [12/Dec/2011:11:23:01 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717781.493000 LatencyStats 1323717779032 37876792 -122260919 1323717781438
+66.87.4.100 - - [12/Dec/2011:11:23:02 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717782.651000 LatencyStats 1323717779032 37876792 -122260919 1323717782597
+128.32.112.135 - - [12/Dec/2011:11:23:02 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873051&lng=-122261531 HTTP/1.1" 200 184 - -
+	1:1323717782.659000 LatencyStats 1323717781399 37875376 -122257350 1323717782604
+66.87.4.100 - - [12/Dec/2011:11:23:03 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717783.626000 LatencyStats 1323717782561 37873051 -122261531 1323717783405
+66.87.4.100 - - [12/Dec/2011:11:23:04 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717784.386000 LatencyStats 1323717782561 37873051 -122261531 1323717784329
+128.32.112.135 - - [12/Dec/2011:11:23:06 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876421&lng=-122259216 HTTP/1.1" 200 184 - -
+	1:1323717786.268000 LatencyStats 1323717784288 37875376 -122257350 1323717786211
+128.32.112.135 - - [12/Dec/2011:11:23:09 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875781&lng=-122259348 HTTP/1.1" 200 184 - -
+	1:1323717789.658000 LatencyStats 1323717784288 37875376 -122257350 1323717789609
+128.32.112.135 - - [12/Dec/2011:11:23:13 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875621&lng=-122259640 HTTP/1.1" 200 184 - -
+	1:1323717793.516000 LatencyStats 1323717784288 37875376 -122257350 1323717793460
+66.87.4.100 - - [12/Dec/2011:11:23:17 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717797.147000 LatencyStats 1323717793427 37875621 -122259640 1323717797085
+128.32.112.135 - - [12/Dec/2011:11:23:17 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877409&lng=-122257751 HTTP/1.1" 200 184 - -
+	1:1323717797.704000 LatencyStats 1323717797050 37875376 -122257350 1323717797641
+66.87.4.100 - - [12/Dec/2011:11:23:17 -0800] "GET /post_position?gid=84558&lng=-122257350&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717797.877000 LatencyStats 1323717797603 37877409 -122257751 1323717797819
+66.87.4.100 - - [12/Dec/2011:11:23:18 -0800] "GET /post_position?gid=84558&lng=-122257345&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717798.892000 LatencyStats 1323717797603 37877409 -122257751 1323717798841
+66.87.4.100 - - [12/Dec/2011:11:23:19 -0800] "GET /post_position?gid=84558&lng=-122257339&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717799.862000 LatencyStats 1323717797603 37877409 -122257751 1323717799684
+128.32.112.135 - - [12/Dec/2011:11:23:21 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874629&lng=-122260119 HTTP/1.1" 200 184 - -
+	1:1323717801.245000 LatencyStats 1323717799624 37875376 -122257339 1323717801192
+66.87.4.100 - - [12/Dec/2011:11:23:21 -0800] "GET /post_position?gid=84558&lng=-122257339&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717801.244000 LatencyStats 1323717797603 37877409 -122257751 1323717801192
+66.87.4.100 - - [12/Dec/2011:11:23:22 -0800] "GET /post_position?gid=84558&lng=-122257339&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717802.839000 LatencyStats 1323717801152 37874629 -122260119 1323717802776
+66.87.4.100 - - [12/Dec/2011:11:23:23 -0800] "GET /post_position?gid=84558&lng=-122257339&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717803.840000 LatencyStats 1323717801152 37874629 -122260119 1323717803529
+66.87.4.100 - - [12/Dec/2011:11:23:25 -0800] "GET /post_position?gid=84558&lng=-122257334&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717805.044000 LatencyStats 1323717801152 37874629 -122260119 1323717804991
+128.32.112.135 - - [12/Dec/2011:11:23:25 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875137&lng=-122260000 HTTP/1.1" 200 184 - -
+	1:1323717805.047000 LatencyStats 1323717803493 37875376 -122257339 1323717804991
+66.87.4.100 - - [12/Dec/2011:11:23:25 -0800] "GET /post_position?gid=84558&lng=-122257329&lat=37875376&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717805.919000 LatencyStats 1323717804955 37875137 -122260000 1323717805867
+66.87.4.100 - - [12/Dec/2011:11:23:27 -0800] "GET /post_position?gid=84558&lng=-122257329&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717806.660000 LatencyStats 1323717804955 37875137 -122260000 1323717806606
+128.32.112.135 - - [12/Dec/2011:11:23:28 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874125&lng=-122257982 HTTP/1.1" 200 184 - -
+	1:1323717808.475000 LatencyStats 1323717806570 37875371 -122257329 1323717808424
+66.87.4.100 - - [12/Dec/2011:11:23:28 -0800] "GET /post_position?gid=84558&lng=-122257329&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717808.481000 LatencyStats 1323717804955 37875137 -122260000 1323717808425
+66.87.4.100 - - [12/Dec/2011:11:23:29 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717809.170000 LatencyStats 1323717808391 37874125 -122257982 1323717809114
+66.87.4.100 - - [12/Dec/2011:11:23:30 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717810.091000 LatencyStats 1323717808391 37874125 -122257982 1323717810016
+66.87.4.100 - - [12/Dec/2011:11:23:30 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717810.872000 LatencyStats 1323717808391 37874125 -122257982 1323717810819
+66.87.4.100 - - [12/Dec/2011:11:23:31 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717811.485000 LatencyStats 1323717808391 37874125 -122257982 1323717811420
+128.32.112.135 - - [12/Dec/2011:11:23:31 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876197&lng=-122258258 HTTP/1.1" 200 184 - -
+	1:1323717811.983000 LatencyStats 1323717811386 37875371 -122257323 1323717811867
+66.87.4.100 - - [12/Dec/2011:11:23:32 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717812.407000 LatencyStats 1323717811809 37876197 -122258258 1323717812345
+66.87.4.100 - - [12/Dec/2011:11:23:33 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717813.638000 LatencyStats 1323717811809 37876197 -122258258 1323717813576
+66.87.4.100 - - [12/Dec/2011:11:23:34 -0800] "GET /post_position?gid=84558&lng=-122257323&lat=37875371&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717814.296000 LatencyStats 1323717811809 37876197 -122258258 1323717814241
+128.32.112.135 - - [12/Dec/2011:11:23:35 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877521&lng=-122259662 HTTP/1.1" 200 184 - -
+	1:1323717815.385000 LatencyStats 1323717814204 37875371 -122257323 1323717815331
+66.87.4.100 - - [12/Dec/2011:11:23:35 -0800] "GET /post_position?gid=84558&lng=-122256716&lat=37874767&pid=85538 HTTP/1.1" 200 184 - "Dalvik/1.2.0 (Linux; U; Android 2.2.2; VM670 Build/FRG83G)"
+	1:1323717815.604000 LatencyStats 1323717815298 37877521 -122259662 1323717815545
+128.32.112.135 - - [12/Dec/2011:11:23:39 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876396&lng=-122261239 HTTP/1.1" 200 184 - -
+	1:1323717819.207000 LatencyStats 1323717815504 37874767 -122256716 1323717819151
+128.32.112.135 - - [12/Dec/2011:11:23:43 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873839&lng=-122261391 HTTP/1.1" 200 184 - -
+	1:1323717823.491000 LatencyStats 1323717815504 37874767 -122256716 1323717823438
+128.32.112.135 - - [12/Dec/2011:11:23:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876132&lng=-122260405 HTTP/1.1" 200 184 - -
+	1:1323717827.025000 LatencyStats 1323717815504 37874767 -122256716 1323717826969
+128.32.112.135 - - [12/Dec/2011:11:23:50 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874520&lng=-122260696 HTTP/1.1" 200 184 - -
+	1:1323717830.702000 LatencyStats 1323717815504 37874767 -122256716 1323717830648
+128.32.112.135 - - [12/Dec/2011:11:23:54 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877713&lng=-122259647 HTTP/1.1" 200 184 - -
+	1:1323717834.252000 LatencyStats 1323717815504 37874767 -122256716 1323717834172
+128.32.112.135 - - [12/Dec/2011:11:23:57 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875201&lng=-122256998 HTTP/1.1" 200 184 - -
+	1:1323717837.681000 LatencyStats 1323717815504 37874767 -122256716 1323717837626
+128.32.112.135 - - [12/Dec/2011:11:24:01 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875064&lng=-122259636 HTTP/1.1" 200 184 - -
+	1:1323717841.176000 LatencyStats 1323717815504 37874767 -122256716 1323717841127
+128.32.112.135 - - [12/Dec/2011:11:24:04 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874117&lng=-122261121 HTTP/1.1" 200 184 - -
+	1:1323717844.778000 LatencyStats 1323717815504 37874767 -122256716 1323717844723
+128.32.112.135 - - [12/Dec/2011:11:24:08 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876725&lng=-122257266 HTTP/1.1" 200 184 - -
+	1:1323717848.184000 LatencyStats 1323717815504 37874767 -122256716 1323717848129
+128.32.112.135 - - [12/Dec/2011:11:24:11 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876373&lng=-122257282 HTTP/1.1" 200 184 - -
+	1:1323717851.616000 LatencyStats 1323717815504 37874767 -122256716 1323717851559
+128.32.112.135 - - [12/Dec/2011:11:24:15 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873614&lng=-122260194 HTTP/1.1" 200 184 - -
+	1:1323717855.066000 LatencyStats 1323717815504 37874767 -122256716 1323717855011
+128.32.112.135 - - [12/Dec/2011:11:24:18 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877551&lng=-122257070 HTTP/1.1" 200 184 - -
+	1:1323717858.673000 LatencyStats 1323717815504 37874767 -122256716 1323717858573
+128.32.112.135 - - [12/Dec/2011:11:24:23 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874585&lng=-122259320 HTTP/1.1" 200 184 - -
+	1:1323717862.992000 LatencyStats 1323717815504 37874767 -122256716 1323717862939
+128.32.112.135 - - [12/Dec/2011:11:24:26 -0800] "GET /post_position?gid=84558&pid=85539&lat=37877553&lng=-122261368 HTTP/1.1" 200 184 - -
+	1:1323717866.543000 LatencyStats 1323717815504 37874767 -122256716 1323717866490
+128.32.112.135 - - [12/Dec/2011:11:24:30 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874998&lng=-122257338 HTTP/1.1" 200 184 - -
+	1:1323717870.117000 LatencyStats 1323717815504 37874767 -122256716 1323717870026
+128.32.112.135 - - [12/Dec/2011:11:24:33 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874831&lng=-122257113 HTTP/1.1" 200 184 - -
+	1:1323717873.537000 LatencyStats 1323717815504 37874767 -122256716 1323717873480
+128.32.112.135 - - [12/Dec/2011:11:24:36 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876099&lng=-122259409 HTTP/1.1" 200 184 - -
+	1:1323717876.839000 LatencyStats 1323717815504 37874767 -122256716 1323717876783
+128.32.112.135 - - [12/Dec/2011:11:24:40 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873267&lng=-122261154 HTTP/1.1" 200 184 - -
+	1:1323717880.377000 LatencyStats 1323717815504 37874767 -122256716 1323717880325
+128.32.112.135 - - [12/Dec/2011:11:24:43 -0800] "GET /post_position?gid=84558&pid=85539&lat=37876315&lng=-122258346 HTTP/1.1" 200 184 - -
+	1:1323717883.879000 LatencyStats 1323717815504 37874767 -122256716 1323717883811
+128.32.112.135 - - [12/Dec/2011:11:24:47 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873294&lng=-122256822 HTTP/1.1" 200 184 - -
+	1:1323717887.263000 LatencyStats 1323717815504 37874767 -122256716 1323717887207
+128.32.112.135 - - [12/Dec/2011:11:24:51 -0800] "GET /post_position?gid=84558&pid=85539&lat=37875875&lng=-122257373 HTTP/1.1" 200 184 - -
+	1:1323717891.220000 LatencyStats 1323717815504 37874767 -122256716 1323717891169
+128.32.112.135 - - [12/Dec/2011:11:24:55 -0800] "GET /post_position?gid=84558&pid=85539&lat=37874621&lng=-122260380 HTTP/1.1" 200 184 - -
+	1:1323717895.423000 LatencyStats 1323717815504 37874767 -122256716 1323717895368
+128.32.112.135 - - [12/Dec/2011:11:24:58 -0800] "GET /post_position?gid=84558&pid=85539&lat=37873648&lng=-122257535 HTTP/1.1" 200 184 - -
+	1:1323717898.892000 LatencyStats 1323717815504 37874767 -122256716 1323717898831
