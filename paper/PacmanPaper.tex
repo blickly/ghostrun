@@ -161,9 +161,10 @@ message, increasing complexity.
 We used a python webserver running on top of Google's Appengine
 service. Google's Appengine service provides many advantage for our
 Android app. The service has a built-in high replication datastore,
-which implements the Paxos Algorithm to synchronize data across data
-centers in real time. The datastore supports high availability for
-reads and writes, making it suitable for our purposes.
+which implements the Paxos Algorithm~\cite{lamport01paxos} to
+synchronize data across data centers in real time. The datastore
+supports high availability for reads and writes, making it suitable
+for our purposes.
 
 The server is responsible for the following features:
 
@@ -370,7 +371,7 @@ will resolve the concurrency part of the problem.
 Note that there is nothing preventing the users from cheating by
 requesting to eat all the dots at the beginning of the game. This
 security/unfairness aspect of the game is further discussed in the
-future work section \ref{future}. We aim to build a fast system for
+future work (Section~\ref{future}). We aim to build a fast system for
 friendly players, not adversarial programmers.
 
 \section{Measurements}
@@ -491,6 +492,7 @@ following section.
 \section{Conclusion}
 
 \section{Future work}
+\label{future}
 
 There is much to be done with this project. Our implementation did not
 take into account of all the security issue and potential unfairness
