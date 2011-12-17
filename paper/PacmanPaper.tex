@@ -8,6 +8,41 @@
 \usepackage{color}
 \usepackage{url}
 
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]''
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
 \newcommand{\FIXME}[1]{{\color{red}\textbf{FIXME: #1}}}
 
 \title{A Pacman Game
@@ -48,7 +83,24 @@ where players leave their game machine and physically move around the
 real world as a logical extension of this progression
 
 \section{Gameplay}
-Our game \FIXME{Describe game overview from a player's perspective}.
+Our game provide a completely different gameplay experience for
+Android gamers. We make use the GPS sensor on the phone to allow games
+of Pacman.
+
+The user can start by creating a map on his/her neighborhood in the
+map editor, a part of our game. The map editor allows users to save
+customized maps to the server. During gameplay, the user simply
+selects the desired map to start a new game. The server will generate
+dots on the map and display the same dots for all the players. After
+starting a new game, the user can invite his/her friends to join the
+game.
+
+Each player pick a role for the game, either a pacman or a ghost. The
+goal of the pacman is to eat all the food dots on the map, while the
+ghost aims to eliminate all the pacmans. Just like a normal pacman
+game on the computer, this game require strategy. Moreover, due to the
+delay in position updates, it also requires the player to infer other
+player's moves to avoid a loss.
 
 \section{System Architecture}
 
@@ -183,12 +235,143 @@ that uses the same server protocol to simulate players in the
 game. The concept and design of ``fakephones'' will be discussed more
 in depth in \ref{measuring}.
 
+The client responsibilities are fairly simple. There are two part of
+the client: Map editor and the Game Map view.
 
+\subsubsection{Map Editor}
+The Map editor allow users to create customized maps and save it to
+the server. The map editor uses Google's direction API
+\cite{GoogleDirection} to find routes between two points. This
+functionality is used when a user draws a map in the map editor. The
+map editor also allows users to link points and delete points (along
+with any related edges).
 
+%\begin{figure}
+%\centering
+%\includegraphics[scale=0.4]{figs/MapEditor}
+%\label{fig:MapEditor}
+%\caption{The Map Editor provide the users with a simple interface to create new maps for gameplay.}
+%\end{figure}
 
+\subsubsection{Game Mapview}
+The Game Mapview is used for the main course of this app - the
+Gameplay. 
 
-\subsubsection{Responsbilities}
+When a player is starting a game, he/she request to join a game and
+the server returns a list of food dots (described in
+\ref{newgame}). The game mapview is responsible for displaying the
+dots and removing dots when a user is close enough to some food dots.
 
+During the game, the Game Mapview is charged with the task of updating
+the server whenever the location of the player changes. The Game
+Mapview listens on the GPS location. Whenever there is a GPS location
+change, the client use the new location to update the
+gameplay. Although this is not entirely true, the client doesn't
+update the server with every single new GPS location, since this can
+easily consume all the phone's resources and bandwidth. The client
+actually waits $0.5$ seconds between updating locations. The Game
+Mapview will get a response with all the other player's location and
+display those players on the map.
+
+The client's game loop for a Pacman can be described as follows:
+
+\begin{enumerate}
+\item If player's location is updated $0.5$ within of the last update, we do nothing.
+\item Else, we update our location on the server and get other player's updated location.
+\item We also check if our location is close enough to any food dots. If so, request to eat a food dot.
+\end{enumerate}
+
+The client's game loop for a ghost is even simpler and can be descrbied as:
+
+\begin{enumerate}
+\item If player's location is updated $0.5$ within of the last update, we do nothing.
+\item Else, we update our location on the server and get other player's updated location.
+\end{enumerate}
+
+Since the interaction between a pacman and a ghost is resolved on the
+server, the game loop for a client is even simpler. However, it might
+be a better design decision to implement this interaction in a way
+that is similar to dots eating to reduce the amount of processing done
+on the server.
+
+\subsection{Game Protocol/API}
+To implement the system described above, we came up with our own API.
+
+\subsubsection{SaveMapHandler}
+This handler is responsible for handling the storing of new maps. A
+request to this handler should contain the contents of the map. The
+return value would be an unique ID for the map.
+
+\emph{Input:} map content in json.\\
+\emph{Output:} Unique ID associate with that map.
+
+\medskip
+\begin{lstlisting}[caption=Map format in json]
+[{ 'id' : <int>,
+   'user_added' : <bool>,
+   'lat' : <int>,
+   'lng' : <int>,
+   'neighbors' : [<int>]}+]
+}]
+\end{lstlisting}
+
+\subsubsection{GetMapsHandler}
+This handler allow users to get a list of map ID to allow the users to
+pick the map to start a new game with.
+
+\emph{Input:} No input required.\\
+\emph{Output:} A list of get ID in json format.
+
+\subsubsection{NewGameHandler}\label{newgame}
+This handler create new games on the server for players to join for a
+game of pacman. We required a map ID to start the game.
+
+\emph{Input:} Map ID to start the game.\\
+\emph{Output:} Returns the unique game ID associated with the game.
+
+When a game is create on the server, food dots are generated for the
+map. Each player that joins the game will receive a list of existing
+dot in the map.
+
+\subsubsection{JoinGameHandler}
+A player may join a game by requesting this handler with a game ID and
+a location (defined as a latitude and longitude).
+
+\emph{Input:} Game ID to identify which game to join.\\
+\emph{Output:} Returns a list of existing food dots and a player ID.\\
+
+The handler returns an unique player ID, which is used by the player
+to update it's location. The server will be able to distinguish the
+player with this player ID.
+
+\subsubsection{GameMoveHandler}
+Whenever a player's GPS location gets updated, we want to make sure
+that the player's location on the server is also updated.
+
+\emph{Input:} player's ID, game ID and player's location.\\
+\emph{Output:} Returns all the other player's location in json and
+whether the player is dead.
+
+The handler is responsible for updating the player's location on the
+server and also returning the other player's location. Furthermore,
+any elimination of players are resolved on the server. Therefore, the
+response includes the status of the player (i.e. dead or alive).
+
+\subsubsection{EatDotHandler}
+Lastly, this handler is created as an optimization to improve the
+latency on the server. Instead of having the server do the dot eating
+calculation, we decided to have the phone calculate this locally. The
+clients will specify which dots the player is eating and the server
+will resolve the concurrency part of the problem.
+
+\emph{Input:} game ID and dot ID.\\
+\emph{Output:} Score that the player gained for eating the dot.
+
+Note that there is nothing preventing the users from cheating by
+requesting to eat all the dots at the beginning of the game. This
+security/unfairness aspect of the game is further discussed in the
+future work section \ref{future}. We aim to build a fast system for
+friendly players, not adversarial programmers.
 
 \section{Measurements}
 \subsection{Measuring Latency}\label{measuring}
@@ -313,9 +496,12 @@ the client more security could make the game more fair.
 
 Currently, the icons of the player updates through ``teleportation''
 due to the lag cause of latency. More work can be done to predict and
-display the diretion and speed of each player to make the animation of
-each player's movement be more smooth, without making the gameplay
-slow.
+display the direction and speed of each player to make the animation
+of each player's movement more smooth, without making the gameplay
+slower. With this feature, the movement of players won't appear to be
+choppy. The user shouldn't be able to tell that the GPS location
+updates every couple seconds. Instead, it would feel like the players'
+locations are constantly being updated.
 
 Furthermore, the Android mapview is somewhat slow, since the overlay
 items (a ghost or a pacman) includes other useful features (click
@@ -338,6 +524,25 @@ ended or has been abandoned by the players. A game lives on forever
 until we delete the data from the datastore on Appengine. The AI could
 serve as a garbage collector for our server and terminate games that
 does not have any players in it.
+
+On the other note, we can also add more features to make the gameplay
+experience more interesting. One of the idea could be the existence of
+power pallets on the map. The pacmans will enter an invincible mode
+for a short duration and would be able to eliminate ghosts from the
+map. Other features could include a fog of war environment, an idea
+taken from an undergraduate AI class, CS 188. During fog of war, the
+player can only see other player that are within a certain
+distance. The existence of food dots are also inaccurate. Pacman
+player can see where the food dots are, but they won't be able to know
+if the dots are still there until they are close enough. 
+
+Other even more exciting features can include a special featured
+map. Equal number of players start on each side of the map. When a
+player is on his/her own side, the player is a ghost and can eliminate
+intruders. When a player is on the enemy's side of the map, the player
+is a pacman and can eat dots. The team loses when it runs out of
+dots. These variations of pacman games provide some defensive and less
+deterministic gameplay experience.
 
 
 \bibliographystyle{plain}
