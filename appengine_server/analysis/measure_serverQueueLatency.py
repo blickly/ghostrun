@@ -31,11 +31,16 @@ def munge(filename, num_phones):
   for line in open(filename, 'r'):
     if "LatencyStat" not in line:
       continue
-    result = parseline(line)
+    try:
+      result = parseline(line)
+    except:
+      continue
     now = result['time']
     latencies = [now - o[0] for o in result['others']]
-    print "%d;%d;%d;%f;%s" % (num_phones, now, result['pid'],
-        avg(latencies), json.dumps(latencies))
+    print num_phones, now, result['pid'], \
+        min(latencies), avg(latencies), max(latencies)
+    #print "%d;%d;%d;$f;%f;%f;%s" % (num_phones, now, result['pid'],
+    #    min(latencies), avg(latencies), max(latencies), json.dumps(latencies))
 
 
 def main():
