@@ -83,24 +83,38 @@ where players leave their game machine and physically move around the
 real world as a logical extension of this progression
 
 \section{Gameplay}
-Our game provide a completely different gameplay experience for
-Android gamers. We make use the GPS sensor on the phone to allow games
-of Pacman.
+The game presented here is an untraditional game on the Android platform.
+Rather than using the touchscreen or keys as input to control the gameplay,
+we make use the GPS sensor on the phone to allow players to control their character.
 
-The user can start by creating a map on his/her neighborhood in the
-map editor, a part of our game. The map editor allows users to save
-customized maps to the server. During gameplay, the user simply
-selects the desired map to start a new game. The server will generate
-dots on the map and display the same dots for all the players. After
-starting a new game, the user can invite his/her friends to join the
+The game is an homage to Namco's Pacman, in which a player tries to eat all
+of the dots in a maze without getting eaten by enemy ghosts. In the original
+game, the player is controlled by a joystick and the maps are fixed, whereas
+in our augmented reality version, the player is controlled by moving around,
+and the map is dependent on the layout of the real-life streets in the
+neighborhood in which the game is being played.
+
+
+In our game, the user can creating a map of his/her neighborhood with
+the included map editor.
+This defines which area of their real life neighborhood are in bounds during
+the course of the game, and where the other players, enemies, and ghosts are
+created.
+The map editor also allows users to save customized maps to a server,
+so that the maps can be persistantly backed up, and also so that players
+can share maps with each other.
+
+In order to start playing, a user simply selects the desired map to start a new game. The player is then presented with a map of their real world location populated with dots that must be run over to be ``eaten". Unlike traditional pacman, our game is multiplayer, allowing multiple players to play in a single game.
+After starting a new game, the user can invite his/her friends to join the
 game.
 
-Each player pick a role for the game, either a pacman or a ghost. The
-goal of the pacman is to eat all the food dots on the map, while the
-ghost aims to eliminate all the pacmans. Just like a normal pacman
-game on the computer, this game require strategy. Moreover, due to the
-delay in position updates, it also requires the player to infer other
-player's moves to avoid a loss.
+Each player must pick a role in the game, either a pacman or a ghost. The
+goal of the pacman character is to eat all the food dots on the map, and
+a score count is kept of how many dots each pacman player has eaten.
+The ghost players, on the other hand, aim to eliminate all the pacman players.
+Just like the original pacman game this game requires strategy to plan out a
+path to eat dots, but also to anticipate the movement of other real human
+players.
 
 \section{System Architecture}
 
