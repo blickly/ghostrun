@@ -19,13 +19,18 @@ def parseline(line):
 
 
 def munge(filename):
+  lastT4 = None
   for line in open(filename, 'r'):
     if "post_position" not in line:
       continue
     result = parseline(line)
+    if lastT4 == None:
+      lastT4 = result['t4']
+      continue
 
-    print result['numPlayer'], result['dbm'], result['ecio'], result['t2']-result['t1'], result['t3']-result['t2'], result['t4']-result['t3']
+    print result['numPlayer'], result['dbm'], result['ecio'], result['t2']-result['t1'], result['t3']-result['t2'], result['t4']-result['t3'], result['t1']-lastT4, result['t4']-lastT4
 
+    lastT4 = result['t4']
 
 def main():
   for name in sys.argv[1:]:

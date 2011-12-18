@@ -44,6 +44,7 @@
 }
 
 \newcommand{\FIXME}[1]{{\color{red}\textbf{FIXME: #1}}}
+\newcommand{\javaCode}[1]{\texttt{#1}}
 
 \title{A Pacman Game
 \numberofauthors{2}
@@ -540,7 +541,37 @@ Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency
 \end{figure}
 
 \subsubsection{Phone Signal Strength}
-\FIXME{Measure and write}
+One more concern about having a multiplayer game was about the effect of the
+signal strength of the phone on the latency of the communication with the
+server. The concern was that as players ran through parts of the map that
+may have had less strong cell signal, then the latency to the server may
+increase. If this happened, then the game would be much less effective when
+played in arbitrary locations that may have less strong cell coverage.
+
+In order to test this hypothesis, we ran a series of experiments with a simple
+one player game, moving the phone around to a variety of positions with
+different signal strength, logging the latency of server queries and the
+signal strength measurements available from the Android platform. Since the
+phones used in this experiment were CDMA phones, the interfaces available
+%
+%   public int getCdmaDbm ()
+% Get the CDMA RSSI value in dBm
+%
+%   public int getCdmaEcio ()
+% Get the CDMA Ec/Io value in dB*10
+%
+to us were the \javaCode{getCdma()} and \javaCode{getCdmaEcio()} interfaces
+of the \javaCode{android.telephony.SignalStrength}
+provider~\cite{SignalStrengthAndroidDocs}.
+The \javaCode{getCdma()} method returns the value of the received
+signal strength indicator, which is a measure of the power of the received
+signal is dBm.
+The \javaCode{getCdmaEcio()} method returns a ratio of the pilot signal energy
+to total received energy in units of dB, and is a measure of how clean the
+received signal is.
+
+The server latencies with respect to the received signal strength and pilot
+signal are shown in Figure~\ref{fig:latencyVsRSSI} and Figure~\ref{fig:latencyVsEcIo}, respectively. We were surprised to find that there was no correlation between signal strength ans latency to query the server. While it is clear that a phone with a sufficiently weak signal will be unable to query the server at all, we found that for signal strengths within the normal operating ranges that we were able to vary, signal strength had no effect on latency. For other applications, it may be interesting to compare signal strength with data bandwidth, but we did not try to make any such comparison.
 
 \begin{figure}
 \centering

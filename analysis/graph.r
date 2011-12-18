@@ -36,7 +36,7 @@ title( main="Update Rate (detailed)")
 dev.copy2pdf(file="phoneUpdateRateDetailed.pdf")
 
 
-signalStrength <- read.table("signalStrength.log", header=FALSE, col.names=c("realphones","dbm","ecio","d1","d2","d3"))
+signalStrength <- read.table("signalStrength.log", header=FALSE, col.names=c("realphones","dbm","ecio","d1","d2","d3","sleeptime","updater"))
 
 dmeans = aggregate(signalStrength, by=list(signalStrength$dbm), FUN=mean)
 ddevs = aggregate(signalStrength, by=list(signalStrength$dbm), FUN=sd)
