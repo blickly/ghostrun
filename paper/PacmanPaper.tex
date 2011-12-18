@@ -504,12 +504,12 @@ to 256, we measured data about latencies of various operations both on the
 server and on the real phone.
 
 \subsubsection{Server Queueing Latency}
-\begin{figure}
+\begin{figure*}
 \centering
-\includegraphics[scale=0.5]{figs/serverQueueLatency}
+\includegraphics[scale=0.6]{figs/serverQueueLatency}
 \label{fig:serverQueueLatency}
 \caption{The highest, lowest, and average age of data fetched from the server.}
-\end{figure}
+\end{figure*}
 
 In Figure~\ref{fig:serverQueueLatency}, we see the measure of the time that each GPS reading waits on the server before it gets read.  Since a single query of the \url{/post_position} method returns the GPS location of all other players, measuring the freshness of the data returned is not straightforward. If each of the GPS readings contained in the response to one request have been waiting on the server for different amounts of time, what is the most useful way to discuss the queue wait time for that request?
 One way to measure this freshness would be to keep track of which GPS reading contained in the response was oldest, and report that as the queue time for the response. Another way would be to look at the newest GPS reading contained in the response. Yet another way would be to simply take the average queue wait time of all the readings contained in the response.

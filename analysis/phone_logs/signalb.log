@@ -1,0 +1,805 @@
+ice(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:43:26.583 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:43:26.673 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:44:26.613 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:44:26.723 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:45:26.633 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:45:26.753 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:46:26.656 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:46:26.746 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:47:26.676 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:47:26.766 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:48:26.706 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:48:26.856 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:49:26.726 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:49:26.826 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:50:26.749 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:50:26.819 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:51:26.769 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:51:26.869 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:52:26.799 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:52:27.249 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d72938}
+12-18 09:53:18.094 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45d65690
+12-18 09:53:18.994 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+12-18 09:53:19.044 W/InputManagerService(  114): Ignoring hideSoftInput of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45b83500
+12-18 09:53:23.654 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.apps.genie.geniewidget/.activities.NewsActivity }
+12-18 09:53:25.194 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.VIEW dat=http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2011/12/17/SPJ71MDT9V.DTL cmp=com.android.browser/.BrowserActivity (has extras) }
+12-18 09:53:25.334 I/WindowManager(  114): Setting rotation to 1, animFlags=1
+12-18 09:53:25.344 I/ActivityManager(  114): Config changed: { scale=1.0 imsi=310/0 loc=en_US touch=3 keys=1/1/2 nav=1/1 orien=2 layout=18 uiMode=17 seq=12}
+12-18 09:53:25.414 W/WindowManager(  114): No window to dispatch pointer action 0
+12-18 09:53:25.614 W/InputManagerService(  114): Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@45bf0708 (uid=10039 pid=745)
+12-18 09:53:25.614 W/InputManagerService(  114): Client not active, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45e307d0
+12-18 09:53:25.684 W/WindowManager(  114): No window to dispatch pointer action 1
+12-18 09:53:26.834 I/WindowManager(  114): Setting rotation to 0, animFlags=1
+12-18 09:53:26.844 I/ActivityManager(  114): Config changed: { scale=1.0 imsi=310/0 loc=en_US touch=3 keys=1/1/2 nav=1/1 orien=1 layout=18 uiMode=17 seq=13}
+12-18 09:53:26.944 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e2e608}
+12-18 09:53:27.064 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45e045a8
+12-18 09:53:27.104 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e2e608}
+12-18 09:53:30.554 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45d2a1b0
+12-18 09:53:47.664 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45d9fa10
+12-18 09:53:48.324 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.google.android.apps.genie.geniewidget/.activities.NewsActivity }
+12-18 09:53:51.424 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.Preferences }
+12-18 09:53:53.174 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.LocationPreferences }
+12-18 09:53:59.644 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45bb9408
+12-18 09:54:10.454 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45ad4cb8
+12-18 09:54:21.454 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.Preferences }
+12-18 09:54:22.954 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.LocationPreferences }
+12-18 09:54:25.834 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.CustomLocationPreferences }
+12-18 09:54:26.964 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45ef1440}
+12-18 09:54:26.994 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45ef1440}
+12-18 09:54:49.954 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45ee3fb0
+12-18 09:54:58.474 I/ActivityManager(  114): Starting activity: Intent { cmp=com.google.android.apps.genie.geniewidget/.activities.CustomLocationPreferences }
+12-18 09:55:07.024 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45d509c8
+12-18 09:55:26.984 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:55:27.024 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:55:51.644 D/StatusBar(  114): DISABLE_EXPAND: yes
+12-18 09:56:27.014 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:56:27.104 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:57:27.034 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:57:27.154 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:58:27.067 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:58:27.177 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:59:27.087 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 09:59:27.177 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+--------- beginning of /dev/log/main
+12-18 09:59:27.507 D/dalvikvm(  521): GC_FOR_MALLOC freed 3055 objects / 470264 bytes in 185ms
+12-18 09:59:32.387 D/dalvikvm( 3515): GC_EXPLICIT freed 283 objects / 10672 bytes in 178ms
+12-18 09:59:37.407 D/dalvikvm(  227): GC_EXPLICIT freed 317 objects / 13920 bytes in 188ms
+12-18 09:59:42.417 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88064 bytes in 204ms
+12-18 10:00:27.117 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:00:27.207 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:01:27.146 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:01:27.236 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:01:27.556 D/dalvikvm(  521): GC_FOR_MALLOC freed 3060 objects / 470848 bytes in 185ms
+12-18 10:01:32.446 D/dalvikvm( 3515): GC_EXPLICIT freed 283 objects / 10728 bytes in 181ms
+12-18 10:01:37.466 D/dalvikvm(  227): GC_EXPLICIT freed 247 objects / 10616 bytes in 192ms
+12-18 10:01:42.456 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88296 bytes in 187ms
+12-18 10:02:27.166 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:02:27.266 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:03:27.196 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:03:27.286 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:03:27.626 D/dalvikvm(  521): GC_FOR_MALLOC freed 3055 objects / 470664 bytes in 185ms
+12-18 10:03:32.506 D/dalvikvm( 3515): GC_EXPLICIT freed 283 objects / 10752 bytes in 180ms
+12-18 10:03:37.496 D/dalvikvm(  227): GC_EXPLICIT freed 247 objects / 10616 bytes in 177ms
+12-18 10:03:42.536 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88448 bytes in 216ms
+12-18 10:03:56.159 D/dalvikvm(  873): GC_FOR_MALLOC freed 7881 objects / 331520 bytes in 176ms
+12-18 10:03:56.349 D/dalvikvm(  873): GC_FOR_MALLOC freed 12721 objects / 509360 bytes in 97ms
+12-18 10:04:05.339 D/dalvikvm(  873): GC_EXPLICIT freed 6288 objects / 379608 bytes in 202ms
+12-18 10:04:23.839 D/dalvikvm(  187): GC_FOR_MALLOC freed 13668 objects / 525400 bytes in 164ms
+12-18 10:04:27.219 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:04:27.599 D/dalvikvm(  114): GC_FOR_MALLOC freed 26145 objects / 1298712 bytes in 369ms
+12-18 10:04:27.709 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:05:27.249 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:05:27.349 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:05:27.679 D/dalvikvm(  521): GC_FOR_MALLOC freed 3003 objects / 469000 bytes in 185ms
+12-18 10:05:32.549 D/dalvikvm( 3515): GC_EXPLICIT freed 285 objects / 10888 bytes in 179ms
+12-18 10:05:37.559 D/dalvikvm(  227): GC_EXPLICIT freed 267 objects / 11536 bytes in 190ms
+12-18 10:05:42.589 D/dalvikvm(  521): GC_EXPLICIT freed 1075 objects / 88880 bytes in 213ms
+12-18 10:06:27.269 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:06:27.369 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:07:27.299 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:07:27.389 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:07:27.929 D/dalvikvm(  521): GC_FOR_MALLOC freed 3055 objects / 470992 bytes in 187ms
+12-18 10:07:32.609 D/dalvikvm( 3515): GC_EXPLICIT freed 330 objects / 13712 bytes in 179ms
+12-18 10:07:37.619 D/dalvikvm(  227): GC_EXPLICIT freed 308 objects / 12976 bytes in 191ms
+12-18 10:07:42.629 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88704 bytes in 197ms
+12-18 10:08:27.322 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:08:27.412 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:09:23.042 D/dalvikvm(  414): GC_EXPLICIT freed 43 objects / 2272 bytes in 160ms
+12-18 10:09:27.352 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:09:27.482 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:09:27.822 D/dalvikvm(  521): GC_FOR_MALLOC freed 3060 objects / 471416 bytes in 246ms
+12-18 10:09:32.662 D/dalvikvm( 3515): GC_EXPLICIT freed 268 objects / 10256 bytes in 178ms
+12-18 10:09:37.212 I/power   (  114): *** set_screen_state 1
+12-18 10:09:37.232 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:09:37.392 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:09:37.412 I/WindowManager(  114): home key test1= 2004
+12-18 10:09:37.412 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:09:37.612 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:09:37.612 I/dun_service(  268): Post event 1
+12-18 10:09:37.622 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:09:37.622 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:09:42.442 I/power   (  114): *** set_screen_state 0
+12-18 10:09:42.582 W/IInputConnectionWrapper(  724): getExtractedText on inactive InputConnection
+12-18 10:09:42.582 W/IInputConnectionWrapper(  724): getExtractedText on inactive InputConnection
+12-18 10:09:44.932 D/dalvikvm(  187): GC_FOR_MALLOC freed 13697 objects / 525728 bytes in 170ms
+12-18 10:09:47.802 D/dalvikvm(  227): GC_EXPLICIT freed 251 objects / 10824 bytes in 185ms
+12-18 10:09:52.832 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88808 bytes in 209ms
+12-18 10:10:27.372 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:10:27.462 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:10:52.065 I/power   (  114): *** set_screen_state 1
+12-18 10:10:52.072 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:10:52.212 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:10:52.222 I/WindowManager(  114): home key test1= 2004
+12-18 10:10:52.222 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:10:53.102 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45eab4c0
+12-18 10:10:53.912 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:10:53.912 I/dun_service(  268): Post event 1
+12-18 10:10:53.922 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:10:53.922 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:10:54.142 I/WindowManager(  114): home key test1= 1
+12-18 10:10:54.142 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:10:54.324 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:10:54.352 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+12-18 10:10:54.382 W/InputManagerService(  114): Ignoring hideSoftInput of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45e5d860
+12-18 10:10:56.792 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.ghostrun/.activity.HomeView }
+12-18 10:10:58.462 I/ActivityManager(  114): Starting activity: Intent { cmp=com.ghostrun/.activity.GameMenu }
+12-18 10:10:58.712 I/ActivityManager(  114): Displayed activity com.ghostrun/.activity.GameMenu: 246 ms (total 246 ms)
+12-18 10:11:12.512 I/ActivityManager(  114): Starting activity: Intent { cmp=com.ghostrun/.activity.MultiplayerMapView (has extras) }
+12-18 10:11:12.552 W/MapActivity( 1032): Recycling dispatcher com.google.googlenav.datarequest.DataRequestDispatcher@459c5e38
+12-18 10:11:12.562 V/MapActivity( 1032): Recycling map object.
+12-18 10:11:12.592 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:11:12.592 D/GpsLocationProvider(  114): startNavigating
+12-18 10:11:12.632 V/GpsLocationProvider(  114): called startNavigating() as 0
+12-18 10:11:12.642 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:11:12.642 I/Maps.MyLocationOverlay( 1032): Request updates from gps
+12-18 10:11:12.642 I/Maps.MyLocationOverlay( 1032): Request updates from network
+12-18 10:11:12.652 I/MapActivity( 1032): Handling network change notification:CONNECTED
+12-18 10:11:12.652 E/MapActivity( 1032): Couldn't get connection factory client
+12-18 10:11:12.762 D/GpsLocationProvider(  114): Acquiring wakelock
+12-18 10:11:12.782 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 807.0
+12-18 10:11:12.872 I/ActivityManager(  114): Displayed activity com.ghostrun/.activity.MultiplayerMapView: 346 ms (total 346 ms)
+12-18 10:11:12.892 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 807.0
+12-18 10:11:14.222 D/GpsLocationProvider(  114): TTFF: 1465
+12-18 10:11:14.632 D/dalvikvm(  521): GC_FOR_MALLOC freed 3177 objects / 477920 bytes in 212ms
+12-18 10:11:16.202 D/dalvikvm(  521): GC_FOR_MALLOC freed 5415 objects / 473688 bytes in 198ms
+12-18 10:11:17.012 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:17.292 D/dalvikvm(  521): GC_FOR_MALLOC freed 4080 objects / 472384 bytes in 261ms
+12-18 10:11:17.292 D/NativeCrypto(  521): Freeing OpenSSL session
+12-18 10:11:17.372 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:17.902 D/dalvikvm(  521): GC_FOR_MALLOC freed 3933 objects / 554872 bytes in 106ms
+12-18 10:11:18.502 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:18.732 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:18.872 D/dalvikvm(  521): GC_FOR_MALLOC freed 1190 objects / 267264 bytes in 318ms
+12-18 10:11:19.322 D/dalvikvm(  521): GC_FOR_MALLOC freed 2879 objects / 513776 bytes in 118ms
+12-18 10:11:19.882 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:20.032 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:20.082 D/dalvikvm(  521): GC_FOR_MALLOC freed 2295 objects / 365792 bytes in 186ms
+12-18 10:11:21.562 D/dalvikvm(  521): GC_FOR_MALLOC freed 2991 objects / 517592 bytes in 194ms
+12-18 10:11:23.252 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:23.262 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:23.422 D/dalvikvm(  521): GC_FOR_MALLOC freed 3077 objects / 422912 bytes in 147ms
+12-18 10:11:23.932 D/dalvikvm(  521): GC_FOR_MALLOC freed 2930 objects / 517992 bytes in 140ms
+12-18 10:11:24.842 D/dalvikvm(  521): GC_FOR_MALLOC freed 5626 objects / 410072 bytes in 281ms
+12-18 10:11:24.862 D/NativeCrypto(  521): Freeing OpenSSL session
+12-18 10:11:25.102 D/dalvikvm(  521): GC_FOR_MALLOC freed 1812 objects / 284664 bytes in 188ms
+12-18 10:11:25.142 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:25.192 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:25.362 D/dalvikvm(  521): GC_FOR_MALLOC freed 533 objects / 192752 bytes in 152ms
+12-18 10:11:25.462 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:25.502 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:25.672 D/dalvikvm(  521): GC_FOR_MALLOC freed 1104 objects / 253920 bytes in 175ms
+12-18 10:11:26.062 D/dalvikvm( 1032): GC_FOR_MALLOC freed 15333 objects / 474920 bytes in 111ms
+12-18 10:11:26.552 D/dalvikvm(  521): GC_FOR_MALLOC freed 2781 objects / 510648 bytes in 240ms
+12-18 10:11:27.302 D/dalvikvm(  521): GC_FOR_MALLOC freed 3962 objects / 472664 bytes in 169ms
+12-18 10:11:27.472 D/dalvikvm(  521): GC_FOR_MALLOC freed 1081 objects / 234216 bytes in 142ms
+12-18 10:11:27.522 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:27.772 D/dalvikvm(  114): GC_EXPLICIT freed 28443 objects / 1300256 bytes in 234ms
+12-18 10:11:27.812 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:28.012 D/dalvikvm(  521): GC_FOR_MALLOC freed 395 objects / 177872 bytes in 179ms
+12-18 10:11:28.102 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:28.162 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:28.272 D/dalvikvm(  521): GC_FOR_MALLOC freed 973 objects / 256584 bytes in 167ms
+12-18 10:11:28.712 D/dalvikvm(  521): GC_FOR_MALLOC freed 2859 objects / 503536 bytes in 147ms
+12-18 10:11:28.892 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.002 D/dalvikvm(  521): GC_FOR_MALLOC freed 3047 objects / 503528 bytes in 93ms
+12-18 10:11:29.022 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.162 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-80&ecio=-50&t1=1324231888681&t2=1324231888685&t3=1324231889155&t4=1324231889169
+12-18 10:11:29.172 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:11:29.382 D/dalvikvm(  521): GC_FOR_MALLOC freed 2767 objects / 467288 bytes in 92ms
+12-18 10:11:29.422 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.582 D/dalvikvm(  521): GC_FOR_MALLOC freed 732 objects / 192848 bytes in 139ms
+12-18 10:11:29.602 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.762 D/dalvikvm(  521): GC_FOR_MALLOC freed 666 objects / 225496 bytes in 110ms
+12-18 10:11:29.872 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.932 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:29.992 D/dalvikvm(  521): GC_FOR_MALLOC freed 1879 objects / 326384 bytes in 101ms
+12-18 10:11:30.262 D/dalvikvm(  521): GC_FOR_MALLOC freed 2466 objects / 497224 bytes in 93ms
+12-18 10:11:30.352 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:30.402 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-80&ecio=-50&t1=1324231889683&t2=1324231889685&t3=1324231890388&t4=1324231890410
+12-18 10:11:30.542 D/dalvikvm(  521): GC_FOR_MALLOC freed 1538 objects / 315400 bytes in 175ms
+12-18 10:11:30.562 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:31.672 D/dalvikvm(  521): GC_FOR_MALLOC freed 2957 objects / 489856 bytes in 122ms
+12-18 10:11:31.772 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:31.892 D/dalvikvm(  521): GC_FOR_MALLOC freed 868 objects / 226344 bytes in 113ms
+12-18 10:11:31.912 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:32.092 D/dalvikvm(  521): GC_FOR_MALLOC freed 749 objects / 231344 bytes in 96ms
+12-18 10:11:32.262 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:32.342 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:32.382 D/dalvikvm(  521): GC_FOR_MALLOC freed 1151 objects / 296696 bytes in 108ms
+12-18 10:11:32.582 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-80&ecio=-50&t1=1324231890662&t2=1324231890665&t3=1324231892569&t4=1324231892585
+12-18 10:11:32.732 D/dalvikvm(  521): GC_FOR_MALLOC freed 2891 objects / 513144 bytes in 92ms
+12-18 10:11:32.952 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-78&ecio=-50&t1=1324231892598&t2=1324231892600&t3=1324231892943&t4=1324231892960
+12-18 10:11:33.732 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-78&ecio=-50&t1=1324231893411&t2=1324231893416&t3=1324231893702&t4=1324231893737
+12-18 10:11:34.352 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:34.522 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:34.632 D/dalvikvm(  521): GC_FOR_MALLOC freed 2519 objects / 402352 bytes in 266ms
+12-18 10:11:35.102 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-78&ecio=-50&t1=1324231894768&t2=1324231894773&t3=1324231895089&t4=1324231895103
+12-18 10:11:35.722 D/dalvikvm(  521): GC_FOR_MALLOC freed 3247 objects / 522064 bytes in 195ms
+12-18 10:11:36.242 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314161&lng=-121917024&numPlayer=2&dbm=-78&ecio=-50&t1=1324231895470&t2=1324231895475&t3=1324231896193&t4=1324231896246
+12-18 10:11:37.262 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:37.442 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=2&dbm=-79&ecio=-60&t1=1324231896466&t2=1324231896471&t3=1324231897402&t4=1324231897445
+12-18 10:11:37.702 D/dalvikvm(  521): GC_FOR_MALLOC freed 3151 objects / 488376 bytes in 425ms
+12-18 10:11:37.782 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45cfbbe8}
+12-18 10:11:38.142 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=2&dbm=-79&ecio=-60&t1=1324231897684&t2=1324231897689&t3=1324231898134&t4=1324231898147
+12-18 10:11:38.602 D/dalvikvm(  521): GC_FOR_MALLOC freed 3392 objects / 529512 bytes in 155ms
+12-18 10:11:38.772 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-79&ecio=-60&t1=1324231898401&t2=1324231898405&t3=1324231898753&t4=1324231898775
+12-18 10:11:39.992 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-79&ecio=-60&t1=1324231899444&t2=1324231899449&t3=1324231899970&t4=1324231899997
+12-18 10:11:41.142 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-79&ecio=-60&t1=1324231900441&t2=1324231900446&t3=1324231901120&t4=1324231901144
+12-18 10:11:41.372 D/dalvikvm( 1032): GC_FOR_MALLOC freed 28827 objects / 1025664 bytes in 224ms
+12-18 10:11:42.362 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231901844&t2=1324231901849&t3=1324231902358&t4=1324231902368
+12-18 10:11:42.772 D/dalvikvm(  521): GC_FOR_MALLOC freed 4805 objects / 508632 bytes in 201ms
+12-18 10:11:42.902 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231902517&t2=1324231902521&t3=1324231902894&t4=1324231902910
+12-18 10:11:44.262 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231903402&t2=1324231903406&t3=1324231904243&t4=1324231904271
+12-18 10:11:45.492 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231904455&t2=1324231904459&t3=1324231905481&t4=1324231905497
+12-18 10:11:45.522 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:11:45.862 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231905527&t2=1324231905529&t3=1324231905858&t4=1324231905872
+12-18 10:11:46.622 D/dalvikvm(  521): GC_FOR_MALLOC freed 5029 objects / 524528 bytes in 102ms
+12-18 10:11:46.912 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-80&ecio=-60&t1=1324231906494&t2=1324231906496&t3=1324231906905&t4=1324231906920
+12-18 10:11:47.902 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231907556&t2=1324231907558&t3=1324231907898&t4=1324231907911
+12-18 10:11:48.932 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231908615&t2=1324231908617&t3=1324231908924&t4=1324231908936
+12-18 10:11:50.212 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231909410&t2=1324231909415&t3=1324231910190&t4=1324231910215
+12-18 10:11:50.502 D/dalvikvm( 1032): GC_FOR_MALLOC freed 17425 objects / 759408 bytes in 239ms
+12-18 10:11:51.002 D/dalvikvm(  521): GC_FOR_MALLOC freed 5065 objects / 524840 bytes in 94ms
+12-18 10:11:51.132 D/dalvikvm( 1032): GC_EXPLICIT freed 5823 objects / 140168 bytes in 97ms
+12-18 10:11:51.612 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231910850&t2=1324231910859&t3=1324231911601&t4=1324231911615
+12-18 10:11:52.062 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231911631&t2=1324231911634&t3=1324231912041&t4=1324231912070
+12-18 10:11:52.302 I/WindowManager(  114): home key test1= 1
+12-18 10:11:52.302 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:11:52.462 D/WindowManager(  114): Home Key Test : false : false
+12-18 10:11:52.512 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=com.android.launcher/com.android.launcher2.Launcher }
+12-18 10:11:52.552 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:11:52.592 D/GpsLocationProvider(  114): stopNavigating
+12-18 10:11:52.592 W/InputManagerService(  114): Ignoring hideSoftInput of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45e242d8
+12-18 10:11:52.812 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 807.0
+12-18 10:11:52.942 I/stats   ( 1032): post_position gid=233001&pid=234011&lat=37314160&lng=-121917024&numPlayer=0&dbm=-82&ecio=-60&t1=1324231912608&t2=1324231912610&t3=1324231912931&t4=1324231912948
+12-18 10:11:53.842 W/LocationMasfClient(  114): uploadCollectionReport(): no ReplyElement
+12-18 10:11:55.192 D/dalvikvm(  197): GC_EXTERNAL_ALLOC freed 4369 objects / 231328 bytes in 102ms
+12-18 10:11:57.632 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.xtralogic.android.logcollector/.SendLogActivity }
+12-18 10:11:57.652 I/ActivityManager(  114): Start proc com.xtralogic.android.logcollector for activity com.xtralogic.android.logcollector/.SendLogActivity: pid=11232 uid=10082 gids={1007, 1015}
+12-18 10:11:58.282 I/ActivityManager(  114): Displayed activity com.xtralogic.android.logcollector/.SendLogActivity: 634 ms (total 634 ms)
+12-18 10:11:59.302 I/global  (11232): Default buffer size used in BufferedReader constructor. It would be better to be explicit if an 8k-char buffer is required.
+12-18 10:11:59.612 D/dalvikvm(11232): GC_FOR_MALLOC freed 1674 objects / 244656 bytes in 159ms
+12-18 10:11:59.882 D/dalvikvm(11232): GC_FOR_MALLOC freed 1271 objects / 379056 bytes in 117ms
+12-18 10:11:59.892 I/dalvikvm-heap(11232): Grow heap (frag case) to 4.029MB for 241940-byte allocation
+12-18 10:12:00.062 D/dalvikvm(11232): GC_FOR_MALLOC freed 0 objects / 0 bytes in 165ms
+12-18 10:12:00.222 D/dalvikvm(11232): GC_FOR_MALLOC freed 753 objects / 263432 bytes in 139ms
+12-18 10:12:00.262 I/dalvikvm-heap(11232): Grow heap (frag case) to 4.221MB for 362906-byte allocation
+12-18 10:12:00.352 D/dalvikvm(11232): GC_FOR_MALLOC freed 0 objects / 0 bytes in 90ms
+12-18 10:12:00.382 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.CHOOSER cmp=android/com.android.internal.app.ChooserActivity (has extras) }
+12-18 10:12:00.722 D/dalvikvm(11232): GC_FOR_MALLOC freed 4082 objects / 547424 bytes in 85ms
+12-18 10:12:00.822 D/dalvikvm(11232): GC_EXTERNAL_ALLOC freed 358 objects / 30824 bytes in 73ms
+12-18 10:12:01.142 I/ActivityManager(  114): Displayed activity android/com.android.internal.app.ChooserActivity: 750 ms (total 750 ms)
+12-18 10:12:03.222 D/dalvikvm(  191): GC_FOR_MALLOC freed 9033 objects / 524568 bytes in 217ms
+12-18 10:12:04.392 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.SEND typ=text/plain flg=0x3000000 cmp=com.google.android.gm/.ComposeActivityGmail (has extras) }
+12-18 10:12:04.452 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.SEND typ=text/plain flg=0x2000000 cmp=com.google.android.gm/.ComposeActivity (has extras) }
+12-18 10:12:04.712 D/dalvikvm(  455): GC_FOR_MALLOC freed 1063 objects / 458160 bytes in 108ms
+12-18 10:12:04.862 D/dalvikvm(  455): GC_FOR_MALLOC freed 236 objects / 10168 bytes in 117ms
+12-18 10:12:04.962 D/GoogleLoginService(  227): onBind: Intent { act=android.accounts.AccountAuthenticator cmp=com.google.android.gsf/.loginservice.GoogleLoginService }
+12-18 10:12:05.372 D/dalvikvm(  455): GC_FOR_MALLOC freed 1239 objects / 337384 bytes in 92ms
+12-18 10:12:05.732 D/dalvikvm(  455): GC_FOR_MALLOC freed 1236 objects / 281712 bytes in 92ms
+12-18 10:12:06.132 I/ActivityManager(  114): Displayed activity com.google.android.gm/.ComposeActivity: 1667 ms (total 1721 ms)
+12-18 10:12:08.766 W/AudioFlinger(   71): write blocked for 232 msecs, 11 delayed writes, thread 0xba28
+12-18 10:12:15.592 D/dalvikvm(  455): GC_FOR_MALLOC freed 4487 objects / 423360 bytes in 95ms
+12-18 10:12:15.822 D/dalvikvm(  455): GC_FOR_MALLOC freed 303 objects / 426944 bytes in 92ms
+12-18 10:12:15.872 V/EmptyService(  455): onCreate()
+12-18 10:12:15.962 W/IInputConnectionWrapper(  455): showStatusIcon on inactive InputConnection
+12-18 10:12:16.362 D/Gmail   (  455): MailProvider.insert(): added local message 5502
+12-18 10:12:16.442 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862303, normalSync: true
+12-18 10:12:16.572 D/dalvikvm(  455): GC_FOR_MALLOC freed 2394 objects / 842648 bytes in 95ms
+12-18 10:12:16.672 D/dalvikvm(  455): GC_FOR_MALLOC freed 435 objects / 167512 bytes in 93ms
+12-18 10:12:18.632 D/dalvikvm(  455): GC_FOR_MALLOC freed 2047 objects / 1321784 bytes in 268ms
+12-18 10:12:21.842 D/dalvikvm(  455): GC_FOR_MALLOC freed 2801 objects / 313120 bytes in 199ms
+12-18 10:12:21.852 D/NativeCrypto(  455): Freeing OpenSSL session
+12-18 10:12:22.142 D/dalvikvm(  455): GC_FOR_MALLOC freed 1139 objects / 473832 bytes in 176ms
+12-18 10:12:22.172 D/Gmail   (  455): Inserting message 1388557814459230071. synced=true
+12-18 10:12:22.752 D/dalvikvm(  455): GC_EXPLICIT freed 10334 objects / 1061544 bytes in 107ms
+12-18 10:12:22.762 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862397, normalSync: true
+12-18 10:12:24.302 W/Gmail   (  455): Server sent rational DURATION but we calculated LABEL with messageId 0
+12-18 10:12:24.452 W/Gmail   (  455): Server sent rational DURATION but we calculated LABEL with messageId 0
+12-18 10:12:25.202 D/dalvikvm(  455): GC_FOR_MALLOC freed 5609 objects / 221496 bytes in 195ms
+12-18 10:12:25.242 D/Gmail   (  455): Updating message 1388557814459230071. synced=true
+12-18 10:12:25.532 D/dalvikvm(  455): GC_EXPLICIT freed 2481 objects / 1020768 bytes in 105ms
+12-18 10:12:25.542 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862414, normalSync: true
+12-18 10:12:25.622 I/Gmail   (  455): Sending notification intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^i (has extras) }
+12-18 10:12:25.762 I/Gmail   (  455): Sending notification intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^iim (has extras) }
+12-18 10:12:25.962 D/dalvikvm(  114): GC_FOR_MALLOC freed 23230 objects / 1259816 bytes in 181ms
+12-18 10:12:26.062 I/AudioService(  114):  AudioFocus  requestAudioFocus() from android.media.AudioManager@45c667b0
+12-18 10:12:26.062 D/MediaPlayer(  114): ******* START *******
+12-18 10:12:26.082 D/NativeCrypto(  114): Freeing OpenSSL session
+12-18 10:12:26.382 W/AudioFlinger(   71): write blocked for 235 msecs, 12 delayed writes, thread 0xba28
+12-18 10:12:26.402 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862414, normalSync: true
+12-18 10:12:27.322 D/dalvikvm(  455): GC_FOR_MALLOC freed 17503 objects / 627736 bytes in 138ms
+12-18 10:12:27.662 D/dalvikvm(  455): GC_EXPLICIT freed 2710 objects / 103240 bytes in 155ms
+12-18 10:12:27.672 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862430, normalSync: true
+12-18 10:12:27.772 I/Gmail   (  455): Sending notification intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^i (has extras) }
+12-18 10:12:27.842 I/AudioService(  114):  AudioFocus  abandonAudioFocus() from android.media.AudioManager@45c667b0
+12-18 10:12:27.852 I/Gmail   (  455): Sending notification intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^iim (has extras) }
+12-18 10:12:37.282 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:12:37.402 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:12:37.642 D/dalvikvm(  521): GC_FOR_MALLOC freed 4437 objects / 531440 bytes in 196ms
+12-18 10:12:46.312 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862430, normalSync: true
+12-18 10:12:47.652 D/dalvikvm(  455): GC_EXPLICIT freed 3402 objects / 165424 bytes in 209ms
+12-18 10:12:47.672 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862452, normalSync: true
+12-18 10:12:53.382 D/GpsLocationProvider(  114): Releasing wakelock
+12-18 10:13:19.301 I/power   (  114): *** set_screen_state 0
+12-18 10:13:19.388 W/IInputConnectionWrapper(  197): getExtractedText on inactive InputConnection
+12-18 10:13:19.388 W/IInputConnectionWrapper(  197): getExtractedText on inactive InputConnection
+12-18 10:13:24.388 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:13:24.468 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:13:24.468 D/StatusBar(  114): DISABLE_EXPAND: yes
+12-18 10:13:24.558 D/GoogleLoginService(  227): onBind: Intent { act=android.accounts.AccountAuthenticator cmp=com.google.android.gsf/.loginservice.GoogleLoginService }
+12-18 10:13:24.708 D/skia    (  114): purging 192K from font cache [18 entries]
+12-18 10:13:29.798 D/dalvikvm(  724): GC_EXPLICIT freed 892 objects / 47672 bytes in 182ms
+12-18 10:13:30.798 D/dalvikvm(  187): GC_FOR_MALLOC freed 12957 objects / 514808 bytes in 165ms
+12-18 10:13:34.798 D/dalvikvm( 1032): GC_EXPLICIT freed 2959 objects / 190648 bytes in 186ms
+12-18 10:13:37.308 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:13:37.398 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:13:42.478 D/dalvikvm(  301): GC_EXPLICIT freed 158 objects / 6536 bytes in 159ms
+12-18 10:13:47.548 D/dalvikvm(  455): GC_EXPLICIT freed 2598 objects / 98784 bytes in 231ms
+12-18 10:13:52.478 D/dalvikvm(  199): GC_EXPLICIT freed 486 objects / 20176 bytes in 160ms
+12-18 10:13:57.498 D/dalvikvm(  414): GC_EXPLICIT freed 312 objects / 17064 bytes in 174ms
+12-18 10:14:05.328 D/dalvikvm( 3515): GC_EXPLICIT freed 6092 objects / 301848 bytes in 188ms
+12-18 10:14:10.338 D/dalvikvm(  227): GC_EXPLICIT freed 2040 objects / 108568 bytes in 194ms
+12-18 10:14:15.338 D/dalvikvm(  521): GC_EXPLICIT freed 3455 objects / 421344 bytes in 196ms
+12-18 10:14:37.328 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:14:37.418 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:15:37.358 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:15:37.438 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:15:37.778 D/dalvikvm(  521): GC_FOR_MALLOC freed 3916 objects / 510760 bytes in 187ms
+12-18 10:15:42.658 D/dalvikvm( 3515): GC_EXPLICIT freed 752 objects / 30280 bytes in 180ms
+12-18 10:15:47.698 D/dalvikvm(  227): GC_EXPLICIT freed 1596 objects / 76232 bytes in 219ms
+12-18 10:15:52.678 D/dalvikvm(  521): GC_EXPLICIT freed 1066 objects / 88464 bytes in 192ms
+12-18 10:16:37.378 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:16:37.478 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:17:27.528 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:17:27.528 I/dun_service(  268): Post event 1
+12-18 10:17:27.528 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:17:27.528 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:17:27.528 I/StorageNotification(  114): UMS connection changed to false (media state mounted)
+12-18 10:17:27.658 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:17:27.658 I/dun_service(  268): Post event 1
+12-18 10:17:27.658 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:17:27.658 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:17:27.658 W/Vold    (   65): Ignoring unknown switch 'msm_hsusb_peripheral'
+12-18 10:17:28.669 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:17:28.669 I/dun_service(  268): Post event 1
+12-18 10:17:28.669 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:17:28.808 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:17:37.546 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:17:37.646 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:17:37.996 D/dalvikvm(  521): GC_FOR_MALLOC freed 3056 objects / 470832 bytes in 209ms
+12-18 10:18:37.626 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:18:37.706 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:19:06.666 I/EventLogService(  227): Aggregate from 1324230546200 (log), 1324230546200 (data)
+12-18 10:19:37.656 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:19:37.786 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:20:37.676 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:20:37.736 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:20:38.096 D/dalvikvm(  521): GC_FOR_MALLOC freed 4287 objects / 538136 bytes in 281ms
+12-18 10:21:37.686 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:21:37.736 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:22:37.706 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:22:37.766 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:23:31.846 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862452, normalSync: true
+12-18 10:23:35.006 D/dalvikvm(  455): GC_EXPLICIT freed 5757 objects / 301616 bytes in 225ms
+12-18 10:23:35.016 D/NativeCrypto(  455): Freeing OpenSSL session
+12-18 10:23:35.036 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862478, normalSync: true
+12-18 10:23:36.976 D/dalvikvm(  486): GC_EXPLICIT freed 494 objects / 23488 bytes in 171ms
+12-18 10:23:37.726 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:23:37.806 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:23:38.016 D/dalvikvm(  521): GC_FOR_MALLOC freed 3887 objects / 580192 bytes in 210ms
+12-18 10:23:41.016 D/dalvikvm(  455): GC_FOR_MALLOC freed 2805 objects / 660912 bytes in 202ms
+12-18 10:23:41.296 D/dalvikvm(  455): GC_FOR_MALLOC freed 346 objects / 601720 bytes in 235ms
+12-18 10:23:41.406 D/dalvikvm(  455): GC_FOR_MALLOC freed 99 objects / 606304 bytes in 91ms
+12-18 10:23:41.516 D/dalvikvm(  455): GC_FOR_MALLOC freed 95 objects / 682328 bytes in 91ms
+12-18 10:23:41.626 D/dalvikvm(  455): GC_FOR_MALLOC freed 46 objects / 467072 bytes in 91ms
+12-18 10:23:41.736 D/dalvikvm(  455): GC_FOR_MALLOC freed 74 objects / 711440 bytes in 92ms
+12-18 10:23:41.856 D/dalvikvm(  455): GC_FOR_MALLOC freed 81 objects / 933608 bytes in 91ms
+12-18 10:23:41.966 D/dalvikvm(  455): GC_FOR_MALLOC freed 57 objects / 685952 bytes in 91ms
+12-18 10:23:42.066 D/dalvikvm(  455): GC_FOR_MALLOC freed 14 objects / 168888 bytes in 94ms
+12-18 10:23:42.066 I/dalvikvm-heap(  455): Grow heap (frag case) to 6.691MB for 910090-byte allocation
+12-18 10:23:42.206 D/dalvikvm(  455): GC_FOR_MALLOC freed 2 objects / 493792 bytes in 134ms
+12-18 10:23:42.326 D/dalvikvm(  455): GC_FOR_MALLOC freed 53 objects / 734016 bytes in 91ms
+12-18 10:23:42.426 D/dalvikvm(  455): GC_FOR_MALLOC freed 49 objects / 782264 bytes in 91ms
+12-18 10:23:42.636 D/dalvikvm(  455): GC_FOR_MALLOC freed 163 objects / 1688696 bytes in 91ms
+12-18 10:23:42.656 D/Gmail   (  455): Inserting message 1388558515855509370. synced=true
+12-18 10:23:42.816 D/dalvikvm(  414): GC_EXPLICIT freed 66 objects / 4088 bytes in 83ms
+12-18 10:23:43.206 D/dalvikvm(  455): GC_EXPLICIT freed 1079 objects / 367272 bytes in 94ms
+12-18 10:23:43.216 I/Gmail   (  455): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 1862488, normalSync: true
+12-18 10:24:37.745 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:24:37.805 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d5e8e0}
+12-18 10:25:37.806 D/dalvikvm(  114): GC_FOR_MALLOC freed 28679 objects / 1313600 bytes in 653ms
+12-18 10:25:37.876 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:25:38.006 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:25:38.106 D/dalvikvm(  521): GC_FOR_MALLOC freed 3368 objects / 468120 bytes in 89ms
+12-18 10:26:18.525 I/power   (  114): *** set_screen_state 1
+12-18 10:26:18.545 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:26:18.615 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:26:18.825 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:26:18.825 I/dun_service(  268): Post event 1
+12-18 10:26:18.835 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:26:18.835 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:26:18.965 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:26:22.573 D/PowerManagerService(  114): ignoring user activity while turning off screen
+12-18 10:26:22.793 I/power   (  114): *** set_screen_state 0
+12-18 10:26:22.963 W/IInputConnectionWrapper(  197): getExtractedText on inactive InputConnection
+12-18 10:26:22.963 W/IInputConnectionWrapper(  197): getExtractedText on inactive InputConnection
+12-18 10:26:37.966 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:26:38.046 I/System.out( 3515): [INFO:34734238]: c: Running flush
+12-18 10:26:38.056 I/System.out( 3515): [INFO:34734244]: c: Sending payload [bytes=378]
+12-18 10:26:39.806 I/System.out( 3515): [INFO:34735997]: c: Response [http=200,length=88]
+12-18 10:26:39.806 I/System.out( 3515): [INFO:34735999]: c: Read id 2, status code 200
+12-18 10:26:39.856 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:37.606 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:27:37.976 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:38.026 I/System.out( 3515): [INFO:34794219]: c: Running flush
+12-18 10:27:38.036 I/System.out( 3515): [INFO:34794225]: c: Sending payload [bytes=352]
+12-18 10:27:38.256 I/System.out( 3515): [INFO:34794450]: c: Response [http=200,length=88]
+12-18 10:27:38.266 I/System.out( 3515): [INFO:34794451]: c: Read id 3, status code 200
+12-18 10:27:38.306 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:38.626 D/dalvikvm(  521): GC_FOR_MALLOC freed 3983 objects / 514528 bytes in 197ms
+12-18 10:27:41.009 I/power   (  114): *** set_screen_state 1
+12-18 10:27:41.026 D/LockScreen(  114): Updating Lock Screen text to Ruim
+12-18 10:27:41.136 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:27:41.246 I/dun_service(  268): The value returned from dun_getusbmodemstate_fromsys is 1 
+12-18 10:27:41.246 I/dun_service(  268): Post event 1
+12-18 10:27:41.246 I/dun_service(  268): received event: DUN_EVENT_USB_UNPLUG 
+12-18 10:27:41.246 E/dun_service(  268): LG_DATA: Dun Reply Functions [DUN_STATE_USB_UNPLUG --> DUN_STATE_USB_UNPLUG][52]
+12-18 10:27:41.786 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45c70818
+12-18 10:27:42.006 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:42.236 D/dalvikvm(  521): GC_FOR_MALLOC freed 5058 objects / 463112 bytes in 205ms
+12-18 10:27:42.236 D/NativeCrypto(  521): Freeing OpenSSL session
+12-18 10:27:42.286 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:44.836 I/ActivityManager(  114): Starting activity: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.ghostrun/.activity.HomeView }
+12-18 10:27:44.876 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:27:44.876 I/Maps.MyLocationOverlay( 1032): Request updates from gps
+12-18 10:27:44.886 I/Maps.MyLocationOverlay( 1032): Request updates from network
+12-18 10:27:44.906 I/MapActivity( 1032): Handling network change notification:CONNECTED
+12-18 10:27:44.916 D/GpsLocationProvider(  114): startNavigating
+12-18 10:27:44.916 V/GpsLocationProvider(  114): called startNavigating() as 0
+12-18 10:27:45.126 D/GpsLocationProvider(  114): Acquiring wakelock
+12-18 10:27:45.156 D/LocationMasfClient(  114): getNetworkLocation(): Location not found in cache, making network request
+12-18 10:27:45.266 E/NetworkLocationProvider(  114): releaseCheckLocationLock: wake lock has already been released
+12-18 10:27:45.416 D/dalvikvm( 1032): GC_EXPLICIT freed 907 objects / 49352 bytes in 93ms
+12-18 10:27:46.196 D/LocationMasfClient(  114): getNetworkLocation(): Number of prefetched entries 1
+12-18 10:27:46.216 D/LocationMasfClient(  114): getNetworkLocation(): Returning network location with accuracy 981.0
+12-18 10:27:46.746 D/GpsLocationProvider(  114): TTFF: 1641
+12-18 10:27:47.306 D/dalvikvm(  521): GC_FOR_MALLOC freed 3399 objects / 569544 bytes in 241ms
+12-18 10:27:47.826 D/dalvikvm( 1032): GC_EXPLICIT freed 435 objects / 49496 bytes in 107ms
+12-18 10:27:49.056 D/dalvikvm(  521): GC_FOR_MALLOC freed 4201 objects / 476816 bytes in 274ms
+12-18 10:27:50.426 D/dalvikvm(  521): GC_FOR_MALLOC freed 5527 objects / 498256 bytes in 275ms
+12-18 10:27:50.446 D/NativeCrypto(  521): Freeing OpenSSL session
+12-18 10:27:50.666 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:51.196 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:53.616 D/dalvikvm(  521): GC_FOR_MALLOC freed 4076 objects / 524488 bytes in 1219ms
+12-18 10:27:54.676 D/dalvikvm(  521): GC_FOR_MALLOC freed 3237 objects / 530024 bytes in 201ms
+12-18 10:27:54.776 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:54.836 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:27:55.616 D/dalvikvm( 1032): GC_EXPLICIT freed 3461 objects / 285592 bytes in 119ms
+12-18 10:27:58.316 D/dalvikvm(  521): GC_FOR_MALLOC freed 3484 objects / 513736 bytes in 322ms
+12-18 10:28:00.586 D/GpsLocationProvider(  114): stopNavigating
+12-18 10:28:00.936 D/dalvikvm(  187): GC_FOR_MALLOC freed 13552 objects / 527928 bytes in 241ms
+12-18 10:28:01.206 D/dalvikvm( 1032): GC_EXPLICIT freed 19500 objects / 374488 bytes in 198ms
+12-18 10:28:01.476 D/LocationMasfClient(  114): getNetworkLocation(): Location not found in cache, making network request
+12-18 10:28:01.656 D/dalvikvm(  521): GC_FOR_MALLOC freed 3300 objects / 522048 bytes in 120ms
+12-18 10:28:01.696 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:28:01.746 I/System.out( 3515): [INFO:34817931]: c: Running flush
+12-18 10:28:01.746 I/System.out( 3515): [INFO:34817939]: c: Sending payload [bytes=379]
+12-18 10:28:01.936 I/ActivityManager(  114): Starting activity: Intent { cmp=com.ghostrun/.activity.MapEditor }
+12-18 10:28:01.986 W/MapActivity( 1032): Recycling dispatcher com.google.googlenav.datarequest.DataRequestDispatcher@459c5e38
+12-18 10:28:01.996 V/MapActivity( 1032): Recycling map object.
+12-18 10:28:02.016 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:28:02.056 D/GpsLocationProvider(  114): startNavigating
+12-18 10:28:02.056 V/GpsLocationProvider(  114): called startNavigating() as 0
+12-18 10:28:02.076 I/System.out( 3515): [INFO:34818251]: c: Response [http=200,length=88]
+12-18 10:28:02.086 I/MapActivity( 1032): Handling network change notification:CONNECTED
+12-18 10:28:02.086 E/MapActivity( 1032): Couldn't get connection factory client
+12-18 10:28:02.166 D/dalvikvm(  521): GC_FOR_MALLOC freed 4323 objects / 534880 bytes in 283ms
+12-18 10:28:02.186 I/System.out( 3515): [INFO:34818371]: c: Read id 4, status code 200
+12-18 10:28:02.276 I/ActivityManager(  114): Displayed activity com.ghostrun/.activity.MapEditor: 319 ms (total 319 ms)
+12-18 10:28:02.546 D/dalvikvm(  114): GC_FOR_MALLOC freed 26864 objects / 1410472 bytes in 231ms
+12-18 10:28:02.566 D/NativeCrypto(  114): Freeing OpenSSL session
+12-18 10:28:02.576 D/NativeCrypto(  114): Freeing OpenSSL session
+12-18 10:28:02.576 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45f12c80}
+12-18 10:28:02.596 E/NetworkLocationProvider(  114): releaseCheckLocationLock: wake lock has already been released
+12-18 10:28:02.636 E/NetworkLocationProvider(  114): releaseCheckLocationLock: wake lock has already been released
+12-18 10:28:02.826 W/LocationMasfClient(  114): uploadCollectionReport(): no ReplyElement
+12-18 10:28:02.826 D/LocationMasfClient(  114): getNetworkLocation(): Number of prefetched entries 1
+12-18 10:28:02.826 D/LocationMasfClient(  114): getNetworkLocation(): Returning network location with accuracy 875.0
+12-18 10:28:02.876 D/dalvikvm(  521): GC_FOR_MALLOC freed 3944 objects / 518160 bytes in 114ms
+12-18 10:28:03.006 D/GpsLocationProvider(  114): TTFF: 928
+12-18 10:28:06.673 D/dalvikvm(  521): GC_FOR_MALLOC freed 5238 objects / 529896 bytes in 316ms
+12-18 10:28:08.933 D/dalvikvm( 1032): GC_EXPLICIT freed 14875 objects / 564816 bytes in 199ms
+12-18 10:28:10.545 D/dalvikvm(  521): GC_FOR_MALLOC freed 4861 objects / 517616 bytes in 437ms
+12-18 10:28:12.995 D/dalvikvm( 1032): GC_EXPLICIT freed 1076 objects / 86896 bytes in 111ms
+12-18 10:28:14.365 D/dalvikvm(  521): GC_FOR_MALLOC freed 5068 objects / 526048 bytes in 235ms
+12-18 10:28:14.858 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:28:16.098 D/dalvikvm( 3515): GC_FOR_MALLOC freed 8699 objects / 469328 bytes in 206ms
+12-18 10:28:16.108 D/NativeCrypto( 3515): Freeing OpenSSL session
+12-18 10:28:16.518 D/dalvikvm( 1032): GC_EXPLICIT freed 3467 objects / 252608 bytes in 202ms
+12-18 10:28:18.108 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 1050 objects / 99168 bytes in 111ms
+12-18 10:28:18.408 D/dalvikvm(  521): GC_FOR_MALLOC freed 5062 objects / 526312 bytes in 188ms
+12-18 10:28:20.086 D/dalvikvm( 1032): GC_EXPLICIT freed 5758 objects / 398776 bytes in 122ms
+12-18 10:28:22.046 D/dalvikvm(  521): GC_FOR_MALLOC freed 5091 objects / 523880 bytes in 205ms
+12-18 10:28:22.756 D/dalvikvm( 1032): GC_EXPLICIT freed 2784 objects / 201600 bytes in 192ms
+12-18 10:28:25.153 D/dalvikvm( 1032): GC_EXPLICIT freed 777 objects / 56616 bytes in 183ms
+12-18 10:28:26.053 D/dalvikvm(  521): GC_FOR_MALLOC freed 5086 objects / 524704 bytes in 287ms
+12-18 10:28:29.633 D/dalvikvm( 1032): GC_EXPLICIT freed 7256 objects / 346296 bytes in 183ms
+12-18 10:28:30.153 D/dalvikvm(  521): GC_FOR_MALLOC freed 5078 objects / 525488 bytes in 310ms
+12-18 10:28:32.273 D/dalvikvm( 1032): GC_EXPLICIT freed 11195 objects / 524536 bytes in 201ms
+12-18 10:28:34.183 D/dalvikvm(  521): GC_FOR_MALLOC freed 5059 objects / 523336 bytes in 100ms
+12-18 10:28:36.133 D/dalvikvm( 1032): GC_FOR_MALLOC freed 25390 objects / 906216 bytes in 138ms
+12-18 10:28:37.913 D/dalvikvm(  521): GC_FOR_MALLOC freed 5063 objects / 523528 bytes in 178ms
+12-18 10:28:38.233 D/dalvikvm( 1032): GC_EXPLICIT freed 13300 objects / 433248 bytes in 227ms
+12-18 10:28:39.273 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:28:41.913 D/dalvikvm( 1032): GC_EXPLICIT freed 17407 objects / 728720 bytes in 229ms
+12-18 10:28:42.083 D/dalvikvm(  521): GC_FOR_MALLOC freed 5071 objects / 523760 bytes in 270ms
+12-18 10:28:43.703 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:28:44.723 D/dalvikvm( 1032): GC_EXPLICIT freed 12968 objects / 508696 bytes in 183ms
+12-18 10:28:45.593 D/dalvikvm(  521): GC_FOR_MALLOC freed 4492 objects / 534600 bytes in 236ms
+12-18 10:28:48.073 D/dalvikvm( 1032): GC_FOR_MALLOC freed 26817 objects / 1073176 bytes in 119ms
+12-18 10:28:48.393 D/dalvikvm(  191): GC_FOR_MALLOC freed 9281 objects / 524464 bytes in 289ms
+12-18 10:28:48.503 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 875.0
+12-18 10:28:48.763 D/dalvikvm(  521): GC_FOR_MALLOC freed 4888 objects / 514192 bytes in 111ms
+12-18 10:28:48.953 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 10715 objects / 748760 bytes in 110ms
+12-18 10:28:49.833 D/dalvikvm(  114): GC_FOR_MALLOC freed 20544 objects / 1327936 bytes in 213ms
+12-18 10:28:52.272 D/dalvikvm(  521): GC_FOR_MALLOC freed 4980 objects / 516752 bytes in 105ms
+12-18 10:28:52.392 D/dalvikvm( 1032): GC_EXPLICIT freed 17895 objects / 699160 bytes in 109ms
+12-18 10:28:52.872 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d7eb30}
+12-18 10:28:52.902 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d7eb30}
+12-18 10:28:53.142 D/dalvikvm(  521): GC_FOR_MALLOC freed 2301 objects / 556000 bytes in 187ms
+12-18 10:28:54.192 D/dalvikvm( 1032): GC_FOR_MALLOC freed 24221 objects / 926304 bytes in 128ms
+12-18 10:28:54.562 D/dalvikvm(  521): GC_FOR_MALLOC freed 3678 objects / 416536 bytes in 93ms
+12-18 10:28:54.612 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d7eb30}
+12-18 10:28:54.642 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45d7eb30}
+12-18 10:28:55.192 D/dalvikvm( 1032): GC_EXPLICIT freed 11260 objects / 560296 bytes in 190ms
+12-18 10:28:55.502 D/dalvikvm(  521): GC_FOR_MALLOC freed 2385 objects / 552496 bytes in 167ms
+12-18 10:28:57.842 D/dalvikvm( 1032): GC_EXPLICIT freed 8084 objects / 629480 bytes in 143ms
+12-18 10:28:58.332 W/InputManagerService(  114): Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@45c4bd98
+12-18 10:28:58.542 D/dalvikvm(  521): GC_FOR_MALLOC freed 4564 objects / 496680 bytes in 358ms
+12-18 10:28:58.962 D/GpsLocationProvider(  114): stopNavigating
+12-18 10:28:59.052 D/GpsLocationProvider(  114): Releasing wakelock
+12-18 10:28:59.132 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 875.0
+12-18 10:28:59.832 I/ActivityManager(  114): Starting activity: Intent { cmp=com.ghostrun/.activity.GameMenu }
+12-18 10:29:00.072 I/ActivityManager(  114): Displayed activity com.ghostrun/.activity.GameMenu: 240 ms (total 240 ms)
+12-18 10:29:00.915 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:01.945 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:10.945 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:13.085 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:15.355 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:17.605 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:19.885 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:24.537 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:26.495 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:29.867 I/ActivityManager(  114): Starting activity: Intent { cmp=com.ghostrun/.activity.MultiplayerMapView (has extras) }
+12-18 10:29:30.007 W/MapActivity( 1032): Recycling dispatcher com.google.googlenav.datarequest.DataRequestDispatcher@459c5e38
+12-18 10:29:30.037 V/MapActivity( 1032): Recycling map object.
+12-18 10:29:30.117 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:29:30.217 D/GpsLocationProvider(  114): setMinTime 0
+12-18 10:29:30.217 I/Maps.MyLocationOverlay( 1032): Request updates from gps
+12-18 10:29:30.217 I/Maps.MyLocationOverlay( 1032): Request updates from network
+12-18 10:29:30.257 D/GpsLocationProvider(  114): startNavigating
+12-18 10:29:30.257 V/GpsLocationProvider(  114): called startNavigating() as 0
+12-18 10:29:30.267 I/MapActivity( 1032): Handling network change notification:CONNECTED
+12-18 10:29:30.267 E/MapActivity( 1032): Couldn't get connection factory client
+12-18 10:29:30.377 D/GpsLocationProvider(  114): Acquiring wakelock
+12-18 10:29:30.457 D/LocationMasfClient(  114): getNetworkLocation(): Location not found in cache, making network request
+12-18 10:29:30.487 I/ActivityManager(  114): Displayed activity com.ghostrun/.activity.MultiplayerMapView: 545 ms (total 545 ms)
+12-18 10:29:31.606 D/GpsLocationProvider(  114): TTFF: 1228
+12-18 10:29:31.976 W/LocationMasfClient(  114): uploadCollectionReport(): no ReplyElement
+12-18 10:29:31.996 D/LocationMasfClient(  114): getNetworkLocation(): Number of prefetched entries 1
+12-18 10:29:31.996 D/LocationMasfClient(  114): getNetworkLocation(): Returning network location with accuracy 972.0
+12-18 10:29:32.366 D/dalvikvm( 1032): GC_EXPLICIT freed 6703 objects / 396584 bytes in 219ms
+12-18 10:29:32.526 D/dalvikvm(  521): GC_FOR_MALLOC freed 4658 objects / 520064 bytes in 94ms
+12-18 10:29:34.276 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:29:34.786 D/dalvikvm( 1032): GC_EXPLICIT freed 8618 objects / 410120 bytes in 94ms
+12-18 10:29:34.856 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37320110&lng=-121926861&numPlayer=0&dbm=0&ecio=0&t1=1324232974281&t2=1324232974286&t3=1324232974801&t4=1324232974864
+12-18 10:29:34.946 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:29:36.216 D/dalvikvm(  521): GC_FOR_MALLOC freed 5088 objects / 500016 bytes in 200ms
+12-18 10:29:37.672 D/dalvikvm( 1032): GC_EXPLICIT freed 1325 objects / 111456 bytes in 261ms
+12-18 10:29:40.242 D/dalvikvm( 1032): GC_EXPLICIT freed 471 objects / 49208 bytes in 244ms
+12-18 10:29:40.592 D/dalvikvm(  521): GC_FOR_MALLOC freed 5018 objects / 524736 bytes in 222ms
+12-18 10:29:41.945 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:44.355 D/dalvikvm(  521): GC_FOR_MALLOC freed 5150 objects / 529640 bytes in 95ms
+12-18 10:29:44.505 I/dalvikvm( 1032): Jit: resizing JitTable from 8192 to 16384
+12-18 10:29:45.545 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 1702 objects / 176432 bytes in 128ms
+12-18 10:29:46.578 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:29:48.088 D/dalvikvm(  521): GC_FOR_MALLOC freed 5048 objects / 525256 bytes in 94ms
+12-18 10:29:48.688 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317274&lng=-121926639&numPlayer=0&dbm=-64&ecio=-40&t1=1324232987959&t2=1324232987962&t3=1324232988544&t4=1324232988690
+12-18 10:29:49.848 D/dalvikvm( 1032): GC_EXPLICIT freed 12742 objects / 445624 bytes in 238ms
+12-18 10:29:51.548 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317274&lng=-121926642&numPlayer=0&dbm=-64&ecio=-40&t1=1324232990076&t2=1324232990081&t3=1324232991436&t4=1324232991551
+12-18 10:29:51.618 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:29:51.808 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 9320 objects / 346848 bytes in 104ms
+12-18 10:29:52.018 D/dalvikvm(  521): GC_FOR_MALLOC freed 4850 objects / 517904 bytes in 122ms
+12-18 10:29:52.308 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317274&lng=-121926642&numPlayer=0&dbm=-64&ecio=-40&t1=1324232991852&t2=1324232991855&t3=1324232992258&t4=1324232992317
+12-18 10:29:53.038 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317274&lng=-121926642&numPlayer=0&dbm=-64&ecio=-40&t1=1324232992380&t2=1324232992382&t3=1324232992827&t4=1324232993046
+12-18 10:29:53.498 D/dalvikvm(  114): GC_FOR_MALLOC freed 23449 objects / 1214336 bytes in 628ms
+12-18 10:29:53.548 D/NativeCrypto(  114): Freeing OpenSSL session
+12-18 10:29:53.788 D/dalvikvm( 1032): GC_EXPLICIT freed 3490 objects / 293872 bytes in 97ms
+12-18 10:29:53.938 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-62&ecio=-40&t1=1324232993613&t2=1324232993616&t3=1324232993873&t4=1324232993940
+12-18 10:29:54.318 D/dalvikvm(  521): GC_FOR_MALLOC freed 4116 objects / 443672 bytes in 133ms
+12-18 10:29:54.368 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e71eb0}
+12-18 10:29:54.478 D/dalvikvm(  521): GC_FOR_MALLOC freed 947 objects / 206840 bytes in 88ms
+12-18 10:29:54.488 I/System.out( 3515): [INFO:34930681]: c: Running flush
+12-18 10:29:54.488 I/System.out( 3515): [INFO:34930683]: c: Sending payload [bytes=401]
+12-18 10:29:54.658 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-62&ecio=-40&t1=1324232994099&t2=1324232994102&t3=1324232994602&t4=1324232994660
+12-18 10:29:54.848 I/System.out( 3515): [INFO:34931038]: c: Response [http=200,length=88]
+12-18 10:29:54.848 I/System.out( 3515): [INFO:34931039]: c: Read id 5, status code 200
+12-18 10:29:54.878 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e71eb0}
+12-18 10:29:55.138 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-62&ecio=-40&t1=1324232994730&t2=1324232994732&t3=1324232995071&t4=1324232995146
+12-18 10:29:55.758 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-62&ecio=-40&t1=1324232995295&t2=1324232995297&t3=1324232995692&t4=1324232995763
+12-18 10:29:56.408 D/dalvikvm( 1032): GC_EXPLICIT freed 6684 objects / 393248 bytes in 92ms
+12-18 10:29:56.548 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-59&ecio=-50&t1=1324232995940&t2=1324232995943&t3=1324232996432&t4=1324232996549
+12-18 10:29:56.998 D/dalvikvm(  521): GC_FOR_MALLOC freed 3681 objects / 594032 bytes in 154ms
+12-18 10:29:57.288 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-59&ecio=-50&t1=1324232996822&t2=1324232996825&t3=1324232997233&t4=1324232997296
+12-18 10:29:58.478 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-59&ecio=-50&t1=1324232997804&t2=1324232997807&t3=1324232998333&t4=1324232998479
+12-18 10:29:59.178 D/dalvikvm( 1032): GC_EXPLICIT freed 4751 objects / 271760 bytes in 129ms
+12-18 10:29:59.428 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-59&ecio=-50&t1=1324232998899&t2=1324232998904&t3=1324232999357&t4=1324232999430
+12-18 10:30:00.868 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-60&ecio=-50&t1=1324233000209&t2=1324233000212&t3=1324233000704&t4=1324233000869
+12-18 10:30:01.248 D/dalvikvm(  521): GC_FOR_MALLOC freed 4984 objects / 520152 bytes in 94ms
+12-18 10:30:01.948 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-60&ecio=-50&t1=1324233001137&t2=1324233001142&t3=1324233001793&t4=1324233001951
+12-18 10:30:02.458 D/dalvikvm( 1032): GC_EXPLICIT freed 5509 objects / 316128 bytes in 94ms
+12-18 10:30:03.108 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-60&ecio=-50&t1=1324233002289&t2=1324233002293&t3=1324233003000&t4=1324233003113
+12-18 10:30:03.818 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-60&ecio=-50&t1=1324233003236&t2=1324233003240&t3=1324233003701&t4=1324233003826
+12-18 10:30:04.358 D/dalvikvm(  521): GC_FOR_MALLOC freed 5013 objects / 523360 bytes in 145ms
+12-18 10:30:04.478 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:30:05.028 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926642&numPlayer=0&dbm=-60&ecio=-50&t1=1324233004077&t2=1324233004087&t3=1324233004874&t4=1324233005027
+12-18 10:30:05.398 D/dalvikvm( 1032): GC_EXPLICIT freed 5841 objects / 287344 bytes in 100ms
+12-18 10:30:05.588 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317274&lng=-121926644&numPlayer=0&dbm=-64&ecio=-50&t1=1324233005275&t2=1324233005280&t3=1324233005538&t4=1324233005598
+12-18 10:30:07.768 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317277&lng=-121926656&numPlayer=0&dbm=-64&ecio=-50&t1=1324233005796&t2=1324233005799&t3=1324233007626&t4=1324233007776
+12-18 10:30:07.948 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:30:08.258 D/dalvikvm( 1032): GC_EXPLICIT freed 3064 objects / 193456 bytes in 226ms
+12-18 10:30:08.428 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317285&lng=-121926697&numPlayer=0&dbm=-66&ecio=-50&t1=1324233007954&t2=1324233007959&t3=1324233008320&t4=1324233008430
+12-18 10:30:08.648 D/dalvikvm(  521): GC_FOR_MALLOC freed 5039 objects / 524400 bytes in 93ms
+12-18 10:30:08.978 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:30:09.248 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317273&lng=-121926780&numPlayer=0&dbm=-66&ecio=-50&t1=1324233008530&t2=1324233008532&t3=1324233009169&t4=1324233009250
+12-18 10:30:10.488 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317220&lng=-121927089&numPlayer=0&dbm=-66&ecio=-50&t1=1324233009406&t2=1324233009410&t3=1324233010334&t4=1324233010487
+12-18 10:30:11.198 D/dalvikvm( 1032): GC_EXPLICIT freed 4175 objects / 258920 bytes in 221ms
+12-18 10:30:12.228 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317201&lng=-121927232&numPlayer=0&dbm=-63&ecio=-50&t1=1324233011618&t2=1324233011623&t3=1324233012044&t4=1324233012237
+12-18 10:30:12.528 D/dalvikvm(  521): GC_FOR_MALLOC freed 5040 objects / 524600 bytes in 572ms
+12-18 10:30:13.498 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:30:13.778 D/dalvikvm( 1032): GC_EXPLICIT freed 3165 objects / 209704 bytes in 195ms
+12-18 10:30:14.118 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317173&lng=-121927400&numPlayer=0&dbm=-63&ecio=-50&t1=1324233013113&t2=1324233013119&t3=1324233013976&t4=1324233014125
+12-18 10:30:15.028 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317145&lng=-121927579&numPlayer=0&dbm=-63&ecio=-50&t1=1324233014355&t2=1324233014361&t3=1324233014861&t4=1324233015035
+12-18 10:30:15.658 D/LocationMasfClient(  114): getNetworkLocation(): Returning cache location with accuracy 972.0
+12-18 10:30:16.188 D/dalvikvm(  521): GC_FOR_MALLOC freed 5048 objects / 500440 bytes in 215ms
+12-18 10:30:16.438 D/dalvikvm( 1032): GC_EXPLICIT freed 3479 objects / 231400 bytes in 201ms
+12-18 10:30:16.868 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317122&lng=-121927762&numPlayer=0&dbm=-63&ecio=-50&t1=1324233015800&t2=1324233015805&t3=1324233016713&t4=1324233016871
+12-18 10:30:18.295 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317100&lng=-121927987&numPlayer=0&dbm=-61&ecio=-50&t1=1324233017057&t2=1324233017062&t3=1324233018158&t4=1324233018303
+12-18 10:30:19.865 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317115&lng=-121928224&numPlayer=0&dbm=-61&ecio=-50&t1=1324233019306&t2=1324233019311&t3=1324233019721&t4=1324233019873
+12-18 10:30:20.365 D/dalvikvm(  521): GC_FOR_MALLOC freed 5060 objects / 526120 bytes in 107ms
+12-18 10:30:20.945 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:30:21.305 W/LocationMasfClient(  114): uploadCollectionReport(): no ReplyElement
+12-18 10:30:22.085 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37320110&lng=-121926861&numPlayer=0&dbm=-61&ecio=-50&t1=1324233020948&t2=1324233020952&t3=1324233021926&t4=1324233022085
+12-18 10:30:22.235 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:30:24.925 D/dalvikvm(  521): GC_FOR_MALLOC freed 5114 objects / 528056 bytes in 296ms
+12-18 10:30:28.585 D/dalvikvm( 1032): GC_FOR_MALLOC freed 7412 objects / 454520 bytes in 114ms
+12-18 10:30:29.395 D/dalvikvm(  521): GC_FOR_MALLOC freed 5062 objects / 500744 bytes in 1054ms
+12-18 10:30:29.665 D/dalvikvm( 1032): GC_EXPLICIT freed 25752 objects / 448760 bytes in 109ms
+12-18 10:30:32.195 D/dalvikvm(  521): GC_FOR_MALLOC freed 4556 objects / 532880 bytes in 118ms
+12-18 10:30:32.465 D/dalvikvm( 1032): GC_EXPLICIT freed 3831 objects / 118608 bytes in 125ms
+12-18 10:30:32.815 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317393&lng=-121933142&numPlayer=0&dbm=-66&ecio=-50&t1=1324233032053&t2=1324233032055&t3=1324233032740&t4=1324233032816
+12-18 10:30:33.675 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317425&lng=-121933472&numPlayer=0&dbm=-66&ecio=-50&t1=1324233033190&t2=1324233033192&t3=1324233033583&t4=1324233033680
+12-18 10:30:34.635 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317446&lng=-121933835&numPlayer=0&dbm=-66&ecio=-50&t1=1324233034217&t2=1324233034219&t3=1324233034582&t4=1324233034636
+12-18 10:30:35.285 D/dalvikvm(  521): GC_FOR_MALLOC freed 4863 objects / 515128 bytes in 119ms
+12-18 10:30:35.745 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317474&lng=-121934177&numPlayer=0&dbm=-66&ecio=-50&t1=1324233035105&t2=1324233035110&t3=1324233035674&t4=1324233035746
+12-18 10:30:36.725 D/dalvikvm( 1032): GC_EXPLICIT freed 13345 objects / 496672 bytes in 213ms
+12-18 10:30:37.005 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317509&lng=-121934519&numPlayer=0&dbm=-66&ecio=-50&t1=1324233036138&t2=1324233036142&t3=1324233036749&t4=1324233037008
+12-18 10:30:37.735 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317504&lng=-121934863&numPlayer=0&dbm=-66&ecio=-50&t1=1324233037197&t2=1324233037200&t3=1324233037677&t4=1324233037744
+12-18 10:30:37.815 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:30:39.165 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317519&lng=-121935214&numPlayer=0&dbm=-66&ecio=-50&t1=1324233038183&t2=1324233038188&t3=1324233039003&t4=1324233039168
+12-18 10:30:39.635 D/dalvikvm(  521): GC_FOR_MALLOC freed 4748 objects / 512760 bytes in 123ms
+12-18 10:30:40.245 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317521&lng=-121935556&numPlayer=0&dbm=-66&ecio=-50&t1=1324233039480&t2=1324233039484&t3=1324233040108&t4=1324233040250
+12-18 10:30:40.645 D/dalvikvm(  191): GC_FOR_MALLOC freed 9250 objects / 523888 bytes in 110ms
+12-18 10:30:41.005 D/dalvikvm( 1032): GC_EXPLICIT freed 8740 objects / 418544 bytes in 93ms
+12-18 10:30:41.245 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317533&lng=-121935905&numPlayer=0&dbm=-66&ecio=-50&t1=1324233040526&t2=1324233040532&t3=1324233041170&t4=1324233041245
+12-18 10:30:42.805 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317535&lng=-121936228&numPlayer=0&dbm=-67&ecio=-50&t1=1324233042005&t2=1324233042010&t3=1324233042628&t4=1324233042809
+12-18 10:30:43.355 D/dalvikvm(  521): GC_FOR_MALLOC freed 5094 objects / 527384 bytes in 204ms
+12-18 10:30:43.845 D/dalvikvm( 1032): GC_EXPLICIT freed 5269 objects / 264808 bytes in 201ms
+12-18 10:30:45.065 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317535&lng=-121936564&numPlayer=0&dbm=-67&ecio=-50&t1=1324233044382&t2=1324233044387&t3=1324233044890&t4=1324233045074
+12-18 10:30:45.825 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317527&lng=-121936899&numPlayer=0&dbm=-67&ecio=-50&t1=1324233045232&t2=1324233045239&t3=1324233045615&t4=1324233045825
+12-18 10:30:46.435 D/dalvikvm( 1032): GC_EXPLICIT freed 3393 objects / 230088 bytes in 198ms
+12-18 10:30:46.585 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317532&lng=-121937230&numPlayer=0&dbm=-67&ecio=-50&t1=1324233045962&t2=1324233045967&t3=1324233046452&t4=1324233046593
+12-18 10:30:47.175 D/dalvikvm( 3515): GC_FOR_MALLOC freed 8726 objects / 557904 bytes in 145ms
+12-18 10:30:47.395 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317532&lng=-121937561&numPlayer=0&dbm=-68&ecio=-60&t1=1324233046798&t2=1324233046800&t3=1324233047329&t4=1324233047400
+12-18 10:30:47.515 D/dalvikvm(  521): GC_FOR_MALLOC freed 5179 objects / 525760 bytes in 266ms
+12-18 10:30:47.865 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317528&lng=-121937877&numPlayer=0&dbm=-68&ecio=-60&t1=1324233047475&t2=1324233047479&t3=1324233047803&t4=1324233047872
+12-18 10:30:48.585 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317531&lng=-121938207&numPlayer=0&dbm=-68&ecio=-60&t1=1324233047998&t2=1324233048000&t3=1324233048530&t4=1324233048594
+12-18 10:30:49.085 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317530&lng=-121938528&numPlayer=0&dbm=-70&ecio=-70&t1=1324233048735&t2=1324233048737&t3=1324233049014&t4=1324233049090
+12-18 10:30:50.195 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317543&lng=-121938844&numPlayer=0&dbm=-70&ecio=-70&t1=1324233049239&t2=1324233049242&t3=1324233050056&t4=1324233050198
+12-18 10:30:50.775 D/dalvikvm( 1032): GC_EXPLICIT freed 7170 objects / 452736 bytes in 193ms
+12-18 10:30:51.155 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317566&lng=-121939155&numPlayer=0&dbm=-69&ecio=-60&t1=1324233050452&t2=1324233050459&t3=1324233051101&t4=1324233051164
+12-18 10:30:51.295 D/dalvikvm(  521): GC_FOR_MALLOC freed 5070 objects / 523968 bytes in 227ms
+12-18 10:30:52.485 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317586&lng=-121939490&numPlayer=0&dbm=-69&ecio=-60&t1=1324233051772&t2=1324233051779&t3=1324233052203&t4=1324233052487
+12-18 10:30:52.785 D/dalvikvm(  114): GC_FOR_MALLOC freed 23529 objects / 1277016 bytes in 710ms
+12-18 10:30:52.835 D/NativeCrypto(  114): Freeing OpenSSL session
+12-18 10:30:53.832 D/dalvikvm( 1032): GC_EXPLICIT freed 4544 objects / 255864 bytes in 160ms
+12-18 10:30:53.962 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317486&lng=-121939813&numPlayer=0&dbm=-69&ecio=-60&t1=1324233052873&t2=1324233052881&t3=1324233053841&t4=1324233053965
+12-18 10:30:54.072 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:30:54.392 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e25758}
+12-18 10:30:54.412 D/dalvikvm(  521): GC_FOR_MALLOC freed 4314 objects / 461024 bytes in 232ms
+12-18 10:30:54.472 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e25758}
+12-18 10:30:54.592 D/WifiService(  114): acquireWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e25758}
+12-18 10:30:54.612 D/WifiService(  114): releaseWifiLockLocked: WifiLock{NetworkLocationLocator type=2 binder=android.os.BinderProxy@45e25758}
+12-18 10:30:54.702 D/dalvikvm(  521): GC_FOR_MALLOC freed 2153 objects / 303192 bytes in 102ms
+12-18 10:30:54.912 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317466&lng=-121940148&numPlayer=0&dbm=-69&ecio=-60&t1=1324233054143&t2=1324233054149&t3=1324233054854&t4=1324233054918
+12-18 10:30:55.422 D/dalvikvm(  521): GC_FOR_MALLOC freed 3411 objects / 586936 bytes in 94ms
+12-18 10:30:55.632 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317448&lng=-121940483&numPlayer=0&dbm=-69&ecio=-60&t1=1324233055044&t2=1324233055047&t3=1324233055582&t4=1324233055634
+12-18 10:30:56.322 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317432&lng=-121940783&numPlayer=0&dbm=-69&ecio=-60&t1=1324233055729&t2=1324233055732&t3=1324233056166&t4=1324233056322
+12-18 10:30:56.952 D/dalvikvm( 1032): GC_EXPLICIT freed 5192 objects / 322848 bytes in 119ms
+12-18 10:30:57.372 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317413&lng=-121941078&numPlayer=0&dbm=-71&ecio=-60&t1=1324233056750&t2=1324233056755&t3=1324233057302&t4=1324233057376
+12-18 10:30:57.942 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317341&lng=-121941406&numPlayer=0&dbm=-71&ecio=-60&t1=1324233057519&t2=1324233057522&t3=1324233057885&t4=1324233057950
+12-18 10:30:58.575 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:30:58.655 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317317&lng=-121941739&numPlayer=0&dbm=-71&ecio=-60&t1=1324233058274&t2=1324233058277&t3=1324233058578&t4=1324233058657
+12-18 10:30:59.325 D/dalvikvm(  521): GC_FOR_MALLOC freed 5073 objects / 522352 bytes in 123ms
+12-18 10:30:59.765 D/dalvikvm( 1032): GC_EXPLICIT freed 5496 objects / 361216 bytes in 119ms
+12-18 10:30:59.895 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317301&lng=-121942073&numPlayer=0&dbm=-71&ecio=-50&t1=1324233059125&t2=1324233059128&t3=1324233059786&t4=1324233059903
+12-18 10:31:00.775 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:31:00.925 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317279&lng=-121942396&numPlayer=0&dbm=-71&ecio=-50&t1=1324233060339&t2=1324233060346&t3=1324233060828&t4=1324233060932
+12-18 10:31:02.235 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317268&lng=-121942718&numPlayer=0&dbm=-71&ecio=-50&t1=1324233061365&t2=1324233061369&t3=1324233062094&t4=1324233062239
+12-18 10:31:02.665 D/dalvikvm( 1032): GC_EXPLICIT freed 5060 objects / 290504 bytes in 112ms
+12-18 10:31:02.745 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317186&lng=-121943077&numPlayer=0&dbm=-71&ecio=-50&t1=1324233062389&t2=1324233062394&t3=1324233062694&t4=1324233062752
+12-18 10:31:03.025 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:31:03.265 D/dalvikvm(  521): GC_FOR_MALLOC freed 5166 objects / 529864 bytes in 96ms
+12-18 10:31:03.435 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317162&lng=-121943404&numPlayer=0&dbm=-73&ecio=-50&t1=1324233063108&t2=1324233063110&t3=1324233063389&t4=1324233063441
+12-18 10:31:04.565 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317139&lng=-121943737&numPlayer=0&dbm=-73&ecio=-50&t1=1324233064139&t2=1324233064143&t3=1324233064511&t4=1324233064573
+12-18 10:31:05.685 D/LocationMasfClient(  114): getNetworkLocation(): Location not found in cache, making network request
+12-18 10:31:05.805 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317125&lng=-121944038&numPlayer=0&dbm=-70&ecio=-50&t1=1324233065460&t2=1324233065468&t3=1324233065761&t4=1324233065812
+12-18 10:31:06.045 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 7084 objects / 487192 bytes in 106ms
+12-18 10:31:06.610 W/LocationMasfClient(  114): uploadCollectionReport(): no ReplyElement
+12-18 10:31:06.615 D/LocationMasfClient(  114): getNetworkLocation(): Number of prefetched entries 1
+12-18 10:31:06.615 D/LocationMasfClient(  114): getNetworkLocation(): Returning network location with accuracy 839.0
+12-18 10:31:07.025 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37317110&lng=-121944337&numPlayer=0&dbm=-70&ecio=-50&t1=1324233066265&t2=1324233066268&t3=1324233066974&t4=1324233067034
+12-18 10:31:07.105 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:31:07.345 D/dalvikvm(  521): GC_FOR_MALLOC freed 5105 objects / 502976 bytes in 152ms
+12-18 10:31:07.575 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316822&lng=-121933284&numPlayer=0&dbm=-70&ecio=-50&t1=1324233067114&t2=1324233067118&t3=1324233067515&t4=1324233067579
+12-18 10:31:07.635 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:31:07.995 D/dalvikvm( 1032): GC_EXPLICIT freed 5654 objects / 701072 bytes in 141ms
+12-18 10:31:10.555 D/dalvikvm( 1032): GC_EXPLICIT freed 2243 objects / 150024 bytes in 116ms
+12-18 10:31:11.615 D/dalvikvm(  521): GC_FOR_MALLOC freed 5100 objects / 528976 bytes in 267ms
+12-18 10:31:13.265 D/dalvikvm( 1032): GC_EXPLICIT freed 7590 objects / 170712 bytes in 141ms
+12-18 10:31:15.855 D/dalvikvm(  521): GC_FOR_MALLOC freed 4894 objects / 519784 bytes in 317ms
+12-18 10:31:16.035 D/dalvikvm( 1032): GC_EXPLICIT freed 8196 objects / 181344 bytes in 108ms
+12-18 10:31:20.108 D/dalvikvm(  521): GC_FOR_MALLOC freed 5070 objects / 526752 bytes in 346ms
+12-18 10:31:21.158 D/dalvikvm( 1032): GC_EXPLICIT freed 9443 objects / 387816 bytes in 123ms
+12-18 10:31:22.968 I/Maps.MyLocationOverlay( 1032): Got fallback update soon after preferred udpate, ignoring
+12-18 10:31:23.708 D/dalvikvm(  521): GC_FOR_MALLOC freed 5128 objects / 525456 bytes in 127ms
+12-18 10:31:23.888 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316891&lng=-121950505&numPlayer=0&dbm=-68&ecio=-50&t1=1324233083539&t2=1324233083541&t3=1324233083828&t4=1324233083893
+12-18 10:31:24.188 D/dalvikvm( 1032): GC_EXPLICIT freed 21609 objects / 451008 bytes in 138ms
+12-18 10:31:24.768 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316896&lng=-121950879&numPlayer=0&dbm=-68&ecio=-50&t1=1324233084454&t2=1324233084457&t3=1324233084718&t4=1324233084769
+12-18 10:31:25.998 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316882&lng=-121951262&numPlayer=0&dbm=-68&ecio=-50&t1=1324233085624&t2=1324233085626&t3=1324233085935&t4=1324233086007
+12-18 10:31:26.848 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316879&lng=-121951616&numPlayer=0&dbm=-71&ecio=-50&t1=1324233086473&t2=1324233086476&t3=1324233086797&t4=1324233086848
+12-18 10:31:27.678 D/dalvikvm(  521): GC_FOR_MALLOC freed 5043 objects / 522968 bytes in 203ms
+12-18 10:31:28.128 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316874&lng=-121951940&numPlayer=0&dbm=-71&ecio=-50&t1=1324233087433&t2=1324233087436&t3=1324233088070&t4=1324233088128
+12-18 10:31:28.748 D/dalvikvm( 1032): GC_EXPLICIT freed 14278 objects / 571552 bytes in 121ms
+12-18 10:31:29.238 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316870&lng=-121952286&numPlayer=0&dbm=-71&ecio=-50&t1=1324233088540&t2=1324233088543&t3=1324233089182&t4=1324233089242
+12-18 10:31:30.248 D/CallNotifier(  191): onServiceChanged(): 
+12-18 10:31:30.498 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316861&lng=-121952638&numPlayer=0&dbm=-71&ecio=-50&t1=1324233089543&t2=1324233089546&t3=1324233090437&t4=1324233090506
+12-18 10:31:30.968 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316828&lng=-121952997&numPlayer=0&dbm=-75&ecio=-50&t1=1324233090630&t2=1324233090632&t3=1324233090920&t4=1324233090977
+12-18 10:31:31.748 D/dalvikvm(  521): GC_FOR_MALLOC freed 5082 objects / 525648 bytes in 95ms
+12-18 10:31:31.968 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316791&lng=-121953368&numPlayer=0&dbm=-75&ecio=-50&t1=1324233091631&t2=1324233091634&t3=1324233091918&t4=1324233091973
+12-18 10:31:32.228 D/dalvikvm( 1032): GC_EXTERNAL_ALLOC freed 11091 objects / 449880 bytes in 103ms
+12-18 10:31:33.038 I/stats   ( 1032): post_position gid=233012&pid=216064&lat=37316777&lng=-121953725&numPlayer=0&dbm=-75&ecio=-50&t1=1324233092562&t2=1324233092566&t3=1324233092990&t4=1324233093042
+12-18 10:31:34.368 I/
+
