@@ -7,7 +7,7 @@ PAPER=PacmanPaper
 
 all: ${PAPER}.pdf
 
-${PAPER}.pdf: ${PAPER}.tex refs.bib *.cls
+${PAPER}.pdf: ${PAPER}.tex refs.bib *.cls figs/*.pdf
 	$(call latex,${PAPER}.tex) &> /dev/null
 	bibtex ${PAPER}
 	$(call latex,${PAPER}.tex) &> /dev/null
