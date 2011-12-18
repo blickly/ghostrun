@@ -298,6 +298,7 @@ on the server.
 \subsection{Game Protocol/API}
 To implement the system described above, we came up with our own API.
 
+\FIXME{Use API URLs rather than python handler names}
 \subsubsection{SaveMapHandler}
 This handler is responsible for handling the storing of new maps. A
 request to this handler should contain the contents of the map. The
@@ -375,6 +376,39 @@ future work (Section~\ref{future}). We aim to build a fast system for
 friendly players, not adversarial programmers.
 
 \section{Measurements}
+\subsection{Phone Simulators}
+In order to get a meaningful evaluation of the entire architecture, we
+need to have more than just measurements of latency in the simple
+two-phones case.  In order to get a clear picture of how well the
+architecture will scale, we would like measurements of how well the
+system handles increasing load.  The most natural way to measure load
+in our system is by increasing the number of phones playing the game,
+but acquiring that number of hardware phones only for testing was
+infeasible.  Instead, we built a phone simulator that can be run on
+the computer and simulate the interaction of any number of phones
+interacting with the server. We still do the latency measurements from
+the real phones, since we want to take into account the potential
+differences in latency between 3G and Wifi connections, but phone
+simulators allow us to vary the load on the server in a realistic
+way. Since creating more players for the game also means that the real
+phones need to display more players on the screen, this load test is
+also a way of testing how efficiently the players are drawn on the
+screen of the handheld devices.
+
+\subsubsection{Simulator Architecture}
+The phone simulator is written in Go, and can create an arbitrary
+number of concurrent threads that each simulate a single phone.  Each
+simulated phone first queries the server requesting to join a specific
+game, and gets back it's player id.  It then uses that player id to
+generate random movement around a fixed point at a given update rate
+(in the examples here, we have used a 1 second update rate as that is
+the update rate used by the real phones). The simulator also logs all
+of the responses from the server and when all communications are sent
+and received, which would allow computation of server latency.  Since
+we are more interested in the server latencies for real phones,
+however, we do not use the simulator latencies in the results in the
+following section.
+
 \subsection{Measuring Latency}\label{measuring}
 
 There are many difficulties with trying to measure latency in a
@@ -423,9 +457,9 @@ reading to move from the GPS receiver on one phone to the screen on
 another is made up of three parts:
 
 \begin{enumerate}
-\item the time that it takes to get from the GPS receiver on the first phone to the server,
-\item the time that the reading waits on the server before it is queried by the second phone, and
-\item the time that the reading takes to get from the server to the screen of the second phone.
+\item the time that it takes to get from the GPS receiver on the first phone to the server ($\tau_{up}$),
+\item the time that the reading waits on the server before it is queried by the second phone ($\tau_{s}$), and
+\item the time that the reading takes to get from the server to the screen of the second phone ($\tau_{down}$).
 \end{enumerate}
 
 Since the second part is handled completely on the server, measuring
@@ -446,48 +480,36 @@ between the GPS measurement being posted and being read by another
 phone gives us a very accurate overall latency for reading-to-display
 across multiple phones.
 
-\subsection{Phone Simulators}
-In order to get a meaningful evaluation of the entire architecture, we
-need to have more than just measurements of latency in the simple
-two-phones case.  In order to get a clear picture of how well the
-architecture will scale, we would like measurements of how well the
-system handles increasing load.  The most natural way to measure load
-in our system is by increasing the number of phones playing the game,
-but acquiring that number of hardware phones only for testing was
-infeasible.  Instead, we built a phone simulator that can be run on
-the computer and simulate the interaction of any number of phones
-interacting with the server. We still do the latency measurements from
-the real phones, since we want to take into account the potential
-differences in latency between 3G and Wifi connections, but phone
-simulators allow us to vary the load on the server in a realistic
-way. Since creating more players for the game also means that the real
-phones need to display more players on the screen, this load test is
-also a way of testing how efficiently the players are drawn on the
-screen of the handheld devices.
-
-\subsubsection{Simulator Architecture}
-The phone simulator is written in Go, and can create an arbitrary
-number of concurrent threads that each simulate a single phone.  Each
-simulated phone first queries the server requesting to join a specific
-game, and gets back it's player id.  It then uses that player id to
-generate random movement around a fixed point at a given update rate
-(in the examples here, we have used a 1 second update rate as that is
-the update rate used by the real phones). The simulator also logs all
-of the responses from the server and when all communications are sent
-and received, which would allow computation of server latency.  Since
-we are more interested in the server latencies for real phones,
-however, we do not use the simulator latencies in the results in the
-following section.
-
 \subsection{Results}
+In order test how the system handles in response to high load, we ran
+experiments in which we had one real phone play the game, and also included
+a varying number of simulated phones running the phone simulators that
+also interacted with the server using the same API as the real phone.
+During 9 experiments each with a number of simulated phones ranging from 1
+to 256, we measured data about latencies of various operations both on the
+server and on the real phone.
 
-
+\subsubsection{Server Queueing Latency}
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/serverQueueLatency}
 \label{fig:serverQueueLatency}
 \caption{The highest, lowest, and average age of data fetched from the server.}
 \end{figure}
+
+In Figure~\ref{fig:serverQueueLatency}, we see the measure of the time that each GPS reading waits on the server before it gets read.  Since a single query of the \url{/post_position} method returns the GPS location of all other players, measuring the freshness of the data returned is not straightforward. If each of the GPS readings contained in the response to one request have been waiting on the server for different amounts of time, what is the most useful way to discuss the queue wait time for that request?
+One way to measure this freshness would be to keep track of which GPS reading contained in the response was oldest, and report that as the queue time for the response. Another way would be to look at the newest GPS reading contained in the response. Yet another way would be to simply take the average queue wait time of all the readings contained in the response.
+Figure~\ref{fig:serverQueueLatency} shows the average queue wait times by all three of these metrics as they vary with respect to server load.
+Note that when there are only two phones (one real and one simulated), each request returns only a single GPS update, and all three metrics are identical.
+It is interesting to note that the wait time of the newest update and average update actually decrease as phones are added up to 16 phones. This seems to be due to the fact that update requests are more likely to be spread evenly over time when there are a critical mass of phones making the requests.
+
+
+
+\subsubsection{Phone Update Rate}
+The other source of latency is that of the time it takes to communicate between the phones and the server. These can conceptually be broken down into two independent parts, the time it takes to upload a reading to the server  ($\tau_{up}$), and the time it takes for a phone to download the reading ($\tau{down}$). Since both of these actions happen within a single API call (to \url{/post_position}), it is easier to measure the sum of these times than individually. To do so, we simply measure from the phone the overall latency of a single round trip of the \url{/post_position} API call.
+
+Nominally, the phones try to make requests updating their positions every $0.5$ seconds, but in practice, the rate at which the phones are able to update depends on the load on the server and the latency of making the previous request. Figure~\ref{fig:phoneUpdateRate} shows how the overall request rate of the phone varies with respect to the number of simulated phones providing additional load.
+Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency comes from. We originally suspected that the reason for increased latency with too many phones was a result of the drawing time for having too many objects on the screen. the latency from drawing so many objects on the screen was the driving force for increasing the time between updates on the phone, but Figure~\ref{fig:phoneUpdateRateDetailed} suggests that this is not the case.  Here we see that as the number of simulated phones increases past about 32, the latency of contacting the server becomes the dominant contributor to overall latency. One other interesting note involves the event wait time, or the time the phone spends idling between GPS updates.  When there is enough slack to have a relatively long idle period between finishing receiving one update and making the next GPS reading, not only is the event wait time high, as would be expected, but the variance is also high. Once the deadlines for making GPS readings start to be missed due to long server latencies, however, the even wait time disappears.
 
 \begin{figure}
 \centering
@@ -502,6 +524,9 @@ following section.
 \label{fig:phoneUpdateRateDetailed}
 \caption{The update rate can be broken down into server communication time, drawing time, and the wait time between GPS readings.}
 \end{figure}
+
+\subsubsection{Phone Signal Strength}
+\FIXME{Measure and write}
 
 \section{Conclusion}
 
