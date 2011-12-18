@@ -34,3 +34,21 @@ legend("topleft", c("Server latency","Draw latency","Event wait time"), pch=c(1,
 title( main="Update Rate (detailed)")
 
 dev.copy2pdf(file="phoneUpdateRateDetailed.pdf")
+
+
+signalStrength <- read.table("signalStrength.log", header=FALSE, col.names=c("realphones","dbm","ecio","d1","d2","d3"))
+
+dmeans = aggregate(signalStrength, by=list(signalStrength$dbm), FUN=mean)
+ddevs = aggregate(signalStrength, by=list(signalStrength$dbm), FUN=sd)
+emeans = aggregate(signalStrength, by=list(signalStrength$ecio), FUN=mean)
+edevs = aggregate(signalStrength, by=list(signalStrength$ecio), FUN=sd)
+
+errbar(dmeans$dbm, dmeans$d2, dmeans$d2+ddevs$d2, dmeans$d2-ddevs$d2, type="b", errbar.col="green", col="green", xlab="RSSI (dBm)", ylab="Server latency (ms)")
+title( main="Latency vs. Received signal strength")
+dev.copy2pdf(file="latencyVsRSSI.pdf")
+
+emeans$ecio <- 10*emeans$ecio
+edevs$ecio <- 10*edevs$ecio
+errbar(emeans$ecio, emeans$d2, emeans$d2+edevs$d2, emeans$d2-edevs$d2, type="b", errbar.col="red", col="red", xlab="Ec/Io (dB)", ylab="Server latency (ms)")
+title( main="Latency vs. Ec/Io")
+dev.copy2pdf(file="latencyVsEcIo.pdf")
