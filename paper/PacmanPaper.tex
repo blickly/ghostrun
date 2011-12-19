@@ -65,8 +65,18 @@
 \maketitle
 
 \begin{abstract}
-\ldots
-\cite{ZombieRun}
+Here we present an augmented reality game for the Android smartphone platform
+that is an homage to Namco's Pacman, but played in the real world.  The game is
+controlled by running around the real world, which is captured by the phone's
+GPS sensor. These readings are uploaded to a server running on Google
+Appengine, which takes care to coordinate and mediate the actions of each of
+the individual players.  In order to test the efficiency of the infrastructure,
+we have constructed a phone simulator in Go that can simulate many phones
+simultaneously while running on a standard desktop computer. Using this
+simulator, we have simulated games that have up to 256 fake phones. At this
+scale, the main bottlenecks in the system are the time it takes to display all
+of the players on the screen of the Android phone, and the latency of the
+server to handle all of the concurrent writes.
 \end{abstract}
 
 \section{Introduction}
