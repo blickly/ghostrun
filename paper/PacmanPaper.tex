@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{color}
-\usepackage{url}
+\usepackage[allowmove]{url}
 
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
@@ -342,10 +342,9 @@ that is similar to dots eating to reduce the amount of processing done
 on the server.
 
 \subsection{Game Protocol/API}
-To implement the system described above, we came up with our own API.
+To implement the system described above, we implemented the following API:
 
-\FIXME{Use API URLs rather than python handler names}
-\subsubsection{SaveMapHandler}
+\subsubsection{\url{/save_map}}
 This handler is responsible for handling the storing of new maps. A
 request to this handler should contain the contents of the map. The
 return value would be an unique ID for the map.
@@ -363,14 +362,17 @@ return value would be an unique ID for the map.
 }]
 \end{lstlisting}
 
-\subsubsection{GetMapsHandler}
+\subsubsection{\url{/get_maps}}
 This handler allow users to get a list of map ID to allow the users to
 pick the map to start a new game with.
 
 \emph{Input:} No input required.\\
 \emph{Output:} A list of get ID in json format.
 
-\subsubsection{NewGameHandler}\label{newgame}
+\subsubsection{\url{/get_map}}
+\FIXME{Write me!}
+
+\subsubsection{\url{/new_game}}\label{newgame}
 This handler create new games on the server for players to join for a
 game of pacman. We required a map ID to start the game.
 
@@ -381,7 +383,10 @@ When a game is create on the server, food dots are generated for the
 map. Each player that joins the game will receive a list of existing
 dot in the map.
 
-\subsubsection{JoinGameHandler}
+\subsubsection{\url{/get_games}}
+\FIXME{Write me!}
+
+\subsubsection{\url{/join_game}}
 A player may join a game by requesting this handler with a game ID and
 a location (defined as a latitude and longitude).
 
@@ -392,7 +397,7 @@ The handler returns an unique player ID, which is used by the player
 to update it's location. The server will be able to distinguish the
 player with this player ID.
 
-\subsubsection{GameMoveHandler}
+\subsubsection{\url{/post_position}}
 Whenever a player's GPS location gets updated, we want to make sure
 that the player's location on the server is also updated.
 
@@ -405,7 +410,7 @@ server and also returning the other player's location. Furthermore,
 any elimination of players are resolved on the server. Therefore, the
 response includes the status of the player (i.e. dead or alive).
 
-\subsubsection{EatDotHandler}
+\subsubsection{\url{/eat_dot}}
 Lastly, this handler is created as an optimization to improve the
 latency on the server. Instead of having the server do the dot eating
 calculation, we decided to have the phone calculate this locally. The
