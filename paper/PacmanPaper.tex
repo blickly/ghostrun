@@ -205,11 +205,10 @@ supports high availability for reads and writes, making it suitable
 for our purposes.
 
 The server is responsible for the following features:
-
 \begin{enumerate}
-\item Allow storing and retrieving of maps.
-\item Allow creation of new games and generation of dots.
-\item Allow querying for current games.
+\item Storing and retrieving of maps.
+\item Creation of new games and generation of dots.
+\item Support for querying of current games.
 \item Keeping track of player locations.
 \item Keeping track of which dots still exist.
 \item Resolve if a pacman is killed by a ghost. \FIXME{move this section to future work}
@@ -443,7 +442,7 @@ also a way of testing how efficiently the players are drawn on the
 screen of the handheld devices.
 
 \subsubsection{Simulator Architecture}
-The phone simulator is written in Go, and can create an arbitrary
+The phone simulator is written in Go~\cite{GoLang}, and can create an arbitrary
 number of concurrent threads that each simulate a single phone.  Each
 simulated phone first queries the server requesting to join a specific
 game, and gets back it's player id.  It then uses that player id to
@@ -723,6 +722,17 @@ deterministic gameplay experience.
 
 
 \section{Conclusion}
+
+We have here presented a rudimentary multiplayer augmented reality game for
+Android phones. We have stress tested the whole system to find that the display
+performance and server latency to be the primary constraints under very high
+load conditions, but both are acceptable under normal loads.  We have presented
+several possible directions for future development, including both new features
+and ways to overcome the latency and display performance issues under high
+load.  All of the development for this project, including the source code for
+the Android app, the Appengine server, the phone simulator for stress testing,
+and even this paper are publicly available, and can be accessed from
+\url{https://github.com/blickly/ghostrun}.
 
 \bibliographystyle{plain}
 \bibliography{refs}
