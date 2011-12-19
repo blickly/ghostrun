@@ -46,7 +46,7 @@
 \newcommand{\FIXME}[1]{{\color{red}\textbf{FIXME: #1}}}
 \newcommand{\javaCode}[1]{\texttt{#1}}
 
-\title{A Pacman Game
+\title{A Mulitplayer Augmented Reality Game for Android Phones
 \numberofauthors{2}
 \author{
 \alignauthor Ben Lickly \\
@@ -70,7 +70,6 @@
 \end{abstract}
 
 \section{Introduction}
-\section{Background}
 Augmented reality refers to a view of the physical world that has been
 augmented with additional computer-generated information, creating a
 sort of hybrid between virtual reality and the real world. Existing
@@ -82,6 +81,19 @@ new methods of input, such as Dance Dance Revolution, Nintendo Wii,
 Playstation Move, and Microsoft Kinect. We see Augmented Reality games
 where players leave their game machine and physically move around the
 real world as a logical extension of this progression
+
+\section{Related Work}
+There already exist a handful of augmented reality games for android. Probably
+the most similar to the game presented here is ``Zombie, Run!"~\cite{ZombieRun},
+in which the player plays as a human that must run away from an indeterminate number of zombie enemies. One of the largest differences in the games is
+that the enemies in ``Zombie, Run!" can move in any direction, including
+through walls, whereas in our game we have specifically defined a map in
+such a way that players and enemies move on the same grid of streets.
+
+Other types of smartphone augmented reality games also exist, such
+as those for ghost hunting~\cite{SpecTrek}, navigating mazes~\cite{ARLabyrinth},
+and augmented reality role playing games~\cite{ParallelKingdom}.
+
 
 \section{Gameplay}
 The game presented here is an untraditional game on the Android platform.
@@ -525,9 +537,6 @@ It is interesting to note that the wait time of the newest update and average up
 \subsubsection{Phone Update Rate}
 The other source of latency is that of the time it takes to communicate between the phones and the server. These can conceptually be broken down into two independent parts, the time it takes to upload a reading to the server  ($\tau_{up}$), and the time it takes for a phone to download the reading ($\tau{down}$). Since both of these actions happen within a single API call (to \url{/post_position}), it is easier to measure the sum of these times than individually. To do so, we simply measure from the phone the overall latency of a single round trip of the \url{/post_position} API call.
 
-Nominally, the phones try to make requests updating their positions every $0.5$ seconds, but in practice, the rate at which the phones are able to update depends on the load on the server and the latency of making the previous request. Figure~\ref{fig:phoneUpdateRate} shows how the overall request rate of the phone varies with respect to the number of simulated phones providing additional load.
-Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency comes from. We originally suspected that the reason for increased latency with too many phones was a result of the drawing time for having too many objects on the screen. the latency from drawing so many objects on the screen was the driving force for increasing the time between updates on the phone, but Figure~\ref{fig:phoneUpdateRateDetailed} suggests that this is not the case.  Here we see that as the number of simulated phones increases past about 32, the latency of contacting the server becomes the dominant contributor to overall latency. One other interesting note involves the event wait time, or the time the phone spends idling between GPS updates.  When there is enough slack to have a relatively long idle period between finishing receiving one update and making the next GPS reading, not only is the event wait time high, as would be expected, but the variance is also high. Once the deadlines for making GPS readings start to be missed due to long server latencies, however, the even wait time disappears.
-
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/phoneUpdateRate}
@@ -540,6 +549,32 @@ Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency
 \includegraphics[scale=0.5]{figs/phoneUpdateRateDetailed}
 \caption{The update rate can be broken down into server communication time, drawing time, and the wait time between GPS readings.}
 \label{fig:phoneUpdateRateDetailed}
+\end{figure}
+
+Nominally, the phones try to make requests updating their positions every $0.5$ seconds, but in practice, the rate at which the phones are able to update depends on the load on the server and the latency of making the previous request. Figure~\ref{fig:phoneUpdateRate} shows how the overall request rate of the phone varies with respect to the number of simulated phones providing additional load.
+Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency comes from. We originally suspected that the reason for increased latency with too many phones was a result of the drawing time for having too many objects on the screen. the latency from drawing so many objects on the screen was the driving force for increasing the time between updates on the phone, but Figure~\ref{fig:phoneUpdateRateDetailed} suggests that this is not the case.  Here we see that as the number of simulated phones increases past about 32, the latency of contacting the server becomes the dominant contributor to overall latency. One other interesting note involves the event wait time, or the time the phone spends idling between GPS updates.  When there is enough slack to have a relatively long idle period between finishing receiving one update and making the next GPS reading, not only is the event wait time high, as would be expected, but the variance is also high. Once the deadlines for making GPS readings start to be missed due to long server latencies, however, the even wait time disappears.
+
+Because the phone slows down considerably with an increasing number of objects
+are drawn to the screen, we initially assumed that the screen rendering time
+was the bottleneck that caused a slow update rate for experiments with large
+numbers of simulated phones. In a run with 256 simulated ghosts, such as that
+shown in Figure~\ref{fig:256Ghosts}, the screen becomes completely unresponsive
+and a dialog to close the app appears. Because the drawing is done in a
+separate thread, however, it does not block the progress of the GPS updates to
+the server, and our data shows instead that server latency is the primary cause
+of slow update rates during games with very large numbers of players.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{screenshots/bigswarm}
+\caption{The phone becomes less responsive when too many objects are drawn to the screen.}
+\label{fig:256Ghosts}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.45]{screenshots/sorry}
+\caption{When too many objects are drawn, the game can not be continued and must be quit.}
+\label{fig:256GhostsSorry}
 \end{figure}
 
 \subsubsection{Phone Signal Strength}
