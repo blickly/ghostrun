@@ -391,10 +391,17 @@ This handler allow users to get a list of map ID to allow the users to
 pick the map to start a new game with.
 
 \emph{Input:} No input required.\\
-\emph{Output:} A list of get ID in json format.
+\emph{Output:} A list of map IDs in json format.
 
 \subsubsection{\url{/get_map}}
-\FIXME{Write me!}
+This handler is responsible for retrieving stored maps. A request to this
+handler should contain an ID for a map that has been previously saved. The
+return value contains the map contents in the format described in
+Listing~\ref{lst:MapFormat}.
+
+\emph{Input:} Map ID associated of map to read. \\
+\emph{Output:} Map content in json.
+
 
 \subsubsection{\url{/new_game}}\label{newgame}
 This handler create new games on the server for players to join for a
@@ -408,7 +415,11 @@ map. Each player that joins the game will receive a list of existing
 dot in the map.
 
 \subsubsection{\url{/get_games}}
-\FIXME{Write me!}
+This handler returns a list of game IDs of all games in progress, useful
+for querying before joining a game.
+
+\emph{Input:} No input required.\\
+\emph{Output:} A list of game IDs in json format.
 
 \subsubsection{\url{/join_game}}
 A player may join a game by requesting this handler with a game ID and
