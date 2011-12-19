@@ -1,6 +1,6 @@
 \documentclass{acm_proc_article-sp}
 
-\usepackage{makeidx}  % allows for indexgeneration
+\usepackage{makeidx}  % allows for index generation
 \usepackage{listings}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -69,7 +69,7 @@ Here we present an augmented reality game for the Android smartphone platform
 that is an homage to Namco's Pacman, but played in the real world.  The game is
 controlled by running around the real world, which is captured by the phone's
 GPS sensor. These readings are uploaded to a server running on Google
-Appengine, which takes care to coordinate and mediate the actions of each of
+App Engine, which takes care to coordinate and mediate the actions of each of
 the individual players.  In order to test the efficiency of the infrastructure,
 we have constructed a phone simulator in Go that can simulate many phones
 simultaneously while running on a standard desktop computer. Using this
@@ -93,7 +93,7 @@ where players leave their game machine and physically move around the
 real world as a logical extension of this progression
 
 \section{Related Work}
-There already exist a handful of augmented reality games for android. Probably
+There already exist a handful of augmented reality games for Android. Probably
 the most similar to the game presented here is ``Zombie, Run!"~\cite{ZombieRun},
 in which the player plays as a human that must run away from an indeterminate number of zombie enemies. One of the largest differences in the games is
 that the enemies in ``Zombie, Run!" can move in any direction, including
@@ -124,7 +124,7 @@ This defines which area of their real life neighborhood are in bounds during
 the course of the game, and where the other players, enemies, and ghosts are
 created.
 The map editor also allows users to save customized maps to a server,
-so that the maps can be persistantly backed up, and also so that players
+so that the maps can be persistently backed up, and also so that players
 can share maps with each other.
 
 In order to start playing, a user simply selects the desired map to start a new game. The player is then presented with a map of their real world location populated with dots that must be run over to be ``eaten". Unlike traditional pacman, our game is multiplayer, allowing multiple players to play in a single game.
@@ -144,13 +144,13 @@ players.
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{figs/ServerArchitecture}
-\caption{A server on Google Appenigine is used to coordinate communication between the phone clients.}
+\caption{A server on Google App Engine is used to coordinate communication between the phone clients.}
 \label{fig:ServerArchitecture}
 \end{figure}
 
 Our augmented reality Pacman game is built in a client/server architecture as
 shown in Figure~\ref{fig:ServerArchitecture}, where the server runs on Google's
-Appengine service, and the clients are smartphones running the Android 2.2
+App Engine service, and the clients are smartphones running the Android 2.2
 operating system.  The server has an API that can be accessed through HTTP
 connections, and the clients use this API in order to maintain a consistent
 view of the world when playing a multiplayer game.
@@ -169,11 +169,11 @@ rates, polling suffers from high latency, and at high polling rates, it can
 consume more power and shorten battery life compared to other techniques.
 
 Receiving information from the server through SMS is a much lower power
-solution. In this approach, the app must register for the permission to read
-incoming SMS messages, and then relies on the server to send messages from a
-specific number with a given format. This approach has the disadvantage that it
-requires unconventional permissions that may make users suspicious, and it is
-difficult and expensive to deploy widely, especially when dealing with
+solution. In this approach, the application must register for the permission to
+read incoming SMS messages, and then relies on the server to send messages from
+a specific number with a given format. This approach has the disadvantage that
+it requires unconventional permissions that may make users suspicious, and it
+is difficult and expensive to deploy widely, especially when dealing with
 international phone numbers. It is also unusable on devices like tablets that
 may have 3G data coverage, but no phone number.
 
@@ -196,9 +196,9 @@ message, increasing complexity.
 
 \subsection{Server}
 
-We used a python webserver running on top of Google's Appengine
-service. Google's Appengine service provides many advantage for our
-Android app. The service has a built-in high replication datastore,
+We used a Python web server running on top of Google's App Engine
+service. Google's App Engine service provides many advantage for our
+Android application. The service has a built-in high replication datastore,
 which implements the Paxos Algorithm~\cite{lamport01paxos} to
 synchronize data across data centers in real time. The datastore
 supports high availability for reads and writes, making it suitable
@@ -218,7 +218,7 @@ The server is responsible for the following features:
 \subsubsection{Map storage and retrieval}
 Besides keeping track of information during gameplay, the server
 is also responsible for storing maps and allowing players to retrieve
-and use those maps. Here, we make use of the Appengine
+and use those maps. Here, we make use of the App Engine
 datastore to store our maps using the \texttt{TextProperty}.
 In an earlier iteration we tried to use the similar \texttt{StringProperty}
 to store maps, but found problems. In particular, the
@@ -299,7 +299,7 @@ together using the server location information about each player.
 
 \subsection{Client}
 
-The clients are implemented as native Android apps that run on any
+The clients are implemented as a native Android application that runs on any
 Android platform of version 2.2. or higher.  Since we only had a limited
 supply of physical phones for testing, we also implemented fake clients,
 or ``phone simulators" that behave similarly to the Android devices, but
@@ -325,12 +325,12 @@ with any related edges).
 %\end{figure}
 
 \subsubsection{Game Mapview}
-The Game Mapview is used for the main course of this app - the
-Gameplay. 
+The Game Mapview is the primary interface of the application during the most
+import mode -- the gameplay.
 
 When a player is starting a game, he/she request to join a game and
 the server returns a list of food dots (described in
-\ref{newgame}). The game mapview is responsible for displaying the
+\ref{newgame}). The game Mapview is responsible for displaying the
 dots and removing dots when a user is close enough to some food dots.
 
 During the game, the Game Mapview is charged with the task of updating
@@ -352,7 +352,7 @@ The client's game loop for a Pacman can be described as follows:
 \item We also check if our location is close enough to any food dots. If so, request to eat a food dot.
 \end{enumerate}
 
-The client's game loop for a ghost is even simpler and can be descrbied as:
+The client's game loop for a ghost is even simpler and can be described as:
 
 \begin{enumerate}
 \item If player's location is updated $0.5$ within of the last update, we do nothing.
@@ -373,7 +373,7 @@ This method is responsible for handling the storing of new maps. A
 request to this method should contain the contents of the map. The
 return value would be an unique ID for the map.
 
-\emph{Arguments:} map content in json.\\
+\emph{Arguments:} map content in JSON.\\
 \emph{Response:} Unique ID associate with that map.
 
 \medskip
@@ -391,7 +391,7 @@ This method allow users to get a list of map ID to allow the users to
 pick the map to start a new game with.
 
 \emph{Arguments:} None required.\\
-\emph{Response:} A list of map IDs in json format.
+\emph{Response:} A list of map IDs in JSON format.
 
 \subsubsection{\url{/get_map}}
 This method is responsible for retrieving stored maps. A request to this
@@ -400,7 +400,7 @@ return value contains the map contents in the format described in
 Listing~\ref{lst:MapFormat}.
 
 \emph{Arguments:} Map ID associated of map to read. \\
-\emph{Response:} Map content in json.
+\emph{Response:} Map content in JSON.
 
 
 \subsubsection{\url{/new_game}}\label{newgame}
@@ -419,14 +419,14 @@ This method returns a list of game IDs of all games in progress, useful
 for querying before joining a game.
 
 \emph{Arguments:} None required.\\
-\emph{Response:} A list of game IDs in json format.
+\emph{Response:} A list of game IDs in JSON format.
 
 \subsubsection{\url{/join_game}}
 A player may join a game by requesting this method with a game ID and
 a location (defined as a latitude and longitude).
 
 \emph{Arguments:} Game ID to identify which game to join.\\
-\emph{Response:} Player ID for requesting player and a list of initial food dot locations in json.
+\emph{Response:} Player ID for requesting player and a list of initial food dot locations in JSON.
 
 The method returns an unique player ID, which is used by the player
 when posting location updates. The server refers to all players solely by
@@ -473,7 +473,7 @@ infeasible.  Instead, we built a phone simulator that can be run on
 the computer and simulate the interaction of any number of phones
 interacting with the server. We still do the latency measurements from
 the real phones, since we want to take into account the potential
-differences in latency between 3G and Wifi connections, but phone
+differences in latency between 3G and wifi connections, but phone
 simulators allow us to vary the load on the server in a realistic
 way. Since creating more players for the game also means that the real
 phones need to display more players on the screen, this load test is
@@ -555,7 +555,7 @@ measurements.  It is likely that the latency for a reading to get from
 the server to one phone will be very close to the latency to get from
 the server to another.  Making this (reasonable) assumption allows us
 to measure the sum of the first and third parts by simply measuring
-the roundtrip time of two separate GPS measurements as seen by a
+the round-trip time of two separate GPS measurements as seen by a
 single phone.  That is, if we assume a certain degree of symmetry
 among the phones, we can measure the time it takes to upload one GPS
 measurement and then receive a different GPS measurement from the
@@ -629,7 +629,7 @@ are drawn to the screen, we initially assumed that the screen rendering time
 was the bottleneck that caused a slow update rate for experiments with large
 numbers of simulated phones. In a run with 256 simulated ghosts, such as that
 shown in Figure~\ref{fig:256Ghosts}, the screen becomes completely unresponsive
-and a dialog to close the app appears. Because the drawing is done in a
+and a dialog to close the application appears. Because the drawing is done in a
 separate thread, however, it does not block the progress of the GPS updates to
 the server, and our data shows instead that server latency is the primary cause
 of slow update rates during games with very large numbers of players.
@@ -680,12 +680,12 @@ received signal is.
 
 There are many avenues for future work on this project.  The implementation
 presented here did not take into the account of cheating that could take place
-by unathorized clients or other abuse of the game API.  For example, a
+by unauthorized clients or other abuse of the game API.  For example, a
 malicious player could obtain all the dot information and request to eat all
 the dots using a script. The lack of authentication makes it possible for
 anyone who knows the location of the server to interfere with the gameplay.
-Player could even potentially create their own Android app or modify the
-existing one to make it send out fake GPS locations.  More work to make the
+Player could even potentially create their own Android application or modify
+the existing one to make it send out fake GPS locations.  More work to make the
 interaction between the server and the client more secure, such as including
 user authentication, could make the game more fair.
 
@@ -706,16 +706,16 @@ comparison.
 
 Currently, the player icons on the screen are moved only when updates are
 received from the server.  When there is high latency, this creates a feeling
-that the other players are performing ``teleportation'' due to thier ability to
+that the other players are performing ``teleportation'' due to their ability to
 cover a large distance instantaneously.  More work can be done to predict and
 display the direction and speed of each player to make the animation of each
 player's movement more smooth, without making the gameplay slower. With this
 feature, the movement of players could appear less choppy without requiring
 more frequent server updates.
 
-Furthermore, the Android mapview is somewhat slow, since the overlay items (a
-ghost or a pacman) includes other useful features (click listerns, dragging
-support, etc), which are useless features for our purposes. A new
+Furthermore, the Android Mapview is somewhat slow, since the overlay items (a
+ghost or a pacman) includes other useful features (click listeners, dragging
+support, etc.), which are useless features for our purposes. A new
 implementation that only support displaying of the icons could speed up the
 system. Additionally, not all players and dots are on screen at all times
 during gameplay.  We could potentially limit the map to only display set area
@@ -723,7 +723,7 @@ to allow for some optimization on map tile drawing and icon projections.
 
 Certain data structures are better optimized for representing items in space, such as k-d trees~\cite{Bentley:1975:kdtrees}. These could potentially be used for storing the locations of the dots and players and to make the operations of checking when dots are eaten or players killed more efficient.
 
-Another appengine feature that we would like to have used but did not have time
+Another App Engine feature that we would like to have used but did not have time
 for was that of task queues~\cite{TaskQueuesAppengine}, which allow tasks that
 are not responses to HTTP requests to be run on the server, effectively
 giving a notion of independent threads.  The most obvious application of this
@@ -737,14 +737,14 @@ Aside from allowing the implementation of AI agents, task queues can be used
 for managing other aspects of the server that are best handled asynchronously,
 such as identifying games that have ended or were abandoned by the players.
 Currently a game persists indefinitely, until the data is manually deleted from
-the datastore on appengine, so a game deleting task queue could act as a
+the datastore on App Engine, so a game deleting task queue could act as a
 garbage collector for the server by and terminate games that have no players.
 
 
 % FIXME: Do we need this stuff?
 On the other note, we can also add more features to make the gameplay
 experience more interesting. One of the idea could be the existence of
-power pallets on the map. The pacmans will enter an invincible mode
+power pallets on the map. The pacman characters will enter an invincible mode
 for a short duration and would be able to eliminate ghosts from the
 map. Other features could include a fog of war environment, an idea
 taken from an undergraduate AI class, CS 188. During fog of war, the
@@ -771,8 +771,8 @@ load conditions, but both are acceptable under normal loads.  We have presented
 several possible directions for future development, including both new features
 and ways to overcome the latency and display performance issues under high
 load.  All of the development for this project, including the source code for
-the Android app, the Appengine server, the phone simulator for stress testing,
-and even this paper are publicly available, and can be accessed from
+the Android application, the App Engine server, the phone simulator for stress
+testing, and even this paper are publicly available, and can be accessed from
 \url{https://github.com/blickly/ghostrun}.
 
 \bibliographystyle{plain}
