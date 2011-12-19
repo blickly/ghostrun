@@ -198,12 +198,34 @@ The server is responsible for the following features:
 
 \begin{enumerate}
 \item Allow storing and retrieving of maps.
-\item Allow querying for current games.
 \item Allow creation of new games and generation of dots.
+\item Allow querying for current games.
 \item Keeping track of player locations.
 \item Keeping track of which dots still exist.
 \item Resolve if a pacman is killed by a ghost. \FIXME{move this section to future work}
 \end{enumerate}
+
+
+\subsubsection{Map storage and retrieval}
+Besides keeping track of information during gameplay, the server
+is also responsible for storing maps and allowing players to retrieve
+and use those maps. Here, we make use of the Appengine
+datastore to store our maps using the \texttt{TextProperty}.
+In an earlier iteration we tried to use the similar \texttt{StringProperty}
+to store maps, but found problems. In particular, the
+\texttt{StringProperty} can only store up to
+500 characters and the value could be indexed for filtering and
+ordering operations. For our usage, we only need to save and retrieve whole
+maps, so the indexing feature is unnecessary. In addition, large maps
+can easily grow above 500 characters, so the \texttt{TextProperty} field
+was more appropriate.
+
+
+\subsubsection{Creating games and generating dots}
+\FIXME{Add deatil}
+
+\subsubsection{Querying games}
+\FIXME{Add deatil}
 
 \subsubsection{Tracking players}
 Since the server is required to know where all the players are, it
@@ -222,7 +244,7 @@ implementation, we introduced wait time (queue time) for each
 player's location on the server. There is this notion of how ``fresh''
 the location data is, since the staleness of the location information
 of each player, solely depends on how often the client decides to send
-in their location. 
+in their location.
 
 \subsubsection{Eating dots}
 Initially, we had the server resolve eating of dots. Now, we offset
@@ -241,20 +263,6 @@ send out a request when it detects the player captured a ghost (if the
 player is a pacman). However, there are more steps to verify here than
 eating dots. The server will check if the players are indeed close
 together using the server location information about each player.
-
-\subsubsection{Storing and allowing retrieval of Game elements}
-Besides all the basic information for gameplay experience, the server
-is also responsible for storing maps and allowing players to retrieve
-and use those maps. Furthermore, allowing players to use those maps to
-create games of pacman. Here, we, again, make use of Appengine's
-datastore to store our maps using the \texttt{TextProperty}. There was
-a slight complication when we first chose
-\texttt{StringProperty}. \texttt{StringProperty} can only store up to
-500 characters and the value could be indexed for filtering and
-ordering operations. It is not until we hit the 500 characters limit
-when it became obvious that we would not require the indexing property
-of \texttt{StringProperty}.
-
 
 \subsection{Client}
 
