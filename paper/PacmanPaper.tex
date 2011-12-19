@@ -122,8 +122,8 @@ players.
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{figs/ServerArchitecture}
-\label{fig:ServerArchitecture}
 \caption{A server on Google Appenigine is used to coordinate communication between the phone clients.}
+\label{fig:ServerArchitecture}
 \end{figure}
 
 Our augmented reality Pacman game is built in a client/server architecture as
@@ -267,8 +267,8 @@ with any related edges).
 %\begin{figure}
 %\centering
 %\includegraphics[scale=0.4]{figs/MapEditor}
-%\label{fig:MapEditor}
 %\caption{The Map Editor provide the users with a simple interface to create new maps for gameplay.}
+%\label{fig:MapEditor}
 %\end{figure}
 
 \subsubsection{Game Mapview}
@@ -438,8 +438,8 @@ system~\cite{Lamport:1978:TCO}.
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{figs/LatencyExplanation}
-\label{fig:LatencyExplanation}
 \caption{Latency can be broken down into three constituent pieces.}
+\label{fig:LatencyExplanation}
 \end{figure}
 
 One solution would be to synchronize the notion of time on the phone.
@@ -510,8 +510,8 @@ server and on the real phone.
 \begin{figure*}
 \centering
 \includegraphics[scale=0.6]{figs/serverQueueLatency}
-\label{fig:serverQueueLatency}
 \caption{The highest, lowest, and average age of data fetched from the server.}
+\label{fig:serverQueueLatency}
 \end{figure*}
 
 In Figure~\ref{fig:serverQueueLatency}, we see the measure of the time that each GPS reading waits on the server before it gets read.  Since a single query of the \url{/post_position} method returns the GPS location of all other players, measuring the freshness of the data returned is not straightforward. If each of the GPS readings contained in the response to one request have been waiting on the server for different amounts of time, what is the most useful way to discuss the queue wait time for that request?
@@ -531,15 +531,15 @@ Figure~\ref{fig:phoneUpdateRateDetailed} shows a breakdown of where this latency
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/phoneUpdateRate}
-\label{fig:phoneUpdateRate}
 \caption{The overall rate of post requests by the phone.}
+\label{fig:phoneUpdateRate}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/phoneUpdateRateDetailed}
-\label{fig:phoneUpdateRateDetailed}
 \caption{The update rate can be broken down into server communication time, drawing time, and the wait time between GPS readings.}
+\label{fig:phoneUpdateRateDetailed}
 \end{figure}
 
 \subsubsection{Phone Signal Strength}
@@ -586,63 +586,69 @@ comparison.
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/latencyVsRSSI}
-\label{fig:latencyVsRSSI}
 \caption{Server latency as affected by received signal strength.}
+\label{fig:latencyVsRSSI}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{figs/latencyVsEcIo}
-\label{fig:latencyVsEcIo}
 \caption{Server latency as affected by pilot strength.}
+\label{fig:latencyVsEcIo}
 \end{figure}
-
-\section{Conclusion}
 
 \section{Future work}
 \label{future}
 
-There is much to be done with this project. Our implementation did not
-take into account of all the security issue and potential unfairness
-that could be caused by such a simple API. For example, a malicious
-player could obtain all the dot information and request to eat all the
-dots using a script. The lack of authenication makes it possible for
-anyone to interfere with the gameplay. In the extreme case, players
-could write their own Android app that sends out fake GPS
-locations. More work to make the interaction between the server and
-the client more security could make the game more fair.
+There are many avenues for future work on this project.  The implementation
+presented here did not take into the account of cheating that could take place
+by unathorized clients or other abuse of the game API.  For example, a
+malicious player could obtain all the dot information and request to eat all
+the dots using a script. The lack of authentication makes it possible for
+anyone who knows the location of the server to interfere with the gameplay.
+Player could even potentially create their own Android app or modify the
+existing one to make it send out fake GPS locations.  More work to make the
+interaction between the server and the client more secure, such as including
+user authentication, could make the game more fair.
 
-Currently, the icons of the player updates through ``teleportation''
-due to the lag cause of latency. More work can be done to predict and
-display the direction and speed of each player to make the animation
-of each player's movement more smooth, without making the gameplay
-slower. With this feature, the movement of players won't appear to be
-choppy. The user shouldn't be able to tell that the GPS location
-updates every couple seconds. Instead, it would feel like the players'
-locations are constantly being updated.
+Currently, the player icons on the screen are moved only when updates are
+received from the server.  When there is high latency, this creates a feeling
+that the other players are performing ``teleportation'' due to thier ability to
+cover a large distance instantaneously.  More work can be done to predict and
+display the direction and speed of each player to make the animation of each
+player's movement more smooth, without making the gameplay slower. With this
+feature, the movement of players could appear less choppy without requiring
+more frequent server updates.
 
-Furthermore, the Android mapview is somewhat slow, since the overlay
-items (a ghost or a pacman) includes other useful features (click
-listerns, dragging support, etc), which are useless features for our
-purposes. A new implementation that only support displaying of the
-icons will speed up the system. Also, during gameplay, a specific map
-has a limited area that has dots, we can some how limit the map to
-only displaya set area to allow for some optimization on map tile
-drawing and icon projections.
+Furthermore, the Android mapview is somewhat slow, since the overlay items (a
+ghost or a pacman) includes other useful features (click listerns, dragging
+support, etc), which are useless features for our purposes. A new
+implementation that only support displaying of the icons could speed up the
+system. Additionally, not all players and dots are on screen at all times
+during gameplay.  We could potentially limit the map to only display set area
+to allow for some optimization on map tile drawing and icon projections.
 
-Another interesting, yet unrelated, direction would be to construct an
-AI that runs as a seperate thread on the server. The AI would be
-either a ghost or a pacman and acts like another client (i.e. sends
-locations and gets other player's locations back, eats dots, etc). The
-AI could allow players to works as a team or enable an intelligent
-single player mode. Aside from making the gameplay more appealing, the
-AI could also be allowed to have more power over the game as a game
-regulator. Currently, our server does not identify games that has
-ended or has been abandoned by the players. A game lives on forever
-until we delete the data from the datastore on Appengine. The AI could
-serve as a garbage collector for our server and terminate games that
-does not have any players in it.
+Certain data structures are better optimized for representing items in space, such as k-d trees~\cite{Bentley:1975:kdtrees}. These could potentially be used for storing the locations of the dots and players and to make the operations of checking when dots are eaten or players killed more efficient.
 
+Another appengine feature that we would like to have used but did not have time
+for was that of task queues~\cite{TaskQueuesAppengine}, which allow tasks that
+are not responses to HTTP requests to be run on the server, effectively
+giving a notion of independent threads.  The most obvious application of this
+to our game would be to implement AI tasks for autonomously controlling
+extra ghost or pacman characters in a way analogous to the phone-based client.
+This would allow games with more players than human users on phones, and would
+also allow for single player games that are still played over the server.
+
+
+Aside from allowing the implementation of AI agents, task queues can be used
+for managing other aspects of the server that are best handled asynchronously,
+such as identifying games that have ended or were abandoned by the players.
+Currently a game persists indefinitely, until the data is manually deleted from
+the datastore on appengine, so a game deleting task queue could act as a
+garbage collector for the server by and terminate games that have no players.
+
+
+% FIXME: Do we need this stuff?
 On the other note, we can also add more features to make the gameplay
 experience more interesting. One of the idea could be the existence of
 power pallets on the map. The pacmans will enter an invincible mode
@@ -652,7 +658,7 @@ taken from an undergraduate AI class, CS 188. During fog of war, the
 player can only see other player that are within a certain
 distance. The existence of food dots are also inaccurate. Pacman
 player can see where the food dots are, but they won't be able to know
-if the dots are still there until they are close enough. 
+if the dots are still there until they are close enough.
 
 Other even more exciting features can include a special featured
 map. Equal number of players start on each side of the map. When a
@@ -662,6 +668,8 @@ is a pacman and can eat dots. The team loses when it runs out of
 dots. These variations of pacman games provide some defensive and less
 deterministic gameplay experience.
 
+
+\section{Conclusion}
 
 \bibliographystyle{plain}
 \bibliography{refs}
