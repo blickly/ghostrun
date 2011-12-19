@@ -369,12 +369,12 @@ on the server.
 To implement the system described above, we implemented the following API:
 
 \subsubsection{\url{/save_map}}
-This handler is responsible for handling the storing of new maps. A
-request to this handler should contain the contents of the map. The
+This method is responsible for handling the storing of new maps. A
+request to this method should contain the contents of the map. The
 return value would be an unique ID for the map.
 
-\emph{Input:} map content in json.\\
-\emph{Output:} Unique ID associate with that map.
+\emph{Arguments:} map content in json.\\
+\emph{Response:} Unique ID associate with that map.
 
 \medskip
 \begin{lstlisting}[caption=Map format in json,label={lst:MapFormat}]
@@ -387,48 +387,48 @@ return value would be an unique ID for the map.
 \end{lstlisting}
 
 \subsubsection{\url{/get_maps}}
-This handler allow users to get a list of map ID to allow the users to
+This method allow users to get a list of map ID to allow the users to
 pick the map to start a new game with.
 
-\emph{Input:} No input required.\\
-\emph{Output:} A list of map IDs in json format.
+\emph{Arguments:} None required.\\
+\emph{Response:} A list of map IDs in json format.
 
 \subsubsection{\url{/get_map}}
-This handler is responsible for retrieving stored maps. A request to this
-handler should contain an ID for a map that has been previously saved. The
+This method is responsible for retrieving stored maps. A request to this
+method should contain an ID for a map that has been previously saved. The
 return value contains the map contents in the format described in
 Listing~\ref{lst:MapFormat}.
 
-\emph{Input:} Map ID associated of map to read. \\
-\emph{Output:} Map content in json.
+\emph{Arguments:} Map ID associated of map to read. \\
+\emph{Response:} Map content in json.
 
 
 \subsubsection{\url{/new_game}}\label{newgame}
-This handler create new games on the server for players to join for a
+This method create new games on the server for players to join for a
 game of pacman. We required a map ID to start the game.
 
-\emph{Input:} Map ID to start the game.\\
-\emph{Output:} Returns the unique game ID associated with the game.
+\emph{Arguments:} Map ID to start the game.\\
+\emph{Response:} The unique game ID associated with the game.
 
 When a game is create on the server, food dots are generated for the
 map. Each player that joins the game will receive a list of existing
 dot in the map.
 
 \subsubsection{\url{/get_games}}
-This handler returns a list of game IDs of all games in progress, useful
+This method returns a list of game IDs of all games in progress, useful
 for querying before joining a game.
 
-\emph{Input:} No input required.\\
-\emph{Output:} A list of game IDs in json format.
+\emph{Arguments:} None required.\\
+\emph{Response:} A list of game IDs in json format.
 
 \subsubsection{\url{/join_game}}
-A player may join a game by requesting this handler with a game ID and
+A player may join a game by requesting this method with a game ID and
 a location (defined as a latitude and longitude).
 
-\emph{Input:} Game ID to identify which game to join.\\
-\emph{Output:} Returns a list of existing food dots and a player ID.\\
+\emph{Arguments:} Game ID to identify which game to join.\\
+\emph{Response:} Player ID for requesting player and a list of initial food dot locations in json.
 
-The handler returns an unique player ID, which is used by the player
+The method returns an unique player ID, which is used by the player
 when posting location updates. The server refers to all players solely by
 their player IDs.
 
@@ -436,24 +436,22 @@ their player IDs.
 Whenever a player's GPS location gets updated, we want to make sure
 that the player's location on the server is also updated.
 
-\emph{Input:} player's ID, game ID and player's location.\\
-\emph{Output:} Returns all the other player's location in json and
-whether the player is dead.
+\emph{Arguments:} Player's ID, game ID and location.\\
+\emph{Response:} All the other player's locations and whether the requesting player is alive or dead.
 
-The handler is responsible for updating the player's location on the
+The method is responsible for updating the player's location on the
 server and also returning the other player's location. Furthermore,
 any elimination of players are resolved on the server. Therefore, the
 response includes the status of the player (i.e. dead or alive).
 
 \subsubsection{\url{/eat_dot}}
-Lastly, this handler is created as an optimization to improve the
-latency on the server. Instead of having the server do the dot eating
-calculation, we decided to have the phone calculate this locally. The
+Instead of having the server do the calculation of which dots are
+eaten by which players, the phone calculates this locally. The
 clients will specify which dots the player is eating and the server
 will resolve the concurrency part of the problem.
 
-\emph{Input:} game ID and dot ID.\\
-\emph{Output:} Score that the player gained for eating the dot.
+\emph{Arguments:} Game ID and dot ID.\\
+\emph{Response:} Score that the player gained for eating the dot.
 
 Note that there is nothing preventing the users from cheating by
 requesting to eat all the dots at the beginning of the game. This
