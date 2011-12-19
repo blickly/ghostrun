@@ -258,13 +258,24 @@ in their location.
 \subsubsection{Eating dots}
 Initially, we had the server resolve eating of dots. Now, we offset
 that some of that responsibility to the client. The client will
-specify which dot it wants to eat. The server will response with the
-number of points the client gain. If the client was attempting to eat
+specify which dot it wants to eat.
+This allows for the client to quickly update its display that a point
+has disappeared before getting a response from the server.
+The server, then, needs to only resolve the race condition of who ate
+the dot first in the case that two players simultaneously tried
+to eat the dot. The format of this response is simply the number of
+points that the client gained for its attempt.
+If the client was attempting to eat
 a dot that has already been eaten, then the server will return 0
-points for the dot. In this implementation, we would not have to
-enumerate through all the available dots with the player's updated
-location to determine which dot is eaten. The delay caused by this
-calculation would increase the latency of the request.
+points for the dot. If the client was the first player to request eating
+a particular dot, then the server returns the full point value for eating
+a single dot.
+
+Another advantage of this implementation is that it means that
+\url{/post_position} can be made more efficient, as it does not not need to
+enumerate all the available dots when it responds to every request.  If
+required, the delay caused by this calculation would increase the latency of
+the request.
 
 \subsubsection{Pacman being caught by the ghost}
 This feature is also semi implemented on the client. The client will
