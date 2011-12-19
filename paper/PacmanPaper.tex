@@ -126,11 +126,12 @@ players.
 \caption{A server on Google Appenigine is used to coordinate communication between the phone clients.}
 \end{figure}
 
-Our augmented reality Pacman game is build on top of the Android 2.2
-platform, with a appengine server as it's counter part. The general
-framework is very simple. The server provides a set of protocol to be
-queried those HTTP connections and the clients use those protocols to
-play games of pacman with their friends using this app.
+Our augmented reality Pacman game is built in a client/server architecture as
+shown in Figure~\ref{fig:ServerArchitecture}, where the server runs on Google's
+Appengine service, and the clients are smartphones running the Android 2.2
+operating system.  The server has an API that can be accessed through HTTP
+connections, and the clients use this API in order to maintain a consistent
+view of the world when playing a multiplayer game.
 
 In practice, there are three methods used for sending data from the server to
 an application running on an Android device:
@@ -184,17 +185,18 @@ for our purposes.
 The server is responsible for the following features:
 
 \begin{enumerate}
-\item Keeping track of where all the players are.
-\item Keeping track of which dots (food dots) still exists.
-\item Resolve if a pacman is killed by a ghost
 \item Allow storing and retrieving of maps.
-\item Allow querying for current on-going games and maps.
+\item Allow querying for current games.
+\item Allow creation of new games and generation of dots.
+\item Keeping track of player locations.
+\item Keeping track of which dots still exist.
+\item Resolve if a pacman is killed by a ghost. \FIXME{move this section to future work}
 \end{enumerate}
 
 \subsubsection{Tracking players}
 Since the server is required to know where all the players are, it
 must have some way to retrieve the most updated location of each
-player and store it for other players to retrive that
+player and store it for other players to retrieve that
 information. This protocol is designed to wait on the client. Despite
 the existence of various technologies for servers to push data to
 clients, we decide to go with the simple implementation of client
@@ -571,7 +573,15 @@ to total received energy in units of dB, and is a measure of how clean the
 received signal is.
 
 The server latencies with respect to the received signal strength and pilot
-signal are shown in Figure~\ref{fig:latencyVsRSSI} and Figure~\ref{fig:latencyVsEcIo}, respectively. We were surprised to find that there was no correlation between signal strength ans latency to query the server. While it is clear that a phone with a sufficiently weak signal will be unable to query the server at all, we found that for signal strengths within the normal operating ranges that we were able to vary, signal strength had no effect on latency. For other applications, it may be interesting to compare signal strength with data bandwidth, but we did not try to make any such comparison.
+signal are shown in Figure~\ref{fig:latencyVsRSSI} and
+Figure~\ref{fig:latencyVsEcIo}, respectively. We were surprised to find that
+there was no correlation between signal strength ans latency to query the
+server. While it is clear that a phone with a sufficiently weak signal will be
+unable to query the server at all, we found that for signal strengths within
+the normal operating ranges that we were able to vary, signal strength had no
+effect on latency. For other applications, it may be interesting to compare
+signal strength with data bandwidth, but we did not try to make any such
+comparison.
 
 \begin{figure}
 \centering
